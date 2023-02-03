@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Contact_us";
+}
+
+
+<link href="~/Design/Contact/Contact.css" rel="stylesheet" />
+
+<style>
+    body {
+        background-image: url('../../image/background/bg-0.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+</style>
+
+<section id="contact">
+    <div class="contact-box">
+        <div class="contact-links">
+            <h2>CONTACT</h2>
+            <div class="links">
+                <div class="link">
+                    <a><img class="img" src="~/image/contact/fb.png" alt="linkedin"></a>
+                </div>
+                <div class="link">
+                    <a><img class="img" src="~/image/contact/insta.png" alt="github"></a>
+                </div>
+                <div class="link">
+                    <a><img class="img" src="~/image/contact/whatsapp.png" alt="codepen"></a>
+                </div>
+                <div class="link">
+                    <a><img class="img" src="~/image/contact/gmail icon.png" alt="email" "></a>
+                </div>
+            </div>
+        </div>
+        <div class="contact-form-wrapper">
+            <form>
+                <div class="form-item">
+                    <input type="text" name="sender" required>
+                    <label>Name:</label>
+                </div>
+                <div class="form-item">
+                    <input type="text" name="email" required>
+                    <label>Email:</label>
+                </div>
+                <div class="form-item">
+                    <textarea class="" name="message" required></textarea>
+                    <label>Message:</label>
+                </div>
+                <button class="submit-btn">Send</button>
+            </form>
+        </div>
+    </div>
+</section>
