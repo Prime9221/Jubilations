@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace Jubilations.Controllers
 {
-    public class Contact : Controller
+    public class ContactController : Controller
     {
         // GET: Contact
         public ActionResult Contact_us()
