@@ -6,10 +6,14 @@ using System.Web.Mvc;
 
 namespace Jubilations.Controllers
 {
-    public class ContactController : Controller
+    public class Contact : Controller
     {
         // GET: Contact
         public ActionResult Contact_us()
+        {
+            return View();
+        }
+        public ActionResult About()
         {
             return View();
         }
