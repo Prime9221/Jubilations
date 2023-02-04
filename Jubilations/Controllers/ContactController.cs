@@ -13,7 +13,7 @@ namespace Jubilations.Controllers
         {
             return View();
         }
-        public ActionResult About()
+        public ActionResult About_us()
         {
             return View();
         }
