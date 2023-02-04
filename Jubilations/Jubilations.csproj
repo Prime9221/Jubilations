@@ -239,6 +239,7 @@
     <Content Include="Views\Login\Otp.cshtml" />
     <Content Include="Views\Login\FNewPass.cshtml" />
     <Content Include="Views\Contact\About.cshtml" />
+    <Content Include="Views\test.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

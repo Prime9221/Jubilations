@@ -1,8 +1,4 @@
-﻿ul {
-    margin: 0px;
-    padding: 0px;
-}
-
+﻿
 .footer-section {
     background: #011A27;
     position: relative;
@@ -118,18 +114,18 @@
         background: #ff5e14;
     }
 
-.footer-widget ul li {
+.footer-widget .lu li {
     display: inline-block;
     float: left;
     width: 50%;
     margin-bottom: 12px;
 }
 
-    .footer-widget ul li a:hover {
+    .footer-widget .lu li a:hover {
         color: #ff5e14;
     }
 
-    .footer-widget ul li a {
+    .footer-widget .lu li a {
         color: #878787;
         text-transform: capitalize;
     }
@@ -192,7 +188,7 @@
     }
 
 
-svg {
+#svg {
     height: 40px;
     width: auto;
 }
