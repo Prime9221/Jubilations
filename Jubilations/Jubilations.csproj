@@ -171,7 +171,7 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Design\About\About.css" />
-    <Content Include="Design\About\About.js" />
+    <Content Include="Design\About\Team.css" />
     <Content Include="Design\Contact\Contact.css" />
     <Content Include="Design\Footer\Footer.css" />
     <Content Include="Design\Forgotpass\Fpass.css" />
@@ -229,17 +229,16 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Contact\About_us.cshtml" />
+    <Content Include="Views\Contact\Contact_us.cshtml" />
+    <Content Include="Views\Login\FNewPass.cshtml" />
+    <Content Include="Views\Login\Forgot_password.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Login\Otp.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Contact\Contact_us.cshtml" />
-    <Content Include="Views\Login\Login.cshtml" />
-    <Content Include="Views\Login\Forgot_password.cshtml" />
-    <Content Include="Views\Login\Otp.cshtml" />
-    <Content Include="Views\Login\FNewPass.cshtml" />
-    <Content Include="Views\Contact\About.cshtml" />
-    <Content Include="Views\test.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
