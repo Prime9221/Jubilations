@@ -116,7 +116,6 @@ section {
     }
 
         .list-style-one li:before {
-
             position: absolute;
             left: 0;
             top: 0px;
