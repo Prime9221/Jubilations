@@ -6,6 +6,7 @@
     <title>@ViewBag.Title - Jubilations</title>
     <link href="~/Design/Header/Header.css" rel="stylesheet" />
     <link href="~/Design/Footer/Footer.css" rel="stylesheet" />
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -45,7 +46,6 @@
                                 <li><a href='#'>Services 4</a></li>
                             </ul>
                         </li>
-                        <li><a href='#'>Reviews</a></li>
                         <li>@Html.ActionLink("Blog", "Blog1", "Contact", new { area = "" }, new { @class = "nav-link" })</li>
                         <li>@Html.ActionLink("About", "About_us", "Contact", new { area = "" }, new { @class = "nav-link" })</li>
                         <li>@Html.ActionLink("Contact", "Contact_us", "Contact", new { area = "" }, new { @class = "nav-link" })</li>
@@ -77,8 +77,10 @@
                         <div class="single-cta">
                             <i class="fas fa-map-marker-alt"></i>
                             <div class="cta-text">
-                                <h4>Find us</h4>
-                                <span>1010 Avenue, sw 54321, chandigarh</span>
+                                <h4>
+                                    Made in India
+                                    <img src="~/image/Logo/india.png" style="height:auto; width:21px;" />
+                                </h4>
                             </div>
                         </div>
                     </div>
@@ -87,7 +89,7 @@
                             <i class=""></i>
                             <div class="cta-text">
                                 <h4>Call us</h4>
-                                <span>9876543210 0</span>
+                                <span>9876543210</span>
                             </div>
                         </div>
                     </div>
@@ -96,7 +98,7 @@
                             <i class=""></i>
                             <div class="cta-text">
                                 <h4>Mail us</h4>
-                                <span>mail@info.com</span>
+                                <span>jubilation@gmail.com</span>
                             </div>
                         </div>
                     </div>
@@ -153,13 +155,13 @@
                                 <li><a href="#">Home</a></li>
                                 <li><a href="#">about</a></li>
                                 <li><a href="#">services</a></li>
-                                <li><a href="#">portfolio</a></li>
+                                <li><a href="#">Blog</a></li>
                                 <li><a href="#">Contact</a></li>
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Our Services</a></li>
-                                <li><a href="#">Expert Team</a></li>
-                                <li><a href="#">Contact us</a></li>
-                                <li><a href="#">Latest News</a></li>
+                                <li><a href="#">Testimonials</a></li>
+                                <li><a href="#">SuccessStory</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">FAQs</a></li>
                             </ul>
                         </div>
                     </div>
@@ -187,17 +189,17 @@
                 <div class="row">
                     <div class="col-xl-6 col-lg-6 text-center text-lg-left">
                         <div class="copyright-text">
-                            <p>Copyright &copy; 2018, All Right Reserved <a href="https://codepen.io/anupkumar92/">JUBILATIONS</a></p>
+                            <p>Copyright &copy; 2023, All Right Reserved <a href="https://codepen.io/anupkumar92/">JUBILATIONS</a></p>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
                         <div class="footer-menu">
                             <ul>
                                 <li><a href="#">Home</a></li>
-                                <li><a href="#">Terms</a></li>
-                                <li><a href="#">Privacy</a></li>
-                                <li><a href="#">Policy</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li>@Html.ActionLink("Blog", "Blog1", "Contact", new { area = "" }, new { @class = "nav-link" })</li>
+                                <li>@Html.ActionLink("About", "About_us", "Contact", new { area = "" }, new { @class = "nav-link" })</li>
+                                <li>@Html.ActionLink("Contact", "Contact_us", "Contact", new { area = "" }, new { @class = "nav-link" })</li>
                             </ul>
                         </div>
                     </div>

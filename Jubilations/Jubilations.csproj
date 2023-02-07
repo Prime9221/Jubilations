@@ -258,6 +258,12 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="image\123.jpg" />
+    <Content Include="image\About\decoration.jpg" />
+    <Content Include="image\About\Dulhan.jpg" />
+    <Content Include="image\About\gopi.png" />
+    <Content Include="image\About\IMG_20220222_135601_786.jpg" />
+    <Content Include="image\About\shaddi.jpg" />
+    <Content Include="image\About\signal-2023-02-07-135949_002.png" />
     <Content Include="image\background\bg-0.jpg" />
     <Content Include="image\background\bg-1.jpg" />
     <Content Include="image\Blog\0005f5d4be613710a1d79ce50d1d41e7.jpg" />
@@ -2316,6 +2322,7 @@
     <Content Include="image\login.png" />
     <Content Include="image\login\login-cover.png" />
     <Content Include="image\Logo\icon.png" />
+    <Content Include="image\Logo\india.png" />
     <Content Include="image\Logo\jubilations.png" />
     <Content Include="image\register.jpg" />
     <Content Include="image\Register\Register-cover.png" />

@@ -233,6 +233,8 @@ section {
             position: absolute;
             left: 0;
             bottom: 0;
+            height:20px;
+            width:auto;
         }
 
             .about-section .image-column .image-2 img,
