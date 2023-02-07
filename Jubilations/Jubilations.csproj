@@ -258,6 +258,9 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="image\123.jpg" />
+    <Content Include="image\About\dinal.jpg" />
+    <Content Include="image\About\Gopika.jpeg" />
+    <Content Include="image\About\Prime.jpeg" />
     <Content Include="image\background\bg-0.jpg" />
     <Content Include="image\background\bg-1.jpg" />
     <Content Include="image\Blog\0005f5d4be613710a1d79ce50d1d41e7.jpg" />
