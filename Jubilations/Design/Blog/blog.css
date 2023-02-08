@@ -25,9 +25,8 @@ h1 {
 }
 
 p {
-    font-family: 'Kumbh Sans', sans-serif;
-    color: #3D3D3D;
-    font-size: 1.10em;
+    color: #777777;
+    font-size: 15px;
 }
 
 .shape {
@@ -67,7 +66,11 @@ a {
 }
 
 .row {
-    margin: 0 -5px;
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
 }
 
     .row:after {
@@ -111,7 +114,7 @@ hr {
     font-family: 'Kumbh Sans', sans-serif;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    color: #CB7348;
+    color: #777777;
     font-size: 1.10em;
     text-align: left;
 }
