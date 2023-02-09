@@ -154,7 +154,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="assets\css\Login.css" />
     <Content Include="assets\css\main.css" />
     <Content Include="assets\img\about-2.jpg" />
     <Content Include="assets\img\about.jpg" />
@@ -188,7 +187,6 @@
     <Content Include="assets\img\testimonials\testimonials-2.jpg" />
     <Content Include="assets\img\testimonials\testimonials-3.jpg" />
     <Content Include="assets\img\testimonials\testimonials-4.jpg" />
-    <Content Include="assets\js\Login.js" />
     <Content Include="assets\js\main.js" />
     <Content Include="assets\scss\Readme.txt" />
     <Content Include="assets\vendor\aos\aos.css" />
