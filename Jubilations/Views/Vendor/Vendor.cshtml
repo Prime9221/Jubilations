@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewBag.Title = "Vendor";
+    Layout = "~/Views/Layout/_LayoutPage1.cshtml";
+}
+
+<link href="~/Design/Forgotpass/Fpass.css" rel="stylesheet" />
+
+
+
+<style>
+    body {
+        background-image: url('../../image/background/bg-0.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+
+    .registerbtn {
+        background-color: #04AA6D;
+        color: white;
+        padding: 16px 20px;
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 50%;
+        border-radius: 30px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+    .gopi {
+        height: 35px;
+        width: 100%;
+        color:gray;
+        border-radius: 50px;
+        background-color: #f2f2f2;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+</style>
+
+
+<body>
+    <div class="form">
+        <div class="form__box">
+            <div class="form__left">
+                <div class="form__padding"><img class="form__image" src="~/image/forgote_password/Forgot-email-cover.png" /></div>
+            </div>
+            <div class="form__right">
+                <div class="form__padding-right">
+                    <form>
+
+                        <h1 class="form__title">Fill the Vendor Form </h1>
+                        <input class="form__email" type="text" placeholder="Name" />
+                        <input class="form__email" type="text" placeholder="Email" />
+                        <input class="form__email" type="text" placeholder="Phone No." />
+                        <input class="form__email" type="text" placeholder="city" />
+                        
+                        <select name="Category" class="gopi">
+                            <option value="Category">JavaScript</option>
+                            <option value="php">PHP</option>
+                            <option value="java">Java</option>
+                            <option value="golang">Golang</option>
+                            <option value="python">Python</option>
+                            <option value="c#">C#</option>
+                            <option value="C++">C++</option>
+                            <option value="erlang">Erlang</option>
+                        </select>
+
+
+
+                        @*<button type="button" id="Prime">@Html.ActionLink("Send otp", "Otp", "Login", new { @id = "Prime2" })</button>*@
+                        <button class="registerbtn" type="button">@Html.ActionLink("Done ", "Login", "Login")</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
