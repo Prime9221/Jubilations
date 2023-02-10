@@ -29,5 +29,10 @@ namespace Jubilations.Controllers
             return View();
         }
 
+        public ActionResult View_Blog1()
+        {
+            return View();
+        }
+
     }
 }

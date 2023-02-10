@@ -310,7 +310,8 @@
     <Content Include="Design\About\About.css" />
     <Content Include="Design\About\Team.css" />
     <Content Include="Design\Blog\Blog.css" />
-    <Content Include="Design\Blog\Blog2.css" />
+    <Content Include="Design\Blog\Blog1.css" />
+    <Content Include="Design\Blog\ViewBlog1.css" />
     <Content Include="Design\Contact\Contact.css" />
     <Content Include="Design\Footer\Footer.css" />
     <Content Include="Design\Forgotpass\Fpass.css" />
@@ -445,6 +446,7 @@
     <Content Include="Views\Login\Otp.cshtml" />
     <Content Include="Views\Login\Register.cshtml" />
     <Content Include="Views\Contact\Blog1.cshtml" />
+    <Content Include="Views\Contact\View_Blog1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
