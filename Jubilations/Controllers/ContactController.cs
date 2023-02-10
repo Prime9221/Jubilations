@@ -24,14 +24,10 @@ namespace Jubilations.Controllers
             return View();
         }
 
-        public ActionResult Blog_inner()
-        {
-            return View();
-        }
-
         public ActionResult Blog1()
         {
             return View();
         }
+
     }
 }
