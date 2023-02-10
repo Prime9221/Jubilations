@@ -80,10 +80,12 @@
                     <li><a>@Html.ActionLink("Blog", "Blog", "Contact")</a></li>
                     <li><a>@Html.ActionLink("About", "About_us", "Contact")</a></li>
                     <li><a>@Html.ActionLink("Contact", "Contact_us", "Contact")</a></li>
+                    <li><a>@Html.ActionLink("Login", "Login", "Login")</a></li>
                 </ul>
             </nav><!-- .navbar -->
 
-            <a>@Html.ActionLink("Login", "Login", "Login" , new { @class= "btn-book-a-table" })</a>
+            @*<a>@Html.ActionLink("Login", "Login", "Login" , new { @class= "btn-book-a-table" })</a>*@
+            <a>@Html.ActionLink("Login", "Login", "Login", new { @class = "btn-book-a-table" })</a>
             <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
             <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 
