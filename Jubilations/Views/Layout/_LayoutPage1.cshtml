@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Jubilations Bootstrap Template - Index</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="~/assets/img/favicon.png" rel="icon">
+    <link href="~/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="~/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="~/assets/css/main.css" rel="stylesheet">
+
+
+
+
+
+</head>
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="~/assets/img/logo.png" alt=""> -->
+                <h1>
+                    <img  src="~/image/Logo/icon.png" style="height:40px; width:auto; " />
+                    <img  src="~/image/Logo/jubilations.png" style="height:40px; width:auto; " />
+                </h1>
+            </a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a href="#hero">Link</a></li>
+                    <li><a href="#about">Link</a></li>
+                    <li><a href="#x`">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                        <ul>
+                            <li><a href="#">Drop Down 1</a></li>
+                            <li class="dropdown">
+                                <a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                                <ul>
+                                    <li><a href="#">Deep Drop Down 1</a></li>
+                                    <li><a href="#">Deep Drop Down 2</a></li>
+                                    <li><a href="#">Deep Drop Down 3</a></li>
+                                    <li><a href="#">Deep Drop Down 4</a></li>
+                                    <li><a href="#">Deep Drop Down 5</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Drop Down 2</a></li>
+                            <li><a href="#">Drop Down 3</a></li>
+                            <li><a href="#">Drop Down 4</a></li>
+                        </ul>
+                    </li>
+                    <li><a>@Html.ActionLink("Blog", "Blog", "Contact")</a></li>
+                    <li><a>@Html.ActionLink("About", "About_us", "Contact")</a></li>
+                    <li><a>@Html.ActionLink("Contact", "Contact_us", "Contact")</a></li>
+                </ul>
+            </nav><!-- .navbar -->
+
+            <a>@Html.ActionLink("Login", "Login", "Login" , new { @class= "btn-book-a-table" })</a>
+            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+        </div>
+    </header><!-- End Header -->
+
+    <div>
+        @RenderBody()
+    </div>
+    <br />
+    <footer id="footer" class="footer">
+
+
+
+
+        <div class="container">
+            <div class="row gy-3">
+                <div class="col-lg-3 col-md-6 d-flex">
+                    <i class="bi bi-tablet icon"></i>
+                    <div>
+                        <h4>Follow Us</h4>
+                        <div class="social-links d-flex">
+                            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links d-flex">
+                    <i class="bi bi-telephone icon"></i>
+                    <div>
+                        <h4>customer care number</h4>
+                        <p>
+                            <strong>Phone:</strong> +91 9909035097<br>
+                            <strong>Email:</strong> info@Jubilations.com<br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links d-flex">
+                    <i class="bi bi-clock icon"></i>
+                    <div>
+                        <h4>customer care</h4>
+                        <p>
+                            <strong>27/7 available services</strong> <br />
+                            The best customer service is if the customer doesn’t need to call you, doesn’t need to talk to you. It just works.
+                        </p>
+                    </div>
+                </div>
+
+                @*<div class="col-lg-3 col-md-6 footer-links">
+
+                    <div>
+                        <h4>Quick Link</h4>
+                        <div class="">
+                            <p>Home</p>
+                            <p>About</p>
+                            <p>Services</p>
+                        </div>
+                        <div class="">
+                            <p>Blog</p>
+                            <p>Portfolio</p>
+                            <p>Contact</p>
+                        </div>
+                        <div class="">
+                            <p>Success Story</p>
+                            <p>Gallery</p>
+                            <p>Privacy Policy</p>
+                        </div>
+                        <div class="">
+                            <p>Terms & Conditions</p>
+                            <p>FAQ</p>
+                            <p>Report Problem</p>
+                        </div>
+                    </div>
+                </div>*@
+
+
+                <div class="col-lg-3 col-md-6 footer-links d-flex">
+                    <i class="bi bi-link icon"></i>
+                    <div>
+                        <h4>Quick Link</h4>
+                        <div class="row">
+                            <div class="col">Home</div>
+                            <div class="col">About</div>
+
+                            <div class="col">Services</div>
+                            <div class="w-100"></div>
+                            <div class="col">Blog</div>
+
+                            <div class="col">Portfolio</div>
+                            <div class="col">Contact</div>
+                            <div class="w-100"></div>
+                            <div class="col">T&C</div>
+
+                            <div class="col">Gallery</div>
+                            <div class="col">FAQ</div>
+
+                            <div class="w-100"></div>
+                            <div class="col">Success Story</div>
+                            <div class="col">Privacy Policy</div>
+                            <div class="col">Report Problem</div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Jubilations</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                Designed by <a class="aa" href="#">Jubilations</a>
+            </div>
+        </div>
+
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
