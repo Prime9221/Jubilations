@@ -57,7 +57,7 @@
                 <ul>
                     <li><a href="#hero">Link</a></li>
                     <li><a href="#about">Link</a></li>
-                    <li><a href="#x`">Link</a></li>
+                    <li><a>@Html.ActionLink("Term", "Terms", "QuickLink")</a></li>
                     <li class="dropdown">
                         <a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                         <ul>
@@ -85,7 +85,7 @@
             </nav><!-- .navbar -->
 
             @*<a>@Html.ActionLink("Login", "Login", "Login" , new { @class= "btn-book-a-table" })</a>*@
-            <a>@Html.ActionLink("Login", "Login", "Login", new { @class = "btn-book-a-table" })</a>
+            @*<a>@Html.ActionLink("Login", "Login", "Login", new { @class = "btn-book-a-table" })</a>*@
             <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
             <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 
@@ -201,7 +201,7 @@
 
         <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong><span>Jubilations</span></strong>. All Rights Reserved
+                &copy; Copyright 2022 <strong><span>Jubilations</span></strong>. All Rights Reserved
             </div>
             <div class="credits">
                 Designed by <a class="aa" href="#">Jubilations</a>
