@@ -129,6 +129,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\QuickLinkController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -323,6 +324,7 @@
     <Content Include="Design\Header\Header.js" />
     <Content Include="Design\Login\Login.css" />
     <Content Include="Design\Login\Login.js" />
+    <Content Include="Design\Submit_Wedding\submit_wedding.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -448,6 +450,9 @@
     <Content Include="Views\Login\Register.cshtml" />
     <Content Include="Views\Contact\Blog1.cshtml" />
     <Content Include="Views\Contact\View_Blog1.cshtml" />
+    <Content Include="Views\QuickLink\Terms.cshtml" />
+    <Content Include="Views\QuickLink\Privacy_Policy.cshtml" />
+    <Content Include="Views\QuickLink\Submit_Wedding.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
