@@ -155,6 +155,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\css\main.css" />
+    <Content Include="assets\img\2.png" />
     <Content Include="assets\img\about-2.jpg" />
     <Content Include="assets\img\about.jpg" />
     <Content Include="assets\img\apple-touch-icon.png" />
