@@ -18,6 +18,8 @@
         background-attachment: fixed;
         background-size: 100% 100%;
     }
+   
+   
 </style>
 
 
@@ -30,14 +32,17 @@
                 <button class="active">Login</button>
             </div>
             <div class="rgstr-btn splits">
+                <button class="submit ">Bussiness Signup</button>
                 <p>Don't have an account?</p>
+
                 <button>Register</button>
+
             </div>
             <div class="wrapper">
                 <form id="login" tabindex="500">
                     <h3>Login</h3>
                     <div class="mail">
-                        <input type="mail" name="">
+                        <input type="text" name="">
                         <label>Mail or Username</label>
                     </div>
                     <div class="passwd">
@@ -46,7 +51,7 @@
                     </div>
                     <button class="submit" style="color:white;">@Html.ActionLink("Forgot password??", "Forgot_password", "Login")</button>
                     <div class="submit">
-                        <button class="dark">@Html.ActionLink("Login", "About_us", "Contact")</button>
+                        <button class="dark" >@Html.ActionLink("Login", "About_us", "Contact")</button>
                     </div>
                 </form>
                 <form id="register" tabindex="502">

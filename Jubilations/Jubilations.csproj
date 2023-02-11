@@ -310,7 +310,6 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Design\About\About.css" />
     <Content Include="Design\About\Team.css" />
-    <Content Include="Design\Blog\Blog.css" />
     <Content Include="Design\Blog\Blog1.css" />
     <Content Include="Design\Blog\ViewBlog1.css" />
     <Content Include="Design\Contact\Contact.css" />
@@ -439,7 +438,6 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\Contact\About_us.cshtml" />
-    <Content Include="Views\Contact\Blog.cshtml" />
     <Content Include="Views\Contact\Contact_us.cshtml" />
     <Content Include="Views\Layout\_LayoutPage1.cshtml" />
     <Content Include="Views\Login\FNewPass.cshtml" />
