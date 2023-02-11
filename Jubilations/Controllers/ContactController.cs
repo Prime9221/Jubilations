@@ -9,6 +9,7 @@ namespace Jubilations.Controllers
     public class ContactController : Controller
     {
         // GET: Contact
+
         public ActionResult Contact_us()
         {
             return View();
@@ -23,14 +24,15 @@ namespace Jubilations.Controllers
             return View();
         }
 
-        public ActionResult Blog_inner()
-        {
-            return View();
-        }
-
         public ActionResult Blog1()
         {
             return View();
         }
+
+        public ActionResult View_Blog1()
+        {
+            return View();
+        }
+
     }
 }

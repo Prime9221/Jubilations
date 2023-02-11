@@ -15,7 +15,7 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="~/assets/img/favicon.png" rel="icon">
+    <link href="~/assets/img/2.png" rel="icon">
     <link href="~/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
@@ -57,7 +57,7 @@
                 <ul>
                     <li><a href="#hero">Link</a></li>
                     <li><a href="#about">Link</a></li>
-                    <li><a href="#x`">Link</a></li>
+                    <li><a href="#">Link</a></li>
                     <li class="dropdown">
                         <a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                         <ul>
@@ -77,13 +77,15 @@
                             <li><a href="#">Drop Down 4</a></li>
                         </ul>
                     </li>
-                    <li><a>@Html.ActionLink("Blog", "Blog", "Contact")</a></li>
+                    <li><a>@Html.ActionLink("Blog", "Blog1", "Contact")</a></li>
                     <li><a>@Html.ActionLink("About", "About_us", "Contact")</a></li>
                     <li><a>@Html.ActionLink("Contact", "Contact_us", "Contact")</a></li>
+                    <li><a>@Html.ActionLink("Login", "Login", "Login")</a></li>
                 </ul>
             </nav><!-- .navbar -->
 
-            <a>@Html.ActionLink("Login", "Login", "Login" , new { @class= "btn-book-a-table" })</a>
+            @*<a>@Html.ActionLink("Login", "Login", "Login" , new { @class= "btn-book-a-table" })</a>*@
+            @*<a>@Html.ActionLink("Login", "Login", "Login", new { @class = "btn-book-a-table" })</a>*@
             <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
             <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 
@@ -169,25 +171,31 @@
                     <div>
                         <h4>Quick Link</h4>
                         <div class="row">
-                            <div class="col">Home</div>
-                            <div class="col">About</div>
+                            <div class="col-lg-3">
+                                <div class="col">Home</div>
+                                <div class="col">About</div>
+                                <div class="col">Service</div>
+                                <div class="col">@Html.ActionLink("T&C", "Terms", "QuickLink")</div>
+                                <div class="col">Gallery</div>
+                                <div class="col">Blog</div>
 
-                            <div class="col">Services</div>
-                            <div class="w-100"></div>
-                            <div class="col">Blog</div>
+                            </div>
 
-                            <div class="col">Portfolio</div>
-                            <div class="col">Contact</div>
-                            <div class="w-100"></div>
-                            <div class="col">T&C</div>
+                            <div class="col-lg-9">
 
-                            <div class="col">Gallery</div>
-                            <div class="col">FAQ</div>
+                                <div class="col">Portfolio</div>
+                                <div class="col">@Html.ActionLink("Privacy Policy", "Privacy_Policy", "QuickLink")</div>
+                                <div class="col">Contact</div>
+                                <div class="col">Success Story</div>
+                                <div class="col">@Html.ActionLink("Submit Your vibes", "Submit_Wedding", "QuickLink")</div>
+                            </div>
 
-                            <div class="w-100"></div>
-                            <div class="col">Success Story</div>
-                            <div class="col">Privacy Policy</div>
-                            <div class="col">Report Problem</div>
+                           
+
+                          
+                            
+
+                            
 
                         </div>
                     </div>
@@ -199,7 +207,7 @@
 
         <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong><span>Jubilations</span></strong>. All Rights Reserved
+                &copy; Copyright 2022 <strong><span>Jubilations</span></strong>. All Rights Reserved
             </div>
             <div class="credits">
                 Designed by <a class="aa" href="#">Jubilations</a>
