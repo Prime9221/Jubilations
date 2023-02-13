@@ -7,6 +7,7 @@
     right: 30px;
     bottom: 30px;
     border-radius: 10px;
+    
 }
 
     .site-link img {
@@ -31,6 +32,7 @@
     background: rgba(255,255,255,.3);
     min-height: 400px;
     display: table;
+    
     position: relative;
     box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
 }
