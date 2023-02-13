@@ -128,6 +128,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\QuickLinkController.cs" />
     <Compile Include="Global.asax.cs">
@@ -322,6 +323,9 @@
     <Content Include="Design\Forgotpass\Otp.js" />
     <Content Include="Design\Header\Header.css" />
     <Content Include="Design\Header\Header.js" />
+    <Content Include="Design\Home\Home.css" />
+    <Content Include="Design\Home\Home.js" />
+    <Content Include="Design\Login\BL.css" />
     <Content Include="Design\Login\Login.css" />
     <Content Include="Design\Login\Login.js" />
     <Content Include="Design\Submit_Wedding\submit_wedding.css" />
@@ -357,6 +361,7 @@
     <Content Include="image\Blog\7.png" />
     <Content Include="image\Blog\8.png" />
     <Content Include="image\Blog\9.jpg" />
+    <Content Include="image\businessform\bg.jpg" />
     <Content Include="image\contact\bg-2.jpg" />
     <Content Include="image\contact\fb.png" />
     <Content Include="image\contact\gmail icon.png" />
@@ -453,6 +458,8 @@
     <Content Include="Views\QuickLink\Terms.cshtml" />
     <Content Include="Views\QuickLink\Privacy_Policy.cshtml" />
     <Content Include="Views\QuickLink\Submit_Wedding.cshtml" />
+    <Content Include="Views\Home\Home.cshtml" />
+    <Content Include="Views\Login\businessForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
