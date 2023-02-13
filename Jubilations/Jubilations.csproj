@@ -130,6 +130,7 @@
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\QuickLinkController.cs" />
+    <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -375,6 +376,42 @@
     <Content Include="image\Logo\jubilations.png" />
     <Content Include="image\register.jpg" />
     <Content Include="image\Register\Register-cover.png" />
+    <Content Include="image\Services\icon\cardsblack.png" />
+    <Content Include="image\Services\icon\carsblack.png" />
+    <Content Include="image\Services\icon\cateringblack.png" />
+    <Content Include="image\Services\icon\decorblack.png" />
+    <Content Include="image\Services\icon\djblack.png" />
+    <Content Include="image\Services\icon\lehengablack.png" />
+    <Content Include="image\Services\icon\makeupblack.png" />
+    <Content Include="image\Services\icon\mehendiblack.png" />
+    <Content Include="image\Services\icon\photographyblack.png" />
+    <Content Include="image\Services\icon\venueblack.png" />
+    <Content Include="image\Services\Venue\1.jpg" />
+    <Content Include="image\Services\Venue\10.jpg" />
+    <Content Include="image\Services\Venue\11.jpg" />
+    <Content Include="image\Services\Venue\12.jpg" />
+    <Content Include="image\Services\Venue\13.jpg" />
+    <Content Include="image\Services\Venue\14.jpg" />
+    <Content Include="image\Services\Venue\15.jpg" />
+    <Content Include="image\Services\Venue\16.jpg" />
+    <Content Include="image\Services\Venue\17.jpg" />
+    <Content Include="image\Services\Venue\18.jpg" />
+    <Content Include="image\Services\Venue\19.jpg" />
+    <Content Include="image\Services\Venue\2.jpg" />
+    <Content Include="image\Services\Venue\20.jpg" />
+    <Content Include="image\Services\Venue\21.jpg" />
+    <Content Include="image\Services\Venue\22.jpg" />
+    <Content Include="image\Services\Venue\23.jpg" />
+    <Content Include="image\Services\Venue\24.jpg" />
+    <Content Include="image\Services\Venue\25.jpg" />
+    <Content Include="image\Services\Venue\26.jpg" />
+    <Content Include="image\Services\Venue\3.jpg" />
+    <Content Include="image\Services\Venue\4.jpg" />
+    <Content Include="image\Services\Venue\5.jpg" />
+    <Content Include="image\Services\Venue\6.jpg" />
+    <Content Include="image\Services\Venue\7.jpg" />
+    <Content Include="image\Services\Venue\8.jpg" />
+    <Content Include="image\Services\Venue\9.jpg" />
     <Content Include="image\white.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -453,6 +490,8 @@
     <Content Include="Views\QuickLink\Terms.cshtml" />
     <Content Include="Views\QuickLink\Privacy_Policy.cshtml" />
     <Content Include="Views\QuickLink\Submit_Wedding.cshtml" />
+    <Content Include="Views\Services\Services.cshtml" />
+    <Content Include="Views\Services\venue.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
