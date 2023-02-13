@@ -33,5 +33,10 @@ namespace Jubilations.Controllers
         {
             return View();
         }
+
+        public ActionResult businessForm()
+        {
+            return View();
+        }
     }
 }

@@ -47,8 +47,8 @@
                 <!-- Uncomment the line below if you also wish to use an image logo -->
                 <!-- <img src="~/assets/img/logo.png" alt=""> -->
                 <h1>
-                    <img  src="~/image/Logo/icon.png" style="height:40px; width:auto; " />
-                    <img  src="~/image/Logo/jubilations.png" style="height:40px; width:auto; " />
+                    <img src="~/image/Logo/icon.png" style="height:40px; width:auto; " />
+                    <img src="~/image/Logo/jubilations.png" style="height:40px; width:auto; " />
                 </h1>
             </a>
 
@@ -58,23 +58,123 @@
                     <li><a href="#about">Link</a></li>
                     <li><a href="#">Link</a></li>
                     <li class="dropdown">
-                    <a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                    <ul>
-                        <li><a href="#">Drop Down 1</a></li>
-                        <li class="dropdown">
-                            <a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                            <ul>
-                                <li><a href="#">Deep Drop Down 1</a></li>
-                                <li><a href="#">Deep Drop Down 2</a></li>
-                                <li><a href="#">Deep Drop Down 3</a></li>
-                                <li><a href="#">Deep Drop Down 4</a></li>
-                                <li><a href="#">Deep Drop Down 5</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Drop Down 2</a></li>
-                        <li><a href="#">Drop Down 3</a></li>
-                        <li><a href="#">Drop Down 4</a></li>
-                    </ul>
+                        <a>@Html.ActionLink("Services", "Services", "Services")</a>
+                        <ul>
+                            <li class="dropdown">
+                                <a>@Html.ActionLink("Venue", "venue", "Services")</a>
+                                <ul>
+                                    <li><a href="#">Hotel</a></li>
+                                    <li><a href="#">FarmHouse</a></li>
+                                    <li><a href="#">Community Halls</a></li>
+                                    <li><a href="#">Resorts</a></li>
+                                    <li><a href="#">Banquet Halls</a></li>
+                                    <li><a href="#">Wedding Tents</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#"><span>Photographer</span></a>
+                                <ul>
+                                    <li><a href="#">Wedding</a></li>
+                                    <li><a href="#">BirthDay</a></li>
+                                    <li><a href="#">Pre-Wedding</a></li>
+                                    <li><a href="#">Baby-Shower</a></li>
+                                    <li><a href="#">Modeling</a></li>
+                                    <li><a href="#">Food</a></li>
+                                    <li><a href="#">Company-Documentry</a></li>
+                                    <li><a href="#">Product Launch</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#"><span>Decorator</span></a>
+                                <ul>
+                                    <li><a href="#">Wedding</a></li>
+                                    <li><a href="#">BirthDay</a></li>
+                                    <li><a href="#">Theme</a></li>
+                                    <li><a href="#">Flower</a></li>
+                                    <li><a href="#">Product Launch</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#"><span>Caterers</span></a>
+                                <ul>
+                                    <li><a href="#">Budget</a></li>
+                                    <li><a href="#">Halwai or Maharaj</a></li>
+                                    <li><a href="#">Fast Food</a></li>
+                                    <li><a href="#">Punjabi</a></li>
+                                    <li><a href="#"> Gujarati</a></li>
+                                    <li><a href="#">Chinese</a></li>
+                                    <li><a href="#">Ice-Cream</a></li>
+                                    <li><a href="#">Mouth Freshner</a></li>
+                                    <li><a href="#"> Cake</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#"><span>Makeup Artist</span></a>
+                                <ul>
+                                    <li><a href="#">Bridal</a></li>
+                                    <li><a href="#">Groom</a></li>
+                                    <li><a href="#">Family</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#"><span>Mahendi Artist</span></a>
+                                <ul>
+                                    <li><a href="#">Bridal</a></li>
+                                    <li><a href="#"> Tatto</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#"><span>Cloth Studio</span></a>
+                                <ul>
+                                    <li class="dropdown">
+                                        <a href="#">Woman</a>
+                                        <ul>
+                                            <li><a href="#">Lehnga</a></li>
+                                            <li><a href="#"> Suits</a></li>
+                                            <li><a href="#"> Sarees</a></li>
+                                            <li><a href="#">Gowns</a></li>
+                                            <li><a href="#"> Indo-Western</a></li>
+                                            <li><a href="#"> Designers</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">Men</a>
+                                        <ul>
+                                            <li><a href="#">Formal</a></li>
+                                            <li><a href="#"> Suit</a></li>
+                                            <li><a href="#"> Sherwani</a></li>
+                                            <li><a href="#">Designers</a></li>
+                                            <li><a href="#"> Indian-Ethnic</a></li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#"><span>DJ Rocks</span></a>
+                                <ul>
+                                    <li><a href="#">Sound System</a></li>
+                                    <li><a href="#"> Singer</a></li>
+                                    <li><a href="#"> Band-Baaja</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#"><span>Cards</span></a>
+                                <ul>
+                                    <li><a href="#">E-Invite</a></li>
+                                    <li><a href="#"> Traditional</a></li>
+                                    <li><a href="#"> Designer</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#"><span>Vehicle</span></a>
+                                <ul>
+                                    <li><a href="#">Car</a></li>
+                                    <li><a href="#"> Bus</a></li>
+                                    <li><a href="#"> Bike</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
                     <li><a>@Html.ActionLink("Blog", "Blog1", "Contact")</a></li>
                     <li><a>@Html.ActionLink("About", "About_us", "Contact")</a></li>
@@ -82,7 +182,6 @@
                     <li><a>@Html.ActionLink("Login", "Login", "Login")</a></li>
                 </ul>
             </nav><!-- .navbar -->
-
             @*<a>@Html.ActionLink("Login", "Login", "Login" , new { @class= "btn-book-a-table" })</a>*@
             @*<a>@Html.ActionLink("Login", "Login", "Login", new { @class = "btn-book-a-table" })</a>*@
             <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -139,30 +238,30 @@
 
                 @*<div class="col-lg-3 col-md-6 footer-links">
 
-                    <div>
-                        <h4>Quick Link</h4>
-                        <div class="">
-                            <p>Home</p>
-                            <p>About</p>
-                            <p>Services</p>
+                        <div>
+                            <h4>Quick Link</h4>
+                            <div class="">
+                                <p>Home</p>
+                                <p>About</p>
+                                <p>Services</p>
+                            </div>
+                            <div class="">
+                                <p>Blog</p>
+                                <p>Portfolio</p>
+                                <p>Contact</p>
+                            </div>
+                            <div class="">
+                                <p>Success Story</p>
+                                <p>Gallery</p>
+                                <p>Privacy Policy</p>
+                            </div>
+                            <div class="">
+                                <p>Terms & Conditions</p>
+                                <p>FAQ</p>
+                                <p>Report Problem</p>
+                            </div>
                         </div>
-                        <div class="">
-                            <p>Blog</p>
-                            <p>Portfolio</p>
-                            <p>Contact</p>
-                        </div>
-                        <div class="">
-                            <p>Success Story</p>
-                            <p>Gallery</p>
-                            <p>Privacy Policy</p>
-                        </div>
-                        <div class="">
-                            <p>Terms & Conditions</p>
-                            <p>FAQ</p>
-                            <p>Report Problem</p>
-                        </div>
-                    </div>
-                </div>*@
+                    </div>*@
 
 
                 <div class="col-lg-3 col-md-6 footer-links d-flex">
@@ -189,12 +288,12 @@
                                 <div class="col">@Html.ActionLink("Submit Your vibes", "Submit_Wedding", "QuickLink")</div>
                             </div>
 
-                           
 
-                          
-                            
 
-                            
+
+
+
+
 
                         </div>
                     </div>
