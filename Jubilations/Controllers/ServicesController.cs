@@ -18,8 +18,39 @@ namespace Jubilations.Controllers
         {
             return View();
         }
-
-        public ActionResult venue1()
+        public ActionResult Bridal_Makeup_Artists()
+        {
+            return View();
+        }
+        public ActionResult Cloth_Studio()
+        {
+            return View();
+        }
+        public ActionResult DJ_Rocks()
+        {
+            return View();
+        }
+        public ActionResult Transport()
+        {
+            return View();
+        }
+        public ActionResult Wedding_Decorator()
+        {
+            return View();
+        }
+        public ActionResult Wedding_Photographers()
+        {
+            return View();
+        }
+        public ActionResult Wedding_Catering()
+        {
+            return View();
+        }
+        public ActionResult Invitation_Cards()
+        {
+            return View();
+        }
+        public ActionResult Mehendi_Artists()
         {
             return View();
         }
