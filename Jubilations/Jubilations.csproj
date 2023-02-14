@@ -408,6 +408,16 @@
     <Content Include="image\Home\service-4.jpg" />
     <Content Include="image\Home\service-5.jpg" />
     <Content Include="image\Home\service-6.jpg" />
+    <Content Include="image\Home\w-b-mackup.jpg" />
+    <Content Include="image\Home\w-catering.png" />
+    <Content Include="image\Home\w-clothstudio.jpg" />
+    <Content Include="image\Home\w-decoration.jpg" />
+    <Content Include="image\Home\w-dj.jpg" />
+    <Content Include="image\Home\w-ecard.jpeg" />
+    <Content Include="image\Home\w-mehandi.jpg" />
+    <Content Include="image\Home\w-p-transport.jpg" />
+    <Content Include="image\Home\w-photography.jpg" />
+    <Content Include="image\Home\w-venue.jpg" />
     <Content Include="image\Home\slider-1.jpg" />
     <Content Include="image\Home\slider-2.jpg" />
     <Content Include="image\Home\slider-3.jpg" />
@@ -418,6 +428,7 @@
     <Content Include="image\Home\testimonial-2.jpg" />
     <Content Include="image\Home\testimonial-3.jpg" />
     <Content Include="image\Home\testimonial-4.jpg" />
+    <Content Include="image\Home\whychooseus.jpg" />
     <Content Include="image\login.png" />
     <Content Include="image\login\login-cover.png" />
     <Content Include="image\Logo\icon.png" />
