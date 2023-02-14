@@ -354,7 +354,12 @@
     <Content Include="image\Blog\13.jpg" />
     <Content Include="image\Blog\14.jpg" />
     <Content Include="image\Blog\15.jpg" />
+    <Content Include="image\Blog\16.jpg" />
+    <Content Include="image\Blog\17.jpg" />
+    <Content Include="image\Blog\18.jpg" />
+    <Content Include="image\Blog\19.jpg" />
     <Content Include="image\Blog\2.jpg" />
+    <Content Include="image\Blog\20.jpg" />
     <Content Include="image\Blog\3.png" />
     <Content Include="image\Blog\4.png" />
     <Content Include="image\Blog\5.png" />
@@ -410,7 +415,14 @@
     <Content Include="image\Services\Venue\24.jpg" />
     <Content Include="image\Services\Venue\25.jpg" />
     <Content Include="image\Services\Venue\26.jpg" />
+    <Content Include="image\Services\Venue\27.jpg" />
+    <Content Include="image\Services\Venue\28.jpg" />
+    <Content Include="image\Services\Venue\29.jpg" />
     <Content Include="image\Services\Venue\3.jpg" />
+    <Content Include="image\Services\Venue\30.jpg" />
+    <Content Include="image\Services\Venue\31.jpg" />
+    <Content Include="image\Services\Venue\32.jpg" />
+    <Content Include="image\Services\Venue\33.jpg" />
     <Content Include="image\Services\Venue\4.jpg" />
     <Content Include="image\Services\Venue\5.jpg" />
     <Content Include="image\Services\Venue\6.jpg" />
@@ -497,6 +509,7 @@
     <Content Include="Views\QuickLink\Submit_Wedding.cshtml" />
     <Content Include="Views\Services\Services.cshtml" />
     <Content Include="Views\Services\venue.cshtml" />
+    <Content Include="Views\Services\venue1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

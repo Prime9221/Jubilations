@@ -18,5 +18,10 @@ namespace Jubilations.Controllers
         {
             return View();
         }
+
+        public ActionResult venue1()
+        {
+            return View();
+        }
     }
 }
