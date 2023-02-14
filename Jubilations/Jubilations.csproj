@@ -509,6 +509,15 @@
     <Content Include="Views\QuickLink\Submit_Wedding.cshtml" />
     <Content Include="Views\Services\Services.cshtml" />
     <Content Include="Views\Services\venue.cshtml" />
+    <Content Include="Views\Services\Bridal_Makeup_Artists.cshtml" />
+    <Content Include="Views\Services\Wedding_Photographers.cshtml" />
+    <Content Include="Views\Services\DJ_Rocks.cshtml" />
+    <Content Include="Views\Services\Cloth_Studio.cshtml" />
+    <Content Include="Views\Services\Transport.cshtml" />
+    <Content Include="Views\Services\Wedding_Decorator.cshtml" />
+    <Content Include="Views\Services\Wedding_Catering.cshtml" />
+    <Content Include="Views\Services\Invitation_Cards.cshtml" />
+    <Content Include="Views\Services\Mehendi_Artists.cshtml" />
     <Content Include="Views\Services\venue1.cshtml" />
   </ItemGroup>
   <ItemGroup>
