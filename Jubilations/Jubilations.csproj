@@ -672,7 +672,6 @@
     <Content Include="Views\Home\Home.cshtml" />
     <Content Include="Views\Login\businessForm.cshtml" />
     <Content Include="Views\QuickLink\why_choose_us.cshtml" />
-    <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\QuickLink\Success_Story.cshtml" />
   </ItemGroup>
