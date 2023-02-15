@@ -590,7 +590,6 @@
     <Content Include="Views\Services\Wedding_Catering.cshtml" />
     <Content Include="Views\Services\Wedding_Decorator.cshtml" />
     <Content Include="Views\Services\Wedding_Photographers.cshtml" />
-    <Content Include="Views\Home\Home.cshtml" />
     <Content Include="Views\Login\businessForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
