@@ -22,5 +22,15 @@ namespace Jubilations.Controllers
         {
             return View();
         }
+
+        public ActionResult why_choose_us()
+        {
+            return View();
+        }
+
+        public ActionResult Success_Story()
+        {
+            return View();
+        }
     }
 }
