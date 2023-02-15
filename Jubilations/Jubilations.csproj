@@ -322,6 +322,8 @@
     <Content Include="Design\Forgotpass\Fpass.css" />
     <Content Include="Design\Forgotpass\Otp.css" />
     <Content Include="Design\Forgotpass\Otp.js" />
+    <Content Include="Design\Gallery\G_home.css" />
+    <Content Include="Design\Gallery\G_home.js" />
     <Content Include="Design\Header\Header.css" />
     <Content Include="Design\Header\Header.js" />
     <Content Include="Design\Home\css\bootstrap.min.css" />
@@ -586,6 +588,7 @@
     <Content Include="Views\Services\Wedding_Catering.cshtml" />
     <Content Include="Views\Services\Wedding_Decorator.cshtml" />
     <Content Include="Views\Services\Wedding_Photographers.cshtml" />
+    <Content Include="Views\QuickLink\Gallery.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

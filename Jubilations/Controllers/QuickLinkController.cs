@@ -22,5 +22,10 @@ namespace Jubilations.Controllers
         {
             return View();
         }
+
+        public ActionResult Gallery()
+        {
+            return View();
+        }
     }
 }
