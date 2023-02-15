@@ -154,6 +154,7 @@
     <Compile Include="Models\User_Role.cs" />
     <Compile Include="Models\User_Role_Map.cs" />
     <Compile Include="Models\Vender_Catalog.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.1.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -577,6 +578,9 @@
     <Content Include="image\Success_story\83.jpg" />
     <Content Include="image\Success_story\9.jpg" />
     <Content Include="image\white.png" />
+    <Content Include="obj\Debug\Jubilations.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Jubilations.dll" />
+    <Content Include="obj\Debug\Jubilations.pdb" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -623,6 +627,10 @@
     <Content Include="image\.picasa.ini" />
     <Content Include="image\.picasaoriginals\.picasa.ini" />
     <Content Include="Design\Home\lib\owlcarousel\LICENSE" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\Jubilations.csproj.AssemblyReference.cache" />
+    <Content Include="obj\Debug\Jubilations.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\Jubilations.csproj.GenerateResource.cache" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -669,7 +677,6 @@
     <Content Include="Views\Services\Wedding_Catering.cshtml" />
     <Content Include="Views\Services\Wedding_Decorator.cshtml" />
     <Content Include="Views\Services\Wedding_Photographers.cshtml" />
-    <Content Include="Views\Home\Home.cshtml" />
     <Content Include="Views\Login\businessForm.cshtml" />
     <Content Include="Views\QuickLink\why_choose_us.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -677,6 +684,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -709,6 +717,7 @@
     <EmbeddedResource Include="Migrations\202302031803129_first.resx">
       <DependentUpon>202302031803129_first.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\Jubilations.Migrations.first.resources" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
