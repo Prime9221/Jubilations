@@ -322,8 +322,8 @@
     <Content Include="Design\Forgotpass\Fpass.css" />
     <Content Include="Design\Forgotpass\Otp.css" />
     <Content Include="Design\Forgotpass\Otp.js" />
-    <Content Include="Design\Gallery\G_home.css" />
-    <Content Include="Design\Gallery\G_home.js" />
+    <Content Include="Design\Gallery\c_home.css" />
+    <Content Include="Design\Gallery\c_home.js" />
     <Content Include="Design\Header\Header.css" />
     <Content Include="Design\Header\Header.js" />
     <Content Include="Design\Home\css\bootstrap.min.css" />
