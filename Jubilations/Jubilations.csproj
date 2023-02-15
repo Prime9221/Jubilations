@@ -528,6 +528,8 @@
     <Content Include="Views\Services\Invitation_Cards.cshtml" />
     <Content Include="Views\Services\Mehendi_Artists.cshtml" />
     <Content Include="Views\Services\venue1.cshtml" />
+    <Content Include="Views\Home\Home.cshtml" />
+    <Content Include="Views\Login\businessForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
