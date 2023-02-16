@@ -359,6 +359,7 @@
     <Content Include="Design\Login\Login.js" />
     <Content Include="Design\Submit_Wedding\font.css" />
     <Content Include="Design\Submit_Wedding\icon.css" />
+    <Content Include="Design\Submit_Wedding\pic_story.css" />
     <Content Include="Design\Submit_Wedding\select2.css" />
     <Content Include="Design\Submit_Wedding\submit_wedding.css" />
     <Content Include="Design\Submit_Wedding\success_story.css" />
