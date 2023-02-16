@@ -32,5 +32,10 @@ namespace Jubilations.Controllers
         {
             return View();
         }
+
+        public ActionResult yomesh_mansi()
+        {
+            return View();
+        }
     }
 }
