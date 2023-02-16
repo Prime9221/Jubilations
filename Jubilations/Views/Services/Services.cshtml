@@ -3,249 +3,3003 @@
     ViewBag.Title = "Services";
     Layout = "~/Views/Layout/_LayoutPage1.cshtml";
 }
-<link href="~/Design/Submit_Wedding/submit_wedding.css" rel="stylesheet" />
+
+
+<link href="~/Design/Gallery/c_home.css" rel="stylesheet" />
+
 <br />
 <br />
-<div class="clearfix pt-50"></div>
-<div class="clearfix pt-50"></div>
-<div class="clearfix pt-50"></div>
-<div class="clearfix pt-50"></div>
-<section id="vendor_sec" class="vendor_slider">
-    <div class="container mg-t-30 mg-b-30">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="header-container">
-                    <div class="index_head amp"><h2 class="tx-20 tx-bold tx-color-777 tx-center"><span>Wedding Categories</span></h2></div>
-                    <div class="col-md-12"> <h5 class="main-subheading tx-semibold tx-color-777 tx-16 tx-center">From the smallest detail, to the grandest event. From today until your day, we do. We build your dream around you</h5></div>
-                </div>
-            </div>
-            <div class="spacer-30"></div>
-        </div>
-    </div>
-    <div class="section col-md-12 container">
-
-        <div class="row" >
-            <div class="col-md-3">
-                <a class="dataToggle" label="weddingVenue">
-                </a><div class="mn-ht-250 card" style="height:200px">
-                    <a class="dataToggle" label="weddingVenue">
-                    </a><div class="card-body">
-    <a class="dataToggle" label="weddingVenue">
-        <div class="cat-img">
-            <img src="~/image/Services/icon/venueblack.png" class="cat-icon" alt="wedding venues" >
-        </div>
-    </a>
-    <div style="text-align:center;">
-        <a><h5>@Html.ActionLink("Wedding Venue", "venue", "Services", new {@class= "tx-color-778" })</h5></a>
-    </div>
-    
-    <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="wedding-venue16cf.html?s=hotels" class="tx-color-777">Hotels</a>, <a href="wedding-venue300d.html?s=farmhouse" class="tx-color-777">Farmhouse</a>, <a href="wedding-venue67a0.html?s=community-halls" class="tx-color-777">Community Halls</a>, <a href="wedding-venue3a31.html?s=resorts" class="tx-color-777">Resorts</a>, <a href="wedding-venuee377.html?s=terrace-banquet-halls" class="tx-color-777">Banquet Halls</a>, <a href="wedding-venue8833.html?s=wedding-tents" class="tx-color-777">Wedding Tents</a></p>
-
-</div>
-                </div>
-
-
-            </div>
-            <div class="col-md-3">
-                <a class="dataToggle" label="makeupartist">
-                </a><div class="mn-ht-250 card" style="height:200px">
-                    <a class="dataToggle" label="makeupartist">
-                    </a><div class="card-body">
-    <a class="dataToggle" label="makeupartist">
-        <div class="cat-img">
-            <img src="~/image/Services/icon/makeupblack.png" class="cat-icon" alt="Bridal Makeup Artists">
-        </div>
-    </a>
-    <div style="text-align:center;">
-        <a><h5>@Html.ActionLink("Bridal_Makeup_Artists", "Bridal_Makeup_Artists", "Services", new { @class = "tx-color-778" })</h5></a>
-    </div>
-    <a href="makeup-and-hair/index.html"></a>
-    <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="makeup-and-hair25d5.html?s=salons" class="tx-color-777">Makeup Salons</a>, <a href="makeup-and-hair5f14.html?s=traditional-makeup" class="tx-color-777">Traditional Makeup Artist</a>,<a href="makeup-and-hair5a28.html?s=hair-stylist" class="tx-color-777">Hair Stylist</a></p>
-
-
-</div>
-                </div>
-
-
-            </div>
-            <div class="col-md-3">
-                <a class="dataToggle" label="photographer">
-                </a><div class="mn-ht-250 card" style="height:200px">
-                    <a class="dataToggle" label="photographer">
-                    </a><div class="card-body">
-    <a class="dataToggle" label="photographer">
-        <div class="cat-img">
-            <img src="~/image/Services/icon/photographyblack.png" class="cat-icon" >
-        </div>
-    </a>
-    <div style="text-align:center;">
-        <a><h5>@Html.ActionLink("Wedding_Photographers", "Wedding_Photographers", "Services", new { @class = "tx-color-778" })</h5></a>
-    </div>
-    <a href="wedding-photography/index.html"></a>
-    <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="wedding-photography0e97.html?s=freelancers" class="tx-color-777">Freelancers</a>, <a href="wedding-photographya908.html?s=studio" class="tx-color-777">Studio</a>, <a href="wedding-photography51ed.html?s=celebrity-photographer" class="tx-color-777">Celebrity Photographer</a> </p>
-
-</div>
-
-                </div>
-
-
-            </div>
-            <div class="col-md-3">
-                <a class="dataToggle" label="photographer">
-                </a><div class="mn-ht-250 card" style="height:200px">
-                    <a class="dataToggle" label="photographer">
-                    </a><div class="card-body">
-    <a class="dataToggle" label="photographer">
-        <div class="cat-img">
-            <img src="~/image/Services/icon/djblack.png" class="cat-icon" alt="Wedding Photographers">
-        </div>
-    </a>
-    <div style="text-align:center;">
-        <a><h5>@Html.ActionLink("Dj_Rocks", "Dj_Rocks", "Services", new { @class = "tx-color-778" })</h5></a>
-    </div>
-
-
-    <a href="wedding-planner/index.html"></a>
-    <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="wedding-planner54fb.html?s=event-management-companies" class="tx-color-777">Event Management Companies</a>, <a href="wedding-planner5c59.html?s=wedding-planners" class="tx-color-777">Wedding Planners</a>, </p>
-
-</div>
-                </div>
-
-
-            </div>
-
-
-            <div class="col-md-3">
-                <a class="dataToggle" label="weddingVenue">
-                </a><div class="mn-ht-250 card" style="height:200px">
-                    <a class="dataToggle" label="weddingVenue">
-                    </a><div class="card-body">
-                        <a class="dataToggle" label="weddingVenue">
-                            <div class="cat-img">
-                                <img src="~/image/Services/icon/lehengablack.png" class="cat-icon" alt="wedding venues">
-                            </div>
-                        </a>
-                        <div style="text-align:center;">
-                            <a><h5>@Html.ActionLink("Cloth_Studio", "Cloth_Studio", "Services", new { @class = "tx-color-778" })</h5></a>
-                        </div>
-                <a href="wedding-attire/index.html"></a>
-                        <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="wedding-attire0971.html?s=gowns" class="tx-color-777">Gowns</a>, <a href="wedding-attiref085.html?s=indo-western" class="tx-color-777">Indo Western</a>, <a href="wedding-attirea8c8.html?s=lehnga" class="tx-color-777">Lehnga</a>, <a href="wedding-attire3bd2.html?s=suits" class="tx-color-777">Suits</a>, <a href="wedding-attire56f4.html?s=sarees" class="tx-color-777">Sarees</a>, <a href="wedding-attire67b6.html?s=designers" class="tx-color-777">Designers</a></p>
-
-                    </div>
-                </div>
+<br />
 
 
 
-            </div>
-            <div class="col-md-3">
-                <a class="dataToggle" label="makeupartist">
-                </a><div class="mn-ht-250 card" style="height:200px">
-                    <a class="dataToggle" label="makeupartist">
-                    </a><div class="card-body">
-                        <a class="dataToggle" label="makeupartist">
-                            <div class="cat-img">
-                                <img src="~/image/Services/icon/carsblack.png" class="cat-icon" alt="Bridal Makeup Artists">
-                            </div>
-                        </a>
-                        <div style="text-align:center;">
-                            <a><h5>@Html.ActionLink("Transport", "Transport", "Services", new { @class = "tx-color-778" })</h5></a>
-                        </div>
-                <a href="bridal-jewellery/index.html"></a>
-                        <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="bridal-jewellery527a.html?s=fashion-jewellery" class="tx-color-777">Fashion Jewellery</a>, <a href="bridal-jewellery5275.html?s=artificial-jewellery" class="tx-color-777">Artificial Jewellery</a>, <a href="bridal-jewellery553b.html?s=diamond-jewellery" class="tx-color-777">Diamond Jewellery</a>, <a href="bridal-jewellery2bc3.html?s=jewellery-on-rent" class="tx-color-777">Jewellery on Rent</a></p>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-                    </div>
-                </div>
+<!-- ===== Link Swiper's CSS ===== -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- ===== Fontawesome CDN Link ===== -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+<!-- ===== CSS ===== -->
+<link rel="stylesheet" href="style.css">
+
+<!--<title>Card with Sliding Feature</title>-->
 
 
-            </div>
-            <div class="col-md-3">
-                <div class="mn-ht-250 card" style="height:200px">
-                    <div class="card-body">
-                        <div class="cat-img">
-                            <img src="~/image/Services/icon/decorblack.png" class="cat-icon" alt="Wedding Photographers">
-                        </div>
-                        <div style="text-align:center;">
-                            <a><h5>@Html.ActionLink("Wedding_Decorator", "Wedding_Decorator", "Services", new { @class = "tx-color-778" })</h5></a>
-                        </div>
-                        <a href="decorators/index.html"></a>
-                        <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="decoratorsf804.html?s=theme-decor" class="tx-color-777">Theme Decor</a>, <a href="decoratorsa885.html?s=flower" class="tx-color-777">Flower</a> </p>
+
+<section class="body2">
+
+    <div class="swiper mySwiper container">
+        <h4 class="h4">Venues</h4>
+        <div class="swiper-wrapper content">
+
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <img src="~/image/Home/w-photography.jpg" alt="">
                     </div>
 
-                </div>
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
 
-            </div>
-            <div class="col-md-3">
-                <a class="dataToggle" label="photographer">
-                </a><div class="mn-ht-250 card" style="height:200px">
-                    <a class="dataToggle" label="photographer">
-                    </a><div class="card-body">
-                        <a class="dataToggle" label="photographer">
-                            <div class="cat-img">
-                                <img src="~/image/Services/icon/mehendiblack.png" class="cat-icon" alt="Wedding Photographers">
-                            </div>
-                        </a>
-                        <div style="text-align:center;">
-                            <a><h5>@Html.ActionLink("Mehendi_Artists", "Mehendi_Artists", "Services", new { @class = "tx-color-778" })</h5></a>
-                        </div> 
-                <a href="mehendi-artists/index.html"></a>
-                        <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="mehendi-artistse473.html?s=bridal-mehendi" class="tx-color-777">Bridal Mehendi</a>, <a href="mehendi-artists04b8.html?s=tattoo-artist" class="tx-color-777">Tattoo Artist</a> </p>
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana1</span>
+                        <span class="profession">Services</span>
+                    </div>
 
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
                     </div>
                 </div>
-
-
             </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <img src="~/image/Home/w-venue.jpg" alt="">
+                    </div>
 
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
 
-            <div class="col-md-3">
-                <a class="dataToggle" label="weddingVenue">
-                </a><div class="mn-ht-250 card" style="height:200px">
-                    <a class="dataToggle" label="weddingVenue">
-                    </a><div class="card-body">
-    <a class="dataToggle" label="weddingVenue">
-        <div class="cat-img">
-            <img src="~/image/Services/icon/cateringblack.png" class="cat-icon" alt="wedding venues">
-        </div>
-    </a>
-    <div style="text-align:center;">
-        <a><h5>@Html.ActionLink("Wedding_Catering", "Wedding_Catering", "Services", new { @class = "tx-color-778" })</h5></a>
-    </div>
-    <a href="caterers/index.html"></a>
-    <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="caterers51c5.html?s=budget-caterers" class="tx-color-777">Budget Caterers</a>, <a href="caterersf9aa.html?s=concept-catering" class="tx-color-777">Concept Catering</a>, <a href="caterers5881.html?s=halwai-or-maharaaj" class="tx-color-777">Halwai or Maharaaj</a> </p>
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana2</span>
+                        <span class="profession">Services</span>
+                    </div>
 
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
 
-</div>
-                </div>
-
-
-            </div>
-            <div class="col-md-3">
-                <a class="dataToggle" label="makeupartist">
-                </a><div class="mn-ht-250 card" style="height:200px">
-                    <a class="dataToggle" label="makeupartist">
-                    </a><div class="card-body">
-                        <a class="dataToggle" label="makeupartist">
-                            <div class="cat-img">
-                                <img src="~/image/Services/icon/cardsblack.png" class="cat-icon" alt="Bridal Makeup Artists">
-                            </div>
-                        </a>
-                        <div style="text-align:center;">
-                            <a><h5>@Html.ActionLink("Invitation_Cards", "Invitation_Cards", "Services", new { @class = "tx-color-778" })</h5></a>
-                        </div>
-                <a href="invitation-cards/index.html"></a>
-                        <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="invitation-cards1d0a.html?s=designer-cards" class="tx-color-777">Designer Cards</a>, <a href="invitation-cards725c.html?s=traditional-cards" class="tx-color-777">Traditional Cards</a>, <a href="invitation-cardsad33.html?s=e-invites" class="tx-color-777">E-Invites</a></p>
-
-
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
                     </div>
                 </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img3.jpg" alt="">-->
+                    </div>
 
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
 
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana3</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img4.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana4</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img5.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana5</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img6.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana6</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img7.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana8</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img8.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana9</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img9.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana10</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
             </div>
 
-
         </div>
-
-
     </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
 </section>
+
+
+<section class="body2">
+
+    <div class="swiper mySwiper container">
+        <h4 class="h4">photographers</h4>
+        <div class="swiper-wrapper content">
+
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <img src="~/image/Home/w-photography.jpg" alt="">
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana1</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <img src="~/image/Home/w-venue.jpg" alt="">
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana2</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img3.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana3</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img4.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana4</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img5.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana5</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img6.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana6</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img7.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana8</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img8.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana9</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img9.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana10</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</section>
+
+
+<section class="body2">
+
+    <div class="swiper mySwiper container">
+        <h4 class="h4">decorators</h4>
+        <div class="swiper-wrapper content">
+
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <img src="~/image/Home/w-photography.jpg" alt="">
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana1</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <img src="~/image/Home/w-venue.jpg" alt="">
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana2</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img3.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana3</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img4.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana4</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img5.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana5</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img6.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana6</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img7.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana8</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img8.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana9</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img9.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana10</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</section>
+
+
+
+<section class="body2">
+
+    <div class="swiper mySwiper container">
+        <h4 class="h4">caterers</h4>
+        <div class="swiper-wrapper content">
+
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <img src="~/image/Home/w-photography.jpg" alt="">
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana1</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <img src="~/image/Home/w-venue.jpg" alt="">
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana2</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img3.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana3</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img4.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana4</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img5.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana5</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img6.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana6</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img7.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana8</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img8.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana9</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img9.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana10</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</section>
+
+
+
+<section class="body2">
+
+    <div class="swiper mySwiper container">
+        <h4 class="h4">makeup artist</h4>
+        <div class="swiper-wrapper content">
+
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <img src="~/image/Home/w-photography.jpg" alt="">
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana1</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <img src="~/image/Home/w-venue.jpg" alt="">
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana2</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img3.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana3</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img4.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana4</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img5.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana5</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img6.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana6</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img7.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana8</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img8.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana9</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img9.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana10</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</section>
+
+
+<section class="body2">
+
+    <div class="swiper mySwiper container">
+        <h4 class="h4">mehndi artist</h4>
+        <div class="swiper-wrapper content">
+
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <img src="~/image/Home/w-photography.jpg" alt="">
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana1</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <img src="~/image/Home/w-venue.jpg" alt="">
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana2</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img3.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana3</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img4.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana4</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img5.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana5</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img6.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana6</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img7.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana8</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img8.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana9</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img9.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana10</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</section>
+
+
+
+<section class="body2">
+
+    <div class="swiper mySwiper container">
+        <h4 class="h4">Cloth studio</h4>
+        <div class="swiper-wrapper content">
+
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <img src="~/image/Home/w-photography.jpg" alt="">
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana1</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <img src="~/image/Home/w-venue.jpg" alt="">
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana2</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img3.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana3</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img4.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana4</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img5.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana5</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img6.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana6</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img7.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana8</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img8.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana9</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img9.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana10</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</section>
+
+
+<section class="body2">
+
+    <div class="swiper mySwiper container">
+        <h4 class="h4">DJ rocks</h4>
+        <div class="swiper-wrapper content">
+
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <img src="~/image/Home/w-photography.jpg" alt="">
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana1</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <img src="~/image/Home/w-venue.jpg" alt="">
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana2</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img3.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana3</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img4.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana4</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img5.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana5</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img6.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana6</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img7.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana8</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img8.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana9</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img9.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana10</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</section>
+
+
+<section class="body2">
+
+    <div class="swiper mySwiper container">
+        <h4 class="h4">Cards</h4>
+        <div class="swiper-wrapper content">
+
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <img src="~/image/Home/w-photography.jpg" alt="">
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana1</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <img src="~/image/Home/w-venue.jpg" alt="">
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana2</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img3.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana3</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img4.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana4</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img5.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana5</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img6.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana6</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img7.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana8</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img8.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana9</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img9.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana10</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</section>
+
+<section class="body2">
+
+    <div class="swiper mySwiper container">
+        <h4 class="h4">vehicle</h4>
+        <div class="swiper-wrapper content">
+
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <img src="~/image/Home/w-photography.jpg" alt="">
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana1</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <img src="~/image/Home/w-venue.jpg" alt="">
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana2</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img3.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana3</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img4.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana4</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img5.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana5</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img6.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana6</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img7.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana8</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img8.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana9</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <div class="image">
+                        <!--<img src="images/img9.jpg" alt="">-->
+                    </div>
+
+                    <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div class="name-profession">
+                        <span class="name">Meet Makavana10</span>
+                        <span class="profession">Services</span>
+                    </div>
+
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="button">
+                        <button class="Visit">Visit Store</button>
+                        <button class="View">View Catelog</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</section>
+
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
 
