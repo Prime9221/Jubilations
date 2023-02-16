@@ -323,6 +323,8 @@
     <Content Include="Design\Forgotpass\Fpass.css" />
     <Content Include="Design\Forgotpass\Otp.css" />
     <Content Include="Design\Forgotpass\Otp.js" />
+    <Content Include="Design\Gallery\c_home.css" />
+    <Content Include="Design\Gallery\c_home.js" />
     <Content Include="Design\Header\Header.css" />
     <Content Include="Design\Header\Header.js" />
     <Content Include="Design\Home\css\bootstrap.min.css" />
@@ -684,6 +686,7 @@
     <Content Include="Views\QuickLink\Success_Story.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\QuickLink\yomesh_mansi.cshtml" />
+    <Content Include="Views\QuickLink\Gallery.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

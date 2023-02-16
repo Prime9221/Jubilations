@@ -23,6 +23,11 @@ namespace Jubilations.Controllers
             return View();
         }
 
+        public ActionResult Gallery()
+        {
+            return View();
+        }
+
         public ActionResult why_choose_us()
         {
             return View();
