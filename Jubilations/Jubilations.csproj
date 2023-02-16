@@ -154,7 +154,6 @@
     <Compile Include="Models\User_Role.cs" />
     <Compile Include="Models\User_Role_Map.cs" />
     <Compile Include="Models\Vender_Catalog.cs" />
-    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.1.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -364,6 +363,7 @@
     <Content Include="Design\Submit_Wedding\submit_wedding.css" />
     <Content Include="Design\Submit_Wedding\success_story.css" />
     <Content Include="Design\Submit_Wedding\why_choose_us.css" />
+    <Content Include="Design\Submit_Wedding\Yomesh.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -578,10 +578,73 @@
     <Content Include="image\Success_story\82.jpg" />
     <Content Include="image\Success_story\83.jpg" />
     <Content Include="image\Success_story\9.jpg" />
+    <Content Include="image\Success_story\Yomesh\1.jpg" />
+    <Content Include="image\Success_story\Yomesh\10.jpg" />
+    <Content Include="image\Success_story\Yomesh\11.jpg" />
+    <Content Include="image\Success_story\Yomesh\12.jpg" />
+    <Content Include="image\Success_story\Yomesh\13.jpg" />
+    <Content Include="image\Success_story\Yomesh\15.jpg" />
+    <Content Include="image\Success_story\Yomesh\16.jpg" />
+    <Content Include="image\Success_story\Yomesh\17.jpg" />
+    <Content Include="image\Success_story\Yomesh\18.jpg" />
+    <Content Include="image\Success_story\Yomesh\19.jpg" />
+    <Content Include="image\Success_story\Yomesh\2.jpg" />
+    <Content Include="image\Success_story\Yomesh\20.jpg" />
+    <Content Include="image\Success_story\Yomesh\21.jpg" />
+    <Content Include="image\Success_story\Yomesh\22.jpg" />
+    <Content Include="image\Success_story\Yomesh\23.jpg" />
+    <Content Include="image\Success_story\Yomesh\24.jpg" />
+    <Content Include="image\Success_story\Yomesh\25.jpg" />
+    <Content Include="image\Success_story\Yomesh\26.jpg" />
+    <Content Include="image\Success_story\Yomesh\27.jpg" />
+    <Content Include="image\Success_story\Yomesh\28.jpg" />
+    <Content Include="image\Success_story\Yomesh\29.jpg" />
+    <Content Include="image\Success_story\Yomesh\3.jpg" />
+    <Content Include="image\Success_story\Yomesh\30.jpg" />
+    <Content Include="image\Success_story\Yomesh\31.jpg" />
+    <Content Include="image\Success_story\Yomesh\32.jpg" />
+    <Content Include="image\Success_story\Yomesh\33.jpg" />
+    <Content Include="image\Success_story\Yomesh\34.jpg" />
+    <Content Include="image\Success_story\Yomesh\35.jpg" />
+    <Content Include="image\Success_story\Yomesh\36.jpg" />
+    <Content Include="image\Success_story\Yomesh\37.jpg" />
+    <Content Include="image\Success_story\Yomesh\38.jpg" />
+    <Content Include="image\Success_story\Yomesh\39.jpg" />
+    <Content Include="image\Success_story\Yomesh\4.jpg" />
+    <Content Include="image\Success_story\Yomesh\40.jpg" />
+    <Content Include="image\Success_story\Yomesh\41.jpg" />
+    <Content Include="image\Success_story\Yomesh\42.jpg" />
+    <Content Include="image\Success_story\Yomesh\43.jpg" />
+    <Content Include="image\Success_story\Yomesh\44.jpg" />
+    <Content Include="image\Success_story\Yomesh\45.jpg" />
+    <Content Include="image\Success_story\Yomesh\46.jpg" />
+    <Content Include="image\Success_story\Yomesh\47.jpg" />
+    <Content Include="image\Success_story\Yomesh\48.jpg" />
+    <Content Include="image\Success_story\Yomesh\49.jpg" />
+    <Content Include="image\Success_story\Yomesh\5.jpg" />
+    <Content Include="image\Success_story\Yomesh\50.jpg" />
+    <Content Include="image\Success_story\Yomesh\51.jpg" />
+    <Content Include="image\Success_story\Yomesh\53.jpg" />
+    <Content Include="image\Success_story\Yomesh\54.jpg" />
+    <Content Include="image\Success_story\Yomesh\55.jpg" />
+    <Content Include="image\Success_story\Yomesh\56.jpg" />
+    <Content Include="image\Success_story\Yomesh\57.jpg" />
+    <Content Include="image\Success_story\Yomesh\58.jpg" />
+    <Content Include="image\Success_story\Yomesh\59.jpg" />
+    <Content Include="image\Success_story\Yomesh\6.jpg" />
+    <Content Include="image\Success_story\Yomesh\7.jpg" />
+    <Content Include="image\Success_story\Yomesh\8.jpg" />
+    <Content Include="image\Success_story\Yomesh\9.jpg" />
+    <Content Include="image\Success_story\Yomesh\icon\banqueticon.png" />
+    <Content Include="image\Success_story\Yomesh\icon\bjicon.png" />
+    <Content Include="image\Success_story\Yomesh\icon\decoricon.png" />
+    <Content Include="image\Success_story\Yomesh\icon\groom.png" />
+    <Content Include="image\Success_story\Yomesh\icon\lehengaicon.png" />
+    <Content Include="image\Success_story\Yomesh\icon\makeupicon.png" />
+    <Content Include="image\Success_story\Yomesh\icon\mehendi.png" />
+    <Content Include="image\Success_story\Yomesh\icon\photo.png" />
+    <Content Include="image\Success_story\Yomesh\icon\wedding.png" />
     <Content Include="image\white.png" />
-    <Content Include="obj\Debug\Jubilations.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\Jubilations.dll" />
-    <Content Include="obj\Debug\Jubilations.pdb" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -628,10 +691,6 @@
     <Content Include="image\.picasa.ini" />
     <Content Include="image\.picasaoriginals\.picasa.ini" />
     <Content Include="Design\Home\lib\owlcarousel\LICENSE" />
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="obj\Debug\Jubilations.csproj.AssemblyReference.cache" />
-    <Content Include="obj\Debug\Jubilations.csproj.CoreCompileInputs.cache" />
-    <Content Include="obj\Debug\Jubilations.csproj.GenerateResource.cache" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -687,7 +746,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -720,7 +778,6 @@
     <EmbeddedResource Include="Migrations\202302031803129_first.resx">
       <DependentUpon>202302031803129_first.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="obj\Debug\Jubilations.Migrations.first.resources" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
