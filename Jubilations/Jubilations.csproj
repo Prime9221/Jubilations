@@ -361,6 +361,7 @@
     <Content Include="Design\Submit_Wedding\pic_story.css" />
     <Content Include="Design\Submit_Wedding\select2.css" />
     <Content Include="Design\Submit_Wedding\submit_wedding.css" />
+    <Content Include="Design\Submit_Wedding\success1.css" />
     <Content Include="Design\Submit_Wedding\success_story.css" />
     <Content Include="Design\Submit_Wedding\why_choose_us.css" />
     <Content Include="Design\Submit_Wedding\Yomesh.css" />
