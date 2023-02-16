@@ -268,20 +268,21 @@
                     <i class="bi bi-link icon"></i>
                     <div>
                         <h4>Quick Link</h4>
-                        <div class="row">
-                            <div class="col-lg-3">
+                        <div class="row" id="col">
+                            <div class="col-lg-3" >
                                 <div class="col">@Html.ActionLink("Home", "Index", "Home")</div>
                                 <div class="col">@Html.ActionLink("About", "About_us", "Contact")</div>
                                 <div class="col">@Html.ActionLink("Service", "Services", "Services")</div>
                                 <div class="col">@Html.ActionLink("T&C", "Terms", "QuickLink")</div>
-                                <div class="col">Gallery</div>
+                                @*<div class="col">Gallery</div>*@
                                 <div class="col">@Html.ActionLink("Blog", "Blog1", "Contact")</div>
+                                <div class="col">@Html.ActionLink("Contact", "Contact_us", "Contact")</div>
 
                             </div>
 
                             <div class="col-lg-9">
 
-                                <div class="col">Portfolio</div>
+                                @*<div class="col">Portfolio</div>*@
                                 <div class="col">@Html.ActionLink("Privacy Policy", "Privacy_Policy", "QuickLink")</div>
                                 <div class="col">@Html.ActionLink("Contact", "Contact_us", "Contact")</div>
                                 <div class="col">@Html.ActionLink("Success Story", "Success_Story", "QuickLink")</div>

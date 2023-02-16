@@ -4,13 +4,11 @@
     Layout = "~/Views/Layout/_LayoutPage1.cshtml";
 }
 
-
-<link href="~/Design/Gallery/c_home.css" rel="stylesheet" />
-
+<link href="~/Design/Submit_Wedding/S_home.css" rel="stylesheet" />
 <br />
 <br />
 <br />
-
+<br />
 
 
 <meta charset="UTF-8">
@@ -61,8 +59,8 @@
                     </div>
 
                     <div class="button">
-                        <button class="Visit">Visit Store</button>
-                        <button class="View">View Catelog</button>
+                        <button class="Visit">@Html.ActionLink("Visit Store", "venue1", "Services")</button>
+                        <button class="View">@Html.ActionLink("View Catelog", "ViewCatelog", "Services")</button>
                     </div>
                 </div>
             </div>
