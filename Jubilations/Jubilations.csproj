@@ -318,6 +318,7 @@
     <Content Include="Design\Blog\Blog1.css" />
     <Content Include="Design\Blog\ViewBlog1.css" />
     <Content Include="Design\Contact\Contact.css" />
+    <Content Include="Design\feedback\feedback.css" />
     <Content Include="Design\Footer\Footer.css" />
     <Content Include="Design\Forgotpass\Fpass.css" />
     <Content Include="Design\Forgotpass\Otp.css" />
@@ -792,6 +793,7 @@
     <Content Include="Views\QuickLink\yomesh_mansi.cshtml" />
     <Content Include="Views\QuickLink\Gallery.cshtml" />
     <Content Include="Views\Services\ViewCatelog.cshtml" />
+    <Content Include="Views\QuickLink\Feedback.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
