@@ -3159,6 +3159,7 @@
     <Content Include="Views\A_admin\Enhanced.cshtml" />
     <Content Include="Views\QuickLink\Feedback.cshtml" />
     <Content Include="Views\Login\businessForm.cshtml" />
+    <Content Include="Views\Login\verifyotp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

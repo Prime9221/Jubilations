@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "verifyotp";
+}
+
+<link href="~/Design/Forgotpass/Fpass.css" rel="stylesheet" />
+<link href="~/Design/Forgotpass/Otp.css" rel="stylesheet" />
+<script src="~/Design/Forgotpass/Otp.js"></script>
+<style>
+    body {
+        background-image: url('../../image/background/bg-0.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+</style>
+
+
+@*<script>
+        let digitValidate = function (ele) {
+            console.log(ele.value);
+            ele.value = ele.value.replace(/[^0-9]/g, '');
+        }
+
+        let tabChange = function (val) {
+            let ele = document.querySelectorAll('.otp');
+            if (ele[val - 1].value != '') {
+                ele[val].focus()
+            } else if (ele[val - 1].value == '') {
+                ele[val - 2].focus()
+            }
+        }
+
+
+    </script>*@
+
+
+
+
+
+<body>
+    <div class="form">
+        <div class="form__box">
+            <div class="form__left">
+                <div class="form__padding"><img class="form__image" src="~/image/forgote_password/Forgot-email-cover.png" /></div>
+            </div>
+            <div class="form__right">
+                <div class="form__padding-right">
+
+                    <div class="title">
+                        Verify OTP
+                    </div>
+                    <h4>
+                        Enter Otp Resived on your Registered Number
+                    </h4>
+                    <form action="" class="mt-5">
+                        <input class="otp" type="text" oninput='digitValidate(this)' onkeyup='tabChange(1)' maxlength=1>
+                        <input class="otp" type="text" oninput='digitValidate(this)' onkeyup='tabChange(2)' maxlength=1>
+                        <input class="otp" type="text" oninput='digitValidate(this)' onkeyup='tabChange(3)' maxlength=1>
+                        <input class="otp" type="text" oninput='digitValidate(this)' onkeyup='tabChange(4)' maxlength=1>
+
+                    </form>
+                    <button id="Prime">@Html.ActionLink("verified", "Login", "Login", new { @id = "Prime2" })</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
