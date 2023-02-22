@@ -10,6 +10,8 @@ namespace Jubilations.Controllers
     {
         public ActionResult Contact_us()
         {
+
+
             return View();
         }
         public ActionResult About_us()
