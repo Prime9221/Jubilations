@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
 
-
-
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Jubilations Bootstrap Template - Index</title>
+    <title>Jubilations Index</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -33,9 +31,6 @@
     <!-- Template Main CSS File -->
     <link href="~/assets/css/main.css" rel="stylesheet">
 
-   
-
-
 </head>
 <body>
 
@@ -54,8 +49,8 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a href="#hero">Link</a></li>
-                    <li><a href="#about">Link</a></li>
+                    @*<li><a href="#hero">Link</a></li>
+                    <li><a href="#about">Link</a></li>*@
                     <li><a>@Html.ActionLink("Home", "Index", "Home")</a></li>
                     <li class="dropdown">
                         <a>@Html.ActionLink("Services", "Services", "Services")</a>
@@ -255,6 +250,7 @@
                                 <div class="col">@Html.ActionLink("Success Story", "Success_Story", "QuickLink")</div>
                                 <div class="col">@Html.ActionLink("Submit Your vibes", "Submit_Wedding", "QuickLink")</div>
                                 <div class="col">@Html.ActionLink("Why Choose Us!?", "why_choose_us", "QuickLink")</div>
+                                <div class="col">@Html.ActionLink("Feedback", "Feedback", "QuickLink")</div>
                             </div>
                         </div>
                     </div>

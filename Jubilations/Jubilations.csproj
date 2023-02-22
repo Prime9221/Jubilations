@@ -2356,6 +2356,7 @@
     <Content Include="Design\Blog\Blog1.css" />
     <Content Include="Design\Blog\ViewBlog1.css" />
     <Content Include="Design\Contact\Contact.css" />
+    <Content Include="Design\feedback\feedback.css" />
     <Content Include="Design\Footer\Footer.css" />
     <Content Include="Design\Forgotpass\Fpass.css" />
     <Content Include="Design\Forgotpass\Otp.css" />
@@ -3117,7 +3118,6 @@
     <Content Include="Views\QuickLink\Terms.cshtml" />
     <Content Include="Views\QuickLink\Privacy_Policy.cshtml" />
     <Content Include="Views\QuickLink\Submit_Wedding.cshtml" />
-    <Content Include="Views\Login\businessForm.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Services\Bridal_Makeup_Artists.cshtml" />
     <Content Include="Views\Services\Cloth_Studio.cshtml" />
@@ -3129,7 +3129,6 @@
     <Content Include="Views\Services\Wedding_Catering.cshtml" />
     <Content Include="Views\Services\Wedding_Decorator.cshtml" />
     <Content Include="Views\Services\Wedding_Photographers.cshtml" />
-    <Content Include="Views\Login\businessForm.cshtml" />
     <Content Include="Views\QuickLink\why_choose_us.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\QuickLink\Success_Story.cshtml" />
@@ -3167,6 +3166,9 @@
     <Content Include="Views\A_admin\Error_500.cshtml" />
     <Content Include="Views\A_admin\Simple_Search.cshtml" />
     <Content Include="Views\A_admin\Enhanced.cshtml" />
+    <Content Include="Views\QuickLink\Feedback.cshtml" />
+    <Content Include="Views\Login\businessForm.cshtml" />
+    <Content Include="Views\Login\verifyotp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

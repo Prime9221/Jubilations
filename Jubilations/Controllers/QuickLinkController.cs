@@ -42,5 +42,10 @@ namespace Jubilations.Controllers
         {
             return View();
         }
+
+        public ActionResult Feedback()
+        {
+            return View();
+        }
     }
 }

@@ -79,7 +79,8 @@
                     </div>
                     <div class="submit">
                         <button>@Html.ActionLink("business registration", "businessForm", "Login", new { @type = "submit" })</button>
-                        <button class="dark">Register</button>
+                        @*<button>@Html.ActionLink("Submit", "verifyotp", "Login", new { @class = "dark" })</button>*@
+                        <button class="dark" type="submit" id="submit">@Html.ActionLink("Submit", "verifyotp", "Login", new {@class="dark"})</button>
                     </div>
                 </form>
             </div>
