@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Jubilations.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -33,5 +34,7 @@ namespace Jubilation.Models
         public DbSet<Service_Role_Map> service_role_map { get; set; }
 
         public DbSet<Vender_Catalog> vender_catalog { get; set; }
+
+        public DbSet<FeedBack> feedBacks { get; set; }
     }
 }

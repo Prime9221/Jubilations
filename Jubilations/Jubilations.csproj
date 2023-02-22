@@ -140,6 +140,14 @@
     <Compile Include="Migrations\202302031803129_first.designer.cs">
       <DependentUpon>202302031803129_first.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202302220527345_feedback.cs" />
+    <Compile Include="Migrations\202302220527345_feedback.designer.cs">
+      <DependentUpon>202302220527345_feedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302220531416_feedback2.cs" />
+    <Compile Include="Migrations\202302220531416_feedback2.designer.cs">
+      <DependentUpon>202302220531416_feedback2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Blog.cs" />
     <Compile Include="Models\Blog_Comment.cs" />
@@ -147,6 +155,7 @@
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\DBEntity.cs" />
+    <Compile Include="Models\FeedBack.cs" />
     <Compile Include="Models\Services.cs" />
     <Compile Include="Models\Service_Role.cs" />
     <Compile Include="Models\Service_Role_Map.cs" />
@@ -3192,6 +3201,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202302031803129_first.resx">
       <DependentUpon>202302031803129_first.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302220527345_feedback.resx">
+      <DependentUpon>202302220527345_feedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302220531416_feedback2.resx">
+      <DependentUpon>202302220531416_feedback2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

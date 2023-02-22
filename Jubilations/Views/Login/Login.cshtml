@@ -43,7 +43,7 @@
                     <h3>Login</h3>
                     <div class="mail">
                         <input type="text" name="">
-                        <label>Mail or Username</label>
+                        <label>Mail or PhoneNo</label>
                     </div>
                     <div class="passwd">
                         <input type="password" name="">
@@ -58,7 +58,7 @@
                     <h3>User Register</h3>
                     <div class="name">
                         <input type="text" name="">
-                        <label>Full Name</label>
+                        <label>User Name</label>
                     </div>
                     <div class="mail">
                         <input type="mail" name="">
@@ -66,14 +66,19 @@
                     </div>
                     <div class="uid">
                         <input type="text" name="">
-                        <label>User Name</label>
+                        <label>Phone No.</label>
+                        
                     </div>
                     <div class="passwd">
                         <input type="password" name="">
                         <label>Password</label>
                     </div>
+                    <div class="passwd">
+                        <input type="password" name="">
+                        <label>Confirm-Password</label>
+                    </div>
                     <div class="submit">
-                        <button>@Html.ActionLink("business registration", "businessForm", "Login", new {@type="submit"})</button>
+                        <button>@Html.ActionLink("business registration", "businessForm", "Login", new { @type = "submit" })</button>
                         <button class="dark">Register</button>
                     </div>
                 </form>
