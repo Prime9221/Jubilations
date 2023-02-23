@@ -27,7 +27,7 @@ namespace Jubilation.Models
 
 
 
-        public string SuccessStory_Rating { get; set; }
+        public string SuccessStory_Images { get; set; }
         public string SuccessStory_Message { get; set; }
         public string SuccessStory_Create_Date { get; set; }
         public string SuccessStory_Update_Date { get; set; }

@@ -38,5 +38,10 @@ namespace Jubilations.Controllers
         {
             return View();
         }
+
+        public ActionResult verifyotp()
+        {
+            return View();
+        }
     }
 }

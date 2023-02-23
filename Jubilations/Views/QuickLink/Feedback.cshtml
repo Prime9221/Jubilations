@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Feedback";
+    Layout = "~/Views/Layout/_LayoutPage1.cshtml";
+}
+<link href="~/Design/feedback/feedback.css" rel="stylesheet" />
+<style>
+    body {
+        background-image: url('../../image/background/bg-0.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+</style>
+<center>
+    <section id="contact">
+        <div class="contact-box">
+
+            <div class="contact-form-wrapper">
+                <h2 style="font-family: 'Dancing Script', cursive; color:#49524c">FeedBack</h2><br />
+                <form>
+                    <div class="form-item">
+                        <input type="text" name="sender" required>
+                        <label>Name:</label>
+                    </div>  
+                    <div class="form-item">
+                        <input type="text" name="email" required>
+                        <label>Email:</label>
+                    </div>
+                    <div class="form-item">
+                        <textarea class="" name="message" required></textarea>
+                        <label>Message:</label>
+                    </div>
+                    <button class="submit-btn">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</center>

@@ -46,6 +46,16 @@ a:hover {
   text-decoration: none;
 }
 
+.col {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+    .col:hover {
+        color: white !important;
+        text-decoration: none;
+    }
+
 h1,
 h2,
 h3,
@@ -312,7 +322,7 @@ section {
 
 .header .btn-book-a-table:hover,
 .header .btn-book-a-table:focus:hover {
-  color: #fff;
+  color: #fff !important;
   background: rgba(206, 18, 18, 0.8);
 }
 
@@ -391,7 +401,7 @@ section {
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color: #fff;
+    color: #fff !important;
   }
 
   .navbar .dropdown ul {
@@ -637,7 +647,7 @@ section {
 }
 
 .footer .footer-links ul a:hover {
-  color: #fff;
+  color: #fff !important;
 }
 
 .footer .social-links a {
