@@ -1,0 +1,531 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+
+
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://demos.themeselection.com/sneat-aspnet-core-admin-template/assets/~/Design/V_admin/img/favicon/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="~/Design/V_admin/vendor/fonts/boxicons.css" />
+    <link rel="stylesheet" href="~/Design/V_admin/vendor/fonts/fontawesome.css" />
+    <link rel="stylesheet" href="~/Design/V_admin/vendor/fonts/flag-icons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="~/Design/V_admin/vendor/css/rtl/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="~/Design/V_admin/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="~/Design/V_admin/css/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="~/Design/V_admin/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="~/Design/V_admin/vendor/libs/typeahead-js/typeahead.css" />
+    <link rel="stylesheet" href="~/Design/V_admin/vendor/libs/apex-charts/apex-charts.css" />
+    <link rel="stylesheet" href="~/Design/V_admin/vendor/libs/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="~/Design/V_admin/vendor/libs/quill/katex.css" />
+    <link rel="stylesheet" href="~/Design/V_admin/vendor/libs/quill/editor.css" />
+    <link rel="stylesheet" href="~/Design/V_admin/vendor/libs/select2/select2.css" />
+    <link rel="stylesheet" href="~/Design/V_admin/vendor/libs/bootstrap-maxlength/bootstrap-maxlength.css" />
+    <link rel="stylesheet" href="~/Design/V_admin/vendor/libs/fullcalendar/fullcalendar.css" />
+    <link rel="stylesheet" href="~/Design/V_admin/vendor/libs/flatpickr/flatpickr.css" />
+    <link rel="stylesheet" href="~/Design/V_admin/vendor/libs/quill/editor.css" />
+    <link rel="stylesheet" href="~/Design/V_admin/vendor/libs/formvalidation/dist/css/formValidation.min.css" />
+    <link rel="stylesheet" href="~/Design/V_admin/vendor/libs/datatables-bs5/datatables.bootstrap5.css">
+    <link rel="stylesheet" href="~/Design/V_admin/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css">
+    <link rel="stylesheet" href="~/Design/V_admin/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css">
+    <link rel="stylesheet" href="~/Design/V_admin/vendor/libs/animate-css/animate.css" />
+    <link rel="stylesheet" href="~/Design/V_admin/vendor/libs/sweetalert2/sweetalert2.css" />
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="~/Design/V_admin/vendor/css/pages/app-calendar.css" />
+    <link rel="stylesheet" href="~/Design/V_admin/vendor/css/pages/app-chat.css">
+    <link rel="stylesheet" href="~/Design/V_admin/vendor/css/pages/app-email.css" />
+    <link rel="stylesheet" href="~/Design/V_admin/vendor/css/pages/app-invoice.css" />
+    <link rel="stylesheet" href="~/Design/V_admin/vendor/css/pages/page-user-view.css" />
+    @*<link rel="stylesheet" href="~/Design/V_admin/vendor/css/pages/app-invoice-print.css" />*@
+    <!-- Helpers -->
+    <script src="~/Design/V_admin/vendor/js/helpers.js"></script>
+
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
+    <!-- <script src="~/Design/V_admin/vendor/js/template-customizer.js"></script> -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="~/Design/V_admin/js/config.js"></script>
+    <style>
+        #body {
+            height: 520px;
+            overflow: auto;
+            padding: 10px;
+        }
+    </style>
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="layout-wrapper layout-content-navbar  ">
+        <div class="layout-container">
+
+            <!-- Menu -->
+            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+                <div class="app-brand demo ">
+                    <a href="index-2.html" class="app-brand-link">
+                        <span class="app-brand-logo demo"></span>
+                        <img src="~/Design/V_admin/img/jubilation3pic.png" style="height:160px; width:200px; " alt="">
+                    </a>
+                    <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
+                        <i class="bx bx-chevron-left bx-sm align-middle"></i>
+                    </a>
+                </div>
+                <div class="menu-inner-shadow"></div>
+                <ul class="menu-inner py-1">
+                    <!-- Dashboards -->
+                    <li class="menu-item">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                            <div data-i18n="Dashboards">Dashboards</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="~/V_admin/Dashboard" class="menu-link">
+                                    <div data-i18n="Analytics">Analytics</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="~/V_admin/dashboards_crm" class="menu-link">
+                                    <div data-i18n="CRM">CRM</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="~/V_admin/dashboards_ecommerce" class="menu-link">
+                                    <div data-i18n="eCommerce">eCommerce</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Apps & Pages -->
+                    <li class="menu-header small text-uppercase">
+                        <span class="menu-header-text">Apps &amp; Pages</span>
+                    </li>
+                    <li class="menu-item">
+                        <a href="~/V_admin/app_email" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-envelope"></i>
+                            <div data-i18n="Email">Email</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="~/V_admin/maps_leaflet" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-map"></i>
+                            <div data-i18n="Map">Maps</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="~/V_admin/app_chat" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-chat"></i>
+                            <div data-i18n="Chat">Chat</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="~/V_admin/app_calendar" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-calendar"></i>
+                            <div data-i18n="Calendar">Calendar</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <i class='menu-icon tf-icons bx bx-food-menu'></i>
+                            <div data-i18n="Invoice">Invoice</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="~/V_admin/app_invoice_list" class="menu-link">
+                                    <div data-i18n="List">List</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="~/V_admin/app_invoice_preview" class="menu-link">
+                                    <div data-i18n="Preview">Preview</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="~/V_admin/app_invoice_edit" class="menu-link">
+                                    <div data-i18n="Edit">Edit</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="~/V_admin/app_invoice_add" class="menu-link">
+                                    <div data-i18n="Add">Add</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-user"></i>
+                            <div data-i18n="Users">Users</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="~/V_admin/app_use_list" class="menu-link">
+                                    <div data-i18n="List">List</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                                    <div data-i18n="View">View</div>
+                                </a>
+                                <ul class="menu-sub">
+                                    <li class="menu-item">
+                                        <a href="~/V_admin/app_user_view_account" class="menu-link">
+                                            <div data-i18n="Account">Account</div>
+                                        </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="~/V_admin/app_user_view_security" class="menu-link">
+                                            <div data-i18n="Security">Security</div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <i class='menu-icon tf-icons bx bx-check-shield'></i>
+                            <div data-i18n="Roles & Permissions">Roles & Permissions</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="~/V_admin/app_access_roles" class="menu-link">
+                                    <div data-i18n="Roles">Roles</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="~/V_admin/app_access_permission" class="menu-link">
+                                    <div data-i18n="Permission">Permission</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </aside>
+            <!-- / Menu -->
+
+
+
+
+            <div class="layout-page">
+                <!-- Navbar -->
+                <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
+                    <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0   d-xl-none ">
+                        <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                            <i class="bx bx-menu bx-sm"></i>
+                        </a>
+                    </div>
+                    <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+                        <!-- Search -->
+                        <div class="navbar-nav align-items-center">
+                            <div class="nav-item navbar-search-wrapper mb-0">
+                                <a class="nav-item nav-link search-toggler px-0" href="javascript:void(0);">
+                                    <i class="bx bx-search bx-sm"></i>
+                                    <span class="d-none d-md-inline-block text-muted">Search (Ctrl+/)</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /Search -->
+                        <ul class="navbar-nav flex-row align-items-center ms-auto">
+                            <!-- Style Switcher -->
+                            <li class="nav-item me-2 me-xl-0">
+                                <a class="nav-link style-switcher-toggle hide-arrow" href="javascript:void(0);">
+                                    <i class='bx bx-sm'></i>
+                                </a>
+                            </li>
+                            <!--/ Style Switcher -->
+                            <!-- Quick links  -->
+                            <li class="nav-item dropdown-shortcuts navbar-dropdown dropdown me-2 me-xl-0">
+                                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                                    <i class='bx bx-grid-alt bx-sm'></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end py-0">
+                                    <div class="dropdown-menu-header border-bottom">
+                                        <div class="dropdown-header d-flex align-items-center py-3">
+                                            <h5 class="text-body mb-0 me-auto">Shortcuts</h5>
+                                            <a href="javascript:void(0)" class="dropdown-shortcuts-add text-body" data-bs-toggle="tooltip" data-bs-placement="top" title="Add shortcuts"><i class="bx bx-sm bx-plus-circle"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-shortcuts-list scrollable-container">
+                                        <div class="row row-bordered overflow-visible g-0">
+                                            <div class="dropdown-shortcuts-item col">
+                                                <span class="dropdown-shortcuts-icon bg-label-secondary rounded-circle mb-2">
+                                                    <i class="bx bx-calendar fs-4"></i>
+                                                </span>
+                                                <a href="app-calendar.html" class="stretched-link">Calendar</a>
+                                                <small class="text-muted mb-0">Appointments</small>
+                                            </div>
+                                            <div class="dropdown-shortcuts-item col">
+                                                <span class="dropdown-shortcuts-icon bg-label-secondary rounded-circle mb-2">
+                                                    <i class="bx bx-food-menu fs-4"></i>
+                                                </span>
+                                                <a href="app-invoice-list.html" class="stretched-link">Invoice App</a>
+                                                <small class="text-muted mb-0">Manage Accounts</small>
+                                            </div>
+                                        </div>
+                                        <div class="row row-bordered overflow-visible g-0">
+                                            <div class="dropdown-shortcuts-item col">
+                                                <span class="dropdown-shortcuts-icon bg-label-secondary rounded-circle mb-2">
+                                                    <i class="bx bx-user fs-4"></i>
+                                                </span>
+                                                <a href="app-user-list.html" class="stretched-link">User App</a>
+                                                <small class="text-muted mb-0">Manage Users</small>
+                                            </div>
+                                            <div class="dropdown-shortcuts-item col">
+                                                <span class="dropdown-shortcuts-icon bg-label-secondary rounded-circle mb-2">
+                                                    <i class="bx bx-check-shield fs-4"></i>
+                                                </span>
+                                                <a href="app-access-roles.html" class="stretched-link">Role Management</a>
+                                                <small class="text-muted mb-0">Permission</small>
+                                            </div>
+                                        </div>
+                                        <div class="row row-bordered overflow-visible g-0">
+                                            <div class="dropdown-shortcuts-item col">
+                                                <span class="dropdown-shortcuts-icon bg-label-secondary rounded-circle mb-2">
+                                                    <i class="bx bx-pie-chart-alt-2 fs-4"></i>
+                                                </span>
+                                                <a href="index-2.html" class="stretched-link">Dashboard</a>
+                                                <small class="text-muted mb-0">User Profile</small>
+                                            </div>
+                                            <div class="dropdown-shortcuts-item col">
+                                                <span class="dropdown-shortcuts-icon bg-label-secondary rounded-circle mb-2">
+                                                    <i class="bx bx-cog fs-4"></i>
+                                                </span>
+                                                <a href="pages-account-settings-account.html" class="stretched-link">Setting</a>
+                                                <small class="text-muted mb-0">Account Settings</small>
+                                            </div>
+                                        </div>
+                                        <div class="row row-bordered overflow-visible g-0">
+                                            <div class="dropdown-shortcuts-item col">
+                                                <span class="dropdown-shortcuts-icon bg-label-secondary rounded-circle mb-2">
+                                                    <i class="bx bx-help-circle fs-4"></i>
+                                                </span>
+                                                <a href="pages-help-center-landing.html" class="stretched-link">Help Center</a>
+                                                <small class="text-muted mb-0">FAQs & Articles</small>
+                                            </div>
+                                            <div class="dropdown-shortcuts-item col">
+                                                <span class="dropdown-shortcuts-icon bg-label-secondary rounded-circle mb-2">
+                                                    <i class="bx bx-window-open fs-4"></i>
+                                                </span>
+                                                <a href="modal-examples.html" class="stretched-link">Modals</a>
+                                                <small class="text-muted mb-0">Useful Popups</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- Quick links -->
+                            <!-- User -->
+                            <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                                    <div class="avatar avatar-online">
+                                        <img src="~/Design/V_admin/img/avatars/1.png" alt="image" class="w-px-40 h-auto rounded-circle">
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        <a class="dropdown-item" href="pages-account-settings-account.html">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0 me-3">
+                                                    <div class="avatar avatar-online">
+                                                        <img src="~/Design/V_admin/img/avatars/1.png" alt="image" class="w-px-40 h-auto rounded-circle">
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <span class="fw-semibold d-block">Jubilations</span>
+                                                    <small class="text-muted">Admin</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="dropdown-divider"></div>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="pages-profile-user.html">
+                                            <i class="bx bx-user me-2"></i>
+                                            <span class="align-middle">My Profile</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="pages-account-settings-account.html">
+                                            <i class="bx bx-cog me-2"></i>
+                                            <span class="align-middle">Settings</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="pages-account-settings-billing.html">
+                                            <span class="d-flex align-items-center align-middle">
+                                                <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
+                                                <span class="flex-grow-1 align-middle">Billing</span>
+                                                <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="dropdown-divider"></div>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="pages-help-center-landing.html">
+                                            <i class="bx bx-support me-2"></i>
+                                            <span class="align-middle">Help</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="pages-faq.html">
+                                            <i class="bx bx-help-circle me-2"></i>
+                                            <span class="align-middle">FAQ</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="pages-pricing.html">
+                                            <i class="bx bx-dollar me-2"></i>
+                                            <span class="align-middle">Pricing</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="dropdown-divider"></div>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="auth-login-cover.html" target="_blank">
+                                            <i class="bx bx-power-off me-2"></i>
+                                            <span class="align-middle">Log Out</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!--/ User -->
+                        </ul>
+                    </div>
+                    <!-- Search Small Screens -->
+                    <div class="navbar-search-wrapper search-input-wrapper  d-none">
+                        <input type="text" class="form-control search-input container-xxl border-0" placeholder="Search..." aria-label="Search...">
+                        <i class="bx bx-x bx-sm search-toggler cursor-pointer"></i>
+                    </div>
+                </nav>
+                <!-- / Navbar -->
+                <div class="content-wrapper">
+                    <div id="body">
+
+                        @RenderBody()
+                    </div>
+                </div>
+                <footer class="content-footer footer bg-footer-theme">
+                    <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+                        <div class="mb-2 mb-md-0">
+                            ©
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script>
+                            , made with ❤️ by <a href="" target="_blank" class="footer-link fw-bolder">jubilation</a>
+                        </div>
+                        <div>
+                            <a href="" class="footer-link me-4" target="_blank">License</a>
+                            <a href="" target="_blank" class="footer-link me-4">More Themes</a>
+                            <a href="" target="_blank" class="footer-link me-4">Documentation</a>
+                            <a href="" target="_blank" class="footer-link d-none d-sm-inline-block">Support</a>
+                        </div>
+                    </div>
+                </footer>
+                <!-- Overlay -->
+                <div class="layout-overlay layout-menu-toggle"></div>
+                <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+                <div class="drag-target"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="~/Design/V_admin/vendor/libs/jquery/jquery.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/popper/popper.js"></script>
+    <script src="~/Design/V_admin/vendor/js/bootstrap.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/hammer/hammer.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/i18n/i18n.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/typeahead-js/typeahead.js"></script>
+    <script src="~/Design/V_admin/vendor/js/menu.js"></script>
+    <!-- endbuild -->
+    <!-- Vendors JS -->
+    <script src="~/Design/V_admin/vendor/libs/apex-charts/apexcharts.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/leaflet/leaflet.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/quill/katex.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/quill/quill.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/select2/select2.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/block-ui/block-ui.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/bootstrap-maxlength/bootstrap-maxlength.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/fullcalendar/fullcalendar.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/formvalidation/dist/js/FormValidation.min.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/select2/select2.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/flatpickr/flatpickr.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/moment/moment.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/datatables/jquery.dataTables.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/datatables-responsive/datatables.responsive.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/datatables-buttons/datatables-buttons.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/cleavejs/cleave.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/cleavejs/cleave-phone.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/jquery-repeater/jquery-repeater.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/jszip/jszip.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/pdfmake/pdfmake.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/datatables-buttons/buttons.html5.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/datatables-buttons/buttons.print.js"></script>
+    <script src="~/Design/V_admin/vendor/libs/sweetalert2/sweetalert2.js"></script>
+    <!-- Main JS -->
+    <script src="~/Design/V_admin/js/main.js"></script>
+    <!-- Page JS -->
+    <script src="~/Design/V_admin/js/app-user-list.js"></script>
+    <script src="~/Design/V_admin/js/app-invoice-edit.js"></script>
+    <script src="~/Design/V_admin/js/offcanvas-add-payment.js"></script>
+    <script src="~/Design/V_admin/js/offcanvas-send-invoice.js"></script>
+    <script src="~/Design/V_admin/js/app-invoice-add.js"></script>
+    <script src="~/Design/V_admin/js/app-invoice-list.js"></script>
+    <script src="~/Design/V_admin/js/app-calendar-events.js"></script>
+    <script src="~/Design/V_admin/js/app-calendar.js"></script>
+    <script src="~/Design/V_admin/js/dashboards-analytics.js"></script>
+    <script src="~/Design/V_admin/js/maps-leaflet.js"></script>
+    <script src="~/Design/V_admin/js/dashboards-crm.js"></script>
+    <script src="~/Design/V_admin/js/dashboards-ecommerce.js"></script>
+    <script src="~/Design/V_admin/js/app-email.js"></script>
+    <script src="~/Design/V_admin/js/app-chat.js"></script>
+    <script src="~/Design/V_admin/js/modal-edit-user.js"></script>
+    <script src="~/Design/V_admin/js/app-user-view.js"></script>
+    <script src="~/Design/V_admin/js/app-user-view-account.js"></script>
+    @*<script src="~/Design/V_admin/js/app-invoice-print.js"></script>*@
+    <script src="~/Design/V_admin/js/app-access-roles.js"></script>
+    <script src="~/Design/V_admin/js/modal-add-role.js"></script>
+    <script src="~/Design/V_admin/js/app-access-permission.js"></script>
+    <script src="~/Design/V_admin/js/modal-add-permission.js"></script>
+    <script src="~/Design/V_admin/js/modal-edit-permission.js"></script>
+</body>
+</html>
