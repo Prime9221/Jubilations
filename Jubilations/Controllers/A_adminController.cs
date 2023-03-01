@@ -1,7 +1,11 @@
 ﻿using Jubilation.Models;
+using Jubilations.Migrations;
+using Jubilations.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -55,11 +59,37 @@ namespace Jubilations.Controllers
         {
             return View();
         }
-
+        ///about us methods start--------------------------------------------------------------------
         public ActionResult A_Aboutus()
         {
+            var data = db.aboutuss.ToList();
+            return View(data);
+        }
+
+        public ActionResult A_Aboutus_Edit(int aboutId)
+        {
+            var AboutList = db.aboutuss.Where(x => x.aboutId == aboutId).First();
+            return View(AboutList);
+        }
+        [HttpPost]
+        public ActionResult A_Aboutus_Edit(Aboutus s)
+        {
+            
+            db.Entry(s).State = EntityState.Modified;
+            int a = db.SaveChanges();
+            if (a > 0)
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                return RedirectToAction("A_Aboutus");
+            }
+            else
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+            }
+
             return View();
         }
+        ///about us methods end--------------------------------------------------------------------
         public ActionResult Projects()
         {
             return View();
