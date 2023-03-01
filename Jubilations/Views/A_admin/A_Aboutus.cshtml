@@ -1,6 +1,6 @@
-﻿
+﻿@model IEnumerable<Jubilations.Models.Aboutus>
 @{
-    ViewBag.Title = "DataTables";
+    ViewBag.Title = "A_Aboutus";
     Layout = "~/Views/Layout/_A_adminLayoutPage.cshtml";
 }
 
@@ -16,7 +16,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                  
+
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">DataTable with default features</h3>
@@ -26,11 +26,12 @@
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
-                                        <th>Rendering engine</th>
-                                        <th>Browser</th>
-                                        <th>Platform(s)</th>
-                                        <th>Engine version</th>
-                                        <th>CSS grade</th>
+                                        <th>@Html.ActionLink("title", "A_Aboutus", "A_admin", new { area = "" }, new { @class = "" })</th>
+                                        <th>@Html.ActionLink("description", "A_Aboutus", "A_admin", new { area = "" }, new { @class = "" })</th>
+                                        <th>@Html.ActionLink("Slogan1", "A_Aboutus", "A_admin", new { area = "" }, new { @class = "" })</th>
+                                        <th>@Html.ActionLink("Slogan2", "A_Aboutus", "A_admin", new { area = "" }, new { @class = "" })</th>
+                                        <th>@Html.ActionLink("Slogan3", "A_Aboutus", "A_admin", new { area = "" }, new { @class = "" })</th>
+                                        
                                     </tr>
                                 </thead>
                                 <tbody>

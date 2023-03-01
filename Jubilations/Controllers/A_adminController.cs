@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Jubilation.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,6 +10,7 @@ namespace Jubilations.Controllers
     public class A_adminController : Controller
     {
         // GET: A_admin
+        DBEntity db = new DBEntity();
         public ActionResult Dashboard()
         {
             return View();
@@ -54,7 +56,7 @@ namespace Jubilations.Controllers
             return View();
         }
 
-        public ActionResult Profiles()
+        public ActionResult A_Aboutus()
         {
             return View();
         }
