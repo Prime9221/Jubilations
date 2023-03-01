@@ -36,5 +36,7 @@ namespace Jubilation.Models
         public DbSet<Vender_Catalog> vender_catalog { get; set; }
 
         public DbSet<FeedBack> feedBacks { get; set; }
+
+        public DbSet<Aboutus> aboutuss { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Jubilation.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,15 +9,15 @@ namespace Jubilations.Controllers
 {
     public class ContactController : Controller
     {
+        DBEntity db = new DBEntity();
         public ActionResult Contact_us()
         {
-
-
             return View();
         }
         public ActionResult About_us()
         {
-            return View();
+            var data = db.aboutuss;
+            return View(data);
         }
 
         public ActionResult Blog()
