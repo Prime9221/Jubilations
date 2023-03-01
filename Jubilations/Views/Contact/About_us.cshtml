@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<Jubilations.Models.Aboutus>
 @{
     ViewBag.Title = "About_us";
     Layout = "~/Views/Layout/_LayoutPage1.cshtml";
@@ -8,71 +8,73 @@
 
 
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="~/Design/About/Team.css" rel="stylesheet" />
-    <link href="~/Design/About/About.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link href="~/Design/About/Team.css" rel="stylesheet" />
+<link href="~/Design/About/About.css" rel="stylesheet" />
 
 
 
 
 
-    <section class="about-section">
-        <div class="container">
-            <div class="row">
-                <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
-                    <div class="inner-column">
-                        <div class="sec-title">
-                            <span class="title">About Jubilation</span>
-                            <h2>India's Youngest And Sassiest Event industry portal</h2>
+
+
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        <section class="about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
+                        <div class="inner-column">
+                            <div class="sec-title">
+                                <span class="title">About Jubilation</span>
+                                <h2> @Html.DisplayFor(modelItem => item.title)</h2>
+                            </div>
+                            <div class="text">
+                                @Html.DisplayFor(modelItem => item.description)
+                            </div>
+                            <ul class="list-style-one">
+                                <li>"@Html.DisplayFor(modelItem => item.Slogan1)"</li>
+                                <li>"@Html.DisplayFor(modelItem => item.Slogan2)"</li>
+                                <li>"@Html.DisplayFor(modelItem => item.Slogan3)"</li>
+                            </ul>
                         </div>
-                        <div class="text">
-                            India's Youngest And Sassiest wedding industry portal Says Hello.
-                            We Have Carefully Curated A Selected List Of Award Winning Wedding Photographer, Lehenga
-                            Designers, Décor Artists, Caterers, Bridal Make Up And Jewellery Artists With A Dozen Other
-                            Categories To Make Sure Your Search For The Most Reliable And Stylish Wedding Planning Partner
-                            Ends Here. Strategically Divided Into Four Categories Of Wedding Partners, We Have Made Sure You
-                            Only Search What's Relevant To You But Still Catering To Every Kind Of Dreams.
-                            Come Let's Plan The Most Effing Amazing Shaadi Of The Season!
+                    </div>
+
+                    <!-- Image Column -->
+                    <div class="image-column col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner-column wow fadeInLeft">
+                            <figure class="image-1"><a href="#" class="lightbox-image" data-fancybox="images"><img src="~/image/About/Dulhan.jpg" /></a></figure>
                         </div>
-                        <ul class="list-style-one">
-                            <li>" Your vision. Our innovation: Event solutions"</li>
-                            <li>"True love stories never have endings." </li>
-                            <li>"Life is an event. Make it memorable"</li>
-                        </ul>
                     </div>
                 </div>
+            </div>
+        </section>
+    }
+}
 
-                <!-- Image Column -->
-                <div class="image-column col-lg-6 col-md-12 col-sm-12">
-                    <div class="inner-column wow fadeInLeft">
-                        <figure class="image-1"><a href="#" class="lightbox-image" data-fancybox="images"><img src="~/image/About/Dulhan.jpg" /></a></figure>
-                    </div>
+
+
+<div class="container">
+    <div class="row">
+        <center><h2>Our Team</h2></center>
+        <div class="col-md-4 col-sm-6">
+            <div class="our-team">
+                <div class="pic">
+                    <img src="~/image/About/Prime.jpeg" alt="team member" class="img-responsive">
+                </div>
+                <div class="content">
+                    <h3 class="title">Mr.Meet Makavana</h3>
+                    <span class="post">CEO</span>
+                    <ul class="social">
+                        <li><a href="https://wa.me/919909440794?text=hello%20Mr.Meet" class="fa fa-whatsapp" target="_blank"></a></li>
+                        <li><a href="https://instagram.com/mr_prime_1229?igshid=Yzg5MTU1MDY=" class="fa fa-instagram" target="_blank"></a></li>
+                        <li><a href="https://www.linkedin.com/in/meet-patel-18a52b247" class="fa fa-linkedin" target="_blank"></a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
-
-
-
-    <div class="container">
-        <div class="row">
-            <center><h2>Our Team</h2></center>
-            <div class="col-md-4 col-sm-6"> 
-                <div class="our-team">
-                    <div class="pic">
-                        <img src="~/image/About/Prime.jpeg" alt="team member" class="img-responsive">
-                    </div>
-                    <div class="content">
-                        <h3 class="title">Mr.Meet Makavana</h3>
-                        <span class="post">CEO</span>
-                        <ul class="social">
-                            <li><a href="https://wa.me/919909440794?text=hello%20Mr.Meet" class="fa fa-whatsapp" target="_blank"></a></li>
-                            <li><a href="https://instagram.com/mr_prime_1229?igshid=Yzg5MTU1MDY=" class="fa fa-instagram" target="_blank"></a></li>
-                            <li><a href="https://www.linkedin.com/in/meet-patel-18a52b247" class="fa fa-linkedin" target="_blank"></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
 
             <div class="col-md-4 col-sm-6">
                 <div class="our-team">
@@ -87,26 +89,26 @@
                             <li><a href="https://instagram.com/gopi_rupapara?igshid=Yzg5MTU1MDY=" class="fa fa-instagram" target="_blank"></a></li>
                             <li><a href="https://www.linkedin.com/in/gopika-rupapara-409282265" class="fa fa-linkedin" target="_blank"></a></li>
 
-                        </ul>
-                    </div>
+                    </ul>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="our-team">
-                    <div class="pic">
-                        <img src="~/image/About/dinal.jpg" alt="team member" class="img-responsive">
-                    </div>
-                    <div class="content">
-                        <h3 class="title">Ms.Dinal Bhimani</h3>
-                        <span class="post">Founder & Director</span>
-                        <ul class="social">
-                            <li><a href="https://wa.me/919558895097?text=hello%20Ms.Dinal" class="fa fa-whatsapp " target="_blank"></a></li>
-                            <li><a href="https://instagram.com/_dinu_bhimani?igshid=Yzg5MTU1MDY=" class="fa fa-instagram" target="_blank"></a></li>
-                            <li><a href="https://www.linkedin.com/in/dinal-bhimani-89a962209" class="fa fa-linkedin" target="_blank"></a></li>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="our-team">
+                <div class="pic">
+                    <img src="~/image/About/dinal.jpg" alt="team member" class="img-responsive">
+                </div>
+                <div class="content">
+                    <h3 class="title">Ms.Dinal Bhimani</h3>
+                    <span class="post">Founder & Director</span>
+                    <ul class="social">
+                        <li><a href="https://wa.me/919558895097?text=hello%20Ms.Dinal" class="fa fa-whatsapp " target="_blank"></a></li>
+                        <li><a href="https://instagram.com/_dinu_bhimani?igshid=Yzg5MTU1MDY=" class="fa fa-instagram" target="_blank"></a></li>
+                        <li><a href="https://www.linkedin.com/in/dinal-bhimani-89a962209" class="fa fa-linkedin" target="_blank"></a></li>
 
-                        </ul>
-                    </div>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
+</div>
