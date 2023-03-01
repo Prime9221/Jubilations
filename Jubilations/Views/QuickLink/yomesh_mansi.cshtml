@@ -7,6 +7,11 @@
 <link href="~/Design/Submit_Wedding/font.css" rel="stylesheet" />
 <link href="~/Design/Submit_Wedding/Yomesh.css" rel="stylesheet" />
 
+<style>
+    #more {
+        display: none;
+    }
+</style>
 
 
 <!-- navbar -->
@@ -22,7 +27,7 @@
                         <img src="~/image/Success_story/1.jpg" class="img-fit-cover ht-390 w-100" alt="Love Story- one of a kind!" />
                     </div>
                     <div class="rounded-5 border pd-20 position-absolute bg-white tx-center couple">
-                        <h4 class="tx-16 tx-color-666 tx-bold tx-uppercase">Pokal</h4><span class='heart main-color tx-24 tx-b0ld'><i class='fa fa-heart-o'></i> </span><h4 class='tx-16 tx-color-666 tx-bold tx-uppercase'>Hitesha</h4>
+                        <h4 class="tx-16 tx-color-666 tx-bold tx-uppercase">Varship</h4><span class='heart main-color tx-24 tx-b0ld'><i class='fa fa-heart-o'></i> </span><h4 class='tx-16 tx-color-666 tx-bold tx-uppercase'>Hitesha</h4>
                         <h6 class="location">
                             <span class="loc"> <i class="fa fa-map-marker"></i> Surat</span>
                         </h6>
@@ -77,27 +82,47 @@
     <div class="mg-t-30">
         <h3 class="dual-border tx-bold tx-color-888">The Story</h3>
         <div class="lead bg-white pd-10" height="100">
-            <p>
-                How we met: &nbsp;We somehow got in touch with one another through a college project in the year 2012 in New Delhi. He was from a different college, so we talked on WhatsApp a lot, but met rarely. In fact, we met for the first time almost 2 years after knowing one another. Over the years, we always stayed in touch and were each other&#39;s &quot; someone special&quot; but things never really kicked off properly as we were always in different cities, working on our careers and in different phases of life. &nbsp;Yomesh was very particular to ask me out only when he was absolutely certain, and I had given up hopes on us. One day suddenly, after 6 years of being friends, Yomesh messaged me &quot; Don&#39;t you think it&#39;s high time we started dating ?&quot; I was surprised and couldn&#39;t believe this was finally happening, so it took me &nbsp;6 months to say yes, and we went on our first &quot;date&quot; a year after dating one another over messages and phone calls. &nbsp;When we finally decided to fly more often to see each other, Covid happened.&nbsp;<br />
-                There was always a distance between us-physically, so much so that we didn&#39;t have a single picture together before our marriage. But we managed to beat it and here we share, the most beautiful album of our lives. I always wanted a love story, which when I narrate to my kids, they believe in the power of love. I think I have gotten mine
-            </p>
-
-            <p>&nbsp;</p>
-
-            <p>Wedding Style: We started planning our wedding during the second wave. So it was clear to us, keep the wedding intimate, source locally, but make everything beautiful just the way we want. We saved for our marriage and did all the expenditures by ourselves. It must not be as royal as the other &quot;Grand Indian Wedding&quot; but I think it&#39;s also important to spread a message that our parents are not responsible to give us a fairy tale wedding, we have to write our own, and then no matter whether it&#39;s grand or not, it will be beautiful for sure.</p>
-
-            <p>&nbsp;</p>
 
             <p>
-                Wedding outfit: As a 3 years&#39; old, my mother dressed me up as a child bride for a school function. I wore a red gota patti lehanga for the event. My Daadu, wasn&rsquo;t with me on that day.<br />
-                Later, he saw my picture from the event and asked my Bua, &ldquo;Will I live long enough to see her as a bride ?&rdquo;<br />
-                Almost 25 years later, I knew I has to dress up again as a bride. My Daadu, wasn&rsquo;t there with me again; he didn&rsquo;t live long enough. But, I again picked a red gota patti lehanga, for that&#39;s how he saw me as a bride.&nbsp;
+                <b style="color:crimson">How We Met:</b>  We somehow got in touch with one another through a college project in the year 2012 in Surat. He was from a different college, so we talked on WhatsApp a lot, but met rarely. In fact, we met for the first time almost 2 years after knowing one another. Over the years, we always stayed in touch and were each other's " someone special" but things never really kicked off properly as we were always in different cities, working on our careers and in different phases of life.  varship was very particular to ask me out only when he was absolutely certain, and I had given up hopes on us. One day suddenly, after 6 years of being friends, Yomesh messaged me " Don't you think it's high time we started dating ?" I was surprised and couldn't believe this was finally happening, so it took me  6 months to say yes, and we went on our first "date" a year after dating one another over messages and phone calls.  When we finally decided to fly more often to see each other, Covid happened.
             </p>
 
-            <p>So here&rsquo;s, my Daadu&rsquo;s &ldquo;Laado&rdquo; as a bride.</p>
-            ....
+            <span id="dots">...</span>
+            <p>
+                <span id="more">
+                    <b style="color:crimson">
+                        Wedding Style:
+                    </b> We started planning our wedding during the second wave. So it was clear to us, keep the wedding intimate, source locally, but make everything beautiful just the way we want. We saved for our marriage and did all the expenditures by ourselves. It must not be as royal as the other "Grand Indian Wedding" but I think it's also important to spread a message that our parents are not responsible to give us a fairy tale wedding, we have to write our own, and then no matter whether it's grand or not, it will be beautiful for sure.<br /><br />
+
+                    <b style="color:crimson"> Wedding outfit:</b> As a 3 years' old, my mother dressed me up as a child bride for a school function. I wore a red gota patti lehanga for the event. My Daadu, wasn’t with me on that day.
+                    Later, he saw my picture from the event and asked my Bua, “Will I live long enough to see her as a bride ?”
+                    Almost 25 years later, I knew I has to dress up again as a bride. My Daadu, wasn’t there with me again; he didn’t live long enough. But, I again picked a red gota patti lehanga, for that's how he saw me as a bride.<br /><br />
+
+
+                    So here’s, my Daadu’s “Laado” as a bride.
+                </span>
+            </p>
+
+            <button onclick="myFunction()" id="myBtn">Read More</button>
+
+            <script>
+                function myFunction() {
+                    var dots = document.getElementById("dots");
+                    var moreText = document.getElementById("more");
+                    var btnText = document.getElementById("myBtn");
+
+                    if (dots.style.display === "none") {
+                        dots.style.display = "inline";
+                        btnText.innerHTML = "Read more";
+                        moreText.style.display = "none";
+                    } else {
+                        dots.style.display = "none";
+                        btnText.innerHTML = "Read less";
+                        moreText.style.display = "inline";
+                    }
+                }
+            </script>
         </div>
-        <div class="pd-t-10 pd-l-5 pd-r-5 pd-b-10"><span class="tx-white more-lead bg-primary pd-10 rounded-10" style="cursor:pointer;">Read More </span></div>
     </div>
 
 
@@ -173,7 +198,7 @@
                                 <figure>
                                     <a href="../photos/p-90114/index.html" class="lightbox">
                                         <div>
-                                            <img src="~/image/Success_story/Yomesh/5.jpg"  class="img-fit-cover w-100 ht-240" alt="" />
+                                            <img src="~/image/Success_story/Yomesh/5.jpg" class="img-fit-cover w-100 ht-240" alt="" />
                                         </div>
                                     </a>
                                 </figure>
@@ -243,7 +268,7 @@
                                 <figure>
                                     <a href="../photos/p-90119/index.html" class="lightbox">
                                         <div>
-                                            <img src="~/image/Success_story/Yomesh/10.jpg"  class="img-fit-cover w-100 ht-240" alt="" />
+                                            <img src="~/image/Success_story/Yomesh/10.jpg" class="img-fit-cover w-100 ht-240" alt="" />
                                         </div>
                                     </a>
                                 </figure>
@@ -257,7 +282,7 @@
                                 <figure>
                                     <a href="../photos/p-90120/index.html" class="lightbox">
                                         <div>
-                                            <img src="~/image/Success_story/Yomesh/11.jpg"  class="img-fit-cover w-100 ht-240" alt="" />
+                                            <img src="~/image/Success_story/Yomesh/11.jpg" class="img-fit-cover w-100 ht-240" alt="" />
                                         </div>
                                     </a>
                                 </figure>
@@ -271,7 +296,7 @@
                                 <figure>
                                     <a href="../photos/p-90121/index.html" class="lightbox">
                                         <div>
-                                            <img src="~/image/Success_story/Yomesh/12.jpg"  class="img-fit-cover w-100 ht-240" alt="" />
+                                            <img src="~/image/Success_story/Yomesh/12.jpg" class="img-fit-cover w-100 ht-240" alt="" />
                                         </div>
                                     </a>
                                 </figure>
@@ -285,7 +310,7 @@
                                 <figure>
                                     <a href="../photos/p-90122/index.html" class="lightbox">
                                         <div>
-                                            <img src="~/image/Success_story/Yomesh/13.jpg"  class="img-fit-cover w-100 ht-240" alt="" />
+                                            <img src="~/image/Success_story/Yomesh/13.jpg" class="img-fit-cover w-100 ht-240" alt="" />
                                         </div>
                                     </a>
                                 </figure>
@@ -313,7 +338,7 @@
                                 <figure>
                                     <a href="../photos/p-90124/index.html" class="lightbox">
                                         <div>
-                                            <img src="~/image/Success_story/Yomesh/16.jpg"  class="img-fit-cover w-100 ht-240" alt="" />
+                                            <img src="~/image/Success_story/Yomesh/16.jpg" class="img-fit-cover w-100 ht-240" alt="" />
                                         </div>
                                     </a>
                                 </figure>
@@ -333,7 +358,7 @@
                                 </figure>
                             </div>
                         </div>
-                    </div>     
+                    </div>
                 </div>
             </div>
 
@@ -399,7 +424,7 @@
                             <div class="vendorClass">
                                 <div class="container-left">
                                     <div class="cat-icon-area">
-                                        <img src="~/image/Success_story/Yomesh/icon/makeupicon.png"  class="icon-cat" alt="" />
+                                        <img src="~/image/Success_story/Yomesh/icon/makeupicon.png" class="icon-cat" alt="" />
                                     </div>
 
                                 </div>
@@ -415,7 +440,7 @@
                             <div class="vendorClass">
                                 <div class="container-left">
                                     <div class="cat-icon-area">
-                                        <img src="~/image/Success_story/Yomesh/icon/banqueticon.png"  class="icon-cat" alt="" />
+                                        <img src="~/image/Success_story/Yomesh/icon/banqueticon.png" class="icon-cat" alt="" />
                                     </div>
 
                                 </div>
@@ -506,7 +531,7 @@
                                 <figure>
                                     <a href="../photos/p-90070/index.html" class="lightbox">
                                         <div>
-                                            <img src="~/image/Success_story/Yomesh/22.jpg"  class="img-fit-cover w-100 ht-240" alt="" />
+                                            <img src="~/image/Success_story/Yomesh/22.jpg" class="img-fit-cover w-100 ht-240" alt="" />
                                         </div>
                                     </a>
                                 </figure>
@@ -520,7 +545,7 @@
                                 <figure>
                                     <a href="../photos/p-90071/index.html" class="lightbox">
                                         <div>
-                                            <img src="~/image/Success_story/Yomesh/23.jpg"  class="img-fit-cover w-100 ht-240" alt="" />
+                                            <img src="~/image/Success_story/Yomesh/23.jpg" class="img-fit-cover w-100 ht-240" alt="" />
                                         </div>
                                     </a>
                                 </figure>
@@ -548,7 +573,7 @@
                                 <figure>
                                     <a href="../photos/p-90073/index.html" class="lightbox">
                                         <div>
-                                            <img src="~/image/Success_story/Yomesh/25.jpg"  class="img-fit-cover w-100 ht-240" alt="" />
+                                            <img src="~/image/Success_story/Yomesh/25.jpg" class="img-fit-cover w-100 ht-240" alt="" />
                                         </div>
                                     </a>
                                 </figure>
@@ -562,7 +587,7 @@
                                 <figure>
                                     <a href="../photos/p-90074/index.html" class="lightbox">
                                         <div>
-                                            <img src="~/image/Success_story/Yomesh/26.jpg"  class="img-fit-cover w-100 ht-240" alt="" />
+                                            <img src="~/image/Success_story/Yomesh/26.jpg" class="img-fit-cover w-100 ht-240" alt="" />
                                         </div>
                                     </a>
                                 </figure>
@@ -590,7 +615,7 @@
                                 <figure>
                                     <a href="../photos/p-90076/index.html" class="lightbox">
                                         <div>
-                                            <img src="~/image/Success_story/Yomesh/28.jpg"  class="img-fit-cover w-100 ht-240" alt="" />
+                                            <img src="~/image/Success_story/Yomesh/28.jpg" class="img-fit-cover w-100 ht-240" alt="" />
                                         </div>
                                     </a>
                                 </figure>
@@ -615,7 +640,7 @@
                             <div class="vendorClass">
                                 <div class="container-left">
                                     <div class="cat-icon-area">
-                                        <img src="~/image/Success_story/Yomesh/icon/lehengaicon.png"  class="icon-cat" alt="" />
+                                        <img src="~/image/Success_story/Yomesh/icon/lehengaicon.png" class="icon-cat" alt="" />
                                     </div>
 
                                 </div>
@@ -791,7 +816,7 @@
                             <div class="vendorClass">
                                 <div class="container-left">
                                     <div class="cat-icon-area">
-                                        <img src="~/image/Success_story/Yomesh/icon/bjicon.png"  class="icon-cat" alt="" />
+                                        <img src="~/image/Success_story/Yomesh/icon/bjicon.png" class="icon-cat" alt="" />
                                     </div>
 
                                 </div>
@@ -870,7 +895,7 @@
                                 <figure>
                                     <a href="../photos/p-90134/index.html" class="lightbox">
                                         <div>
-                                            <img src="~/image/Success_story/Yomesh/38.jpg"class="img-fit-cover w-100 ht-240" alt="" />
+                                            <img src="~/image/Success_story/Yomesh/38.jpg" class="img-fit-cover w-100 ht-240" alt="" />
                                         </div>
                                     </a>
                                 </figure>
@@ -926,7 +951,7 @@
                                 <figure>
                                     <a href="../photos/p-90138/index.html" class="lightbox">
                                         <div>
-                                            <img src="~/image/Success_story/Yomesh/43.jpg"  class="img-fit-cover w-100 ht-240" alt="" />
+                                            <img src="~/image/Success_story/Yomesh/43.jpg" class="img-fit-cover w-100 ht-240" alt="" />
                                         </div>
                                     </a>
                                 </figure>
@@ -954,7 +979,7 @@
                                 <figure>
                                     <a href="../photos/p-90140/index.html" class="lightbox">
                                         <div>
-                                            <img src="~/image/Success_story/Yomesh/45.jpg"  class="img-fit-cover w-100 ht-240" alt="" />
+                                            <img src="~/image/Success_story/Yomesh/45.jpg" class="img-fit-cover w-100 ht-240" alt="" />
                                         </div>
                                     </a>
                                 </figure>
@@ -982,7 +1007,7 @@
                                 <figure>
                                     <a href="../photos/p-90142/index.html" class="lightbox">
                                         <div>
-                                            <img src="~/image/Success_story/Yomesh/47.jpg"  class="img-fit-cover w-100 ht-240" alt="" />
+                                            <img src="~/image/Success_story/Yomesh/47.jpg" class="img-fit-cover w-100 ht-240" alt="" />
                                         </div>
                                     </a>
                                 </figure>
@@ -996,7 +1021,7 @@
                                 <figure>
                                     <a href="../photos/p-90143/index.html" class="lightbox">
                                         <div>
-                                            <img src="~/image/Success_story/Yomesh/48.jpg"  class="img-fit-cover w-100 ht-240" alt="" />
+                                            <img src="~/image/Success_story/Yomesh/48.jpg" class="img-fit-cover w-100 ht-240" alt="" />
                                         </div>
                                     </a>
                                 </figure>
@@ -1010,7 +1035,7 @@
                                 <figure>
                                     <a href="../photos/p-90144/index.html" class="lightbox">
                                         <div>
-                                            <img src="~/image/Success_story/Yomesh/49.jpg"class="img-fit-cover w-100 ht-240" alt="" />
+                                            <img src="~/image/Success_story/Yomesh/49.jpg" class="img-fit-cover w-100 ht-240" alt="" />
                                         </div>
                                     </a>
                                 </figure>
@@ -1049,7 +1074,7 @@
                             <div class="vendorClass">
                                 <div class="container-left">
                                     <div class="cat-icon-area">
-                                        <img src="~/image/Success_story/Yomesh/icon/lehengaicon.png"class="icon-cat" alt="" />
+                                        <img src="~/image/Success_story/Yomesh/icon/lehengaicon.png" class="icon-cat" alt="" />
                                     </div>
 
                                 </div>
@@ -1065,7 +1090,7 @@
                             <div class="vendorClass">
                                 <div class="container-left">
                                     <div class="cat-icon-area">
-                                        <img src="~/image/Success_story/Yomesh/icon/groom.png"class="icon-cat" alt="" />
+                                        <img src="~/image/Success_story/Yomesh/icon/groom.png" class="icon-cat" alt="" />
                                     </div>
 
                                 </div>
@@ -1098,7 +1123,7 @@
                             <div class="vendorClass">
                                 <div class="container-left">
                                     <div class="cat-icon-area">
-                                        <img src="~/image/Success_story/Yomesh/icon/decoricon.png"  class="icon-cat" alt="" />
+                                        <img src="~/image/Success_story/Yomesh/icon/decoricon.png" class="icon-cat" alt="" />
                                     </div>
 
                                 </div>
@@ -1146,7 +1171,7 @@
                             <div class="vendorClass">
                                 <div class="container-left">
                                     <div class="cat-icon-area">
-                                        <img src="~/image/Success_story/Yomesh/icon/photo.png"  class="icon-cat" alt="" />
+                                        <img src="~/image/Success_story/Yomesh/icon/photo.png" class="icon-cat" alt="" />
                                     </div>
 
                                 </div>
