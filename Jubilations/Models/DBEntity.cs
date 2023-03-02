@@ -5,7 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace Jubilation.Models
+namespace Jubilations.Models
 {
     public class DBEntity : DbContext
     {

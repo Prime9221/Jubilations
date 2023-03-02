@@ -18,8 +18,6 @@
         background-attachment: fixed;
         background-size: 100% 100%;
     }
-   
-   
 </style>
 
 
@@ -32,7 +30,7 @@
                 <button class="active">Login</button>
             </div>
             <div class="rgstr-btn splits">
-                
+
                 <p>Don't have an account?</p>
 
                 <button>Register</button>
@@ -61,13 +59,13 @@
                         <label>User Name</label>
                     </div>
                     <div class="mail">
-                        <input type="mail" name="">
+                        <input type="email" name="">
                         <label>Mail</label>
                     </div>
                     <div class="uid">
                         <input type="text" name="">
                         <label>Phone No.</label>
-                        
+
                     </div>
                     <div class="passwd">
                         <input type="password" name="">
@@ -80,7 +78,7 @@
                     <div class="submit">
                         <button>@Html.ActionLink("business registration", "businessForm", "Login", new { @type = "submit" })</button>
                         @*<button>@Html.ActionLink("Submit", "verifyotp", "Login", new { @class = "dark" })</button>*@
-                        <button class="dark" type="submit" id="submit">@Html.ActionLink("Submit", "verifyotp", "Login", new {@class="dark"})</button>
+                        <button class="dark" type="submit" id="submit">@Html.ActionLink("Submit", "verifyotp", "Login", new { @class = "dark" })</button>
                     </div>
                 </form>
             </div>

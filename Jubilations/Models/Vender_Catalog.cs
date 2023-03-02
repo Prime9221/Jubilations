@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Xml.Linq;
 
-namespace Jubilation.Models
+namespace Jubilations.Models
 {
     public class Vender_Catalog
     {
