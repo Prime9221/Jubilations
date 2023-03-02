@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace Jubilation.Models
+namespace Jubilations.Models
 {
     public class Services
     {

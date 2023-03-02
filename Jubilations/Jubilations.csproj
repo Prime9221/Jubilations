@@ -137,25 +137,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202302031803129_first.cs" />
-    <Compile Include="Migrations\202302031803129_first.designer.cs">
-      <DependentUpon>202302031803129_first.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302220527345_feedback.cs" />
-    <Compile Include="Migrations\202302220527345_feedback.designer.cs">
-      <DependentUpon>202302220527345_feedback.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302220531416_feedback2.cs" />
-    <Compile Include="Migrations\202302220531416_feedback2.designer.cs">
-      <DependentUpon>202302220531416_feedback2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302280704183_about.cs" />
-    <Compile Include="Migrations\202302280704183_about.designer.cs">
-      <DependentUpon>202302280704183_about.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302280708097_about2.cs" />
-    <Compile Include="Migrations\202302280708097_about2.designer.cs">
-      <DependentUpon>202302280708097_about2.cs</DependentUpon>
+    <Compile Include="Migrations\202303020555584_initial.cs" />
+    <Compile Include="Migrations\202303020555584_initial.designer.cs">
+      <DependentUpon>202303020555584_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Aboutus.cs" />
@@ -4192,6 +4176,9 @@
     <Content Include="Views\V_admin\dashboards_ecommerce.cshtml" />
     <Content Include="Views\V_admin\maps_leaflet.cshtml" />
     <Content Include="Views\QuickLink\Feedback.cshtml" />
+    <Content Include="Views\A_admin\A_Aboutus_Edit.cshtml" />
+    <Content Include="Views\Login\businessForm.cshtml" />
+    <Content Include="Views\Login\verifyotp.cshtml" />
     <Content Include="Views\QuickLink\Testimonial.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -4225,20 +4212,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202302031803129_first.resx">
-      <DependentUpon>202302031803129_first.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302220527345_feedback.resx">
-      <DependentUpon>202302220527345_feedback.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302220531416_feedback2.resx">
-      <DependentUpon>202302220531416_feedback2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302280704183_about.resx">
-      <DependentUpon>202302280704183_about.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302280708097_about2.resx">
-      <DependentUpon>202302280708097_about2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202303020555584_initial.resx">
+      <DependentUpon>202303020555584_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
