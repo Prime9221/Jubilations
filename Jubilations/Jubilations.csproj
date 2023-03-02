@@ -2430,6 +2430,7 @@
     <Content Include="Design\Submit_Wedding\success_story.css" />
     <Content Include="Design\Submit_Wedding\why_choose_us.css" />
     <Content Include="Design\Submit_Wedding\Yomesh.css" />
+    <Content Include="Design\Testimonial\Testimonial.css" />
     <Content Include="Design\V_admin\css\demo.css" />
     <Content Include="Design\V_admin\icons\payments\master-dark.html" />
     <Content Include="Design\V_admin\icons\payments\paypal-dark.html" />
@@ -4191,6 +4192,7 @@
     <Content Include="Views\V_admin\dashboards_ecommerce.cshtml" />
     <Content Include="Views\V_admin\maps_leaflet.cshtml" />
     <Content Include="Views\QuickLink\Feedback.cshtml" />
+    <Content Include="Views\QuickLink\Testimonial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

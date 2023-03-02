@@ -4,47 +4,41 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Jubilations.Controllers
-{
-    public class QuickLinkController : Controller
-    {
+namespace Jubilations.Controllers {
+    public class QuickLinkController : Controller {
         // GET: QuickLink
-        public ActionResult Terms()
-        {
+        public ActionResult Terms() {
             return View();
         }
-        public ActionResult Privacy_Policy()
-        {
-            return View();
-        }
-
-        public ActionResult Submit_Wedding()
-        {
+        public ActionResult Privacy_Policy() {
             return View();
         }
 
-        public ActionResult Gallery()
-        {
+        public ActionResult Submit_Wedding() {
             return View();
         }
 
-        public ActionResult why_choose_us()
-        {
+        public ActionResult Gallery() {
             return View();
         }
 
-        public ActionResult Success_Story()
-        {
+        public ActionResult why_choose_us() {
             return View();
         }
 
-        public ActionResult yomesh_mansi()
-        {
+        public ActionResult Success_Story() {
             return View();
         }
 
-        public ActionResult Feedback()
-        {
+        public ActionResult yomesh_mansi() {
+            return View();
+        }
+
+        public ActionResult Feedback() {
+            return View();
+        }
+
+        public ActionResult Testimonial() {
             return View();
         }
     }
