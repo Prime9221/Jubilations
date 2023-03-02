@@ -4192,6 +4192,8 @@
     <Content Include="Views\V_admin\maps_leaflet.cshtml" />
     <Content Include="Views\QuickLink\Feedback.cshtml" />
     <Content Include="Views\A_admin\A_Aboutus_Edit.cshtml" />
+    <Content Include="Views\Login\businessForm.cshtml" />
+    <Content Include="Views\Login\verifyotp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
