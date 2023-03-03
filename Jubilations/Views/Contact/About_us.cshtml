@@ -24,16 +24,16 @@
                         <div class="inner-column">
                             <div class="sec-title">
                                 <span class="title">About Jubilation</span>
-                                <h2> @Html.DisplayFor(modelItem => item.title)</h2>
+                                <h2> @Html.Raw(item.title)</h2>
                             </div>
                             <div class="text">
-                                @Html.DisplayFor(modelItem => item.description)
+                                @Html.Raw(item.description)
                             </div>
-                            <ul class="list-style-one">
+                            @*<ul class="list-style-one">
                                 <li>"@Html.DisplayFor(modelItem => item.Slogan1)"</li>
                                 <li>"@Html.DisplayFor(modelItem => item.Slogan2)"</li>
                                 <li>"@Html.DisplayFor(modelItem => item.Slogan3)"</li>
-                            </ul>
+                            </ul>*@
                         </div>
                     </div>
 
