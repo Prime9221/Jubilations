@@ -1,5 +1,6 @@
 ﻿using Jubilations.Models;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -75,8 +76,11 @@ namespace Jubilations.Controllers
             aboutus.title = aboutUsModel.aboutus.title;
             aboutus.description = aboutUsModel.aboutus.description;
             aboutus.Pictures = aboutUsModel.aboutus.Pictures;
+            var fileName = aboutUsModel.files.Select(x => x.FileName);
+            aboutus.ImagePath = ("https://localhost:44330/webdata/UploadedFiles/") + fileName.FirstOrDefault();
             db.Entry(aboutus).State = EntityState.Modified;
             int a = db.SaveChanges();
+
             foreach (HttpPostedFileBase file in aboutUsModel.files)
             {
                 //Checking file is available to save.  
@@ -85,7 +89,9 @@ namespace Jubilations.Controllers
                     var InputFileName = Path.GetFileName(file.FileName);
                     var ServerSavePath = Path.Combine(Server.MapPath("~/webdata/UploadedFiles/") + InputFileName);
                     //Save file to server folder  
-                    file.SaveAs(ServerSavePath);
+                    file.SaveAs(ServerSavePath) ;
+                   
+
                 }
             }
             if (a > 0)
@@ -98,7 +104,7 @@ namespace Jubilations.Controllers
                 ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
             }
 
-            return View(aboutUsModel);
+            return View("A_Aboutus");
         }
 
         

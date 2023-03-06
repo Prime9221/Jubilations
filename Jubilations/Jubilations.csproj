@@ -162,25 +162,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202303020555584_initial.cs" />
-    <Compile Include="Migrations\202303020555584_initial.designer.cs">
-      <DependentUpon>202303020555584_initial.cs</DependentUpon>
+    <Compile Include="Migrations\202303060908162_remove.cs" />
+    <Compile Include="Migrations\202303060908162_remove.designer.cs">
+      <DependentUpon>202303060908162_remove.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202303030932057_editor.cs" />
-    <Compile Include="Migrations\202303030932057_editor.designer.cs">
-      <DependentUpon>202303030932057_editor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202303040852073_picture.cs" />
-    <Compile Include="Migrations\202303040852073_picture.designer.cs">
-      <DependentUpon>202303040852073_picture.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202303040853229_picture2.cs" />
-    <Compile Include="Migrations\202303040853229_picture2.designer.cs">
-      <DependentUpon>202303040853229_picture2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202303040855591_picture3.cs" />
-    <Compile Include="Migrations\202303040855591_picture3.designer.cs">
-      <DependentUpon>202303040855591_picture3.cs</DependentUpon>
+    <Compile Include="Migrations\202303060921341_add.cs" />
+    <Compile Include="Migrations\202303060921341_add.designer.cs">
+      <DependentUpon>202303060921341_add.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Aboutus.cs" />
@@ -4510,20 +4498,11 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202303020555584_initial.resx">
-      <DependentUpon>202303020555584_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202303060908162_remove.resx">
+      <DependentUpon>202303060908162_remove.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202303030932057_editor.resx">
-      <DependentUpon>202303030932057_editor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202303040852073_picture.resx">
-      <DependentUpon>202303040852073_picture.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202303040853229_picture2.resx">
-      <DependentUpon>202303040853229_picture2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202303040855591_picture3.resx">
-      <DependentUpon>202303040855591_picture3.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202303060921341_add.resx">
+      <DependentUpon>202303060921341_add.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

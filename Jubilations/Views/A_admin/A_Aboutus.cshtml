@@ -47,13 +47,23 @@
                                                     @Html.DisplayFor(modelItem => item.aboutId)
                                                 </td>
                                                 <td>
-                                                    @Html.DisplayFor(modelItem => item.title)
+                                                    @if (item.title != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.title)
+                                                    }
                                                 </td>
                                                 <td>
+
+                                                    @if (item.description != null)
+                                                    {
                                                     @Html.DisplayFor(modelItem => item.description)
+                                                    }
                                                 </td>
                                                 <td>
-                                                    @Html.DisplayFor(modelItem => item.Pictures)
+                                                    @if (item.ImagePath != null)
+                                                    {
+                                                        <img src="@item.ImagePath" style=" width:100px; height:auto; "/>
+                                                    }
                                                 </td>
                                                 
                                                 <td>
