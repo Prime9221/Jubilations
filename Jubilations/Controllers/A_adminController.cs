@@ -1,7 +1,9 @@
 ﻿using Jubilations.Models;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -60,21 +62,36 @@ namespace Jubilations.Controllers
         ///about us methods start--------------------------------------------------------------------
         public ActionResult A_Aboutus()
         {
-            var data = db.aboutuss.ToList();
-            return View(data);
+            var model = new AboutUsModel();
+            model.aboutusList = db.aboutuss.ToList();
+            return View(model);
         }
 
         public ActionResult A_Aboutus_Edit(int aboutId)
         {
-            var AboutList = db.aboutuss.Where(x => x.aboutId == aboutId).First();
-            return View(AboutList);
+            var model = new AboutUsModel();
+            model.aboutus = db.aboutuss.Where(x => x.aboutId == aboutId).First();
+            return View(model);
         }
         [HttpPost]
-        public ActionResult A_Aboutus_Edit(Aboutus s)
+        public ActionResult A_Aboutus_Edit(AboutUsModel aboutUsModel,  Aboutus aboutus)
         {
-            
-            db.Entry(s).State = EntityState.Modified;
+            aboutus.title = aboutUsModel.aboutus.title;
+            aboutus.description = aboutUsModel.aboutus.description;
+            aboutus.Pictures = aboutUsModel.aboutus.Pictures;
+            db.Entry(aboutus).State = EntityState.Modified;
             int a = db.SaveChanges();
+            foreach (HttpPostedFileBase file in aboutUsModel.files)
+            {
+                //Checking file is available to save.  
+                if (file != null)
+                {
+                    var InputFileName = Path.GetFileName(file.FileName);
+                    var ServerSavePath = Path.Combine(Server.MapPath("~/webdata/UploadedFiles/") + InputFileName);
+                    //Save file to server folder  
+                    file.SaveAs(ServerSavePath);
+                }
+            }
             if (a > 0)
             {
                 ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
@@ -85,6 +102,31 @@ namespace Jubilations.Controllers
                 ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
             }
 
+            return View(aboutUsModel);
+        }
+
+        [HttpPost]
+        public ActionResult UploadFiles(HttpPostedFileBase[] Picturesfile)
+        {
+
+            //Ensure model state is valid  
+            if (ModelState.IsValid)
+            {   //iterating through multiple file collection   
+                foreach (HttpPostedFileBase file in Picturesfile)
+                {
+                    //Checking file is available to save.  
+                    if (file != null)
+                    {
+                        var InputFileName = Path.GetFileName(file.FileName);
+                        var ServerSavePath = Path.Combine(Server.MapPath("~/webdata/UploadedFiles/") + InputFileName);
+                        //Save file to server folder  
+                        file.SaveAs(ServerSavePath);
+                        //assigning file uploaded status to ViewBag for showing message to user.  
+                        ViewBag.UploadStatus = Picturesfile.Count().ToString() + " files uploaded successfully.";
+                    }
+
+                }
+            }
             return View();
         }
         ///about us methods end--------------------------------------------------------------------

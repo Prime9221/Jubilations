@@ -1,29 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Xml.Linq;
 
 namespace Jubilations.Models
 {
-    public class Aboutus
+    public class AboutUsModel
     {
-        [Key]
+        [Required(ErrorMessage = "Please select file.")]
+        [Display(Name = "Browse File")]
+        public HttpPostedFileBase[] files { get; set; }
+
         public int aboutId { get; set; }
         public string title { get; set; }
 
         public string Pictures { get; set; }
-      
+
         [AllowHtml]
         [UIHint("tinymce_full")]
         public string description { get; set; }
-        //public string Slogan1 { get; set; }
-        //public string Slogan2 { get; set; }
-        //public string Slogan3 { get; set; }
 
-
-
+        public Aboutus aboutus { get; set; }
+        public List<Aboutus> aboutusList { get; set; }
     }
 }
