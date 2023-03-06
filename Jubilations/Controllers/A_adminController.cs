@@ -105,30 +105,7 @@ namespace Jubilations.Controllers
             return View(aboutUsModel);
         }
 
-        [HttpPost]
-        public ActionResult UploadFiles(HttpPostedFileBase[] Picturesfile)
-        {
-
-            //Ensure model state is valid  
-            if (ModelState.IsValid)
-            {   //iterating through multiple file collection   
-                foreach (HttpPostedFileBase file in Picturesfile)
-                {
-                    //Checking file is available to save.  
-                    if (file != null)
-                    {
-                        var InputFileName = Path.GetFileName(file.FileName);
-                        var ServerSavePath = Path.Combine(Server.MapPath("~/webdata/UploadedFiles/") + InputFileName);
-                        //Save file to server folder  
-                        file.SaveAs(ServerSavePath);
-                        //assigning file uploaded status to ViewBag for showing message to user.  
-                        ViewBag.UploadStatus = Picturesfile.Count().ToString() + " files uploaded successfully.";
-                    }
-
-                }
-            }
-            return View();
-        }
+        
         ///about us methods end--------------------------------------------------------------------
         public ActionResult Projects()
         {
