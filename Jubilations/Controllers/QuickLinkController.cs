@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Jubilations.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,7 +7,8 @@ using System.Web.Mvc;
 
 namespace Jubilations.Controllers {
     public class QuickLinkController : Controller {
-        // GET: QuickLink
+
+        DBEntity db = new DBEntity();
         public ActionResult Terms() {
             return View();
         }
@@ -34,8 +36,10 @@ namespace Jubilations.Controllers {
             return View();
         }
 
-        public ActionResult Feedback() {
-            return View();
+        public ActionResult Feedback()
+        {
+            var data = db.feedBacks;
+            return View(data);
         }
 
         public ActionResult Testimonial() {

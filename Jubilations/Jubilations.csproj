@@ -2433,6 +2433,7 @@
     <Content Include="Design\Login\BL.css" />
     <Content Include="Design\Login\Login.css" />
     <Content Include="Design\Login\Login.js" />
+    <Content Include="Design\Login\Profile.css" />
     <Content Include="Design\search\search.css" />
     <Content Include="Design\Submit_Wedding\S_home.css" />
     <Content Include="Design\Submit_Wedding\font.css" />
@@ -4465,6 +4466,8 @@
     <Content Include="Views\QuickLink\Testimonial.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\tinymce_full_compressed.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\tinymce_full.cshtml" />
+    <Content Include="Views\Services\Services1.cshtml" />
+    <Content Include="Views\Login\Profile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
