@@ -14,6 +14,11 @@ namespace Jubilations.Controllers
             return View();
         }
 
+        public ActionResult Services1()
+        {
+            return View();
+        }
+
         public ActionResult venue()
         {
             return View();
