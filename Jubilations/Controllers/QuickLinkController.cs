@@ -67,7 +67,8 @@ namespace Jubilations.Controllers {
         }
 
         public ActionResult Testimonial() {
-            return View();
+            var data = db.feedBacks.ToList();
+            return View(data);
         }
     }
 }
