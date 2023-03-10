@@ -170,6 +170,10 @@
     <Compile Include="Migrations\202303060921341_add.designer.cs">
       <DependentUpon>202303060921341_add.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202303091211553_name.cs" />
+    <Compile Include="Migrations\202303091211553_name.designer.cs">
+      <DependentUpon>202303091211553_name.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Aboutus.cs" />
     <Compile Include="Models\AboutUsModel.cs" />
@@ -4506,6 +4510,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202303060921341_add.resx">
       <DependentUpon>202303060921341_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303091211553_name.resx">
+      <DependentUpon>202303091211553_name.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -14,6 +14,7 @@ namespace Jubilations.Models
 
         [Key]
         public int FeedBack_Id { get; set; }
+        public string Name { get; set; }
         public string FeedBack_Email { get; set; }
         public string FeedBack_Message { get; set; }
         public string SuccessStory_Create_Date { get; set; }

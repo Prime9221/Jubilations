@@ -1,4 +1,4 @@
-﻿
+﻿@model Jubilations.Models.FeedBack
 @{
     ViewBag.Title = "Feedback";
     Layout = "~/Views/Layout/_LayoutPage1.cshtml";
@@ -12,28 +12,54 @@
         background-size: 100% 100%;
     }
 </style>
-<center>
-    <section id="contact">
-        <div class="contact-box">
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
 
-            <div class="contact-form-wrapper">
-                <h2 style="font-family: 'Dancing Script', cursive; color:#49524c">FeedBack</h2><br />
-                <form>
-                    <div class="form-item">
-                        <input type="text" name="sender" required>
-                        <label>Name:</label>
-                    </div>  
-                    <div class="form-item">
-                        <input type="text" name="email" required>
-                        <label>Email:</label>
-                    </div>
-                    <div class="form-item">
-                        <textarea class="" name="message" required></textarea>
-                        <label>Message:</label>
-                    </div>
-                    <button class="submit-btn">Send</button>
-                </form>
+    <center>
+        <section id="contact">
+            <div class="contact-box">
+
+                <div class="contact-form-wrapper">
+                    <h2 style="font-family: 'Dancing Script', cursive; color:#49524c">FeedBack</h2><br />
+                    <form>
+                        @*<div class="form-item">
+                                <input type="text" name="sender" required>
+                                <label> @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" }):</label>
+                            </div>*@
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", placeholder = "Name:" } })
+                                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.FeedBack_Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.FeedBack_Email, new { htmlAttributes = new { @class = "form-control", placeholder = "email:", Type = "email" } })
+                                @Html.ValidationMessageFor(model => model.FeedBack_Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.FeedBack_Message, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.FeedBack_Message, new { htmlAttributes = new { @class = "form-control", placeholder = "message:" } })
+                                @Html.ValidationMessageFor(model => model.FeedBack_Message, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+
+
+
+
+                        <button class="submit-btn" type="submit">Send</button>
+                    </form>
+                </div>
             </div>
-        </div>
-    </section>
-</center>
+        </section>
+    </center>
+}
