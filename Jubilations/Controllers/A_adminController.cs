@@ -3,6 +3,7 @@ using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -107,8 +108,43 @@ namespace Jubilations.Controllers
             return View("A_Aboutus");
         }
 
-        
+
         ///about us methods end--------------------------------------------------------------------
+
+        ///Feedback methods start--------------------------------------------------------------------
+        public ActionResult A_Feedback()
+        {
+            var model = new FeedBackModel();
+            model.feedbackList = db.feedBacks.ToList();
+            return View(model);
+        }
+
+        public ActionResult A_Feedback_delete(int Feedback_ID)
+        {
+            var Feedback = db.feedBacks.Where(x => x.FeedBack_Id == Feedback_ID).First();
+            return View(Feedback);
+        }
+        [HttpPost]
+        public ActionResult A_Feedback_delete(FeedBack s)
+        {
+           db.Entry(s).State = EntityState.Deleted;
+            int a = db.SaveChanges();
+            if (a > 0)
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                return RedirectToAction("A_Feedback");
+            }
+            else
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+            }
+
+            return View("A_Feedback");
+        }
+
+
+        ///Feedback methods end--------------------------------------------------------------------
+
         public ActionResult Projects()
         {
             return View();

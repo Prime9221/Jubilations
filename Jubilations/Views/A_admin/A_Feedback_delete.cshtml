@@ -1,0 +1,70 @@
+﻿@model Jubilations.Models.FeedBack
+
+@{
+    ViewBag.Title = "Feedback_delete";
+    Layout = "~/Views/Layout/_A_adminLayoutPage.cshtml";
+}
+
+
+
+<div class="content-wrapper">
+    <h2>Feedback_delete</h2>
+
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>FeedBack</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FeedBack_Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FeedBack_Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FeedBack_Message)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FeedBack_Message)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SuccessStory_Create_Date)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SuccessStory_Create_Date)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SuccessStory_Update_Date)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SuccessStory_Update_Date)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "A_Feedback")
+            </div>
+        }
+    </div>
+</div>

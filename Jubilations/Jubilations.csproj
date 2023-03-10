@@ -184,6 +184,7 @@
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\DBEntity.cs" />
     <Compile Include="Models\FeedBack.cs" />
+    <Compile Include="Models\FeedBackModel.cs" />
     <Compile Include="Models\Services.cs" />
     <Compile Include="Models\Service_Role.cs" />
     <Compile Include="Models\Service_Role_Map.cs" />
@@ -4472,6 +4473,8 @@
     <Content Include="Views\Shared\EditorTemplates\tinymce_full.cshtml" />
     <Content Include="Views\Services\Services1.cshtml" />
     <Content Include="Views\Login\Profile.cshtml" />
+    <Content Include="Views\A_admin\A_Feedback.cshtml" />
+    <Content Include="Views\A_admin\A_Feedback_delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

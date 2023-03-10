@@ -1,0 +1,100 @@
+﻿@model Jubilations.Models.FeedBackModel
+
+@{
+    ViewBag.Title = "Feedback";
+    Layout = "~/Views/Layout/_A_adminLayoutPage.cshtml";
+}
+
+<h2>Feedback</h2>
+<br />
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">About us DataTable</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Message</th>
+                                        <th>Create date</th>
+                                        <th>Action</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model.feedbackList.Count > 0)
+                                    {
+                                        foreach (var item in Model.feedbackList)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.FeedBack_Id)
+                                                </td>
+                                                <td>
+                                                    @if (item.Name != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.Name)
+                                                    }
+                                                </td>
+                                                <td>
+
+                                                    @if (item.FeedBack_Email != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.FeedBack_Email)
+                                                    }
+                                                </td>
+                                                <td>
+
+                                                    @if (item.FeedBack_Message != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.FeedBack_Message)
+                                                    }
+                                                </td>
+                                                <td>
+                                                    @if (item.SuccessStory_Create_Date != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.SuccessStory_Create_Date)
+                                                    }
+                                                </td>
+                                                @*<td>
+            @if (item.SuccessStory_Update_Date != null)
+            {
+                @Html.DisplayFor(modelItem => item.SuccessStory_Update_Date)
+            }
+        </td>*@
+                                                <td>
+
+                                                    @Html.ActionLink("Delete", "A_Feedback_delete", new { FeedBack_Id = item.FeedBack_Id })
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
