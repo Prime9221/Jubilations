@@ -121,7 +121,8 @@ input, textarea {
     outline: 0;
     border: 1px solid #ccc;
     border-radius: 4px;
-    margin-bottom: 20px;
+
+    margin-top: 20px;
     padding: 12px;
     font-size: clamp(15px, 1.5vw, 18px);
 }
