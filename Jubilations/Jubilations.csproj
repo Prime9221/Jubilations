@@ -180,6 +180,7 @@
     <Compile Include="Models\Blog.cs" />
     <Compile Include="Models\Blog_Comment.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\CategoryModel.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\DBEntity.cs" />
@@ -4475,6 +4476,10 @@
     <Content Include="Views\Login\Profile.cshtml" />
     <Content Include="Views\A_admin\A_Feedback.cshtml" />
     <Content Include="Views\A_admin\A_Feedback_delete.cshtml" />
+    <Content Include="Views\A_admin\A_Category.cshtml" />
+    <Content Include="Views\A_admin\A_Category_Create.cshtml" />
+    <Content Include="Views\A_admin\A_Category_Edit.cshtml" />
+    <Content Include="Views\A_admin\A_Category_delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

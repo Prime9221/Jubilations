@@ -14,6 +14,7 @@ namespace Jubilations.Models
         public string SuccessStory_Create_Date { get; set; }
         public string SuccessStory_Update_Date { get; set; }
 
+        public FeedBack FeedBack { get; set; }
         public List<FeedBack> feedbackList { get; set; }
     }
 }

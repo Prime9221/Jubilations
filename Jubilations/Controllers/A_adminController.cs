@@ -1,4 +1,5 @@
 ﻿using Jubilations.Models;
+using System;
 using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.IO;
@@ -144,6 +145,97 @@ namespace Jubilations.Controllers
 
 
         ///Feedback methods end--------------------------------------------------------------------
+
+
+
+        ///Category methods start--------------------------------------------------------------------
+        public ActionResult A_Category()
+        {
+            var model = new CategoryModel();
+            model.CategoryList = db.category.ToList();
+            return View(model);
+        }
+
+
+        public ActionResult A_Category_Create()
+        {
+            return View("A_Category_Create");
+        }
+
+        [HttpPost]
+        public ActionResult A_Category_Create(Category model)
+        {
+            if (ModelState.IsValid)
+            {
+
+
+                Category a = new Category();
+
+                a.Category_Name = model.Category_Name;
+                a.Category_Status = model.Category_Status;
+                a.Category_Create_Date = DateTime.Now.ToShortDateString();
+                a.Category_Update_Date = DateTime.Now.ToShortDateString();
+                db.category.Add(a);
+                db.SaveChanges();
+                TempData["DataInserted"] = "true";
+                return RedirectToAction("A_Category");
+
+            }
+            return RedirectToAction("A_Category");
+        }
+
+
+        public ActionResult A_Category_Edit(int Category_id)
+        {
+            var ca = db.category.Where(x => x.Category_Id == Category_id).First();
+            return View(ca);
+        }
+        [HttpPost]
+        public ActionResult A_Category_Edit(Category s)
+        {
+            db.Entry(s).State = EntityState.Modified;
+            s.Category_Create_Date = DateTime.Now.ToShortDateString();
+            s.Category_Update_Date = DateTime.Now.ToShortDateString();
+            int a = db.SaveChanges();
+            if (a > 0)
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                return RedirectToAction("A_Category");
+            }
+            else
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+            }
+
+            return View();
+        }
+
+        public ActionResult A_Category_delete(int Category_ID)
+        {
+            var Ci = db.category.Where(x => x.Category_Id == Category_ID).First();
+            return View(Ci);
+        }
+        [HttpPost]
+        public ActionResult A_Category_delete(Category s)
+        {
+            db.Entry(s).State = EntityState.Deleted;
+            int a = db.SaveChanges();
+            if (a > 0)
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                return RedirectToAction("A_Category");
+            }
+            else
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+            }
+
+            return View("A_Category");
+        }
+
+
+        ///Category methods end--------------------------------------------------------------------
+
 
         public ActionResult Projects()
         {
