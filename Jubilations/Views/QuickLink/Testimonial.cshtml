@@ -17,74 +17,25 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-3 col-sm-6">
-            <div class="serviceBox">
-                <div style="max-width: 120px; height: auto; background-color: powderblue; overflow: hidden; border: 1px solid black; border-radius: 50%; ">
+        @if (Model != null)
+        {
+            foreach (var item in Model)
+            {
+                <div class="col-md-3 col-sm-6">
+                    <div class="serviceBox">
+                        <div style="max-width: 120px; height: auto; background-color: powderblue; overflow: hidden; border: 1px solid black; border-radius: 50%; ">
 
-                    <img src="~/image/Blog/25.jpg" style="width: 100%; min-height: 100%;" />
+                            <img src="~/image/Blog/25.jpg" style="width: 100%; min-height: 100%;" />
+                        </div>
+                        <br />
+
+                        <h3 class="title">@Html.Raw(item.Name)</h3>
+                        <p class="description">@Html.Raw(item.FeedBack_Message)</p>
+                    </div>
                 </div>
-                <br />
+            }
+        }
                 
-                <h3 class="title">Meet Makavana</h3>
-                <p class="description">just a note to say thank you both for an unbelievable wedding! It was the best day ever! We’ve been on Safari ever since and loving this time together. Thank you, thank you, thank you!.</p>
+
             </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <div class="serviceBox">
-                <div style="max-width: 120px; height: 120px; background-color: powderblue; overflow: hidden; border: 1px solid black; border-radius: 50%; ">
-
-                    <img src="~/image/Blog/21.jpg" style="width: 100%; min-height: 100%;" />
-                </div>
-                <br />
-                <h3 class="title">Meet Makavana</h3>
-                <p class="description">just a note to say thank you both for an unbelievable wedding! It was the best day ever! We’ve been on Safari ever since and loving this time together. Thank you, thank you, thank you!.</p>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <div class="serviceBox">
-                <div style="max-width: 120px; height: 120px; background-color: powderblue; overflow: hidden; border: 1px solid black; border-radius: 50%; ">
-
-                    <img src="~/image/Blog/20.jpg" style="width: 100%; min-height: 100%;" />
-                </div>
-                <br />
-                <h3 class="title">Meet Makavana</h3>
-                <p class="description">just a note to say thank you both for an unbelievable wedding! It was the best day ever! We’ve been on Safari ever since and loving this time together. Thank you, thank you, thank you!.</p>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <div class="serviceBox">
-                <div style="max-width: 120px; height: 120px; background-color: powderblue; overflow: hidden; border: 1px solid black; border-radius: 50%; ">
-
-                    <img src="~/image/Blog/17.jpg" style="width: 100%; min-height: 100%;" />
-                </div>
-                <br />
-                <h3 class="title">Meet Makavana</h3>
-                <p class="description">just a note to say thank you both for an unbelievable wedding! It was the best day ever! We’ve been on Safari ever since and loving this time together. Thank you, thank you, thank you!.</p>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <div class="serviceBox">
-                <div style="max-width: 120px; height: 120px; background-color: powderblue; overflow: hidden; border: 1px solid black; border-radius: 50%; ">
-
-                    <img src="~/image/Blog/1.jpg" style="width: 100%; min-height: 100%;" />
-                </div>
-                <br />
-                <h3 class="title">Meet Makavana</h3>
-                <p class="description">just a note to say thank you both for an unbelievable wedding! It was the best day ever! We’ve been on Safari ever since and loving this time together. Thank you, thank you, thank you!.</p>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <div class="serviceBox">
-                <div style="max-width: 120px; height: 120px; background-color: powderblue; overflow: hidden; border: 1px solid black; border-radius: 50%; ">
-
-                    <img src="~/image/Blog/14.jpg" style="width: 100%; min-height: 100%;" />
-                </div>
-                <br />
-                <h3 class="title">Meet Makavana</h3>
-                <p class="description">just a note to say thank you both for an unbelievable wedding! It was the best day ever! We’ve been on Safari ever since and loving this time together. Thank you, thank you, thank you!.</p>
-            </div>
-
-        </div>
-
-    </div>
 </div>

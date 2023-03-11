@@ -1,13 +1,12 @@
-﻿@model Jubilations.Models.AboutUsModel
+﻿@model Jubilations.Models.FeedBackModel
+
 @{
-    ViewBag.Title = "A_Aboutus";
+    ViewBag.Title = "Feedback";
     Layout = "~/Views/Layout/_A_adminLayoutPage.cshtml";
 }
 
+<h2>Feedback</h2>
 <br />
-<br />
-<br />
-
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
 
@@ -19,53 +18,66 @@
 
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">About us DataTable</h3>
+                            <h3 class="card-title">FeedBack DataTable</h3>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
-                                        <th>@Html.ActionLink("Id", "A_Aboutus", "A_admin", new { area = "" }, new { @class = "" })</th>
-                                        <th>@Html.ActionLink("title", "A_Aboutus", "A_admin", new { area = "" }, new { @class = "" })</th>
-                                        <th>@Html.ActionLink("description", "A_Aboutus", "A_admin", new { area = "" }, new { @class = "" })</th>
-                                        <th>@Html.ActionLink("Pictures", "A_Aboutus", "A_admin", new { area = "" }, new { @class = "" })</th>
-                                        
+                                        <th>Id</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Message</th>
+                                        <th>Create date</th>
                                         <th>Action</th>
-                                        
+
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @if (Model.aboutusList.Count > 0)
+                                    @if (Model.feedbackList.Count > 0)
                                     {
-                                        foreach (var item in Model.aboutusList)
+                                        foreach (var item in Model.feedbackList)
                                         {
                                             <tr>
                                                 <td>
-                                                    @Html.DisplayFor(modelItem => item.aboutId)
+                                                    @Html.DisplayFor(modelItem => item.FeedBack_Id)
                                                 </td>
                                                 <td>
-                                                    @if (item.title != null)
+                                                    @if (item.Name != null)
                                                     {
-                                                        @Html.DisplayFor(modelItem => item.title)
+                                                        @Html.DisplayFor(modelItem => item.Name)
                                                     }
                                                 </td>
                                                 <td>
 
-                                                    @if (item.description != null)
+                                                    @if (item.FeedBack_Email != null)
                                                     {
-                                                    @Html.DisplayFor(modelItem => item.description)
+                                                        @Html.DisplayFor(modelItem => item.FeedBack_Email)
                                                     }
                                                 </td>
                                                 <td>
-                                                    @if (item.ImagePath != null)
+
+                                                    @if (item.FeedBack_Message != null)
                                                     {
-                                                        <img src="@item.ImagePath" style=" width:100px; height:auto; "/>
+                                                        @Html.DisplayFor(modelItem => item.FeedBack_Message)
                                                     }
                                                 </td>
-                                                
                                                 <td>
-                                                    @Html.ActionLink("Edit", "A_Aboutus_Edit", new { aboutId = item.aboutId })
+                                                    @if (item.SuccessStory_Create_Date != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.SuccessStory_Create_Date)
+                                                    }
+                                                </td>
+                                                @*<td>
+            @if (item.SuccessStory_Update_Date != null)
+            {
+                @Html.DisplayFor(modelItem => item.SuccessStory_Update_Date)
+            }
+        </td>*@
+                                                <td>
+
+                                                    @Html.ActionLink("Delete", "A_Feedback_delete", new { FeedBack_Id = item.FeedBack_Id })
                                                 </td>
                                             </tr>
                                         }

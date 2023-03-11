@@ -170,16 +170,22 @@
     <Compile Include="Migrations\202303060921341_add.designer.cs">
       <DependentUpon>202303060921341_add.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202303091211553_name.cs" />
+    <Compile Include="Migrations\202303091211553_name.designer.cs">
+      <DependentUpon>202303091211553_name.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Aboutus.cs" />
     <Compile Include="Models\AboutUsModel.cs" />
     <Compile Include="Models\Blog.cs" />
     <Compile Include="Models\Blog_Comment.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\CategoryModel.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\DBEntity.cs" />
     <Compile Include="Models\FeedBack.cs" />
+    <Compile Include="Models\FeedBackModel.cs" />
     <Compile Include="Models\Services.cs" />
     <Compile Include="Models\Service_Role.cs" />
     <Compile Include="Models\Service_Role_Map.cs" />
@@ -2433,6 +2439,7 @@
     <Content Include="Design\Login\BL.css" />
     <Content Include="Design\Login\Login.css" />
     <Content Include="Design\Login\Login.js" />
+    <Content Include="Design\Login\Profile.css" />
     <Content Include="Design\search\search.css" />
     <Content Include="Design\Submit_Wedding\S_home.css" />
     <Content Include="Design\Submit_Wedding\font.css" />
@@ -4465,6 +4472,14 @@
     <Content Include="Views\QuickLink\Testimonial.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\tinymce_full_compressed.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\tinymce_full.cshtml" />
+    <Content Include="Views\Services\Services1.cshtml" />
+    <Content Include="Views\Login\Profile.cshtml" />
+    <Content Include="Views\A_admin\A_Feedback.cshtml" />
+    <Content Include="Views\A_admin\A_Feedback_delete.cshtml" />
+    <Content Include="Views\A_admin\A_Category.cshtml" />
+    <Content Include="Views\A_admin\A_Category_Create.cshtml" />
+    <Content Include="Views\A_admin\A_Category_Edit.cshtml" />
+    <Content Include="Views\A_admin\A_Category_delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -4503,6 +4518,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202303060921341_add.resx">
       <DependentUpon>202303060921341_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303091211553_name.resx">
+      <DependentUpon>202303091211553_name.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

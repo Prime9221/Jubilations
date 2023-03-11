@@ -1,10 +1,10 @@
-﻿@model Jubilations.Models.AboutUsModel
+﻿@model Jubilations.Models.CategoryModel
+
 @{
-    ViewBag.Title = "A_Aboutus";
+    ViewBag.Title = "A_Category";
     Layout = "~/Views/Layout/_A_adminLayoutPage.cshtml";
 }
 
-<br />
 <br />
 <br />
 
@@ -19,53 +19,67 @@
 
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">About us DataTable</h3>
+                            <h3 class="card-title">Category DataTable</h3>
+
                         </div>
+                        <button>@Html.ActionLink("Create New", "A_Category_Create")</button>
                         <!-- /.card-header -->
                         <div class="card-body">
+
                             <table id="example1" class="table table-bordered table-striped">
+
                                 <thead>
                                     <tr>
-                                        <th>@Html.ActionLink("Id", "A_Aboutus", "A_admin", new { area = "" }, new { @class = "" })</th>
-                                        <th>@Html.ActionLink("title", "A_Aboutus", "A_admin", new { area = "" }, new { @class = "" })</th>
-                                        <th>@Html.ActionLink("description", "A_Aboutus", "A_admin", new { area = "" }, new { @class = "" })</th>
-                                        <th>@Html.ActionLink("Pictures", "A_Aboutus", "A_admin", new { area = "" }, new { @class = "" })</th>
-                                        
+                                        <th>Category Id</th>
+                                        <th>Category Name</th>
+                                        <th>Category Status</th>
+                                        <th>Create Date</th>
+                                        <th>Update Date</th>
+                                        @*<th>Category Update Date</th>*@
+
                                         <th>Action</th>
-                                        
+
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @if (Model.aboutusList.Count > 0)
+                                    @if (Model.CategoryList.Count > 0)
                                     {
-                                        foreach (var item in Model.aboutusList)
+                                        foreach (var item in Model.CategoryList)
                                         {
                                             <tr>
                                                 <td>
-                                                    @Html.DisplayFor(modelItem => item.aboutId)
+                                                    @Html.DisplayFor(modelItem => item.Category_Id)
                                                 </td>
                                                 <td>
-                                                    @if (item.title != null)
+                                                    @if (item.Category_Name != null)
                                                     {
-                                                        @Html.DisplayFor(modelItem => item.title)
+                                                        @Html.DisplayFor(modelItem => item.Category_Name)
                                                     }
                                                 </td>
                                                 <td>
 
-                                                    @if (item.description != null)
+                                                    @if (item.Category_Status != null)
                                                     {
-                                                    @Html.DisplayFor(modelItem => item.description)
+                                                        @Html.DisplayFor(modelItem => item.Category_Status)
                                                     }
                                                 </td>
                                                 <td>
-                                                    @if (item.ImagePath != null)
+
+                                                    @if (item.Category_Create_Date != null)
                                                     {
-                                                        <img src="@item.ImagePath" style=" width:100px; height:auto; "/>
+                                                        @Html.DisplayFor(modelItem => item.Category_Create_Date)
                                                     }
                                                 </td>
-                                                
                                                 <td>
-                                                    @Html.ActionLink("Edit", "A_Aboutus_Edit", new { aboutId = item.aboutId })
+
+                                                    @if (item.Category_Update_Date != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.Category_Update_Date)
+                                                    }
+                                                </td>
+                                                <td>
+                                                    @Html.ActionLink("Edit", "A_Category_Edit", new { Category_Id = item.Category_Id }) |
+                                                    @Html.ActionLink("Delete", "A_Category_delete", new { Category_Id = item.Category_Id }) 
                                                 </td>
                                             </tr>
                                         }
