@@ -243,104 +243,37 @@ namespace Jubilations.Controllers
             return View(model);
         }
 
-        //public ActionResult A_Services_Create()
-        //{
-        //    var ServicesList = db.ser.ToList();
-        //    ViewBag.CompanyId = new SelectList(ServicesList, "CompanyId", "CompanyName");
-        //    var EmployeeList = db.Employee.ToList();
-        //    ViewBag.EmployeeId = new SelectList(EmployeeList, "EmployeeId", "EmployeeName");
 
-        //    return View("create");
-        //}
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult A_Services_Create(Address model)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        var CompanyList = db.Company.ToList();
-        //        ViewBag.CompanyId = new SelectList(CompanyList, "CompanyId", "CompanyName");
-        //        var EmployeeList = db.Employee.ToList();
-        //        ViewBag.EmployeeId = new SelectList(EmployeeList, "EmployeeId", "EmployeeName");
-        //        Address Address = new Address();
-        //        Address.CompanyId = model.CompanyId;
-        //        Address.EmployeeId = model.EmployeeId;
-        //        Address.City = model.City;
-        //        Address.State = model.State;
-        //        Address.Country = model.Country;
-        //        Address.Pincode = model.Pincode;
-        //        db.Address.Add(Address);
-        //        db.SaveChanges();
-        //        TempData["DataInserted"] = "true";
-        //        return RedirectToAction("Index");
 
-        //    }
-        //    return RedirectToAction("create");
-        //}
 
-        //public ActionResult A_Services_Edit(int AddressId)
-        //{
 
-        //    var CompanyList = db.Company.ToList();
-        //    ViewBag.CompanyId = new SelectList(CompanyList, "CompanyId", "CompanyName");
-        //    var EmployeeList = db.Employee.ToList();
-        //    ViewBag.EmployeeId = new SelectList(EmployeeList, "EmployeeId", "EmployeeName");
-        //    var Address = db.Address.Where(x => x.AddressId == AddressId).First();
-        //    return View(Address);
-        //}
+        public ActionResult A_Services_Delete(int Service_Id)
+        {
+            var categoryList = db.category.ToList();
+            ViewBag.CompanyId = new SelectList(categoryList, "Category_Id", "Category_Name");            
+            var Service = db.services.Where(x => x.Services_Id == Service_Id).First();
+            return View(Service);
+        }
 
-        //[HttpPost]
-        //public ActionResult A_Services_Edit(Address s)
-        //{
-        //    var CompanyList = db.Company.ToList();
-        //    ViewBag.CompanyId = new SelectList(CompanyList, "CompanyId", "CompanyName");
-        //    var EmployeeList = db.Employee.ToList();
-        //    ViewBag.EmployeeId = new SelectList(EmployeeList, "EmployeeId", "EmployeeName");
-        //    db.Entry(s).State = EntityState.Modified;
-        //    int a = db.SaveChanges();
-        //    if (a > 0)
-        //    {
-        //        ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
-        //        return RedirectToAction("Index");
-        //    }
-        //    else
-        //    {
-        //        ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
-        //    }
-
-        //    return View();
-        //}
-
-        //public ActionResult A_Services_Delete(int AddressId)
-        //{
-        //    var CompanyList = db.Company.ToList();
-        //    ViewBag.CompanyId = new SelectList(CompanyList, "CompanyId", "CompanyName");
-        //    var EmployeeList = db.Employee.ToList();
-        //    ViewBag.EmployeeId = new SelectList(EmployeeList, "EmployeeId", "EmployeeName");
-        //    var Address = db.Address.Where(x => x.AddressId == AddressId).First();
-        //    return View(Address);
-        //}
-
-        //[HttpPost]
-        //public ActionResult A_Services_Delete(Address s)
-        //{
-        //    var CompanyList = db.Company.ToList();
-        //    ViewBag.CompanyId = new SelectList(CompanyList, "CompanyId", "CompanyName");
-        //    var EmployeeList = db.Employee.ToList();
-        //    ViewBag.EmployeeId = new SelectList(EmployeeList, "EmployeeId", "EmployeeName");
-        //    db.Entry(s).State = EntityState.Deleted;
-        //    int a = db.SaveChanges();
-        //    if (a > 0)
-        //    {
-        //        ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
-        //        return RedirectToAction("Index");
-        //    }
-        //    else
-        //    {
-        //        ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
-        //    }
-        //    return View();
-        //}
+        [HttpPost]
+        public ActionResult A_Services_Delete(Services s)
+        {
+            
+            var categoryList = db.category.ToList();
+            ViewBag.EmployeeId = new SelectList(categoryList, "Category_Id", "Category_Name");
+            db.Entry(s).State = EntityState.Deleted;
+            int a = db.SaveChanges();
+            if (a > 0)
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+            }
+            return View();
+        }
 
 
 

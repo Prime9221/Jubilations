@@ -182,6 +182,14 @@
     <Compile Include="Migrations\202303110707061_remove_field_services2.designer.cs">
       <DependentUpon>202303110707061_remove_field_services2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202303110734327_remove_field_services21.cs" />
+    <Compile Include="Migrations\202303110734327_remove_field_services21.designer.cs">
+      <DependentUpon>202303110734327_remove_field_services21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303110845489_remove_field_services3.cs" />
+    <Compile Include="Migrations\202303110845489_remove_field_services3.designer.cs">
+      <DependentUpon>202303110845489_remove_field_services3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Aboutus.cs" />
     <Compile Include="Models\AboutUsModel.cs" />
@@ -4468,7 +4476,7 @@
     <Content Include="Views\V_admin\app_invoice_list.cshtml" />
     <Content Include="Views\V_admin\app_invoice_preview.cshtml" />
     <Content Include="Views\V_admin\app_invoice_print.cshtml" />
-    <Content Include="Views\V_admin\app_use_list.cshtml" />
+    <Content Include="Views\V_admin\V_Services.cshtml" />
     <Content Include="Views\V_admin\app_user_view_account.cshtml" />
     <Content Include="Views\V_admin\app_user_view_security.cshtml" />
     <Content Include="Views\V_admin\dashboards_crm.cshtml" />
@@ -4537,6 +4545,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202303110707061_remove_field_services2.resx">
       <DependentUpon>202303110707061_remove_field_services2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303110734327_remove_field_services21.resx">
+      <DependentUpon>202303110734327_remove_field_services21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303110845489_remove_field_services3.resx">
+      <DependentUpon>202303110845489_remove_field_services3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
