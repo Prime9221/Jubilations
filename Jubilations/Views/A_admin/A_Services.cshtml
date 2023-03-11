@@ -1,0 +1,131 @@
+﻿@model Jubilations.Models.ServicesModel
+@{
+    ViewBag.Title = "A_Services";
+    Layout = "~/Views/Layout/_A_adminLayoutPage.cshtml";
+}
+
+<h2>A_Services</h2>
+
+<br />
+<br />
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Category DataTable</h3>
+
+                        </div>
+                        <button>@Html.ActionLink("Create New", "A_Services_Create")</button>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+
+                            <table id="example1" class="table table-bordered table-striped">
+
+                                <thead>
+                                    <tr>
+                                        <th>Services Id</th>
+                                        <th>User Name</th>
+                                        <th>Category Name</th>
+                                        <th>Services Name</th>
+                                        <th>Services Title</th>
+                                        <th>Services Description</th>
+                                        @*<th>Services Image</th>
+                                        <th>Services Budget</th>*@
+                                        <th>Services Status</th>
+                                        <th>Create Date</th>
+                                        <th>Update Date</th>
+                                        <th>Action</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model.ServicesList.Count > 0)
+                                    {
+                                        foreach (var item in Model.ServicesList)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Services_Id)
+                                                </td>
+                                                <td>
+                                                    @if (item.User_Id != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.User_Id)
+                                                    }
+                                                </td>
+                                                <td>
+
+                                                    @if (item.Category_Id != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.Category_Id)
+                                                    }
+                                                </td>
+                                                <td>
+
+                                                    @if (item.Services_Name != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.Services_Name)
+                                                    }
+                                                </td>
+
+                                                <td>
+
+                                                    @if (item.Services_Title != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.Services_Title)
+                                                    }
+                                                </td>
+
+                                                <td>
+
+                                                    @if (item.Services_Description != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.Services_Description)
+                                                    }
+                                                </td>
+
+                                                <td>
+
+                                                    @if (item.Services_Create_Date != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.Services_Create_Date)
+                                                    }
+                                                </td>
+                                                <td>
+
+                                                    @if (item.Services_Update_Date != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.Services_Update_Date)
+                                                    }
+                                                </td>
+                                                <td>
+                                                    @Html.ActionLink("Edit", "A_Services_Edit", new { Services_Id = item.Services_Id }) |
+                                                    @Html.ActionLink("Delete", "A_Services_Delete", new { Services_Id = item.Services_Id })
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

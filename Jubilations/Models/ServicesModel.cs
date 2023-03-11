@@ -1,16 +1,16 @@
-﻿using System;
+﻿using Jubilations.Migrations;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
 
 namespace Jubilations.Models
 {
-    public class Services
+    public class ServicesModel
     {
-        [Key]
+        
         public int Services_Id { get; set; }
         public string Services_Name { get; set; }
 
@@ -26,19 +26,7 @@ namespace Jubilations.Models
         public int Category_Id { get; set; }
         [ForeignKey("Category_Id")]
         public virtual Category Category_Names { get; set; }
-
-
-
-
-        public string Services_Title { get; set; }
-
-        [AllowHtml]
-        [UIHint("tinymce_full")]
-        public string Services_Description { get; set; }
-        //public string Services_Image { get; set; }
-        //public string Services_Budget { get; set; }
-        public string Services_Status { get; set; }
-        public string Services_Create_Date { get; set; }
-        public string Services_Update_Date { get; set; }
+        public Services Services { get; set; }
+        public List<Services> ServicesList { get; set; }
     }
 }

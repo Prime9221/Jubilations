@@ -146,8 +146,6 @@ namespace Jubilations.Controllers
 
         ///Feedback methods end--------------------------------------------------------------------
 
-
-
         ///Category methods start--------------------------------------------------------------------
         public ActionResult A_Category()
         {
@@ -174,7 +172,7 @@ namespace Jubilations.Controllers
                 a.Category_Name = model.Category_Name;
                 a.Category_Status = model.Category_Status;
                 a.Category_Create_Date = DateTime.Now.ToShortDateString();
-                a.Category_Update_Date = DateTime.Now.ToShortDateString();
+                //a.Category_Update_Date = DateTime.Now.ToShortDateString();
                 db.category.Add(a);
                 db.SaveChanges();
                 TempData["DataInserted"] = "true";
@@ -194,7 +192,7 @@ namespace Jubilations.Controllers
         public ActionResult A_Category_Edit(Category s)
         {
             db.Entry(s).State = EntityState.Modified;
-            s.Category_Create_Date = DateTime.Now.ToShortDateString();
+            //s.Category_Create_Date = DateTime.Now.ToShortDateString();
             s.Category_Update_Date = DateTime.Now.ToShortDateString();
             int a = db.SaveChanges();
             if (a > 0)
@@ -236,7 +234,130 @@ namespace Jubilations.Controllers
 
         ///Category methods end--------------------------------------------------------------------
 
+        ///Services methods Start--------------------------------------------------------------------
 
+        public ActionResult A_Services()
+        {
+            var model = new ServicesModel();
+            model.ServicesList = db.services.ToList();
+            return View(model);
+        }
+
+        //public ActionResult A_Services_Create()
+        //{
+        //    var ServicesList = db.ser.ToList();
+        //    ViewBag.CompanyId = new SelectList(ServicesList, "CompanyId", "CompanyName");
+        //    var EmployeeList = db.Employee.ToList();
+        //    ViewBag.EmployeeId = new SelectList(EmployeeList, "EmployeeId", "EmployeeName");
+
+        //    return View("create");
+        //}
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult A_Services_Create(Address model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        var CompanyList = db.Company.ToList();
+        //        ViewBag.CompanyId = new SelectList(CompanyList, "CompanyId", "CompanyName");
+        //        var EmployeeList = db.Employee.ToList();
+        //        ViewBag.EmployeeId = new SelectList(EmployeeList, "EmployeeId", "EmployeeName");
+        //        Address Address = new Address();
+        //        Address.CompanyId = model.CompanyId;
+        //        Address.EmployeeId = model.EmployeeId;
+        //        Address.City = model.City;
+        //        Address.State = model.State;
+        //        Address.Country = model.Country;
+        //        Address.Pincode = model.Pincode;
+        //        db.Address.Add(Address);
+        //        db.SaveChanges();
+        //        TempData["DataInserted"] = "true";
+        //        return RedirectToAction("Index");
+
+        //    }
+        //    return RedirectToAction("create");
+        //}
+
+        //public ActionResult A_Services_Edit(int AddressId)
+        //{
+
+        //    var CompanyList = db.Company.ToList();
+        //    ViewBag.CompanyId = new SelectList(CompanyList, "CompanyId", "CompanyName");
+        //    var EmployeeList = db.Employee.ToList();
+        //    ViewBag.EmployeeId = new SelectList(EmployeeList, "EmployeeId", "EmployeeName");
+        //    var Address = db.Address.Where(x => x.AddressId == AddressId).First();
+        //    return View(Address);
+        //}
+
+        //[HttpPost]
+        //public ActionResult A_Services_Edit(Address s)
+        //{
+        //    var CompanyList = db.Company.ToList();
+        //    ViewBag.CompanyId = new SelectList(CompanyList, "CompanyId", "CompanyName");
+        //    var EmployeeList = db.Employee.ToList();
+        //    ViewBag.EmployeeId = new SelectList(EmployeeList, "EmployeeId", "EmployeeName");
+        //    db.Entry(s).State = EntityState.Modified;
+        //    int a = db.SaveChanges();
+        //    if (a > 0)
+        //    {
+        //        ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+        //        return RedirectToAction("Index");
+        //    }
+        //    else
+        //    {
+        //        ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+        //    }
+
+        //    return View();
+        //}
+
+        //public ActionResult A_Services_Delete(int AddressId)
+        //{
+        //    var CompanyList = db.Company.ToList();
+        //    ViewBag.CompanyId = new SelectList(CompanyList, "CompanyId", "CompanyName");
+        //    var EmployeeList = db.Employee.ToList();
+        //    ViewBag.EmployeeId = new SelectList(EmployeeList, "EmployeeId", "EmployeeName");
+        //    var Address = db.Address.Where(x => x.AddressId == AddressId).First();
+        //    return View(Address);
+        //}
+
+        //[HttpPost]
+        //public ActionResult A_Services_Delete(Address s)
+        //{
+        //    var CompanyList = db.Company.ToList();
+        //    ViewBag.CompanyId = new SelectList(CompanyList, "CompanyId", "CompanyName");
+        //    var EmployeeList = db.Employee.ToList();
+        //    ViewBag.EmployeeId = new SelectList(EmployeeList, "EmployeeId", "EmployeeName");
+        //    db.Entry(s).State = EntityState.Deleted;
+        //    int a = db.SaveChanges();
+        //    if (a > 0)
+        //    {
+        //        ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+        //        return RedirectToAction("Index");
+        //    }
+        //    else
+        //    {
+        //        ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+        //    }
+        //    return View();
+        //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        ///Services methods End--------------------------------------------------------------------
         public ActionResult Projects()
         {
             return View();
