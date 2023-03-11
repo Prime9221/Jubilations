@@ -174,7 +174,7 @@ namespace Jubilations.Controllers
                 a.Category_Name = model.Category_Name;
                 a.Category_Status = model.Category_Status;
                 a.Category_Create_Date = DateTime.Now.ToShortDateString();
-                a.Category_Update_Date = DateTime.Now.ToShortDateString();
+                //a.Category_Update_Date = DateTime.Now.ToShortDateString();
                 db.category.Add(a);
                 db.SaveChanges();
                 TempData["DataInserted"] = "true";
@@ -194,7 +194,7 @@ namespace Jubilations.Controllers
         public ActionResult A_Category_Edit(Category s)
         {
             db.Entry(s).State = EntityState.Modified;
-            s.Category_Create_Date = DateTime.Now.ToShortDateString();
+            //s.Category_Create_Date = DateTime.Now.ToShortDateString();
             s.Category_Update_Date = DateTime.Now.ToShortDateString();
             int a = db.SaveChanges();
             if (a > 0)
