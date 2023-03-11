@@ -54,7 +54,7 @@ namespace Jubilations.Controllers
             return View();
         }
 
-        public ActionResult app_use_list() {
+        public ActionResult V_Services() {
             return View();
         }
 

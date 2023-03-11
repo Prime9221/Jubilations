@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using System.Xml.Linq;
+using System.Web.Mvc;
 
 namespace Jubilations.Models
 {
@@ -30,6 +31,18 @@ namespace Jubilations.Models
         [ForeignKey("Services_Id")]
         public virtual Services Services_Name { get; set; }
 
+
         public string Product_image { get; set; }
+
+        [AllowHtml]
+        [UIHint("tinymce_full")]
+        public string Description { get; set; }
+
+        public string Price { get; set; }
+
+        public string Status { get; set; }
+
+        public string Create_Date { get; set; }
+        public string Update_Date { get; set; }
     }
 }
