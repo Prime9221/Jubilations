@@ -190,6 +190,10 @@
     <Compile Include="Migrations\202303110845489_remove_field_services3.designer.cs">
       <DependentUpon>202303110845489_remove_field_services3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202303111017451_user_change.cs" />
+    <Compile Include="Migrations\202303111017451_user_change.designer.cs">
+      <DependentUpon>202303111017451_user_change.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Aboutus.cs" />
     <Compile Include="Models\AboutUsModel.cs" />
@@ -4498,6 +4502,8 @@
     <Content Include="Views\A_admin\A_Category_Edit.cshtml" />
     <Content Include="Views\A_admin\A_Category_delete.cshtml" />
     <Content Include="Views\A_admin\A_Services.cshtml" />
+    <Content Include="Views\V_admin\V_Services_Create.cshtml" />
+    <Content Include="Views\A_admin\A_Services_Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -4551,6 +4557,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202303110845489_remove_field_services3.resx">
       <DependentUpon>202303110845489_remove_field_services3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303111017451_user_change.resx">
+      <DependentUpon>202303111017451_user_change.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

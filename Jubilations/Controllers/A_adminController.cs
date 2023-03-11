@@ -239,7 +239,10 @@ namespace Jubilations.Controllers
         public ActionResult A_Services()
         {
             var model = new ServicesModel();
+
             model.ServicesList = db.services.ToList();
+            model.UserNameList = db.user.ToList();
+            model.CategoryList = db.category.ToList();
             return View(model);
         }
 
@@ -249,30 +252,34 @@ namespace Jubilations.Controllers
 
         public ActionResult A_Services_Delete(int Service_Id)
         {
+            var userList = db.user.ToList();
+            ViewBag.UserId = new SelectList(userList, "User_Id", "User_Name");
             var categoryList = db.category.ToList();
-            ViewBag.CompanyId = new SelectList(categoryList, "Category_Id", "Category_Name");            
-            var Service = db.services.Where(x => x.Services_Id == Service_Id).First();
-            return View(Service);
+            ViewBag.CategoryId = new SelectList(categoryList, "Category_Id", "Category_Name");
+            var si = db.services.Where(x => x.Services_Id == Service_Id).First();
+            return View(si);
         }
 
         [HttpPost]
         public ActionResult A_Services_Delete(Services s)
         {
-            
+            var userList = db.user.ToList();
+            ViewBag.UserId = new SelectList(userList, "User_Id", "User_Name");
             var categoryList = db.category.ToList();
-            ViewBag.EmployeeId = new SelectList(categoryList, "Category_Id", "Category_Name");
+            ViewBag.CategoryId = new SelectList(categoryList, "Category_Id", "Category_Name");
             db.Entry(s).State = EntityState.Deleted;
             int a = db.SaveChanges();
             if (a > 0)
             {
                 ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
-                return RedirectToAction("Index");
+                return RedirectToAction("A_Category");
             }
             else
             {
                 ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
             }
-            return View();
+
+            return View("A_Category");
         }
 
 
