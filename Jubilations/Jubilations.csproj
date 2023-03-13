@@ -4371,7 +4371,6 @@
     <Content Include="Scripts\tinymce\utils\form_utils.js" />
     <Content Include="Scripts\tinymce\utils\mctabs.js" />
     <Content Include="Scripts\tinymce\utils\validate.js" />
-    <Content Include="Views\Services\Services.cshtml" />
     <Content Include="Views\Services\venue.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -4478,6 +4477,7 @@
     <Content Include="Views\A_admin\A_Services.cshtml" />
     <Content Include="Views\V_admin\V_Services_Create.cshtml" />
     <Content Include="Views\A_admin\A_Services_Delete.cshtml" />
+    <Content Include="Views\V_admin\V_Services_Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
