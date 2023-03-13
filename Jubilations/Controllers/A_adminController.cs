@@ -239,108 +239,50 @@ namespace Jubilations.Controllers
         public ActionResult A_Services()
         {
             var model = new ServicesModel();
+
             model.ServicesList = db.services.ToList();
+            model.UserNameList = db.user.ToList();
+            model.CategoryList = db.category.ToList();
             return View(model);
         }
 
-        //public ActionResult A_Services_Create()
-        //{
-        //    var ServicesList = db.ser.ToList();
-        //    ViewBag.CompanyId = new SelectList(ServicesList, "CompanyId", "CompanyName");
-        //    var EmployeeList = db.Employee.ToList();
-        //    ViewBag.EmployeeId = new SelectList(EmployeeList, "EmployeeId", "EmployeeName");
 
-        //    return View("create");
-        //}
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult A_Services_Create(Address model)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        var CompanyList = db.Company.ToList();
-        //        ViewBag.CompanyId = new SelectList(CompanyList, "CompanyId", "CompanyName");
-        //        var EmployeeList = db.Employee.ToList();
-        //        ViewBag.EmployeeId = new SelectList(EmployeeList, "EmployeeId", "EmployeeName");
-        //        Address Address = new Address();
-        //        Address.CompanyId = model.CompanyId;
-        //        Address.EmployeeId = model.EmployeeId;
-        //        Address.City = model.City;
-        //        Address.State = model.State;
-        //        Address.Country = model.Country;
-        //        Address.Pincode = model.Pincode;
-        //        db.Address.Add(Address);
-        //        db.SaveChanges();
-        //        TempData["DataInserted"] = "true";
-        //        return RedirectToAction("Index");
 
-        //    }
-        //    return RedirectToAction("create");
-        //}
 
-        //public ActionResult A_Services_Edit(int AddressId)
-        //{
 
-        //    var CompanyList = db.Company.ToList();
-        //    ViewBag.CompanyId = new SelectList(CompanyList, "CompanyId", "CompanyName");
-        //    var EmployeeList = db.Employee.ToList();
-        //    ViewBag.EmployeeId = new SelectList(EmployeeList, "EmployeeId", "EmployeeName");
-        //    var Address = db.Address.Where(x => x.AddressId == AddressId).First();
-        //    return View(Address);
-        //}
+        public ActionResult A_Services_Delete(int Service_Id)
+        {
+            //var userList = db.user.ToList();
+            //ViewBag.UserId = new SelectList(userList, "User_Id", "User_Name");
+            //var categoryList = db.category.ToList();
+            //ViewBag.CategoryId = new SelectList(categoryList, "Category_Id", "Category_Name");
+            var si = db.services.Where(x => x.Services_Id == Service_Id).First();
+            return View(si);
+        }
 
-        //[HttpPost]
-        //public ActionResult A_Services_Edit(Address s)
-        //{
-        //    var CompanyList = db.Company.ToList();
-        //    ViewBag.CompanyId = new SelectList(CompanyList, "CompanyId", "CompanyName");
-        //    var EmployeeList = db.Employee.ToList();
-        //    ViewBag.EmployeeId = new SelectList(EmployeeList, "EmployeeId", "EmployeeName");
-        //    db.Entry(s).State = EntityState.Modified;
-        //    int a = db.SaveChanges();
-        //    if (a > 0)
-        //    {
-        //        ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
-        //        return RedirectToAction("Index");
-        //    }
-        //    else
-        //    {
-        //        ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
-        //    }
+        [HttpPost]
+        public ActionResult A_Services_Delete( Services s)
+        {
+            //var userList = db.user.ToList();
+            //ViewBag.UserId = new SelectList(userList, "User_Id", "User_Name");
+            //var categoryList = db.category.ToList();
+            //ViewBag.CategoryId = new SelectList(categoryList, "Category_Id", "Category_Name");
 
-        //    return View();
-        //}
+           
+            db.Entry(s).State = EntityState.Deleted;
+            int a = db.SaveChanges();
+            if (a > 0)
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                return RedirectToAction("A_Category");
+            }
+            else
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+            }
 
-        //public ActionResult A_Services_Delete(int AddressId)
-        //{
-        //    var CompanyList = db.Company.ToList();
-        //    ViewBag.CompanyId = new SelectList(CompanyList, "CompanyId", "CompanyName");
-        //    var EmployeeList = db.Employee.ToList();
-        //    ViewBag.EmployeeId = new SelectList(EmployeeList, "EmployeeId", "EmployeeName");
-        //    var Address = db.Address.Where(x => x.AddressId == AddressId).First();
-        //    return View(Address);
-        //}
-
-        //[HttpPost]
-        //public ActionResult A_Services_Delete(Address s)
-        //{
-        //    var CompanyList = db.Company.ToList();
-        //    ViewBag.CompanyId = new SelectList(CompanyList, "CompanyId", "CompanyName");
-        //    var EmployeeList = db.Employee.ToList();
-        //    ViewBag.EmployeeId = new SelectList(EmployeeList, "EmployeeId", "EmployeeName");
-        //    db.Entry(s).State = EntityState.Deleted;
-        //    int a = db.SaveChanges();
-        //    if (a > 0)
-        //    {
-        //        ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
-        //        return RedirectToAction("Index");
-        //    }
-        //    else
-        //    {
-        //        ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
-        //    }
-        //    return View();
-        //}
+            return View("A_Category");
+        }
 
 
 

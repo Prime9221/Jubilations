@@ -1,15 +1,9 @@
 ﻿@model Jubilations.Models.ServicesModel
 @{
-    ViewBag.Title = "A_Services";
-    Layout = "~/Views/Layout/_A_adminLayoutPage.cshtml";
+    ViewBag.Title = "Services";
+    Layout = "~/Views/Layout/_V_adminLayoutPage2.cshtml";
 }
 
-<h2>A_Services</h2>
-
-<br />
-<br />
-
-<!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
 
     <!-- Main content -->
@@ -23,7 +17,7 @@
                             <h3 class="card-title">Category DataTable</h3>
 
                         </div>
-                        @*<button>@Html.ActionLink("Create New", "A_Services_Create")</button>*@
+                        <button>@Html.ActionLink("Create New", "V_Services_Create")</button>
                         <!-- /.card-header -->
                         <div class="card-body">
 
@@ -94,7 +88,7 @@
                                                 </td>
                                                 <td>
                                                     @*@Html.ActionLink("Edit", "A_Services_Edit", new { Services_Id = item.Services_Id }) |*@
-                                                    @Html.ActionLink("Delete", "A_Services_Delete", new { Service_Id = item.Services_Id })
+                                                    @Html.ActionLink("Delete", "V_Services_Delete", new { Service_Id = item.Services_Id })
                                                 </td>
                                             </tr>
                                         }
@@ -114,4 +108,3 @@
     </section>
     <!-- /.content -->
 </div>
-<!-- /.content-wrapper -->

@@ -162,25 +162,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202303060908162_remove.cs" />
-    <Compile Include="Migrations\202303060908162_remove.designer.cs">
-      <DependentUpon>202303060908162_remove.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202303060921341_add.cs" />
-    <Compile Include="Migrations\202303060921341_add.designer.cs">
-      <DependentUpon>202303060921341_add.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202303091211553_name.cs" />
-    <Compile Include="Migrations\202303091211553_name.designer.cs">
-      <DependentUpon>202303091211553_name.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202303110702283_remove_field_services.cs" />
-    <Compile Include="Migrations\202303110702283_remove_field_services.designer.cs">
-      <DependentUpon>202303110702283_remove_field_services.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202303110707061_remove_field_services2.cs" />
-    <Compile Include="Migrations\202303110707061_remove_field_services2.designer.cs">
-      <DependentUpon>202303110707061_remove_field_services2.cs</DependentUpon>
+    <Compile Include="Migrations\202303130419294_inital.cs" />
+    <Compile Include="Migrations\202303130419294_inital.designer.cs">
+      <DependentUpon>202303130419294_inital.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Aboutus.cs" />
@@ -4470,7 +4454,7 @@
     <Content Include="Views\V_admin\app_invoice_list.cshtml" />
     <Content Include="Views\V_admin\app_invoice_preview.cshtml" />
     <Content Include="Views\V_admin\app_invoice_print.cshtml" />
-    <Content Include="Views\V_admin\app_use_list.cshtml" />
+    <Content Include="Views\V_admin\V_Services.cshtml" />
     <Content Include="Views\V_admin\app_user_view_account.cshtml" />
     <Content Include="Views\V_admin\app_user_view_security.cshtml" />
     <Content Include="Views\V_admin\dashboards_crm.cshtml" />
@@ -4492,8 +4476,8 @@
     <Content Include="Views\A_admin\A_Category_Edit.cshtml" />
     <Content Include="Views\A_admin\A_Category_delete.cshtml" />
     <Content Include="Views\A_admin\A_Services.cshtml" />
-    <Content Include="Views\Home\Index2.cshtml" />
-    <Content Include="Views\Home\Index3.cshtml" />
+    <Content Include="Views\V_admin\V_Services_Create.cshtml" />
+    <Content Include="Views\A_admin\A_Services_Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -4527,20 +4511,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202303060908162_remove.resx">
-      <DependentUpon>202303060908162_remove.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202303060921341_add.resx">
-      <DependentUpon>202303060921341_add.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202303091211553_name.resx">
-      <DependentUpon>202303091211553_name.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202303110702283_remove_field_services.resx">
-      <DependentUpon>202303110702283_remove_field_services.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202303110707061_remove_field_services2.resx">
-      <DependentUpon>202303110707061_remove_field_services2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202303130419294_inital.resx">
+      <DependentUpon>202303130419294_inital.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

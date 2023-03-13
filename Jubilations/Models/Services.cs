@@ -12,7 +12,6 @@ namespace Jubilations.Models
     {
         [Key]
         public int Services_Id { get; set; }
-        public string Services_Name { get; set; }
 
 
 
@@ -31,13 +30,7 @@ namespace Jubilations.Models
 
 
         public string Services_Title { get; set; }
-
-        [AllowHtml]
-        [UIHint("tinymce_full")]
-        public string Services_Description { get; set; }
-        //public string Services_Image { get; set; }
-        //public string Services_Budget { get; set; }
-        public string Services_Status { get; set; }
+       
         public string Services_Create_Date { get; set; }
         public string Services_Update_Date { get; set; }
     }
