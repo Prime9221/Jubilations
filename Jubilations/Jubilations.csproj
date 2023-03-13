@@ -178,10 +178,12 @@
     <Compile Include="Models\DBEntity.cs" />
     <Compile Include="Models\FeedBack.cs" />
     <Compile Include="Models\FeedBackModel.cs" />
+    <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Services.cs" />
     <Compile Include="Models\ServicesModel.cs" />
     <Compile Include="Models\Service_Role.cs" />
     <Compile Include="Models\Service_Role_Map.cs" />
+    <Compile Include="Models\SiteRole.cs" />
     <Compile Include="Models\SuccessStory.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\User_Role.cs" />
