@@ -1,6 +1,7 @@
 ﻿using Jubilations.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -83,17 +84,18 @@ namespace Jubilations.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult V_Services_Create(Services model)
+        public ActionResult V_Services_Create(Services model , ServicesModel S)
         {
             if (ModelState.IsValid)
             {
+
                 var userList = db.user.ToList();
                 ViewBag.UserId = new SelectList(userList, "User_Id", "User_Name");
                 var categoryList = db.category.ToList();
                 ViewBag.CategoryId = new SelectList(categoryList, "Category_Id", "Category_Name");
-                Services services = new Services();
-                services.Services_Title = model.Services_Title;
-
+                Services s = new Services();
+                S.Services.Services_Create_Date = DateTime.Now.ToString();
+                s.Services_Title = model.Services_Title;
                 db.services.Add(model);
                 db.SaveChanges();
                 TempData["DataInserted"] = "true";
@@ -102,8 +104,36 @@ namespace Jubilations.Controllers
             }
             return RedirectToAction("V_Services_Create");
         }
-        //Services end----------------------------------------------------------------------------------
+       
 
+        public ActionResult V_Services_Edit(int Service_id)
+        {
+            var ca = db.services.Where(x => x.Services_Id == Service_id).First();
+            return View(ca);
+        }
+        [HttpPost]
+        public ActionResult V_Services_Edit(Services s)
+        {
+            db.Entry(s).State = EntityState.Modified;
+            //s.Category_Create_Date = DateTime.Now.ToShortDateString();
+            s.Services_Update_Date = DateTime.Now.ToShortDateString();
+            int a = db.SaveChanges();
+            if (a > 0)
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                return RedirectToAction("V_Services");
+            }
+            else
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+            }
+
+            return View();
+        }
+
+
+
+        //Services end----------------------------------------------------------------------------------
         public ActionResult app_user_view_account() {
             return View();
         }

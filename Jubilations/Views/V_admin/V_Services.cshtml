@@ -78,6 +78,8 @@
                                                     {
                                                         @Html.DisplayFor(modelItem => item.Services_Create_Date)
                                                     }
+
+
                                                 </td>
                                                 <td>
 
@@ -87,7 +89,7 @@
                                                     }
                                                 </td>
                                                 <td>
-                                                    @*@Html.ActionLink("Edit", "A_Services_Edit", new { Services_Id = item.Services_Id }) |*@
+                                                    @Html.ActionLink("Edit", "V_Services_Edit", new { Service_id = item.Services_Id }) |
                                                     @Html.ActionLink("Delete", "V_Services_Delete", new { Service_Id = item.Services_Id })
                                                 </td>
                                             </tr>
