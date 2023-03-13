@@ -17,32 +17,6 @@ namespace Jubilations.Models
         public string User_DOB { get; set; }
         public string User_Profile_Image { get; set; }
 
-
-        [Display(Name = "Services_Id")]
-        public int Services_Id { get; set; }
-        
-        [ForeignKey("Services_Id")]
-        public virtual Services Services_Ids { get; set; }
-
-
-        [Display(Name = "Services_Name")]
-        public string Services_Name { get; set; }
-        [ForeignKey("Services_Id")]
-        public virtual Services Services_Names { get; set; }
-
-
-
-        [Display(Name = "Category_Name")]
-        public int Category_Id { get; set; }
-        [ForeignKey("Category_Id")]
-        public virtual Category Categorys { get; set; }
-
-
-        [Display(Name = "City_Name")]
-        public int City_Id { get; set; }
-        [ForeignKey("City_Id")]
-        public virtual City Citys { get; set; }
-
         public string User_GSTNO { get; set; }
         public string User_ShopName { get; set; }
         public string User_Address { get; set; }

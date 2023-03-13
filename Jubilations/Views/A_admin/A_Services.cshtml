@@ -50,13 +50,27 @@
                                                 <td>
                                                     @Html.DisplayFor(modelItem => item.Services_Id)
                                                 </td>
+                                                <td>
+                                                    @foreach (var user in Model.UserNameList)
+                                                    {
+                                                        if (user.User_Id == item.User_Id)
+                                                        {
+                                                            @Html.DisplayFor(modelItem => user.User_Name)
 
-                                                <td>
-                                                    @Html.DisplayFor(modelItem => item.Category_Id)
+                                                        }
+                                                    }
                                                 </td>
                                                 <td>
-                                                    @Html.DisplayFor(modelItem => item.User_Id)
+                                                    @foreach (var category in Model.CategoryList)
+                                                    {
+                                                        if (category.Category_Id == item.Category_Id)
+                                                        {
+                                                            @Html.DisplayFor(modelItem => category.Category_Name)
+
+                                                        }
+                                                    }
                                                 </td>
+
                                                 <td>
 
                                                     @if (item.Services_Title != null)
