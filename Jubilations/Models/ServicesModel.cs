@@ -1,4 +1,4 @@
-﻿using Jubilations.Migrations;
+﻿//using Jubilations.Migrations;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;

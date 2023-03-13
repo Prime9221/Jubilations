@@ -252,21 +252,23 @@ namespace Jubilations.Controllers
 
         public ActionResult A_Services_Delete(int Service_Id)
         {
-            var userList = db.user.ToList();
-            ViewBag.UserId = new SelectList(userList, "User_Id", "User_Name");
-            var categoryList = db.category.ToList();
-            ViewBag.CategoryId = new SelectList(categoryList, "Category_Id", "Category_Name");
+            //var userList = db.user.ToList();
+            //ViewBag.UserId = new SelectList(userList, "User_Id", "User_Name");
+            //var categoryList = db.category.ToList();
+            //ViewBag.CategoryId = new SelectList(categoryList, "Category_Id", "Category_Name");
             var si = db.services.Where(x => x.Services_Id == Service_Id).First();
             return View(si);
         }
 
         [HttpPost]
-        public ActionResult A_Services_Delete(Services s)
+        public ActionResult A_Services_Delete( Services s)
         {
-            var userList = db.user.ToList();
-            ViewBag.UserId = new SelectList(userList, "User_Id", "User_Name");
-            var categoryList = db.category.ToList();
-            ViewBag.CategoryId = new SelectList(categoryList, "Category_Id", "Category_Name");
+            //var userList = db.user.ToList();
+            //ViewBag.UserId = new SelectList(userList, "User_Id", "User_Name");
+            //var categoryList = db.category.ToList();
+            //ViewBag.CategoryId = new SelectList(categoryList, "Category_Id", "Category_Name");
+
+           
             db.Entry(s).State = EntityState.Deleted;
             int a = db.SaveChanges();
             if (a > 0)

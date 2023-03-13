@@ -7,13 +7,13 @@ namespace Jubilations.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class remove_field_services3 : IMigrationMetadata
+    public sealed partial class inital : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(remove_field_services3));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(inital));
         
         string IMigrationMetadata.Id
         {
-            get { return "202303110845489_remove_field_services3"; }
+            get { return "202303130419294_inital"; }
         }
         
         string IMigrationMetadata.Source
