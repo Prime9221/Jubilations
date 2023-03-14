@@ -94,7 +94,7 @@ namespace Jubilations.Controllers
                 var categoryList = db.category.ToList();
                 ViewBag.CategoryId = new SelectList(categoryList, "Category_Id", "Category_Name");
                 Services s = new Services();
-                S.Services.Services_Create_Date = DateTime.Now.ToString();
+                s.Services_Create_Date = DateTime.Now.ToShortDateString();
                 s.Services_Title = model.Services_Title;
                 db.services.Add(model);
                 db.SaveChanges();
