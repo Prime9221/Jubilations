@@ -187,6 +187,7 @@
     <Compile Include="Models\SiteRole.cs" />
     <Compile Include="Models\SuccessStory.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Models\User_Role.cs" />
     <Compile Include="Models\User_Role_Map.cs" />
     <Compile Include="Models\Vender_Catalog.cs" />
@@ -4415,15 +4416,14 @@
     <Content Include="Views\Layout\_A_adminLayoutPage.cshtml" />
     <Content Include="Views\A_admin\Dashboard.cshtml" />
     <Content Include="Views\A_admin\Widgets.cshtml" />
-    <Content Include="Views\A_admin\ChartsJS.cshtml" />
+    <Content Include="Views\A_admin\A_User_Role.cshtml" />
     <Content Include="Views\A_admin\Icons.cshtml" />
-    <Content Include="Views\A_admin\Buttons.cshtml" />
     <Content Include="Views\A_admin\Validation.cshtml" />
     <Content Include="Views\A_admin\DataTables.cshtml" />
-    <Content Include="Views\A_admin\Calendar.cshtml" />
+    <Content Include="Views\A_admin\A_Role.cshtml" />
     <Content Include="Views\A_admin\Gallery.cshtml" />
     <Content Include="Views\A_admin\A_Aboutus.cshtml" />
-    <Content Include="Views\A_admin\Projects.cshtml" />
+    <Content Include="Views\A_admin\A_Profiles.cshtml" />
     <Content Include="Views\A_admin\Project_Add.cshtml" />
     <Content Include="Views\A_admin\Project_Edit.cshtml" />
     <Content Include="Views\A_admin\Project_Detail.cshtml" />
@@ -4481,6 +4481,8 @@
     <Content Include="Views\V_admin\V_Services_Edit.cshtml" />
     <Content Include="Views\V_admin\V_Service_delete.cshtml" />
     <Content Include="Views\V_admin\FAQ.cshtml" />
+    <Content Include="Views\A_admin\A_User.cshtml" />
+    <Content Include="Views\A_admin\A_User_delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

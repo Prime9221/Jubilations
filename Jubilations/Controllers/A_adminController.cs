@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.Mvc;
 
 namespace Jubilations.Controllers
@@ -246,10 +247,6 @@ namespace Jubilations.Controllers
             return View(model);
         }
 
-
-
-
-
         public ActionResult A_Services_Delete(int Service_Id)
         {
             var si = db.services.Where(x => x.Services_Id == Service_Id).First();
@@ -264,39 +261,71 @@ namespace Jubilations.Controllers
             if (a > 0)
             {
                 ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
-                return RedirectToAction("A_Category");
+                return RedirectToAction("A_Services");
             }
             else
             {
                 ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
             }
 
-            return View("A_Category");
+            return View("A_Services");
         }
-
-
-
-
-
-
 
         ///Services methods End--------------------------------------------------------------------
-        public ActionResult Projects()
+        
+        //Profile start----------------------------
+        public ActionResult ProFiles()
         {
             return View();
         }
-        public ActionResult Project_Add()
+        //Profile End----------------------------
+
+        //User start----------------------------
+        public ActionResult A_User()
+        {
+            var model = new UserModel();
+            model.UserList = db.user.ToList();
+
+            return View(model);
+        }
+
+        public ActionResult A_User_delete(int User_ID)
+        {
+            var Ui = db.user.Where(x => x.User_Id == User_ID).First();
+            return View(Ui);
+        }
+        [HttpPost]
+        public ActionResult A_User_delete(User u)
+        {
+            int a = 0;
+            var existingRecord = db.user.Find(u.User_Id);
+            if (existingRecord != null)
+            {
+                db.user.Remove(existingRecord);
+                 a = db.SaveChanges();
+            }
+            if (a > 0)
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                return RedirectToAction("A_User");
+            }
+            else
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+            }
+
+            return View("A_User");
+        }
+        public ActionResult A_Role()
         {
             return View();
         }
-        public ActionResult Project_Edit()
+        public ActionResult A_User_Role()
         {
             return View();
         }
-        public ActionResult Project_Detail()
-        {
-            return View();
-        }
+
+        //User End----------------------------
         public ActionResult Contacts()
         {
             return View();

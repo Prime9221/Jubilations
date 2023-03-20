@@ -1,0 +1,175 @@
+﻿@model Jubilations.Models.UserModel
+@{
+    ViewBag.Title = "A_User";
+    Layout = "~/Views/Layout/_A_adminLayoutPage.cshtml";
+}
+
+
+<br />
+<br />
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">User DataTable</h3>
+
+                        </div>
+                        @*<button>@Html.ActionLink("Create New", "A_Services_Create")</button>*@
+                        <!-- /.card-header -->
+                        <div class="card-body">
+
+                            <table id="example1" class="table table-bordered table-striped">
+
+                                <thead>
+                                    <tr>
+                                        <th>User Id</th>
+                                        <th>User Name</th>
+                                        <th>User Email</th>
+                                        <th>User PhoneNo</th>
+                                        <th>User DOB</th>
+                                        <th>User Profile Image</th>
+                                        <th>User GSTNO</th>
+                                        <th>User ShopName</th>
+                                        <th>User Address</th>
+                                        <th>User PinCode</th>
+                                        <th>User Password</th>
+                                        <th>User Create Date</th>
+                                        <th>User Update Date</th>
+                                        <th>Action</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model.UserList.Count > 0)
+                                    {
+                                        foreach (var item in Model.UserList)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.User_Id)
+                                                </td>
+
+                                                <td>
+
+                                                    @if (item.User_Name != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.User_Name)
+                                                    }
+                                                </td>
+                                                <td>
+
+                                                    @if (item.User_Email != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.User_Email)
+                                                    }
+                                                </td>
+
+                                                <td>
+
+                                                    @if (item.User_PhoneNo != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.User_PhoneNo)
+                                                    }
+                                                </td>
+
+                                                <td>
+
+                                                    @if (item.User_DOB != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.User_DOB)
+                                                    }
+                                                </td>
+
+                                                <td>
+
+                                                    @if (item.User_Profile_Image != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.User_Profile_Image)
+                                                    }
+                                                </td>
+
+                                                <td>
+
+                                                    @if (item.User_GSTNO != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.User_GSTNO)
+                                                    }
+                                                </td>
+
+                                                <td>
+
+                                                    @if (item.User_ShopName != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.User_ShopName)
+                                                    }
+                                                </td>
+
+                                                <td>
+
+                                                    @if (item.User_Address != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.User_Address)
+                                                    }
+                                                </td>
+
+                                                <td>
+
+                                                    @if (item.User_PinCode != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.User_PinCode)
+                                                    }
+                                                </td>
+
+                                                <td>
+
+                                                    @if (item.User_Password != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.User_Password)
+                                                    }
+                                                </td>
+
+                                                <td>
+
+                                                    @if (item.User_Create_Date != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.User_Create_Date)
+                                                    }
+                                                </td>
+
+                                                <td>
+
+                                                    @if (item.User_Update_Date != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.User_Update_Date)
+                                                    }
+                                                </td>
+                                                <td>
+                                                    @Html.ActionLink("Delete", "A_User_delete", new { User_ID = item.User_Id })
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
