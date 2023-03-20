@@ -1,4 +1,5 @@
 ﻿using Jubilations.Models;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Data.Entity;
 using System.Data.Entity.Migrations;
@@ -318,12 +319,156 @@ namespace Jubilations.Controllers
         }
         public ActionResult A_Role()
         {
-            return View();
+            var model = new User_RoleModel();
+            model.User_RoleList = db.user_role.ToList();
+
+            return View(model);
         }
+
+        public ActionResult A_Role_Create()
+        {
+            return View("A_Role_Create");
+        }
+
+        [HttpPost]
+        public ActionResult A_Role_Create(User_Role model)
+        {
+            if (ModelState.IsValid)
+            {
+
+
+                User_Role a = new User_Role();
+
+                a.UserRole_Name = model.UserRole_Name;
+                db.user_role.Add(a);
+                db.SaveChanges();
+                TempData["DataInserted"] = "true";
+                return RedirectToAction("A_Role");
+
+            }
+            return RedirectToAction("A_Role");
+        }
+
+
+        public ActionResult A_Role_delete(int UserRole_Id)
+        {
+            var URi = db.user_role.Where(x => x.UserRole_Id == UserRole_Id).First();
+            return View(URi);
+        }
+        [HttpPost]
+        public ActionResult A_Role_delete(User_Role s)
+        {
+            db.Entry(s).State = EntityState.Deleted;
+            int a = db.SaveChanges();
+            if (a > 0)
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                return RedirectToAction("A_Role");
+            }
+            else
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+            }
+
+            return View("A_Role");
+        }
+
         public ActionResult A_User_Role()
         {
+            var model = new User_Role_MapModel();
+            model.User_RoleList = db.user_role.ToList();
+            model.User_IdList = db.user.ToList();
+            model.User_Role_MapList = db.user_role_Maps.ToList();
+            return View(model);
+        }
+
+        public ActionResult A_DRole_Delete(int Role_Id)
+        {
+            var si = db.user_role_Maps.Where(x => x.Id == Role_Id).First();
+            return View(si);
+        }
+
+        [HttpPost]
+        public ActionResult A_DRole_Delete(User_Role_Map u, int Role_Id)
+        {
+            int a = 0;
+            var existingRecord = db.user_role_Maps.Find(Role_Id);
+            if (existingRecord != null)
+            {
+                db.user_role_Maps.Remove(existingRecord);
+                a = db.SaveChanges();
+            }
+            if (a > 0)
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                return RedirectToAction("A_User_Role");
+            }
+            else
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+            }
+
+            return View("A_User_Role");
+        }
+
+        public ActionResult A_Role_Define()
+        {
+            var userList = db.user.ToList();
+            ViewBag.UserId = new SelectList(userList, "User_Id", "User_Name");
+            var RoleList = db.user_role.ToList();
+            ViewBag.RoleId = new SelectList(RoleList, "UserRole_Id", "UserRole_Name");
+
+            return View("A_Role_Define");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult A_Role_Define(User_Role_Map model, User_Role_MapModel S)
+        {
+            if (ModelState.IsValid)
+            {
+
+                var userList = db.user.ToList();
+                ViewBag.UserId = new SelectList(userList, "User_Id", "User_Name");
+                var RoleList = db.user_role.ToList();
+                ViewBag.RoleId = new SelectList(RoleList, "UserRole_Id", "UserRole_Name");
+                User_Role_Map s = new User_Role_Map();
+                db.user_role_Maps.Add(model);
+                db.SaveChanges();
+                TempData["DataInserted"] = "true";
+                return RedirectToAction("A_User_Role");
+
+            }
+            return RedirectToAction("A_Role_Define");
+        }
+
+
+        public ActionResult A_DRole_Edit(int Role_Id)
+        {
+            var ca = db.user_role_Maps.Where(x => x.Id == Role_Id).First();
+            return View(ca);
+        }
+        [HttpPost]
+        public ActionResult A_DRole_Edit(User_Role_Map s)
+        {
+            db.Entry(s).State = EntityState.Modified;
+            int a = db.SaveChanges();
+            if (a > 0)
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                return RedirectToAction("V_Services");
+            }
+            else
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+            }
+
             return View();
         }
+
+
+
+
 
         //User End----------------------------
         public ActionResult Contacts()

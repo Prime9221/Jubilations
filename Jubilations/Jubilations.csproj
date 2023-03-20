@@ -189,7 +189,9 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Models\User_Role.cs" />
+    <Compile Include="Models\User_RoleModel.cs" />
     <Compile Include="Models\User_Role_Map.cs" />
+    <Compile Include="Models\User_Role_MapModel.cs" />
     <Compile Include="Models\Vender_Catalog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -4483,6 +4485,11 @@
     <Content Include="Views\V_admin\FAQ.cshtml" />
     <Content Include="Views\A_admin\A_User.cshtml" />
     <Content Include="Views\A_admin\A_User_delete.cshtml" />
+    <Content Include="Views\A_admin\A_Role_Create.cshtml" />
+    <Content Include="Views\A_admin\A_Role_delete.cshtml" />
+    <Content Include="Views\A_admin\A_DRole_Delete.cshtml" />
+    <Content Include="Views\A_admin\A_Role_Define.cshtml" />
+    <Content Include="Views\A_admin\A_DRole_Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

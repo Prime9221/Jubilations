@@ -23,9 +23,7 @@ namespace Jubilations.Models
         public string User_Update_Date { get; set; }
 
         public User User { get; set; }
-        public Services services { get; set; }
         public List<User> UserList { get; set; }
 
-        public List<Services> ServicesList { get; set; }
     }
 }

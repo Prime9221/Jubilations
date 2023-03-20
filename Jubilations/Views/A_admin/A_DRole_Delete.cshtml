@@ -1,0 +1,46 @@
+﻿@model Jubilations.Models.User_Role_Map
+
+@{
+    ViewBag.Title = "A_DRole_Delete";
+    Layout = "~/Views/Layout/_A_adminLayoutPage.cshtml";
+}
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+
+    <h2>A_DRole_Delete</h2>
+
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+
+        <h4>User Role Map</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.User_Names.User_Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.User_Names.User_Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.UserRole_Names.UserRole_Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UserRole_Names.UserRole_Name)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(Model => Model.Id)
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "A_User_Role")
+            </div>
+        }
+    </div>
+</div>
