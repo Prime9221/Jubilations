@@ -280,15 +280,6 @@ namespace Jubilations.Controllers
 
 
 
-
-
-
-
-
-
-
-
-
         ///Services methods End--------------------------------------------------------------------
         public ActionResult Projects()
         {

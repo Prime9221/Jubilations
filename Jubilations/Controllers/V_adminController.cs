@@ -94,8 +94,8 @@ namespace Jubilations.Controllers
                 var categoryList = db.category.ToList();
                 ViewBag.CategoryId = new SelectList(categoryList, "Category_Id", "Category_Name");
                 Services s = new Services();
-                s.Services_Create_Date = DateTime.Now.ToShortDateString();
-                s.Services_Title = model.Services_Title;
+                model.Services_Create_Date = DateTime.Now.ToShortDateString();
+              //  s.Services_Title = model.Services_Title;
                 db.services.Add(model);
                 db.SaveChanges();
                 TempData["DataInserted"] = "true";
@@ -132,6 +132,29 @@ namespace Jubilations.Controllers
         }
 
 
+        public ActionResult V_Service_delete(int Service_id)
+        {
+            var Ci = db.services.Where(x => x.Services_Id == Service_id).First();
+            return View(Ci);
+        }
+        [HttpPost]
+        public ActionResult V_Service_delete(Services s)
+        {
+            db.Entry(s).State = EntityState.Deleted;
+            int a = db.SaveChanges();
+            if (a > 0)
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                return RedirectToAction("V_Services");
+            }
+            else
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+            }
+
+            return View("V_Services");
+        }
+
 
         //Services end----------------------------------------------------------------------------------
         public ActionResult app_user_view_account() {
@@ -151,6 +174,11 @@ namespace Jubilations.Controllers
         }
 
         public ActionResult maps_leaflet() {
+            return View();
+        }
+
+        public ActionResult FAQ()
+        {
             return View();
         }
     }

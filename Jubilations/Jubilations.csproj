@@ -162,9 +162,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202303130419294_inital.cs" />
-    <Compile Include="Migrations\202303130419294_inital.designer.cs">
-      <DependentUpon>202303130419294_inital.cs</DependentUpon>
+    <Compile Include="Migrations\202303160450372_initial.cs" />
+    <Compile Include="Migrations\202303160450372_initial.designer.cs">
+      <DependentUpon>202303160450372_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Aboutus.cs" />
@@ -179,6 +179,7 @@
     <Compile Include="Models\FeedBack.cs" />
     <Compile Include="Models\FeedBackModel.cs" />
     <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\Register.cs" />
     <Compile Include="Models\Services.cs" />
     <Compile Include="Models\ServicesModel.cs" />
     <Compile Include="Models\Service_Role.cs" />
@@ -4478,6 +4479,8 @@
     <Content Include="Views\V_admin\V_Services_Create.cshtml" />
     <Content Include="Views\A_admin\A_Services_Delete.cshtml" />
     <Content Include="Views\V_admin\V_Services_Edit.cshtml" />
+    <Content Include="Views\V_admin\V_Service_delete.cshtml" />
+    <Content Include="Views\V_admin\FAQ.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -4511,8 +4514,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202303130419294_inital.resx">
-      <DependentUpon>202303130419294_inital.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202303160450372_initial.resx">
+      <DependentUpon>202303160450372_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
