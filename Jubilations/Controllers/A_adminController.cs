@@ -12,10 +12,13 @@ using System.Web.Mvc;
 
 namespace Jubilations.Controllers
 {
+    [Authorize(Roles = "1")]
     public class A_adminController : Controller
     {
         // GET: A_admin
         DBEntity db = new DBEntity();
+
+
         public ActionResult Dashboard()
         {
             return View();
