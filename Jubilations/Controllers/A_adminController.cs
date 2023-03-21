@@ -443,33 +443,6 @@ namespace Jubilations.Controllers
         }
 
 
-        public ActionResult A_DRole_Edit(int Role_Id)
-        {
-            var ca = db.user_role_Maps.Where(x => x.Id == Role_Id).First();
-            return View(ca);
-        }
-        [HttpPost]
-        public ActionResult A_DRole_Edit(User_Role_Map s)
-        {
-            db.Entry(s).State = EntityState.Modified;
-            int a = db.SaveChanges();
-            if (a > 0)
-            {
-                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
-                return RedirectToAction("V_Services");
-            }
-            else
-            {
-                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
-            }
-
-            return View();
-        }
-
-
-
-
-
         //User End----------------------------
         public ActionResult Contacts()
         {
