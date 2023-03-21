@@ -166,6 +166,14 @@
     <Compile Include="Migrations\202303160450372_initial.designer.cs">
       <DependentUpon>202303160450372_initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202303210511403_pass.cs" />
+    <Compile Include="Migrations\202303210511403_pass.designer.cs">
+      <DependentUpon>202303210511403_pass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303210542299_rpass.cs" />
+    <Compile Include="Migrations\202303210542299_rpass.designer.cs">
+      <DependentUpon>202303210542299_rpass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Aboutus.cs" />
     <Compile Include="Models\AboutUsModel.cs" />
@@ -4488,8 +4496,8 @@
     <Content Include="Views\A_admin\A_Role_Create.cshtml" />
     <Content Include="Views\A_admin\A_Role_delete.cshtml" />
     <Content Include="Views\A_admin\A_DRole_Delete.cshtml" />
-    <Content Include="Views\A_admin\A_Role_Define.cshtml" />
     <Content Include="Views\A_admin\A_DRole_Edit.cshtml" />
+    <Content Include="Views\A_admin\A_Role_Define.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -4525,6 +4533,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202303160450372_initial.resx">
       <DependentUpon>202303160450372_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303210511403_pass.resx">
+      <DependentUpon>202303210511403_pass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303210542299_rpass.resx">
+      <DependentUpon>202303210542299_rpass.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
