@@ -271,7 +271,7 @@ namespace Jubilations.Controllers
                 ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
             }
 
-            return View("A_Category");
+            return View("A_Services");
         }
 
 
