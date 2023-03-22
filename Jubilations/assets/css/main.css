@@ -37,14 +37,11 @@ body {
 }
 
 a {
-  color: var(--color-primary);
+  
   text-decoration: none;
 }
 
-a:hover {
-  color: white;
-  text-decoration: none;
-}
+
 
 .col {
     color: var(--color-primary);
