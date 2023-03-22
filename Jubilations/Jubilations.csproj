@@ -174,6 +174,10 @@
     <Compile Include="Migrations\202303210542299_rpass.designer.cs">
       <DependentUpon>202303210542299_rpass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202303210643117_rlogin.cs" />
+    <Compile Include="Migrations\202303210643117_rlogin.designer.cs">
+      <DependentUpon>202303210643117_rlogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Aboutus.cs" />
     <Compile Include="Models\AboutUsModel.cs" />
@@ -186,7 +190,6 @@
     <Compile Include="Models\DBEntity.cs" />
     <Compile Include="Models\FeedBack.cs" />
     <Compile Include="Models\FeedBackModel.cs" />
-    <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Register.cs" />
     <Compile Include="Models\Services.cs" />
     <Compile Include="Models\ServicesModel.cs" />
@@ -4397,7 +4400,7 @@
     <Content Include="Views\Layout\_LayoutPage1.cshtml" />
     <Content Include="Views\Login\FNewPass.cshtml" />
     <Content Include="Views\Login\Forgot_password.cshtml" />
-    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Login\LoginOld.cshtml" />
     <Content Include="Views\Login\Otp.cshtml" />
     <Content Include="Views\Login\Register.cshtml" />
     <Content Include="Views\Contact\Blog1.cshtml" />
@@ -4498,6 +4501,7 @@
     <Content Include="Views\A_admin\A_DRole_Delete.cshtml" />
     <Content Include="Views\A_admin\A_DRole_Edit.cshtml" />
     <Content Include="Views\A_admin\A_Role_Define.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -4539,6 +4543,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202303210542299_rpass.resx">
       <DependentUpon>202303210542299_rpass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303210643117_rlogin.resx">
+      <DependentUpon>202303210643117_rlogin.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

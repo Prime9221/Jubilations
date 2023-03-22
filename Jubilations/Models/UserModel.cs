@@ -24,6 +24,7 @@ namespace Jubilations.Models
 
         public User User { get; set; }
         public List<User> UserList { get; set; }
+        public List<User_Role_Map> User_Role_Maps { get; set; }
 
     }
 }

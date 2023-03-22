@@ -6,7 +6,6 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 using System.Web.UI.WebControls;
-using Login = Jubilations.Models.Login;
 
 namespace Jubilations.Controllers
 {
