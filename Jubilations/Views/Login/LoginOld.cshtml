@@ -1,0 +1,88 @@
+﻿@model Jubilations.Models.User
+
+@{
+    ViewBag.Title = "Login";
+}
+
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="~/Design/Login/Login.css" rel="stylesheet" />
+<script src="~/Design/Login/Login.js"></script>
+
+<style>
+    body {
+        background-image: url('../../image/background/bg-0.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+</style>
+
+
+<body>
+    <div class="body">
+        <div class="veen">
+            <div class="login-btn splits">
+                <p>Already an user?</p>
+                <button class="active">Login</button>
+            </div>
+            <div class="rgstr-btn splits">
+
+                <p>Don't have an account?</p>
+
+                <button>Register</button>
+
+            </div>
+            <div class="wrapper">
+                <form id="login" tabindex="500" asp-action="Login"asp-controller="Login" method="post">
+                    <h3>Login</h3>
+                    <div class="mail">
+                        <input type="text" name="" asp-for="@Model.User_Email" value="@Model.User_Email">
+                        <label>Mail or PhoneNo</label>
+                    </div>
+                    <div class="passwd">
+                        <input type="password" name="">
+                        <label>Password</label>
+                    </div>
+                    <button class="submit" style="color:white;">@Html.ActionLink("Forgot password??", "Forgot_password", "Login")</button>
+                    <div class="submit">
+                        <button class="dark" type="submit">Login</button>
+                    </div>
+                </form>
+                <form id="register" tabindex="502">
+                    <h3>User Register</h3>
+                    <div class="name">
+                        <input type="text" name="">
+                        <label>User Name</label>
+                    </div>
+                    <div class="mail">
+                        <input type="email" name="">
+                        <label>Mail</label>
+                    </div>
+                    <div class="uid">
+                        <input type="text" name="">
+                        <label>Phone No.</label>
+
+                    </div>
+                    <div class="passwd">
+                        <input type="password" name="">
+                        <label>Password</label>
+                    </div>
+                    <div class="passwd">
+                        <input type="password" name="">
+                        <label>Confirm-Password</label>
+                    </div>
+                    <div class="submit">
+                        <button>@Html.ActionLink("Business Registration", "businessForm", "Login", new { @type = "submit" })</button>
+                        @*<button>@Html.ActionLink("Submit", "verifyotp", "Login", new { @class = "dark" })</button>*@
+                        <button class="dark" type="submit" id="submit">@Html.ActionLink("Submit", "verifyotp", "Login", new { @class = "dark" })</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>

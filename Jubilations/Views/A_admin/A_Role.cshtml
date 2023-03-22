@@ -1,0 +1,76 @@
+﻿@model Jubilations.Models.User_RoleModel
+@{
+    ViewBag.Title = "Roles";
+    Layout = "~/Views/Layout/_A_adminLayoutPage.cshtml";
+}
+
+
+<br />
+<br />
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Role DataTable</h3>
+
+                        </div>
+                        <button>@Html.ActionLink("Create New", "A_Role_Create")</button>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+
+                            <table id="example1" class="table table-bordered table-striped">
+
+                                <thead>
+                                    <tr>
+                                        <th>Role Id</th>
+                                        <th>Role Name</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model.User_RoleList.Count > 0)
+                                    {
+                                        foreach (var item in Model.User_RoleList)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.UserRole_Id)
+                                                </td>
+
+                                                <td>
+
+                                                    @if (item.UserRole_Name != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.UserRole_Name)
+                                                    }
+                                                </td>                                               
+                                                <td>
+                                                    @Html.ActionLink("Delete", "A_Role_delete", new { UserRole_Id = item.UserRole_Id })
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

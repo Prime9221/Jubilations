@@ -1,88 +1,64 @@
-﻿
+﻿@model Jubilations.Models.User
+
 @{
-    ViewBag.Title = "Login";
+    Layout = null;
 }
 
+<!DOCTYPE html>
 
+<html>
+<head>
 
-<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link href="~/Design/Login/Login.css" rel="stylesheet" />
-<script src="~/Design/Login/Login.js"></script>
-
-<style>
-    body {
-        background-image: url('../../image/background/bg-0.jpg');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: 100% 100%;
-    }
-</style>
-
-
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="~/Design/Login/Login.css" rel="stylesheet" />
+    <script src="~/Design/Login/Login.js"></script>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
 <body>
+    @using (Html.BeginForm()) 
+    {
+        @Html.AntiForgeryToken()
+        
+    <div class="form-horizontal">
+        <h4>User</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-    <div class="body">
-        <div class="veen">
-            <div class="login-btn splits">
-                <p>Already an user?</p>
-                <button class="active">Login</button>
+        @Html.HiddenFor(model => model.User_Id, new { htmlAttributes = new { @class = "form-control" } })
+        <div class="form-group">
+            @Html.LabelFor(model => model.User_Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.User_Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.User_Email, "", new { @class = "text-danger" })
             </div>
-            <div class="rgstr-btn splits">
+        </div>
 
-                <p>Don't have an account?</p>
 
-                <button>Register</button>
 
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.User_Password, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.User_Password, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.User_Password, "", new { @class = "text-danger" })
             </div>
-            <div class="wrapper">
-                <form id="login" tabindex="500">
-                    <h3>Login</h3>
-                    <div class="mail">
-                        <input type="text" name="">
-                        <label>Mail or PhoneNo</label>
-                    </div>
-                    <div class="passwd">
-                        <input type="password" name="">
-                        <label>Password</label>
-                    </div>
-                    <button class="submit" style="color:white;">@Html.ActionLink("Forgot password??", "Forgot_password", "Login")</button>
-                    <div class="submit">
-                        <button class="dark">@Html.ActionLink("Login", "Index", "Home")</button>
-                    </div>
-                </form>
-                <form id="register" tabindex="502">
-                    <h3>User Register</h3>
-                    <div class="name">
-                        <input type="text" name="">
-                        <label>User Name</label>
-                    </div>
-                    <div class="mail">
-                        <input type="email" name="">
-                        <label>Mail</label>
-                    </div>
-                    <div class="uid">
-                        <input type="text" name="">
-                        <label>Phone No.</label>
+        </div>
 
-                    </div>
-                    <div class="passwd">
-                        <input type="password" name="">
-                        <label>Password</label>
-                    </div>
-                    <div class="passwd">
-                        <input type="password" name="">
-                        <label>Confirm-Password</label>
-                    </div>
-                    <div class="submit">
-                        <button>@Html.ActionLink("Business Registration", "businessForm", "Login", new { @type = "submit" })</button>
-                        @*<button>@Html.ActionLink("Submit", "verifyotp", "Login", new { @class = "dark" })</button>*@
-                        <button class="dark" type="submit" id="submit">@Html.ActionLink("Submit", "verifyotp", "Login", new { @class = "dark" })</button>
-                    </div>
-                </form>
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Login" class="btn btn-default" />
             </div>
         </div>
     </div>
-
+    }
+    
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
 </body>
+</html>

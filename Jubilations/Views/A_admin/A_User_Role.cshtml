@@ -1,0 +1,86 @@
+﻿@model Jubilations.Models.User_Role_MapModel
+@{
+    ViewBag.Title = "User role define";
+    Layout = "~/Views/Layout/_A_adminLayoutPage.cshtml";
+}
+<br />
+<br />
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Role defined DataTable</h3>
+
+                        </div>
+                        <button>@Html.ActionLink("Define New Role", "A_Role_Define")</button>
+                        <div class="card-body">
+
+                            <table id="example1" class="table table-bordered table-striped">
+
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>User Name</th>
+                                        <th>Role Name</th>
+                                        <th>Action</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model.User_Role_MapList.Count > 0)
+                                    {
+                                        foreach (var item in Model.User_Role_MapList)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Id)
+                                                </td>
+                                                <td>
+                                                    @foreach (var user in Model.User_IdList)
+                                                    {
+                                                        if (user.User_Id == item.User_Id)
+                                                        {
+                                                            @Html.DisplayFor(modelItem => user.User_Name)
+
+                                                        }
+                                                    }
+                                                </td>
+                                                <td>
+                                                    @foreach (var User_Role in Model.User_RoleList)
+                                                    {
+                                                        if (User_Role.UserRole_Id == item.UserRole_Id)
+                                                        {
+                                                            @Html.DisplayFor(modelItem => User_Role.UserRole_Name)
+
+                                                        }
+                                                    }
+                                                </td>
+                                                <td>
+                                                    @*@Html.ActionLink("Edit", "A_DRole_Edit", new { Role_Id = item.Id }) |*@
+                                                    @Html.ActionLink("Delete", "A_DRole_Delete", new { Role_Id = item.Id })
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
