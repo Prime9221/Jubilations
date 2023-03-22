@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
 namespace Jubilations.Models
 {
-    public class User
+    public class UserModel
     {
-        [Key]
         public int User_Id { get; set; }
         public string User_Name { get; set; }
         public string User_Email { get; set; }
@@ -24,5 +21,10 @@ namespace Jubilations.Models
         public string User_Password { get; set; }
         public string User_Create_Date { get; set; }
         public string User_Update_Date { get; set; }
+
+        public User User { get; set; }
+        public List<User> UserList { get; set; }
+        public List<User_Role_Map> User_Role_Maps { get; set; }
+
     }
 }

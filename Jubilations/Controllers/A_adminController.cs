@@ -1,4 +1,5 @@
 ﻿using Jubilations.Models;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Data.Entity;
 using System.Data.Entity.Migrations;
@@ -6,14 +7,18 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.Mvc;
 
 namespace Jubilations.Controllers
 {
+    [Authorize(Roles = "1")]
     public class A_adminController : Controller
     {
         // GET: A_admin
         DBEntity db = new DBEntity();
+
+
         public ActionResult Dashboard()
         {
             return View();
@@ -146,8 +151,6 @@ namespace Jubilations.Controllers
 
         ///Feedback methods end--------------------------------------------------------------------
 
-
-
         ///Category methods start--------------------------------------------------------------------
         public ActionResult A_Category()
         {
@@ -174,7 +177,7 @@ namespace Jubilations.Controllers
                 a.Category_Name = model.Category_Name;
                 a.Category_Status = model.Category_Status;
                 a.Category_Create_Date = DateTime.Now.ToShortDateString();
-                a.Category_Update_Date = DateTime.Now.ToShortDateString();
+                //a.Category_Update_Date = DateTime.Now.ToShortDateString();
                 db.category.Add(a);
                 db.SaveChanges();
                 TempData["DataInserted"] = "true";
@@ -194,7 +197,7 @@ namespace Jubilations.Controllers
         public ActionResult A_Category_Edit(Category s)
         {
             db.Entry(s).State = EntityState.Modified;
-            s.Category_Create_Date = DateTime.Now.ToShortDateString();
+            //s.Category_Create_Date = DateTime.Now.ToShortDateString();
             s.Category_Update_Date = DateTime.Now.ToShortDateString();
             int a = db.SaveChanges();
             if (a > 0)
@@ -236,23 +239,214 @@ namespace Jubilations.Controllers
 
         ///Category methods end--------------------------------------------------------------------
 
+        ///Services methods Start--------------------------------------------------------------------
 
-        public ActionResult Projects()
+        public ActionResult A_Services()
+        {
+            var model = new ServicesModel();
+
+            model.ServicesList = db.services.ToList();
+            model.UserNameList = db.user.ToList();
+            model.CategoryList = db.category.ToList();
+            return View(model);
+        }
+
+        public ActionResult A_Services_Delete(int Service_Id)
+        {
+            var si = db.services.Where(x => x.Services_Id == Service_Id).First();
+            return View(si);
+        }
+
+        [HttpPost]
+        public ActionResult A_Services_Delete( Services s)
+        {
+            db.Entry(s).State = EntityState.Deleted;
+            int a = db.SaveChanges();
+            if (a > 0)
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                return RedirectToAction("A_Services");
+            }
+            else
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+            }
+
+            return View("A_Services");
+        }
+
+        ///Services methods End--------------------------------------------------------------------
+        
+        //Profile start----------------------------
+        public ActionResult ProFiles()
         {
             return View();
         }
-        public ActionResult Project_Add()
+        //Profile End----------------------------
+
+        //User start----------------------------
+        public ActionResult A_User()
         {
-            return View();
+            var model = new UserModel();
+            model.UserList = db.user.ToList();
+
+            return View(model);
         }
-        public ActionResult Project_Edit()
+
+        public ActionResult A_User_delete(int User_ID)
         {
-            return View();
+            var Ui = db.user.Where(x => x.User_Id == User_ID).First();
+            return View(Ui);
         }
-        public ActionResult Project_Detail()
+        [HttpPost]
+        public ActionResult A_User_delete(User u)
         {
-            return View();
+            int a = 0;
+            var existingRecord = db.user.Find(u.User_Id);
+            if (existingRecord != null)
+            {
+                db.user.Remove(existingRecord);
+                 a = db.SaveChanges();
+            }
+            if (a > 0)
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                return RedirectToAction("A_User");
+            }
+            else
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+            }
+
+            return View("A_User");
         }
+        public ActionResult A_Role()
+        {
+            var model = new User_RoleModel();
+            model.User_RoleList = db.user_role.ToList();
+
+            return View(model);
+        }
+
+        public ActionResult A_Role_Create()
+        {
+            return View("A_Role_Create");
+        }
+
+        [HttpPost]
+        public ActionResult A_Role_Create(User_Role model)
+        {
+            if (ModelState.IsValid)
+            {
+
+
+                User_Role a = new User_Role();
+
+                a.UserRole_Name = model.UserRole_Name;
+                db.user_role.Add(a);
+                db.SaveChanges();
+                TempData["DataInserted"] = "true";
+                return RedirectToAction("A_Role");
+
+            }
+            return RedirectToAction("A_Role");
+        }
+
+
+        public ActionResult A_Role_delete(int UserRole_Id)
+        {
+            var URi = db.user_role.Where(x => x.UserRole_Id == UserRole_Id).First();
+            return View(URi);
+        }
+        [HttpPost]
+        public ActionResult A_Role_delete(User_Role s)
+        {
+            db.Entry(s).State = EntityState.Deleted;
+            int a = db.SaveChanges();
+            if (a > 0)
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                return RedirectToAction("A_Role");
+            }
+            else
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+            }
+
+            return View("A_Role");
+        }
+
+        public ActionResult A_User_Role()
+        {
+            var model = new User_Role_MapModel();
+            model.User_RoleList = db.user_role.ToList();
+            model.User_IdList = db.user.ToList();
+            model.User_Role_MapList = db.user_role_Maps.ToList();
+            return View(model);
+        }
+
+        public ActionResult A_DRole_Delete(int Role_Id)
+        {
+            var si = db.user_role_Maps.Where(x => x.Id == Role_Id).First();
+            return View(si);
+        }
+
+        [HttpPost]
+        public ActionResult A_DRole_Delete(User_Role_Map u, int Role_Id)
+        {
+            int a = 0;
+            var existingRecord = db.user_role_Maps.Find(Role_Id);
+            if (existingRecord != null)
+            {
+                db.user_role_Maps.Remove(existingRecord);
+                a = db.SaveChanges();
+            }
+            if (a > 0)
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                return RedirectToAction("A_User_Role");
+            }
+            else
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+            }
+
+            return View("A_User_Role");
+        }
+
+        public ActionResult A_Role_Define()
+        {
+            var userList = db.user.ToList();
+            ViewBag.UserId = new SelectList(userList, "User_Id", "User_Name");
+            var RoleList = db.user_role.ToList();
+            ViewBag.RoleId = new SelectList(RoleList, "UserRole_Id", "UserRole_Name");
+
+            return View("A_Role_Define");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult A_Role_Define(User_Role_Map model, User_Role_MapModel S)
+        {
+            if (ModelState.IsValid)
+            {
+
+                var userList = db.user.ToList();
+                ViewBag.UserId = new SelectList(userList, "User_Id", "User_Name");
+                var RoleList = db.user_role.ToList();
+                ViewBag.RoleId = new SelectList(RoleList, "UserRole_Id", "UserRole_Name");
+                User_Role_Map s = new User_Role_Map();
+                db.user_role_Maps.Add(model);
+                db.SaveChanges();
+                TempData["DataInserted"] = "true";
+                return RedirectToAction("A_User_Role");
+
+            }
+            return RedirectToAction("A_Role_Define");
+        }
+
+
+        //User End----------------------------
         public ActionResult Contacts()
         {
             return View();

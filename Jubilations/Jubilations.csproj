@@ -162,17 +162,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202303060908162_remove.cs" />
-    <Compile Include="Migrations\202303060908162_remove.designer.cs">
-      <DependentUpon>202303060908162_remove.cs</DependentUpon>
+    <Compile Include="Migrations\202303160450372_initial.cs" />
+    <Compile Include="Migrations\202303160450372_initial.designer.cs">
+      <DependentUpon>202303160450372_initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202303060921341_add.cs" />
-    <Compile Include="Migrations\202303060921341_add.designer.cs">
-      <DependentUpon>202303060921341_add.cs</DependentUpon>
+    <Compile Include="Migrations\202303210511403_pass.cs" />
+    <Compile Include="Migrations\202303210511403_pass.designer.cs">
+      <DependentUpon>202303210511403_pass.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202303091211553_name.cs" />
-    <Compile Include="Migrations\202303091211553_name.designer.cs">
-      <DependentUpon>202303091211553_name.cs</DependentUpon>
+    <Compile Include="Migrations\202303210542299_rpass.cs" />
+    <Compile Include="Migrations\202303210542299_rpass.designer.cs">
+      <DependentUpon>202303210542299_rpass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303210643117_rlogin.cs" />
+    <Compile Include="Migrations\202303210643117_rlogin.designer.cs">
+      <DependentUpon>202303210643117_rlogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Aboutus.cs" />
@@ -186,13 +190,19 @@
     <Compile Include="Models\DBEntity.cs" />
     <Compile Include="Models\FeedBack.cs" />
     <Compile Include="Models\FeedBackModel.cs" />
+    <Compile Include="Models\Register.cs" />
     <Compile Include="Models\Services.cs" />
+    <Compile Include="Models\ServicesModel.cs" />
     <Compile Include="Models\Service_Role.cs" />
     <Compile Include="Models\Service_Role_Map.cs" />
+    <Compile Include="Models\SiteRole.cs" />
     <Compile Include="Models\SuccessStory.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Models\User_Role.cs" />
+    <Compile Include="Models\User_RoleModel.cs" />
     <Compile Include="Models\User_Role_Map.cs" />
+    <Compile Include="Models\User_Role_MapModel.cs" />
     <Compile Include="Models\Vender_Catalog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -4376,7 +4386,6 @@
     <Content Include="Scripts\tinymce\utils\form_utils.js" />
     <Content Include="Scripts\tinymce\utils\mctabs.js" />
     <Content Include="Scripts\tinymce\utils\validate.js" />
-    <Content Include="Views\Services\Services.cshtml" />
     <Content Include="Views\Services\venue.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -4391,7 +4400,7 @@
     <Content Include="Views\Layout\_LayoutPage1.cshtml" />
     <Content Include="Views\Login\FNewPass.cshtml" />
     <Content Include="Views\Login\Forgot_password.cshtml" />
-    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Login\LoginOld.cshtml" />
     <Content Include="Views\Login\Otp.cshtml" />
     <Content Include="Views\Login\Register.cshtml" />
     <Content Include="Views\Contact\Blog1.cshtml" />
@@ -4420,15 +4429,14 @@
     <Content Include="Views\Layout\_A_adminLayoutPage.cshtml" />
     <Content Include="Views\A_admin\Dashboard.cshtml" />
     <Content Include="Views\A_admin\Widgets.cshtml" />
-    <Content Include="Views\A_admin\ChartsJS.cshtml" />
+    <Content Include="Views\A_admin\A_User_Role.cshtml" />
     <Content Include="Views\A_admin\Icons.cshtml" />
-    <Content Include="Views\A_admin\Buttons.cshtml" />
     <Content Include="Views\A_admin\Validation.cshtml" />
     <Content Include="Views\A_admin\DataTables.cshtml" />
-    <Content Include="Views\A_admin\Calendar.cshtml" />
+    <Content Include="Views\A_admin\A_Role.cshtml" />
     <Content Include="Views\A_admin\Gallery.cshtml" />
     <Content Include="Views\A_admin\A_Aboutus.cshtml" />
-    <Content Include="Views\A_admin\Projects.cshtml" />
+    <Content Include="Views\A_admin\A_Profiles.cshtml" />
     <Content Include="Views\A_admin\Project_Add.cshtml" />
     <Content Include="Views\A_admin\Project_Edit.cshtml" />
     <Content Include="Views\A_admin\Project_Detail.cshtml" />
@@ -4459,7 +4467,7 @@
     <Content Include="Views\V_admin\app_invoice_list.cshtml" />
     <Content Include="Views\V_admin\app_invoice_preview.cshtml" />
     <Content Include="Views\V_admin\app_invoice_print.cshtml" />
-    <Content Include="Views\V_admin\app_use_list.cshtml" />
+    <Content Include="Views\V_admin\V_Services.cshtml" />
     <Content Include="Views\V_admin\app_user_view_account.cshtml" />
     <Content Include="Views\V_admin\app_user_view_security.cshtml" />
     <Content Include="Views\V_admin\dashboards_crm.cshtml" />
@@ -4480,6 +4488,20 @@
     <Content Include="Views\A_admin\A_Category_Create.cshtml" />
     <Content Include="Views\A_admin\A_Category_Edit.cshtml" />
     <Content Include="Views\A_admin\A_Category_delete.cshtml" />
+    <Content Include="Views\A_admin\A_Services.cshtml" />
+    <Content Include="Views\V_admin\V_Services_Create.cshtml" />
+    <Content Include="Views\A_admin\A_Services_Delete.cshtml" />
+    <Content Include="Views\V_admin\V_Services_Edit.cshtml" />
+    <Content Include="Views\V_admin\V_Service_delete.cshtml" />
+    <Content Include="Views\V_admin\FAQ.cshtml" />
+    <Content Include="Views\A_admin\A_User.cshtml" />
+    <Content Include="Views\A_admin\A_User_delete.cshtml" />
+    <Content Include="Views\A_admin\A_Role_Create.cshtml" />
+    <Content Include="Views\A_admin\A_Role_delete.cshtml" />
+    <Content Include="Views\A_admin\A_DRole_Delete.cshtml" />
+    <Content Include="Views\A_admin\A_DRole_Edit.cshtml" />
+    <Content Include="Views\A_admin\A_Role_Define.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -4513,14 +4535,17 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202303060908162_remove.resx">
-      <DependentUpon>202303060908162_remove.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202303160450372_initial.resx">
+      <DependentUpon>202303160450372_initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202303060921341_add.resx">
-      <DependentUpon>202303060921341_add.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202303210511403_pass.resx">
+      <DependentUpon>202303210511403_pass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202303091211553_name.resx">
-      <DependentUpon>202303091211553_name.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202303210542299_rpass.resx">
+      <DependentUpon>202303210542299_rpass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303210643117_rlogin.resx">
+      <DependentUpon>202303210643117_rlogin.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,0 +1,130 @@
+﻿@model Jubilations.Models.User
+
+@{
+    ViewBag.Title = "A_User_delete";
+    Layout = "~/Views/Layout/_A_adminLayoutPage.cshtml";
+}
+
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+
+    <h2>A_User_delete</h2>
+
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>User</h4>
+        <hr />
+        <dl class="dl-horizontal">
+
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.User_Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.User_Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.User_Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.User_Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.User_PhoneNo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.User_PhoneNo)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.User_DOB)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.User_DOB)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.User_Profile_Image)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.User_Profile_Image)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.User_GSTNO)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.User_GSTNO)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.User_ShopName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.User_ShopName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.User_Address)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.User_Address)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.User_PinCode)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.User_PinCode)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.User_Password)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.User_Password)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.User_Create_Date)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.User_Create_Date)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.User_Update_Date)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.User_Update_Date)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(model => model.User_Id)
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "A_User")
+            </div>
+        }
+    </div>
+    </div>
