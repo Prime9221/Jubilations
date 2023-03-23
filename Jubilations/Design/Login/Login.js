@@ -1,15 +1,11 @@
-﻿$(document).ready(function () {
-	$(".veen .rgstr-btn button").click(function () {
-		$('.veen .wrapper').addClass('move');
-		$('.body').css('background');
-		$(".veen .login-btn button").removeClass('active');
-		$(this).addClass('active');
+﻿const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
 
-	});
-	$(".veen .login-btn button").click(function () {
-		$('.veen .wrapper').removeClass('move');
-		$('.body').css('background');
-		$(".veen .rgstr-btn button").removeClass('active');
-		$(this).addClass('active');
-	});
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
 });

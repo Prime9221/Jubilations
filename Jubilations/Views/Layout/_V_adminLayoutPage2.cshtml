@@ -116,7 +116,7 @@
                                     <div data-i18n="Analytics">Analytics</div>
                                 </a>
                             </li>
-                            <li class="menu-item">
+                            @*<li class="menu-item">
                                 <a href="~/V_admin/dashboards_crm" class="menu-link">
                                     <div data-i18n="CRM">CRM</div>
                                 </a>
@@ -125,7 +125,7 @@
                                 <a href="~/V_admin/dashboards_ecommerce" class="menu-link">
                                     <div data-i18n="eCommerce">eCommerce</div>
                                 </a>
-                            </li>
+                            </li>*@
                         </ul>
                     </li>
                     <!-- Apps & Pages -->
@@ -232,8 +232,14 @@
                             </li>
                         </ul>
                     </li>
-
+                    <li class="menu-item">
+                        <a href="~/V_admin/FAQ" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-envelope"></i>
+                            <div data-i18n="Email">FAQ</div>
+                        </a>
+                    </li>
                 </ul>
+
             </aside>
             <!-- / Menu -->
 
@@ -365,8 +371,14 @@
                                                     </div>
                                                 </div>
                                                 <div class="flex-grow-1">
-                                                    <span class="fw-semibold d-block">Jubilations</span>
-                                                    <small class="text-muted">Admin</small>
+
+
+                                                    @if (User.Identity.IsAuthenticated)
+                                                    {
+                                                    <span class="fw-semibold d-block">@(User.Identity.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Guest")</span>
+                                                    <small class="text-muted">Welcome @(User.Identity.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Guest")</small>
+                                                        
+                                                    }
                                                 </div>
                                             </div>
                                         </a>
@@ -420,10 +432,12 @@
                                         <div class="dropdown-divider"></div>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="auth-login-cover.html" target="_blank">
+                                        @*<a class="dropdown-item" href="auth-login-cover.html">*@
                                             <i class="bx bx-power-off me-2"></i>
-                                            <span class="align-middle">Log Out</span>
-                                        </a>
+                                            @*<span class="align-middle">Logout</span>*@
+                                            <a href="@Url.Action("SignOut","Login")">Logout</a>
+
+                                        @*</a>*@
                                     </li>
                                 </ul>
                             </li>
@@ -450,14 +464,14 @@
                             <script>
                                 document.write(new Date().getFullYear())
                             </script>
-                            , made with ❤️ by <a href="" target="_blank" class="footer-link fw-bolder">jubilation</a>
+                            , Made By <a href="" target="_blank" class="footer-link fw-bolder">Jubilation. ❤️</a>
                         </div>
-                        <div>
+                        @*<div>
                             <a href="" class="footer-link me-4" target="_blank">License</a>
                             <a href="" target="_blank" class="footer-link me-4">More Themes</a>
                             <a href="" target="_blank" class="footer-link me-4">Documentation</a>
                             <a href="" target="_blank" class="footer-link d-none d-sm-inline-block">Support</a>
-                        </div>
+                        </div>*@
                     </div>
                 </footer>
                 <!-- Overlay -->

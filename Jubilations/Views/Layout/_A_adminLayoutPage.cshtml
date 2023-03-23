@@ -90,6 +90,10 @@
                     <i class="fas fa-th-large"></i>
                 </a>
             </li>
+
+            <li class="nav-item">
+            <a href="@Url.Action("SignOut","Login")">Logout</a>
+            </li>
         </ul>
     </nav>
 
@@ -112,10 +116,13 @@
 
                     <img src="~/Design/A_admin/dist/img/1.png" class="img-circle elevation-2" alt="User Image">
                 </div>
-                <div class="info">
-                    <a href="#" class="d-block">Admin</a>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="info">
+                        <a href="#" class="d-block">@(User.Identity.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Guest")</a>
+                    </div>
+                }
                 </div>
-            </div>
             <!-- SidebarSearch Form -->
             <div class="form-inline">
                 <div class="input-group" data-widget="sidebar-search">
@@ -264,27 +271,27 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="~/A_admin/Projects" class="nav-link">
+                                <a href="~/A_admin/A_Profiles" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Projects</p>
+                                    <p>Profiles</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="~/A_admin/Project_Add" class="nav-link">
+                                <a href="~/A_admin/A_User" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Project Add</p>
+                                    <p>All User</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="~/A_admin/Project_Edit" class="nav-link">
+                                <a href="~/A_admin/A_Role" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Project Edit</p>
+                                    <p>User Role</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="~/A_admin/Project_Detail" class="nav-link">
+                                <a href="~/A_admin/A_User_Role" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Project Detail</p>
+                                    <p>User Role Define</p>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -303,124 +310,6 @@
                                 <a href="~/A_admin/Contact_us" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Contact us</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon far fa-plus-square"></i>
-                            <p>
-                                Extras
-                                <i class="fas fa-angle-left right"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>
-                                        Login & Register v1
-                                        <i class="fas fa-angle-left right"></i>
-                                    </p>
-                                </a>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="~/A_admin/Login_v1" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Login v1</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="~/A_admin/Register_v1" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Register v1</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="~/A_admin/Forgot_Password_v1" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Forgot Password v1</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="~/A_admin/Recover_Password_v1" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Recover Password v1</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>
-                                        Login & Register v2
-                                        <i class="fas fa-angle-left right"></i>
-                                    </p>
-                                </a>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="~/A_admin/Login_v2" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Login v2</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="~/A_admin/Register_v2" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Register v2</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="~/A_admin/Forgot_Password_v2" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Forgot Password v2</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="~/A_admin/Recover_Password_v2" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Recover Password v2</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="~/A_admin/Error_404" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Error 404</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="~/A_admin/Error_500" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Error 500</p>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-search"></i>
-                            <p>
-                                Search
-                                <i class="fas fa-angle-left right"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="~/A_admin/Simple_Search" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Simple Search</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="~/A_admin/Enhanced" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Enhanced</p>
                                 </a>
                             </li>
                         </ul>
@@ -461,9 +350,9 @@
     </div>
     <footer class="main-footer">
         <div class="float-right d-none d-sm-block">
-            <b>Version</b> 3.2.0
+            @*<b>Version</b> 3.2.0*@
         </div>
-        <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">Jubilations</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2023 <a href="https://adminlte.io">Jubilation. ❤️</a>.</strong> All rights reserved.
     </footer>
 
 

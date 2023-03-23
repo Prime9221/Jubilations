@@ -38,6 +38,7 @@ namespace Jubilations.Models
         public DbSet<FeedBack> feedBacks { get; set; }
 
         public DbSet<Aboutus> aboutuss { get; set; }
-        public DbSet<Login> Login { get; set; }
+
+        public DbSet<Register> registers { get; set; }
     }
 }
