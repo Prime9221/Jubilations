@@ -3500,7 +3500,12 @@
     <Content Include="image\Home\testimonial-4.jpg" />
     <Content Include="image\Home\whychooseus.jpg" />
     <Content Include="image\login.png" />
+    <Content Include="image\login\1.png" />
     <Content Include="image\login\login-cover.png" />
+    <Content Include="image\login\login.png" />
+    <Content Include="image\login\login2.png" />
+    <Content Include="image\login\loginhear.png" />
+    <Content Include="image\login\loginpink.png" />
     <Content Include="image\Logo\icon.png" />
     <Content Include="image\Logo\india.png" />
     <Content Include="image\Logo\jubilations.png" />
