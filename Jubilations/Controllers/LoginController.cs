@@ -75,7 +75,7 @@ namespace Jubilations.Controllers
         public ActionResult SignOut()
         {
             FormsAuthentication.SignOut();
-            return RedirectToAction("Login", "Home");
+            return RedirectToAction("Login", "Login");
 
         }
 
@@ -86,9 +86,32 @@ namespace Jubilations.Controllers
 
         public ActionResult Register()
         {
-            return View();
+            return View("Register");
         }
+        [HttpPost]
+        public ActionResult Register(User model)
+        {
+            if (ModelState.IsValid)
+            {
 
+
+                User a = new User();
+
+                a.User_Name = model.User_Name;
+                a.User_Email = model.User_Email;
+                a.User_PhoneNo = model.User_PhoneNo;
+                a.User_DOB = model.User_DOB;
+                a.User_Password = model.User_Password;
+                a.User_Create_Date = DateTime.Now.ToShortDateString();
+                //a.Category_Update_Date = DateTime.Now.ToShortDateString();
+                db.user.Add(a);
+                db.SaveChanges();
+                TempData["DataInserted"] = "true";
+                return RedirectToAction("Login");
+
+            }
+            return RedirectToAction("Login");
+        }
         public ActionResult Otp()
         {
             return View();
@@ -101,9 +124,34 @@ namespace Jubilations.Controllers
 
         public ActionResult businessForm()
         {
-            return View();
+            return View("businessForm");
         }
+        [HttpPost]
+        public ActionResult businessForm(User model)
+        {
+            if (ModelState.IsValid)
+            {
 
+
+                User a = new User();
+
+                a.User_Name = model.User_Name;
+                a.User_ShopName= model.User_ShopName;
+                a.User_Address = model.User_Address;
+                a.User_GSTNO = model.User_GSTNO;
+                a.User_Email = model.User_Email;
+                a.User_PhoneNo = model.User_PhoneNo;
+                a.User_Password = model.User_Password;
+                a.User_Create_Date = DateTime.Now.ToShortDateString();
+                //a.Category_Update_Date = DateTime.Now.ToShortDateString();
+                db.user.Add(a);
+                db.SaveChanges();
+                TempData["DataInserted"] = "true";
+                return RedirectToAction("Login");
+
+            }
+            return RedirectToAction("Login");
+        }
         public ActionResult verifyotp()
         {
             return View();

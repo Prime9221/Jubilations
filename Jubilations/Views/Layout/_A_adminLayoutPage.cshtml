@@ -90,6 +90,10 @@
                     <i class="fas fa-th-large"></i>
                 </a>
             </li>
+
+            <li class="nav-item">
+            <a href="@Url.Action("SignOut","Login")">Logout</a>
+            </li>
         </ul>
     </nav>
 
@@ -112,10 +116,13 @@
 
                     <img src="~/Design/A_admin/dist/img/1.png" class="img-circle elevation-2" alt="User Image">
                 </div>
-                <div class="info">
-                    <a href="#" class="d-block">Admin</a>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="info">
+                        <a href="#" class="d-block">@(User.Identity.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Guest")</a>
+                    </div>
+                }
                 </div>
-            </div>
             <!-- SidebarSearch Form -->
             <div class="form-inline">
                 <div class="input-group" data-widget="sidebar-search">

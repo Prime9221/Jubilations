@@ -184,8 +184,11 @@
                     <li><a>@Html.ActionLink("Blog", "Blog1", "Contact")</a></li>
                     <li><a>@Html.ActionLink("About", "About_us", "Contact")</a></li>
                     <li><a>@Html.ActionLink("Contact", "Contact_us", "Contact")</a></li>
-                    <li><a>@Html.ActionLink("Login", "Login", "Login")</a></li>
-                </ul><br /><br /><br />
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li><a style="color: #7f7f90;">Welcome:-) @(User.Identity.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Guest")</a></li>
+                    }
+                    </ul><br /><br /><br />
 
 
 

@@ -371,8 +371,14 @@
                                                     </div>
                                                 </div>
                                                 <div class="flex-grow-1">
-                                                    <span class="fw-semibold d-block">Jubilations</span>
-                                                    <small class="text-muted">Admin</small>
+
+
+                                                    @if (User.Identity.IsAuthenticated)
+                                                    {
+                                                    <span class="fw-semibold d-block">@(User.Identity.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Guest")</span>
+                                                    <small class="text-muted">Welcome @(User.Identity.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Guest")</small>
+                                                        
+                                                    }
                                                 </div>
                                             </div>
                                         </a>
@@ -426,10 +432,12 @@
                                         <div class="dropdown-divider"></div>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="auth-login-cover.html" target="_blank">
+                                        @*<a class="dropdown-item" href="auth-login-cover.html">*@
                                             <i class="bx bx-power-off me-2"></i>
-                                            <span class="align-middle">Log Out</span>
-                                        </a>
+                                            @*<span class="align-middle">Logout</span>*@
+                                            <a href="@Url.Action("SignOut","Login")">Logout</a>
+
+                                        @*</a>*@
                                     </li>
                                 </ul>
                             </li>
