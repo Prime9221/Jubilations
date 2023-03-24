@@ -205,6 +205,7 @@
     <Compile Include="Models\User_Role_Map.cs" />
     <Compile Include="Models\User_Role_MapModel.cs" />
     <Compile Include="Models\Vender_Catalog.cs" />
+    <Compile Include="Models\Vender_CatalogModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -4508,6 +4509,7 @@
     <Content Include="Views\A_admin\A_DRole_Edit.cshtml" />
     <Content Include="Views\A_admin\A_Role_Define.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\V_admin\V_Catelog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

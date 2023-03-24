@@ -145,7 +145,7 @@ namespace Jubilations.Controllers
                 a.User_Create_Date = DateTime.Now.ToShortDateString();
                 //a.Category_Update_Date = DateTime.Now.ToShortDateString();
                 db.user.Add(a);
-                db.SaveChanges();
+                db.SaveChanges();  
                 TempData["DataInserted"] = "true";
                 return RedirectToAction("Login");
 
