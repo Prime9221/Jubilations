@@ -1,0 +1,112 @@
+﻿@model Jubilations.Models.ServicesModel
+@{
+    ViewBag.Title = "Services";
+    Layout = "~/Views/Layout/_V_adminLayoutPage2.cshtml";
+}
+
+<div class="content-wrapper">
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Category DataTable</h3>
+
+                        </div>
+                        <button>@Html.ActionLink("Create New", "V_Services_Create")</button>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+
+                            <table id="example1" class="table table-bordered table-striped">
+
+                                <thead>
+                                    <tr>
+                                        <th>Services Id</th>
+                                        <th>User Name</th>
+                                        <th>Category Name</th>
+                                        <th>Services Title</th>
+                                        <th>Create Date</th>
+                                        <th>Update Date</th>
+                                        <th>Action</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model.ServicesList.Count > 0)
+                                    {
+                                        foreach (var item in Model.ServicesList)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Services_Id)
+                                                </td>
+                                                <td>
+                                                    @foreach (var user in Model.UserNameList)
+                                                    {
+                                                        if (user.User_Id == item.User_Id)
+                                                        {
+                                                            @Html.DisplayFor(modelItem => user.User_Name)
+
+                                                        }
+                                                    }
+                                                </td>
+                                                <td>
+                                                    @foreach (var category in Model.CategoryList)
+                                                    {
+                                                        if (category.Category_Id == item.Category_Id)
+                                                        {
+                                                            @Html.DisplayFor(modelItem => category.Category_Name)
+
+                                                        }
+                                                    }
+                                                </td>
+
+                                                <td>
+
+                                                    @if (item.Services_Title != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.Services_Title)
+                                                    }
+                                                </td>
+                                                <td>
+
+                                                    @if (item.Services_Create_Date != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.Services_Create_Date)
+                                                    }
+
+
+                                                </td>
+                                                <td>
+
+                                                    @if (item.Services_Update_Date != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.Services_Update_Date)
+                                                    }
+                                                </td>
+                                                <td>
+                                                    @Html.ActionLink("Edit", "V_Services_Edit", new { Service_id = item.Services_Id }) |
+                                                    @Html.ActionLink("Delete", "V_Service_delete", new { Service_id = item.Services_Id })
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
