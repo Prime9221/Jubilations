@@ -22,6 +22,7 @@ form.example button {
     border: 1px solid grey;
     border-left: none;
     cursor: pointer;
+   
 }
 
     form.example button:hover {

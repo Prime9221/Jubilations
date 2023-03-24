@@ -137,7 +137,7 @@
         font-weight: 700;
         display: flex;
         align-items: center;
-        width: 100%;
+        width: 40%;
         color: #4C489D;
         box-shadow: 0px 2px 2px #5C5696;
         cursor: pointer;
@@ -210,11 +210,14 @@
                         @*<input type="password" class="login__input" placeholder="Password">*@
                         @Html.EditorFor(model => model.User_Password, new { htmlAttributes = new { @class = "login__input", placeholder = "password", @Type = "password" } })
                     </div>
-                    <span style=" position: absolute; z-index: 999; float: right; display: flex; justify-content: right; margin: 13px 330; }">&#128640;</span>
-                    <span>
+                    <center>
+                   
+                        <span>
+                            <span style=" position: absolute; z-index: 999; float: right; display: flex; justify-content: right; margin: 15px 200; }">&#128640;</span>
+                            <input type="submit" value="Login" class="button login__submit" style=" position: relative; background-color: #7E7BB9;color:antiquewhite" />
 
-                        <input type="submit" value="Login" class="button login__submit" style=" position: relative;" />
-                    </span>
+                        </span>
+                        </center>
                     <a href="~/Login/Forgot_password" style="color:black;"> <center> <h3> Forgot Password </h3> </center></a>
                     <a href="~/Login/Register"  style="color:black;"><center> <h3> User Register </h3> </center></a>
                     <a href="~/Login/businessForm"  style="color:black;"><center> <h3> Bussiness Register </h3> </center></a>
