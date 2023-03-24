@@ -10,7 +10,7 @@ using System.Web.Mvc;
 namespace Jubilations.Controllers
 {
     [Authorize(Roles = "3")]
-    //[Authorize(Roles = "1")]
+    [Authorize(Roles = "1")]
     public class V_adminController : Controller
     {
         // dashboards-analytics
