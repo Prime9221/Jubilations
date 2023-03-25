@@ -1,6 +1,7 @@
 ﻿using Jubilations.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -89,28 +90,35 @@ namespace Jubilations.Controllers
             return View("Register");
         }
         [HttpPost]
-        public ActionResult Register(User model)
+        public ActionResult Register(User model, UserModel S)
         {
-            if (ModelState.IsValid)
+            var fileName = S.files.Select(x => x.FileName);
+            model.ImagePath = ("https://localhost:44330/webdata/UploadedFiles/") + fileName.FirstOrDefault();
+
+            model.User_Name = S.User_Name;
+            model.User_Email = S.User_Email;
+            model.User_PhoneNo = S.User_PhoneNo;
+            model.User_DOB = S.User_DOB;
+            model.User_Password = S.User_Password;
+            model.User_Create_Date = DateTime.Now.ToShortDateString();
+            db.user.Add(model);
+            db.SaveChanges();
+
+            foreach (HttpPostedFileBase file in S.files)
             {
-
-
-                User a = new User();
-
-                a.User_Name = model.User_Name;
-                a.User_Email = model.User_Email;
-                a.User_PhoneNo = model.User_PhoneNo;
-                a.User_DOB = model.User_DOB;
-                a.User_Password = model.User_Password;
-                a.User_Create_Date = DateTime.Now.ToShortDateString();
-                //a.Category_Update_Date = DateTime.Now.ToShortDateString();
-                db.user.Add(a);
-                db.SaveChanges();
-                TempData["DataInserted"] = "true";
-                return RedirectToAction("Login");
-
+                //Checking file is available to save.  
+                if (file != null)
+                {
+                    var InputFileName = Path.GetFileName(file.FileName);
+                    var ServerSavePath = Path.Combine(Server.MapPath("~/webdata/Profileimg/") + InputFileName);
+                    //Save file to server folder  
+                    file.SaveAs(ServerSavePath);
+                }
             }
+            TempData["DataInserted"] = "true";
             return RedirectToAction("Login");
+
+
         }
         public ActionResult Otp()
         {
