@@ -1,7 +1,7 @@
 ﻿@model Jubilations.Models.Vender_CatalogModel
 @{
-    ViewBag.Title = "Services";
-    Layout = "~/Views/Layout/_V_adminLayoutPage2.cshtml";
+    ViewBag.Title = "Catelog";
+    Layout = "~/Views/Layout/_A_adminLayoutPage.cshtml";
 }
 
 <div class="content-wrapper">
@@ -17,7 +17,6 @@
                             <h3 class="card-title">Catelog DataTable</h3>
 
                         </div>
-                        <button>@Html.ActionLink("Create New", "V_Catelog_Create")</button>
                         <!-- /.card-header -->
                         <div class="card-body">
 
@@ -83,7 +82,7 @@
 
                                                     @if (item.ImagePath != null)
                                                     {
-                                                       <img src="@item.ImagePath" style=" width:80px; height:auto; " />
+                                                        <img src="@item.ImagePath" style=" width:80px; height:auto; " />
                                                     }
                                                 </td>
                                                 <td>
@@ -124,8 +123,7 @@
                                                     }
                                                 </td>
                                                 <td>
-                                                    @Html.ActionLink("Edit", "V_Catelog_Edit", new { Catalog_id = item.Catalog_Id }) |
-                                                    @Html.ActionLink("Delete", "V_Catelog_delete", new { Catalog_id = item.Catalog_Id })
+                                                    @Html.ActionLink("Delete", "A_Catelog_delete", new { Catalog_id = item.Catalog_Id })
                                                 </td>
                                             </tr>
                                         }

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -159,6 +160,144 @@ namespace Jubilations.Controllers
 
 
         //Services end----------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+        //Catelog start-----------------------------------------------------------------------------------------------------------------------------------------
+
+
+        public ActionResult V_Catelog()
+        {
+            var model = new Vender_CatalogModel();
+
+            model.CatalogList = db.vender_catalog.ToList();
+            model.UserNameList = db.user.ToList();
+            model.CategoryList = db.category.ToList();
+            model.ServicesList = db.services.ToList();
+            return View(model);
+        }
+
+        public ActionResult V_Catelog_Create()
+        {
+            var UserNameList = db.user.ToList();
+            ViewBag.UserId = new SelectList(UserNameList, "User_Id", "User_Name");
+            var categoryList = db.category.ToList();
+            ViewBag.CategoryId = new SelectList(categoryList, "Category_Id", "Category_Name");
+            var servicesList = db.services.ToList();
+            ViewBag.ServiceList = new SelectList(servicesList, "Services_Id", "Services_Title");
+
+            return View("V_Catelog_Create");
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult V_Catelog_Create(Vender_Catalog model, Vender_CatalogModel S)
+        {
+           
+            
+
+                var userList = db.user.ToList();
+                ViewBag.UserId = new SelectList(userList, "User_Id", "User_Name");
+                var categoryList = db.category.ToList();
+                ViewBag.CategoryId = new SelectList(categoryList, "Category_Id", "Category_Name");
+                var servicesList = db.services.ToList();
+                ViewBag.ServiceList = new SelectList(servicesList, "Services_Id", "Services_Title");
+                var fileName = S.files.Select(x => x.FileName);
+                model.ImagePath = ("https://localhost:44330/webdata/UploadedFiles/") + fileName.FirstOrDefault();
+                Vender_Catalog s = new Vender_Catalog();
+
+                s.Description = model.Description;
+                s.Price = model.Price;
+                s.Status = model.Status;
+                model.Create_Date = DateTime.Now.ToShortDateString();
+                db.vender_catalog.Add(model);
+                db.SaveChanges();
+
+                foreach (HttpPostedFileBase file in S.files)
+                {
+                    //Checking file is available to save.  
+                    if (file != null)
+                    {
+                        var InputFileName = Path.GetFileName(file.FileName);
+                        var ServerSavePath = Path.Combine(Server.MapPath("~/webdata/UploadedFiles/") + InputFileName);
+                        //Save file to server folder  
+                        file.SaveAs(ServerSavePath);
+
+
+                    }
+                }
+                TempData["DataInserted"] = "true";
+                return RedirectToAction("V_Catelog");
+        }
+
+
+
+        public ActionResult V_Catelog_Edit(int Catalog_id)
+        {
+            var cata = db.vender_catalog.Where(x => x.Catalog_Id == Catalog_id).First();
+            return View(cata);
+        }
+        [HttpPost]
+        public ActionResult V_Catelog_Edit(Vender_Catalog s)
+        {
+            db.Entry(s).State = EntityState.Modified;
+            //s.Category_Create_Date = DateTime.Now.ToShortDateString();
+            s.Update_Date = DateTime.Now.ToShortDateString();
+            int a = db.SaveChanges();
+            if (a > 0)
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                return RedirectToAction("V_Catelog");
+            }
+            else
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+            }
+
+            return View();
+        }
+
+
+        public ActionResult V_Catelog_delete(int Catalog_id)
+        {
+            var Cate = db.vender_catalog.Where(x => x.Catalog_Id == Catalog_id).First();
+            return View(Cate);
+        }
+        [HttpPost]
+        public ActionResult V_Catelog_delete(Vender_Catalog s)
+        {
+            db.Entry(s).State = EntityState.Deleted;
+            int a = db.SaveChanges();
+            if (a > 0)
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                return RedirectToAction("V_Catelog");
+            }
+            else
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+            }
+
+            return View("V_Catelog");
+        }
+
+
+
+
+
+
+
+
+
+
+        //Catelog End----------------------------------------------------------------------------------------------------------------------------------------------
         public ActionResult app_user_view_account() {
             return View();
         }

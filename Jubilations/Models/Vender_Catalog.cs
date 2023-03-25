@@ -33,6 +33,10 @@ namespace Jubilations.Models
 
 
         public string Product_image { get; set; }
+        [NotMapped]
+        public HttpPostedFileBase ImageFile { get; set; }
+
+        public string ImagePath { get; set; }
 
         [AllowHtml]
         [UIHint("tinymce_full")]

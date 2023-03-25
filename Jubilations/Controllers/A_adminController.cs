@@ -276,7 +276,57 @@ namespace Jubilations.Controllers
         }
 
         ///Services methods End--------------------------------------------------------------------
-        
+
+
+        //Catelog start--------------------------------------------------------------------------------------------------
+
+        public ActionResult A_Catelog()
+        {
+            var model = new Vender_CatalogModel();
+
+            model.CatalogList = db.vender_catalog.ToList();
+            model.UserNameList = db.user.ToList();
+            model.CategoryList = db.category.ToList();
+            model.ServicesList = db.services.ToList();
+            return View(model);
+        }
+
+
+        public ActionResult A_Catelog_delete(int Catalog_id)
+        {
+            var Cate = db.vender_catalog.Where(x => x.Catalog_Id == Catalog_id).First();
+            return View(Cate);
+        }
+        [HttpPost]
+        public ActionResult A_Catelog_delete(Vender_Catalog s)
+        {
+            db.Entry(s).State = EntityState.Deleted;
+            int a = db.SaveChanges();
+            if (a > 0)
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                return RedirectToAction("A_Catelog");
+            }
+            else
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+            }
+
+            return View("A_Catelog");
+        }
+
+
+
+
+
+
+
+
+
+
+        //Catelog end--------------------------------------------------------------------------------------------------
+
+
         //Profile start----------------------------
         public ActionResult ProFiles()
         {

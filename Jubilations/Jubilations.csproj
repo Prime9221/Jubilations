@@ -155,6 +155,7 @@
     <Compile Include="Controllers\A_adminController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LayoutController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\QuickLinkController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
@@ -177,6 +178,10 @@
     <Compile Include="Migrations\202303210643117_rlogin.cs" />
     <Compile Include="Migrations\202303210643117_rlogin.designer.cs">
       <DependentUpon>202303210643117_rlogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303241017237_initial1.cs" />
+    <Compile Include="Migrations\202303241017237_initial1.designer.cs">
+      <DependentUpon>202303241017237_initial1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Aboutus.cs" />
@@ -4509,6 +4514,11 @@
     <Content Include="Views\A_admin\A_Role_Define.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\V_admin\V_Catelog.cshtml" />
+    <Content Include="Views\V_admin\V_Catelog_Create.cshtml" />
+    <Content Include="Views\V_admin\V_Catelog_Edit.cshtml" />
+    <Content Include="Views\V_admin\V_Catelog_delete.cshtml" />
+    <Content Include="Views\A_admin\A_Catelog.cshtml" />
+    <Content Include="Views\A_admin\A_Catelog_delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -4553,6 +4563,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202303210643117_rlogin.resx">
       <DependentUpon>202303210643117_rlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303241017237_initial1.resx">
+      <DependentUpon>202303241017237_initial1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

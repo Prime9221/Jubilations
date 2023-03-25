@@ -136,7 +136,7 @@ namespace Jubilations.Controllers
                 User a = new User();
 
                 a.User_Name = model.User_Name;
-                a.User_ShopName= model.User_ShopName;
+                a.User_ShopName = model.User_ShopName;
                 a.User_Address = model.User_Address;
                 a.User_GSTNO = model.User_GSTNO;
                 a.User_Email = model.User_Email;
