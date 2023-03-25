@@ -3507,6 +3507,10 @@
     <Content Include="image\Home\whychooseus.jpg" />
     <Content Include="image\login.png" />
     <Content Include="image\login\1.png" />
+    <Content Include="image\login\L0-removebg-preview.png" />
+    <Content Include="image\login\L0.jpg" />
+    <Content Include="image\login\L5.png" />
+    <Content Include="image\login\LG.png" />
     <Content Include="image\login\login-cover.png" />
     <Content Include="image\login\login.png" />
     <Content Include="image\login\login2.png" />

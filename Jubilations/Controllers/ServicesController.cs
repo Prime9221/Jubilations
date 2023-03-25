@@ -8,8 +8,8 @@ namespace Jubilations.Controllers
 {
     public class ServicesController : Controller
     {
-        [Authorize(Roles = "1")]
-        [Authorize(Roles = "3")]
+        //[Authorize(Roles = "1")]
+        //[Authorize(Roles = "3")]
         [Authorize(Roles = "2")]
         // GET: Services
         public ActionResult Services()

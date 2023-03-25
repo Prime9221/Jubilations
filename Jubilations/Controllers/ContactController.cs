@@ -7,8 +7,8 @@ using System.Web.Mvc;
 
 namespace Jubilations.Controllers
 {
-    [Authorize(Roles = "1")]
-    [Authorize(Roles = "3")]
+    //[Authorize(Roles = "1")]
+    //[Authorize(Roles = "3")]
     [Authorize(Roles = "2")]
     public class ContactController : Controller
     {

@@ -11,7 +11,7 @@ using System.Web.Mvc;
 namespace Jubilations.Controllers
 {
     [Authorize(Roles = "3")]
-    [Authorize(Roles = "1")]
+    //[Authorize(Roles = "1")]
     public class V_adminController : Controller
     {
         // dashboards-analytics
@@ -123,12 +123,12 @@ namespace Jubilations.Controllers
             int a = db.SaveChanges();
             if (a > 0)
             {
-                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                ViewBag.UpdateMessage = "<script>alert('Data Updated !!')</script>";
                 return RedirectToAction("V_Services");
             }
             else
             {
-                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+                ViewBag.UpdateMessage = "<script>alert('Data Not Updated !!')</script>";
             }
 
             return View();
@@ -147,12 +147,12 @@ namespace Jubilations.Controllers
             int a = db.SaveChanges();
             if (a > 0)
             {
-                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                ViewBag.UpdateMessage = "<script>alert('Data Updated !!')</script>";
                 return RedirectToAction("V_Services");
             }
             else
             {
-                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+                ViewBag.UpdateMessage = "<script>alert('Data Not Updated !!')</script>";
             }
 
             return View("V_Services");
@@ -253,12 +253,12 @@ namespace Jubilations.Controllers
             int a = db.SaveChanges();
             if (a > 0)
             {
-                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                ViewBag.UpdateMessage = "<script>alert('Data Updated !!')</script>";
                 return RedirectToAction("V_Catelog");
             }
             else
             {
-                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+                ViewBag.UpdateMessage = "<script>alert('Data Not Updated !!')</script>";
             }
 
             return View();
@@ -277,12 +277,12 @@ namespace Jubilations.Controllers
             int a = db.SaveChanges();
             if (a > 0)
             {
-                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                ViewBag.UpdateMessage = "<script>alert('Data Updated !!')</script>";
                 return RedirectToAction("V_Catelog");
             }
             else
             {
-                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+                ViewBag.UpdateMessage = "<script>alert('Data Not Updated !!')</script>";
             }
 
             return View("V_Catelog");
