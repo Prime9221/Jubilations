@@ -15,7 +15,13 @@ namespace Jubilations.Models
         public string User_Email { get; set; }
         public string User_PhoneNo { get; set; }
         public string User_DOB { get; set; }
-        public string User_Profile_Image { get; set; }
+
+
+        [NotMapped]
+        public HttpPostedFileBase ImageFile { get; set; }
+
+        //public string ImagePath { get; set; }
+        public string ImagePath { get; set; }
 
         public string User_GSTNO { get; set; }
         public string User_ShopName { get; set; }

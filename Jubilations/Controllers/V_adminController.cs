@@ -211,11 +211,10 @@ namespace Jubilations.Controllers
                 ViewBag.ServiceList = new SelectList(servicesList, "Services_Id", "Services_Title");
                 var fileName = S.files.Select(x => x.FileName);
                 model.ImagePath = ("https://localhost:44330/webdata/UploadedFiles/") + fileName.FirstOrDefault();
-                Vender_Catalog s = new Vender_Catalog();
 
-                s.Description = model.Description;
-                s.Price = model.Price;
-                s.Status = model.Status;
+                model.Description = model.Description;
+                model.Price = model.Price;
+                model.Status = model.Status;
                 model.Create_Date = DateTime.Now.ToShortDateString();
                 db.vender_catalog.Add(model);
                 db.SaveChanges();
@@ -229,8 +228,6 @@ namespace Jubilations.Controllers
                         var ServerSavePath = Path.Combine(Server.MapPath("~/webdata/UploadedFiles/") + InputFileName);
                         //Save file to server folder  
                         file.SaveAs(ServerSavePath);
-
-
                     }
                 }
                 TempData["DataInserted"] = "true";
