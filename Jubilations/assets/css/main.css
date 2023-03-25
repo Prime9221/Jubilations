@@ -49,7 +49,7 @@ a {
 }
 
     .col:hover {
-        color: white !important;
+        color: white!important;
         text-decoration: none;
     }
 
@@ -79,16 +79,16 @@ section {
   padding-bottom: 30px;
 }
 
-.section-header h2 {
-  font-size: 13px;
-  letter-spacing: 1px;
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
-  color: #7f7f90;
-  text-transform: uppercase;
-  font-family: var(--font-default);
-}
+    .section-header h2 {
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+        color: #7f7f90;
+        text-transform: uppercase;
+        font-family: var(--font-default);
+    }
 
 .section-header p {
   margin: 0;
