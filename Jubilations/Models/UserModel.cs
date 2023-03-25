@@ -1,12 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Xml.Linq;
 
 namespace Jubilations.Models
 {
     public class UserModel
     {
+        [Required(ErrorMessage = "Please select file.")]
+        [Display(Name = "Browse File")]
+        public HttpPostedFileBase[] files { get; set; }
         public int User_Id { get; set; }
         public string User_Name { get; set; }
         public string User_Email { get; set; }

@@ -1,4 +1,4 @@
-﻿@model Jubilations.Models.User
+﻿@model Jubilations.Models.UserModel
 @{
     ViewBag.Title = "Register";
 }
@@ -177,7 +177,7 @@
         <div class="title">User Registration</div>
         <div class="content">
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Register", "Login", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
@@ -188,6 +188,20 @@
                         <span class="details">Username</span>
                         @Html.EditorFor(model => model.User_Name, new { htmlAttributes = new { @class = "form-control", @type = "text", @placeholder = "Enter your username", required = "required" } })
                     </div>
+
+                    <div class="form-horizontal">
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.files, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.TextBoxFor(model => model.files, "", new { @type = "file", @multiple = "multiple" })
+                                @Html.ValidationMessageFor(model => model.files, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+
                     <div class="input-box">
                         <span class="details">Email</span>
                         @Html.EditorFor(model => model.User_Email, new { htmlAttributes = new { @class = "form-control", @type = "email", @placeholder = "Enter your Email", required = "required" } })
@@ -198,7 +212,7 @@
                         @Html.EditorFor(model => model.User_PhoneNo, new { htmlAttributes = new { @class = "form-control", @type = "text", @placeholder = "Enter your Phoneno", required = "required" } })
                     </div>
                     <div class="input-box">
-                        <span class="details">Phone Number</span>
+                        <span class="details">Date Of Birth</span>
                         @Html.EditorFor(model => model.User_DOB, new { htmlAttributes = new { @class = "form-control", @type = "date", @placeholder = "Enter your Date of birth", required = "required" } })
                     </div>
                     <div class="input-box">

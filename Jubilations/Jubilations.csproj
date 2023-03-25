@@ -183,6 +183,14 @@
     <Compile Include="Migrations\202303241017237_initial1.designer.cs">
       <DependentUpon>202303241017237_initial1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202303250612188_dp.cs" />
+    <Compile Include="Migrations\202303250612188_dp.designer.cs">
+      <DependentUpon>202303250612188_dp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303250719274_dp1.cs" />
+    <Compile Include="Migrations\202303250719274_dp1.designer.cs">
+      <DependentUpon>202303250719274_dp1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Aboutus.cs" />
     <Compile Include="Models\AboutUsModel.cs" />
@@ -4526,6 +4534,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="webdata\Profileimg\" />
     <Folder Include="webdata\UploadedFiles\" />
   </ItemGroup>
   <ItemGroup>
@@ -4570,6 +4579,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202303241017237_initial1.resx">
       <DependentUpon>202303241017237_initial1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303250612188_dp.resx">
+      <DependentUpon>202303250612188_dp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303250719274_dp1.resx">
+      <DependentUpon>202303250719274_dp1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
