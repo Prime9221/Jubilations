@@ -191,6 +191,18 @@
     <Compile Include="Migrations\202303250719274_dp1.designer.cs">
       <DependentUpon>202303250719274_dp1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202303251103089_catelog.cs" />
+    <Compile Include="Migrations\202303251103089_catelog.designer.cs">
+      <DependentUpon>202303251103089_catelog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303251136333_dd.cs" />
+    <Compile Include="Migrations\202303251136333_dd.designer.cs">
+      <DependentUpon>202303251136333_dd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303251139420_onee.cs" />
+    <Compile Include="Migrations\202303251139420_onee.designer.cs">
+      <DependentUpon>202303251139420_onee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Aboutus.cs" />
     <Compile Include="Models\AboutUsModel.cs" />
@@ -4585,6 +4597,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202303250719274_dp1.resx">
       <DependentUpon>202303250719274_dp1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303251103089_catelog.resx">
+      <DependentUpon>202303251103089_catelog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303251136333_dd.resx">
+      <DependentUpon>202303251136333_dd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303251139420_onee.resx">
+      <DependentUpon>202303251139420_onee.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
