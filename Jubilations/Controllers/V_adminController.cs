@@ -1,4 +1,5 @@
-﻿using Jubilations.Models;
+﻿using Jubilations.Migrations;
+using Jubilations.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -123,12 +124,12 @@ namespace Jubilations.Controllers
             int a = db.SaveChanges();
             if (a > 0)
             {
-                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                ViewBag.UpdateMessage = "<script>alert('Data Updated !!')</script>";
                 return RedirectToAction("V_Services");
             }
             else
             {
-                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+                ViewBag.UpdateMessage = "<script>alert('Data Not Updated !!')</script>";
             }
 
             return View();
@@ -147,12 +148,12 @@ namespace Jubilations.Controllers
             int a = db.SaveChanges();
             if (a > 0)
             {
-                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                ViewBag.UpdateMessage = "<script>alert('Data Updated !!')</script>";
                 return RedirectToAction("V_Services");
             }
             else
             {
-                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+                ViewBag.UpdateMessage = "<script>alert('Data Not Updated !!')</script>";
             }
 
             return View("V_Services");
@@ -238,16 +239,34 @@ namespace Jubilations.Controllers
 
         public ActionResult V_Catelog_Edit(int Catalog_id)
         {
-            var cata = db.vender_catalog.Where(x => x.Catalog_Id == Catalog_id).First();
-            return View(cata);
+            var model = new Vender_CatalogModel();
+            model.Vender_Catalogs = db.vender_catalog.Where(x => x.Catalog_Id == Catalog_id).First();
+            return View(model);
         }
         [HttpPost]
-        public ActionResult V_Catelog_Edit(Vender_Catalog s)
+        public ActionResult V_Catelog_Edit(Vender_Catalog Vender_Catalogs, Vender_CatalogModel Vender_CatalogModel)
         {
-            db.Entry(s).State = EntityState.Modified;
-            //s.Category_Create_Date = DateTime.Now.ToShortDateString();
-            s.Update_Date = DateTime.Now.ToShortDateString();
+            //Vender_Catalogs.ImageFile = Vender_CatalogModel.Vender_Catalogs.title;
+            //Vender_Catalogs.description = Vender_CatalogModel.Vender_Catalogs.description;
+            //Vender_Catalogs.Pictures = Vender_CatalogModel.Vender_Catalogs.Pictures;
+            var fileName = Vender_CatalogModel.files.Select(x => x.FileName);
+            Vender_Catalogs.ImagePath = ("https://localhost:44330/webdata/UploadedFiles/") + fileName.FirstOrDefault();
+            db.Entry(Vender_Catalogs).State = EntityState.Modified;
             int a = db.SaveChanges();
+
+            foreach (HttpPostedFileBase file in Vender_CatalogModel.files)
+            {
+                //Checking file is available to save.  
+                if (file != null)
+                {
+                    var InputFileName = Path.GetFileName(file.FileName);
+                    var ServerSavePath = Path.Combine(Server.MapPath("~/webdata/UploadedFiles/") + InputFileName);
+                    //Save file to server folder  
+                    file.SaveAs(ServerSavePath);
+
+
+                }
+            }
             if (a > 0)
             {
                 ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
@@ -258,7 +277,7 @@ namespace Jubilations.Controllers
                 ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
             }
 
-            return View();
+            return View("V_Catelog");
         }
 
 
@@ -274,12 +293,12 @@ namespace Jubilations.Controllers
             int a = db.SaveChanges();
             if (a > 0)
             {
-                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                ViewBag.UpdateMessage = "<script>alert('Data Updated !!')</script>";
                 return RedirectToAction("V_Catelog");
             }
             else
             {
-                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+                ViewBag.UpdateMessage = "<script>alert('Data Not Updated !!')</script>";
             }
 
             return View("V_Catelog");

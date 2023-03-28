@@ -32,7 +32,7 @@ namespace Jubilations.Models
         public virtual Services Services_Name { get; set; }
 
 
-        //public string Product_image { get; set; }
+        public string Product_image { get; set; }
         [NotMapped]
         public HttpPostedFileBase ImageFile { get; set; }
 

@@ -1,9 +1,14 @@
-﻿@model Jubilations.Models.ServicesModel
-@{
-    ViewBag.Title = "Services";
-    Layout = "~/Views/Layout/_V_adminLayoutPage2.cshtml";
-}
+﻿@model Jubilations.Models.BlogModel
 
+@{
+    ViewBag.Title = "Blog";
+    Layout = "~/Views/Layout/_A_adminLayoutPage.cshtml";
+}
+<br />
+<br />
+<br />
+<br />
+<!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
 
     <!-- Main content -->
@@ -14,10 +19,10 @@
 
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Services DataTable</h3>
+                            <h3 class="card-title">Blog DataTable</h3>
 
                         </div>
-                        <button>@Html.ActionLink("Create New", "V_Services_Create")</button>
+                        <button>@Html.ActionLink("Create New", "A_Blog_Create")</button>
                         <!-- /.card-header -->
                         <div class="card-body">
 
@@ -25,10 +30,11 @@
 
                                 <thead>
                                     <tr>
-                                        <th>Services Id</th>
-                                        <th>User Name</th>
-                                        <th>Category Name</th>
-                                        <th>Services Title</th>
+                                        <th>Id</th>
+                                        <th>Name</th>
+                                        <th>Title</th>
+                                        <th>Description</th>
+                                        <th>Image</th>
                                         <th>Create Date</th>
                                         <th>Update Date</th>
                                         <th>Action</th>
@@ -36,61 +42,58 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @if (Model.ServicesList.Count > 0)
+                                    @if (Model.BlogList.Count > 0)
                                     {
-                                        foreach (var item in Model.ServicesList)
+                                        foreach (var item in Model.BlogList)
                                         {
                                             <tr>
                                                 <td>
-                                                    @Html.DisplayFor(modelItem => item.Services_Id)
+                                                    @Html.DisplayFor(modelItem => item.Blog_Id)
                                                 </td>
                                                 <td>
-                                                    @foreach (var user in Model.UserNameList)
+                                                    @if (item.Blog_Name != null)
                                                     {
-                                                        if (user.User_Id == item.User_Id)
-                                                        {
-                                                            @Html.DisplayFor(modelItem => user.User_Name)
-
-                                                        }
-                                                    }
-                                                </td>
-                                                <td>
-                                                    @foreach (var category in Model.CategoryList)
-                                                    {
-                                                        if (category.Category_Id == item.Category_Id)
-                                                        {
-                                                            @Html.DisplayFor(modelItem => category.Category_Name)
-
-                                                        }
-                                                    }
-                                                </td>
-
-                                                <td>
-
-                                                    @if (item.Services_Title != null)
-                                                    {
-                                                        @Html.DisplayFor(modelItem => item.Services_Title)
+                                                        @Html.DisplayFor(modelItem => item.Blog_Name)
                                                     }
                                                 </td>
                                                 <td>
 
-                                                    @if (item.Services_Create_Date != null)
+                                                    @if (item.Blog_Title != null)
                                                     {
-                                                        @Html.DisplayFor(modelItem => item.Services_Create_Date)
-                                                    }
-
-
-                                                </td>
-                                                <td>
-
-                                                    @if (item.Services_Update_Date != null)
-                                                    {
-                                                        @Html.DisplayFor(modelItem => item.Services_Update_Date)
+                                                        @Html.DisplayFor(modelItem => item.Blog_Title)
                                                     }
                                                 </td>
                                                 <td>
-                                                    @Html.ActionLink("Edit", "V_Services_Edit", new { Service_id = item.Services_Id }) |
-                                                    @Html.ActionLink("Delete", "V_Service_delete", new { Service_id = item.Services_Id })
+
+                                                    @if (item.Blog_Description != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.Blog_Description)
+                                                    }
+                                                </td>
+                                                <td>
+
+                                                    @if (item.Blog_Image != null)
+                                                    {
+                                                        <img src="@item.Blog_Image" style=" width:80px; height:auto; " />
+                                                    }
+                                                </td>
+                                                <td>
+
+                                                    @if (item.Blog_Create_Date != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.Blog_Create_Date)
+                                                    }
+                                                </td>
+                                                <td>
+
+                                                    @if (item.Blog_Update_Date != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.Blog_Update_Date)
+                                                    }
+                                                </td>
+                                                <td>
+                                                    @Html.ActionLink("Edit", "A_Blog_Edit", new { Blog_Id = item.Blog_Id }) |
+                                                    @Html.ActionLink("Delete", "A_Blog_delete", new { Blog_Id = item.Blog_Id })
                                                 </td>
                                             </tr>
                                         }
@@ -110,3 +113,4 @@
     </section>
     <!-- /.content -->
 </div>
+<!-- /.content-wrapper -->
