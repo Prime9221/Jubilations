@@ -22,9 +22,10 @@ namespace Jubilations.Controllers
             return View(data);
         }
 
-        public ActionResult venue()
+        public ActionResult venue(int categoryId)
         {
-            return View();
+            var services = db.services.Where(x=>x.Category_Id == categoryId).ToList();
+            return View(services);
         }
 
         public ActionResult venue1()
