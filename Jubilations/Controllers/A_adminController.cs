@@ -497,6 +497,97 @@ namespace Jubilations.Controllers
 
 
         //User End----------------------------
+
+
+
+        //Blog start--------------------------------------------------------------------------------------------
+
+        public ActionResult A_Blog()
+        {
+            var model = new BlogModel();
+            model.BlogList = db.blog.ToList();
+            return View(model);
+        }
+        public ActionResult A_Blog_Create()
+        {
+            return View("A_Blog_Create");
+        }
+
+        [HttpPost]
+        public ActionResult A_Blog_Create(Blog model)
+        {
+            if (ModelState.IsValid)
+            {
+
+
+                Blog a = new Blog();
+
+                a.Blog_Name = model.Blog_Name;
+                a.Blog_Title = model.Blog_Title;
+                a.Blog_Description = model.Blog_Description;
+                a.Blog_Image = model.Blog_Image;
+                a.Blog_Create_Date = DateTime.Now.ToShortDateString();
+                //a.Category_Update_Date = DateTime.Now.ToShortDateString();
+                db.blog.Add(a);
+                db.SaveChanges();
+                TempData["DataInserted"] = "true";
+                return RedirectToAction("A_Blog");
+
+            }
+            return RedirectToAction("A_Blog");
+        }
+        public ActionResult A_Blog_Edit(int Blog_Id)
+        {
+            var ca = db.blog.Where(x => x.Blog_Id == Blog_Id).First();
+            return View(ca);
+        }
+        [HttpPost]
+        public ActionResult A_Blog_Edit(Blog s)
+        {
+            db.Entry(s).State = EntityState.Modified;
+            //s.Category_Create_Date = DateTime.Now.ToShortDateString();
+            s.Blog_Update_Date = DateTime.Now.ToShortDateString();
+            int a = db.SaveChanges();
+            if (a > 0)
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                return RedirectToAction("A_Blog");
+            }
+            else
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+            }
+
+            return View();
+        }
+        public ActionResult A_Blog_delete(int Blog_Id)
+        {
+            var Ci = db.blog.Where(x => x.Blog_Id == Blog_Id).First();
+            return View(Ci);
+        }
+        [HttpPost]
+        public ActionResult A_Blog_delete(Blog s)
+        {
+            db.Entry(s).State = EntityState.Deleted;
+            int a = db.SaveChanges();
+            if (a > 0)
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Updated !!')</script>";
+                return RedirectToAction("A_Blog");
+            }
+            else
+            {
+                ViewBag.UpdateMessage = "<script>alret('Data Not Updated !!')</script>";
+            }
+
+            return View("A_Blog");
+        }
+
+
+
+
+        //Blog End--------------------------------------------------------------------------------------------
+
         public ActionResult Contacts()
         {
             return View();
