@@ -9,7 +9,7 @@ namespace Jubilations.Controllers
 {
     //[Authorize(Roles = "1")]
     //[Authorize(Roles = "3")]
-    [Authorize(Roles = "2")]
+   // [Authorize(Roles = "2")]
     public class ContactController : Controller
     {
         DBEntity db = new DBEntity();
@@ -22,11 +22,7 @@ namespace Jubilations.Controllers
             var data = db.aboutuss;
             return View(data);
         }
-
-        public ActionResult Blog()
-        {
-            return View();
-        }
+       
 
         public ActionResult Blog1()
         {

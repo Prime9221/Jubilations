@@ -41,7 +41,7 @@ namespace Jubilations.Models
         public virtual Services Services_Name { get; set; }
 
 
-        //public string Product_image { get; set; }
+        public string Product_image { get; set; }
         [AllowHtml]
         [UIHint("tinymce_full")]
         public string Description { get; set; }
@@ -53,7 +53,7 @@ namespace Jubilations.Models
         public string Create_Date { get; set; }
         public string Update_Date { get; set; }
 
-
+        public Vender_Catalog Vender_Catalogs { get; set; }
         public List<Vender_Catalog> CatalogList { get; set; }
     }
 }
