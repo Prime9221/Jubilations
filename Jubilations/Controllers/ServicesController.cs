@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Jubilations.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,12 +7,14 @@ using System.Web.Mvc;
 
 namespace Jubilations.Controllers
 {
+    [Authorize(Roles = "2")]
     public class ServicesController : Controller
     {
         //[Authorize(Roles = "1")]
         //[Authorize(Roles = "3")]
-        [Authorize(Roles = "2")]
+        
         // GET: Services
+        DBEntity db = new DBEntity();
         public ActionResult Services()
         {
             return View();
@@ -70,7 +73,8 @@ namespace Jubilations.Controllers
 
         public ActionResult ViewCatelog()
         {
-            return View();
+            var model = db.vender_catalog;
+            return View(model);
         }
     }
 }

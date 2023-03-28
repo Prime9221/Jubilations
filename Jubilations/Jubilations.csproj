@@ -191,6 +191,18 @@
     <Compile Include="Migrations\202303250719274_dp1.designer.cs">
       <DependentUpon>202303250719274_dp1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202303251103089_catelog.cs" />
+    <Compile Include="Migrations\202303251103089_catelog.designer.cs">
+      <DependentUpon>202303251103089_catelog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303251136333_dd.cs" />
+    <Compile Include="Migrations\202303251136333_dd.designer.cs">
+      <DependentUpon>202303251136333_dd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303251139420_onee.cs" />
+    <Compile Include="Migrations\202303251139420_onee.designer.cs">
+      <DependentUpon>202303251139420_onee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202303270440023_as.cs" />
     <Compile Include="Migrations\202303270440023_as.designer.cs">
       <DependentUpon>202303270440023_as.cs</DependentUpon>
@@ -3520,6 +3532,10 @@
     <Content Include="image\Home\whychooseus.jpg" />
     <Content Include="image\login.png" />
     <Content Include="image\login\1.png" />
+    <Content Include="image\login\L0-removebg-preview.png" />
+    <Content Include="image\login\L0.jpg" />
+    <Content Include="image\login\L5.png" />
+    <Content Include="image\login\LG.png" />
     <Content Include="image\login\login-cover.png" />
     <Content Include="image\login\login.png" />
     <Content Include="image\login\login2.png" />

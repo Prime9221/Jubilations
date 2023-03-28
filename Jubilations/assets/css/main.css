@@ -394,12 +394,12 @@ section {
     width: 100%;
   }
 
-  .navbar a:hover,
-  .navbar .active,
-  .navbar .active:focus,
-  .navbar li:hover>a {
-    color: #fff !important;
-  }
+    .navbar a:hover,
+    .navbar .active,
+    .navbar .active:focus,
+    .navbar li:hover > a {
+        color: #7987a1 !important;
+    }
 
   .navbar .dropdown ul {
     display: block;
