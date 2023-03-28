@@ -527,7 +527,6 @@ namespace Jubilations.Controllers
                 a.Blog_Description = model.Blog_Description;
                 a.Blog_Image = model.Blog_Image;
                 a.Blog_Create_Date = DateTime.Now.ToShortDateString();
-                //a.Category_Update_Date = DateTime.Now.ToShortDateString();
                 db.blog.Add(a);
                 db.SaveChanges();
                 TempData["DataInserted"] = "true";
@@ -545,7 +544,6 @@ namespace Jubilations.Controllers
         public ActionResult A_Blog_Edit(Blog s)
         {
             db.Entry(s).State = EntityState.Modified;
-            //s.Category_Create_Date = DateTime.Now.ToShortDateString();
             s.Blog_Update_Date = DateTime.Now.ToShortDateString();
             int a = db.SaveChanges();
             if (a > 0)
