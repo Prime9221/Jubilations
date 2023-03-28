@@ -1,4 +1,4 @@
-﻿@model Jubilations.Models.Category
+﻿@model IEnumerable<Jubilations.Models.Category>
 @{
     ViewBag.Title = "Services1";
     Layout = "~/Views/Layout/_LayoutPage1.cshtml";
@@ -39,23 +39,34 @@
     </div>
     <div class="section col-md-12 container">
         <div class="row">
+                        @if (Model != null)
+                        {
+                            foreach (var item in Model)
+                            {
             <div class="col-md-3">
                 <a class="dataToggle" label="weddingVenue">
-                </a><div class="mn-ht-250 card">  
+                </a><div class="mn-ht-250 card">
                     <a class="dataToggle" label="weddingVenue">
-                    </a><div class="card-body">
-                        <a class="dataToggle" label="weddingVenue">
-                            <div class="cat-img">
-                                <img src="~/image/Services/icon/venueblack.png" class="cat-icon" alt="wedding venues">
+                    </a>
+                    <div class="card-body">
+                                <a class="dataToggle" label="weddingVenue">
+                                    <div class="cat-img">
+                                        <img src="~/image/Services/icon/venueblack.png" class="cat-icon" alt="wedding venues">
+                                    </div>
+                                </a><a href="Services\venue">
+                                    <h2 class="card-title tx-color-icon">
+                                        @*@Html.ActionLink("Wedding Venue", "venue", "Services",new {@style="color:black"})*@
+                                        @Html.Raw(item.Category_Name)
+                                    </h2>
+                                </a>
+                                <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="wedding-venue16cf.html?s=hotels" class="tx-color-777">Hotels</a>, <a href="wedding-venue300d.html?s=farmhouse" class="tx-color-777">Farmhouse</a>, <a href="wedding-venue67a0.html?s=community-halls" class="tx-color-777">Community Halls</a>, <a href="wedding-venue3a31.html?s=resorts" class="tx-color-777">Resorts</a>, <a href="wedding-venuee377.html?s=terrace-banquet-halls" class="tx-color-777">Banquet Halls</a>, <a href="wedding-venue8833.html?s=wedding-tents" class="tx-color-777">Wedding Tents</a></p>
                             </div>
-                        </a><a href="Services\venue"><h2 class="card-title tx-color-icon">@Html.ActionLink("Wedding Venue", "venue", "Services",new {@style="color:black"})</h2></a>
-                        <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="wedding-venue16cf.html?s=hotels" class="tx-color-777">Hotels</a>, <a href="wedding-venue300d.html?s=farmhouse" class="tx-color-777">Farmhouse</a>, <a href="wedding-venue67a0.html?s=community-halls" class="tx-color-777">Community Halls</a>, <a href="wedding-venue3a31.html?s=resorts" class="tx-color-777">Resorts</a>, <a href="wedding-venuee377.html?s=terrace-banquet-halls" class="tx-color-777">Banquet Halls</a>, <a href="wedding-venue8833.html?s=wedding-tents" class="tx-color-777">Wedding Tents</a></p>
-
-                    </div>
-                </div>
             </div>
+        </div>
+                            }
+                        }
 
-            <div class="col-md-3">
+        @*<div class="col-md-3">
                 <a class="dataToggle" label="makeupartist">
                 </a><div class="mn-ht-250 card">
                     <a class="dataToggle" label="makeupartist">
@@ -185,9 +196,9 @@
                         <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="invitation-cards1d0a.html?s=designer-cards" class="tx-color-777">Designer Cards</a>, <a href="invitation-cards725c.html?s=traditional-cards" class="tx-color-777">Traditional Cards</a>, <a href="invitation-cardsad33.html?s=e-invites" class="tx-color-777">E-Invites</a></p>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div>*@
     </div>
+</div>
 </section>
 
 

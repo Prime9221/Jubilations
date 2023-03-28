@@ -18,7 +18,7 @@ namespace Jubilations.Controllers
 
         public ActionResult Services1()
         {
-            var data = db.category.ToList();
+            var data = db.category;
             return View(data);
         }
 
