@@ -191,10 +191,31 @@
     <Compile Include="Migrations\202303250719274_dp1.designer.cs">
       <DependentUpon>202303250719274_dp1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202303251103089_catelog.cs" />
+    <Compile Include="Migrations\202303251103089_catelog.designer.cs">
+      <DependentUpon>202303251103089_catelog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303251136333_dd.cs" />
+    <Compile Include="Migrations\202303251136333_dd.designer.cs">
+      <DependentUpon>202303251136333_dd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303251139420_onee.cs" />
+    <Compile Include="Migrations\202303251139420_onee.designer.cs">
+      <DependentUpon>202303251139420_onee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303270440023_as.cs" />
+    <Compile Include="Migrations\202303270440023_as.designer.cs">
+      <DependentUpon>202303270440023_as.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303280437542_two.cs" />
+    <Compile Include="Migrations\202303280437542_two.designer.cs">
+      <DependentUpon>202303280437542_two.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Aboutus.cs" />
     <Compile Include="Models\AboutUsModel.cs" />
     <Compile Include="Models\Blog.cs" />
+    <Compile Include="Models\BlogModel.cs" />
     <Compile Include="Models\Blog_Comment.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\CategoryModel.cs" />
@@ -4531,6 +4552,10 @@
     <Content Include="Views\V_admin\V_Catelog_delete.cshtml" />
     <Content Include="Views\A_admin\A_Catelog.cshtml" />
     <Content Include="Views\A_admin\A_Catelog_delete.cshtml" />
+    <Content Include="Views\A_admin\A_Blog.cshtml" />
+    <Content Include="Views\A_admin\A_Blog_Create.cshtml" />
+    <Content Include="Views\A_admin\A_Blog_Edit.cshtml" />
+    <Content Include="Views\A_admin\A_Blog_delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -4585,6 +4610,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202303250719274_dp1.resx">
       <DependentUpon>202303250719274_dp1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303270440023_as.resx">
+      <DependentUpon>202303270440023_as.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303280437542_two.resx">
+      <DependentUpon>202303280437542_two.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
