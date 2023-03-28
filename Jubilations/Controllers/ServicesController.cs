@@ -15,12 +15,7 @@ namespace Jubilations.Controllers
         
         // GET: Services
         DBEntity db = new DBEntity();
-        public ActionResult Services()
-        {
-            return View();
-        }
 
-        DBEntity db = new DBEntity();
         public ActionResult Services1()
         {
             var data = db.category.ToList();
