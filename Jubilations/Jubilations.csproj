@@ -211,6 +211,10 @@
     <Compile Include="Migrations\202303280437542_two.designer.cs">
       <DependentUpon>202303280437542_two.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202303290452093_titlecatelog.cs" />
+    <Compile Include="Migrations\202303290452093_titlecatelog.designer.cs">
+      <DependentUpon>202303290452093_titlecatelog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Aboutus.cs" />
     <Compile Include="Models\AboutUsModel.cs" />
@@ -4616,6 +4620,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202303280437542_two.resx">
       <DependentUpon>202303280437542_two.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303290452093_titlecatelog.resx">
+      <DependentUpon>202303290452093_titlecatelog.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
