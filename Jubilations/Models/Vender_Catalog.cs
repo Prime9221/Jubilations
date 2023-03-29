@@ -48,5 +48,7 @@ namespace Jubilations.Models
 
         public string Create_Date { get; set; }
         public string Update_Date { get; set; }
+
+        public string title { get; set; }
     }
 }
