@@ -57,7 +57,7 @@
                                 <a href="Services\venue">
                                     <h2 class="card-title tx-color-icon">
                                         @*@Html.ActionLink("Wedding Venue", "venue", "Services",new {@style="color:black"})*@
-                                @Html.ActionLink(item.Services_Title, "venue", new { categoryId = item.Category_Id }, null)
+                                        @Html.ActionLink(item.Services_Title, "venue", new { categoryId = item.Category_Id }, null)
                                         @*@Html.Raw(item.Services_Title)*@
                                     </h2>
                                 </a>
