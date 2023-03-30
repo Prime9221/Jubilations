@@ -4,6 +4,11 @@
     ViewBag.Title = "Login";
 
 }
+<head>
+<!-- Favicons -->
+<link href="~/assets/img/2.png" rel="icon">
+</head>
+
 <style>
     import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 
@@ -200,8 +205,8 @@
 
 
 
-                    
-                        <img src="~/image/login/LG.png"  id="img2" style=" width: 120px; height: 120px;">
+
+                        <img src="~/image/login/LG.png" id="img2" style=" width: 120px; height: 120px;">
                     </center>
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
@@ -217,16 +222,16 @@
                         @Html.EditorFor(model => model.User_Password, new { htmlAttributes = new { @class = "login__input", placeholder = "password", @Type = "password" } })
                     </div>
                     <center>
-                   
+
                         <span>
                             <span style=" position: absolute; z-index: 999; float: right; display: flex; justify-content: right; margin: 15px 200; }">&#128640;</span>
                             <input type="submit" value="Login" class="button login__submit" style=" position: relative; background-color: #7E7BB9;color:antiquewhite" />
 
                         </span>
-                        </center>
+                    </center>
                     <a href="~/Login/Forgot_password" style="color:black;"> <center> <h3> Forgot Password </h3> </center></a>
-                    <a href="~/Login/Register"  style="color:black;"><center> <h3> User Register </h3> </center></a>
-                    <a href="~/Login/businessForm"  style="color:black;"><center> <h3> Bussiness Register </h3> </center></a>
+                    <a href="~/Login/Register" style="color:black;"><center> <h3> User Register </h3> </center></a>
+                    <a href="~/Login/businessForm" style="color:black;"><center> <h3> Bussiness Register </h3> </center></a>
                 </form>
 
             </div>
