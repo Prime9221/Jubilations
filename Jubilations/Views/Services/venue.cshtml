@@ -4,34 +4,74 @@
     Layout = "~/Views/Layout/_LayoutPage1.cshtml";
 }
 <!-- navbar -->
+@*<link href="~/Design/Submit_Wedding/submit_wedding.css" rel="stylesheet" />
+
+    <div class="container">
+        <div class="mg-t-100">
+            <h1 class="tx-20 tx-bold tx-gray-700 tx-capitalize border-bottom">
+                Jubilation - Wedding Vendors
+            </h1>
+            <div class="breadcrumb-area mg-b-10">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb breadcrumb-style2 mg-b-0">
+                        <li class="breadcrumb-item"><a href="../index.html">Home <i class="fa fa-arrow-right"></i></a></li>
+
+                        <li class="breadcrumb-item active" aria-current="page">
+                            Wedding Vendors
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <section id="vendor_sec" class="vendor_slider">
+        <div class="container mg-t-30 mg-b-30">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="header-container">
+                        <div class="index_head amp"><h2 class="tx-20 tx-bold tx-color-777 tx-center"><span>Wedding Categories</span></h2></div>
+                        <div class="col-md-12"> <h5 class="main-subheading tx-semibold tx-color-777 tx-16 tx-center">From the smallest detail, to the grandest event. From today until your day, we do. We build your dream around you</h5></div>
+                    </div>
+                </div>
+                <div class="spacer-30"></div>
+            </div>
+        </div>
+        <div class="section col-md-12 container">
+            <div class="row">
+                @if (Model != null)
+                {
+                    foreach (var item in Model)
+                    {
+                        <div class="col-md-3">
+                            <a class="dataToggle" label="weddingVenue">
+                            </a><div class="mn-ht-250 card">
+                                <a class="dataToggle" label="weddingVenue">
+                                </a>
+                                <div class="card-body">
+                                    <a class="dataToggle" label="weddingVenue">
+                                        <div class="cat-img">
+                                            <img src="~/image/Services/icon/venueblack.png" class="cat-icon" alt="wedding venues">
+                                        </div>
+                                    </a>
+                                    <a href="Services\venue">
+                                        <h2 class="card-title tx-color-icon">
+                                            @Html.ActionLink(item.Services_Title, "venue", new { categoryId = item.Category_Id }, null)
+                                        </h2>
+                                    </a>
+                                    <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="wedding-venue16cf.html?s=hotels" class="tx-color-777">Hotels</a>, <a href="wedding-venue300d.html?s=farmhouse" class="tx-color-777">Farmhouse</a>, <a href="wedding-venue67a0.html?s=community-halls" class="tx-color-777">Community Halls</a>, <a href="wedding-venue3a31.html?s=resorts" class="tx-color-777">Resorts</a>, <a href="wedding-venuee377.html?s=terrace-banquet-halls" class="tx-color-777">Banquet Halls</a>, <a href="wedding-venue8833.html?s=wedding-tents" class="tx-color-777">Wedding Tents</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </section>*@
+
+
+<!-- navbar -->
 <link href="~/Design/Submit_Wedding/submit_wedding.css" rel="stylesheet" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <br />
@@ -46,758 +86,42 @@
 
     <div class="mg-t-40">
         <div class="top-listing row">
-            <div class="col-md-3">
-                <div class="card box-shadow mg-b-30">
-                    <div class="img-area">
-                        <img src="~/image/Services/Venue/1.jpg" style="height:210px" class="img-fit-cover ht-180" alt="DoubleTree by Hilton Goa,Panaji" title="DoubleTree by Hilton Goa,Panaji" />
+            @if (Model != null)
+            {
+                foreach (var item in Model)
+                {
+                    <div class="col-md-3">
+                        <div class="card box-shadow mg-b-30">
+                            <div class="img-area">
+                                <img src="~/image/Services/Venue/1.jpg" style="height:210px" class="img-fit-cover ht-180" alt="DoubleTree by Hilton Goa,Panaji" title="DoubleTree by Hilton Goa,Panaji" />
+                            </div>
+                            <div class="pd-10">
+                                <div class="w-100 float-left b-bottom-dashed">
+                                    <h4 class="tx-16 tx-gray-400 tx-bold tx-capitalize lh-1 mg-b-5" style="color:black">
+                                        @*<a>@Html.ActionLink("Doubletree By Hilton Goa Panaji", "venue1", "Services", new { @class = "tx-color-778" })</a>*@
+                                        <a> @Html.ActionLink(item.Services_Title, "venue", new { categoryId = item.Category_Id }, null)</a>
+                                    </h4>
+                                    <p class="tx-14 tx-gray-600 tx-bold tx-capitalize lh-1 mg-b-5"><i class="fa fa-map-marker"></i>  Panaji, Goa</p>
+
+                                </div>
+                                <div class="w-75 float-left  pd-t-10">
+                                    <div class="">
+                                        <p class="tx-14 tx-color-01 tx-bold lh-1 mg-b-5"><i class="fas fa-rupee"></i> 1800</p>
+                                        <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10"><i class="fas fa-square tx-color-03"></i> Per Plate</p>
+                                    </div>
+                                </div>
+                                <div class="w-25 float-right pd-t-10">
+                                    <p class="tx-14 tx-white tx-bold lh--6 mg-b-5 rating-5 pd-t-10 pd-b-10 pd-r-5 pd-l-5  tx-center pd-t-10 rounded-5">5.0000</p>
+                                    <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10 tx-center">1 reviews</p>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
-                    <div class="pd-10">
-                        <div class="w-100 float-left b-bottom-dashed">
-                            <h4 class="tx-16 tx-gray-400 tx-bold tx-capitalize lh-1 mg-b-5" style="color:black">
-                                <a>@Html.ActionLink("Doubletree By Hilton Goa Panaji", "venue1", "Services", new { @class = "tx-color-778" })</a>
-                            </h4>
-                            <p class="tx-14 tx-gray-600 tx-bold tx-capitalize lh-1 mg-b-5"><i class="fa fa-map-marker"></i>  Panaji, Goa</p>
-
-                        </div>
-                        <div class="w-75 float-left  pd-t-10">
-                            <div class="">
-                                <p class="tx-14 tx-color-01 tx-bold lh-1 mg-b-5"><i class="fas fa-rupee"></i> 1800</p>
-                                <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10"><i class="fas fa-square tx-color-03"></i> Per Plate</p>
-                            </div>
-                        </div>
-                        <div class="w-25 float-right pd-t-10">
-                            <p class="tx-14 tx-white tx-bold lh--6 mg-b-5 rating-5 pd-t-10 pd-b-10 pd-r-5 pd-l-5  tx-center pd-t-10 rounded-5">5.0000</p>
-                            <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10 tx-center">1 reviews</p>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card box-shadow mg-b-30">
-                    <div class="img-area">
-                        <img src="~/image/Services/Venue/2.jpg" class="img-fit-cover ht-180" alt="Royal Orchid Beach , Resort & Spa " title="Royal Orchid Beach , Resort & Spa " style="height:210px" />
-                    </div>
-                    <div class="pd-10">
-                        <div class="w-100 float-left b-bottom-dashed">
-                            <h4 class="tx-16 tx-gray-400 tx-bold tx-capitalize lh-1 mg-b-5">
-                                <a>
-                                    @Html.ActionLink("Royal Orchid Beach , Resort & Spa", "venue1", "Services", new { @class = "tx-color-778" })
-                                </a>
-                            </h4>
-                            <p class="tx-14 tx-gray-600 tx-bold tx-capitalize lh-1 mg-b-5"><i class="fa fa-map-marker"></i>  Goa, Goa</p>
-
-                        </div>
-                        <div class="w-75 float-left  pd-t-10">
-                            <div class="">
-                                <p class="tx-14 tx-color-01 tx-bold lh-1 mg-b-5">Price on Request</p>
-                                <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10"><i class="fas fa-square tx-color-03"></i> Per Plate</p>
-                            </div>
-                        </div>
-                        <div class="w-25 float-right pd-t-10">
-                            <p class="tx-14 tx-white tx-bold lh--6 mg-b-5 rating-5 pd-t-10 pd-b-10 pd-r-5 pd-l-5  tx-center pd-t-10 rounded-5">4.8</p>
-                            <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10 tx-center">0  reviews</p>
-                        </div>
+                }
+            }
 
                 </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card box-shadow mg-b-30">
-                <div class="img-area">
-                    <a href="prainha-resort-by-the-sea--dona-paula--goa--dona-paula/index.html" target="_blank">
-                        <img src="~/image/Services/Venue/3.jpg" style="height:192px" class="img-fit-cover ht-180" alt="Prainha Resort By The Sea, Dona Paula, Goa" title="Prainha Resort By The Sea, Dona Paula, Goa" />
-                    </a>
-                </div>
-                <div class="pd-10">
-                    <a href="prainha-resort-by-the-sea--dona-paula--goa--dona-paula/index.html" target="_blank">
-                        <div class="w-100 float-left b-bottom-dashed">
-                            <h4 class="tx-16 tx-gray-400 tx-bold tx-capitalize lh-1 mg-b-5">Prainha Resort By The Sea, Dona&#8230;</h4>
-                            <p class="tx-14 tx-gray-600 tx-bold tx-capitalize lh-1 mg-b-5"><i class="fa fa-map-marker"></i>   Dona Paula, Goa</p>
-
-                        </div>
-                        <div class="w-75 float-left  pd-t-10">
-                            <div class="">
-                                <p class="tx-14 tx-color-01 tx-bold lh-1 mg-b-5">Price on Request</p>
-                                <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10"><i class="fas fa-square tx-color-03"></i> Per Plate</p>
-                            </div>
-                        </div>
-                        <div class="w-25 float-right pd-t-10">
-                            <p class="tx-14 tx-white tx-bold lh--6 mg-b-5 rating-5 pd-t-10 pd-b-10 pd-r-5 pd-l-5  tx-center pd-t-10 rounded-5">4.8</p>
-                            <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10 tx-center">0  reviews</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card box-shadow mg-b-30">
-                <div class="img-area">
-                    <a href="clube-tennis-de-gaspar-dias--miramar--goa-panaji/index.html" target="_blank">
-                        <img src="~/image/Services/Venue/4.jpg" style="height:192px" class="img-fit-cover ht-180" alt="Clube Tennis De Gaspar Dias, Miramar, Goa" title="Clube Tennis De Gaspar Dias, Miramar, Goa" />
-                    </a>
-                </div>
-                <div class="pd-10">
-                    <a href="clube-tennis-de-gaspar-dias--miramar--goa-panaji/index.html" target="_blank">
-                        <div class="w-100 float-left b-bottom-dashed">
-                            <h4 class="tx-16 tx-gray-400 tx-bold tx-capitalize lh-1 mg-b-5">Clube Tennis De Gaspar Dias, Miramar,&#8230;</h4>
-                            <p class="tx-14 tx-gray-600 tx-bold tx-capitalize lh-1 mg-b-5"><i class="fa fa-map-marker"></i>  Panaji, Goa</p>
-
-                        </div>
-                        <div class="w-75 float-left  pd-t-10">
-                            <div class="">
-                                <p class="tx-14 tx-color-01 tx-bold lh-1 mg-b-5"><i class="fas fa-rupee"></i> 450</p>
-                                <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10"><i class="fas fa-square tx-color-03"></i> Per Plate</p>
-                            </div>
-                        </div>
-                        <div class="w-25 float-right pd-t-10">
-                            <p class="tx-14 tx-white tx-bold lh--6 mg-b-5 rating-5 pd-t-10 pd-b-10 pd-r-5 pd-l-5  tx-center pd-t-10 rounded-5">4.8</p>
-                            <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10 tx-center">0  reviews</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card box-shadow mg-b-30">
-                <div class="img-area">
-                    <a href="international-centre-goa--dona-paula/index.html" target="_blank">
-                        <img src="~/image/Services/Venue/5.jpg" style="height:192px" class="img-fit-cover ht-180" alt="International Centre Goa" title="International Centre Goa" />
-                    </a>
-                </div>
-                <div class="pd-10">
-                    <a href="international-centre-goa--dona-paula/index.html" target="_blank">
-                        <div class="w-100 float-left b-bottom-dashed">
-                            <h4 class="tx-16 tx-gray-400 tx-bold tx-capitalize lh-1 mg-b-5">International Centre Goa</h4>
-                            <p class="tx-14 tx-gray-600 tx-bold tx-capitalize lh-1 mg-b-5"><i class="fa fa-map-marker"></i>   Dona Paula, Goa</p>
-
-                        </div>
-                        <div class="w-75 float-left  pd-t-10">
-                            <div class="">
-                                <p class="tx-14 tx-color-01 tx-bold lh-1 mg-b-5">Price on Request</p>
-                                <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10"><i class="fas fa-square tx-color-03"></i> Per Plate</p>
-                            </div>
-                        </div>
-                        <div class="w-25 float-right pd-t-10">
-                            <p class="tx-14 tx-white tx-bold lh--6 mg-b-5 rating-5 pd-t-10 pd-b-10 pd-r-5 pd-l-5  tx-center pd-t-10 rounded-5">4.8</p>
-                            <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10 tx-center">0  reviews</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card box-shadow mg-b-30">
-                <div class="img-area">
-                    <a href="resorte-village-royale-goa/index.html" target="_blank">
-                        <img src="~/image/Services/Venue/6.jpg" style="height:192px" class="img-fit-cover ht-180" alt="Resorte Village Royale" title="Resorte Village Royale" />
-                    </a>
-                </div>
-                <div class="pd-10">
-                    <a href="resorte-village-royale-goa/index.html" target="_blank">
-                        <div class="w-100 float-left b-bottom-dashed">
-                            <h4 class="tx-16 tx-gray-400 tx-bold tx-capitalize lh-1 mg-b-5">Resorte Village Royale</h4>
-                            <p class="tx-14 tx-gray-600 tx-bold tx-capitalize lh-1 mg-b-5"><i class="fa fa-map-marker"></i>  Goa, Goa</p>
-
-                        </div>
-                        <div class="w-75 float-left  pd-t-10">
-                            <div class="">
-                                <p class="tx-14 tx-color-01 tx-bold lh-1 mg-b-5"><i class="fas fa-rupee"></i> 200</p>
-                                <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10"><i class="fas fa-square tx-color-03"></i> Per Plate</p>
-                            </div>
-                        </div>
-                        <div class="w-25 float-right pd-t-10">
-                            <p class="tx-14 tx-white tx-bold lh--6 mg-b-5 rating-5 pd-t-10 pd-b-10 pd-r-5 pd-l-5  tx-center pd-t-10 rounded-5">4.8</p>
-                            <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10 tx-center">0 reviews</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card box-shadow mg-b-30">
-                <div class="img-area">
-                    <a href="zuri-white-sands-resort-and-casino--varca--goa-goa/index.html" target="_blank">
-                        <img src="~/image/Services/Venue/7.jpg" style="height:176px" class="img-fit-cover ht-180" alt="Zuri White Sands Resort And Casino, Varca, Goa" title="Zuri White Sands Resort And Casino, Varca, Goa" />
-                    </a>
-                </div>
-                <div class="pd-10">
-                    <a href="zuri-white-sands-resort-and-casino--varca--goa-goa/index.html" target="_blank">
-                        <div class="w-100 float-left b-bottom-dashed">
-                            <h4 class="tx-16 tx-gray-400 tx-bold tx-capitalize lh-1 mg-b-5">Zuri White Sands Resort And Casino,&#8230;</h4>
-                            <p class="tx-14 tx-gray-600 tx-bold tx-capitalize lh-1 mg-b-5"><i class="fa fa-map-marker"></i>  Goa, Goa</p>
-
-                        </div>
-                        <div class="w-75 float-left  pd-t-10">
-                            <div class="">
-                                <p class="tx-14 tx-color-01 tx-bold lh-1 mg-b-5"><i class="fas fa-rupee"></i> 2500</p>
-                                <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10"><i class="fas fa-square tx-color-03"></i> Per Plate</p>
-                            </div>
-                        </div>
-                        <div class="w-25 float-right pd-t-10">
-                            <p class="tx-14 tx-white tx-bold lh--6 mg-b-5 rating-5 pd-t-10 pd-b-10 pd-r-5 pd-l-5  tx-center pd-t-10 rounded-5">4.8</p>
-                            <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10 tx-center">0  reviews</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card box-shadow mg-b-30">
-                <div class="img-area">
-                    <a href="kesarval-garden-retreat--verna-goa/index.html" target="_blank">
-                        <img src="~/image/Services/Venue/8.jpg" style="height:192px" class="img-fit-cover ht-180" alt="Kesarval Garden Retreat, Verna" title="Kesarval Garden Retreat, Verna" />
-                    </a>
-                </div>
-                <div class="pd-10">
-                    <a href="kesarval-garden-retreat--verna-goa/index.html" target="_blank">
-                        <div class="w-100 float-left b-bottom-dashed">
-                            <h4 class="tx-16 tx-gray-400 tx-bold tx-capitalize lh-1 mg-b-5">Kesarval Garden Retreat, Verna</h4>
-                            <p class="tx-14 tx-gray-600 tx-bold tx-capitalize lh-1 mg-b-5"><i class="fa fa-map-marker"></i>  Goa, Goa</p>
-
-                        </div>
-                        <div class="w-75 float-left  pd-t-10">
-                            <div class="">
-                                <p class="tx-14 tx-color-01 tx-bold lh-1 mg-b-5"><i class="fas fa-rupee"></i> 350</p>
-                                <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10"><i class="fas fa-square tx-color-03"></i> Per Plate</p>
-                            </div>
-                        </div>
-                        <div class="w-25 float-right pd-t-10">
-                            <p class="tx-14 tx-white tx-bold lh--6 mg-b-5 rating-5 pd-t-10 pd-b-10 pd-r-5 pd-l-5  tx-center pd-t-10 rounded-5">4.8</p>
-                            <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10 tx-center">0  reviews</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card box-shadow mg-b-30">
-                <div class="img-area">
-                    <a href="hotel-goan-heritage--calangute-bardez/index.html" target="_blank">
-                        <img src="~/image/Services/Venue/9.jpg" style="height:192px" class="img-fit-cover ht-180" alt="Hotel Goan Heritage, Calangute" title="Hotel Goan Heritage, Calangute" />
-                    </a>
-                </div>
-                <div class="pd-10">
-                    <a href="hotel-goan-heritage--calangute-bardez/index.html" target="_blank">
-                        <div class="w-100 float-left b-bottom-dashed">
-                            <h4 class="tx-16 tx-gray-400 tx-bold tx-capitalize lh-1 mg-b-5">Hotel Goan Heritage, Calangute</h4>
-                            <p class="tx-14 tx-gray-600 tx-bold tx-capitalize lh-1 mg-b-5"><i class="fa fa-map-marker"></i>  Bardez, Goa</p>
-
-                        </div>
-                        <div class="w-75 float-left  pd-t-10">
-                            <div class="">
-                                <p class="tx-14 tx-color-01 tx-bold lh-1 mg-b-5">Price on Request</p>
-                                <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10"><i class="fas fa-square tx-color-03"></i> Per Plate</p>
-                            </div>
-                        </div>
-                        <div class="w-25 float-right pd-t-10">
-                            <p class="tx-14 tx-white tx-bold lh--6 mg-b-5 rating-5 pd-t-10 pd-b-10 pd-r-5 pd-l-5  tx-center pd-t-10 rounded-5">4.8</p>
-                            <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10 tx-center">0  reviews</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card box-shadow mg-b-30">
-                <div class="img-area">
-                    <a href="stone-water-eco-resort--bogmalo--goa-goa/index.html" target="_blank">
-                        <img src="~/image/Services/Venue/10.jpg" style="height:176px" class="img-fit-cover ht-180" alt="Stone Water Eco Resort, Bogmalo, Goa" title="Stone Water Eco Resort, Bogmalo, Goa" />
-                    </a>
-                </div>
-                <div class="pd-10">
-                    <a href="stone-water-eco-resort--bogmalo--goa-goa/index.html" target="_blank">
-                        <div class="w-100 float-left b-bottom-dashed">
-                            <h4 class="tx-16 tx-gray-400 tx-bold tx-capitalize lh-1 mg-b-5">Stone Water Eco Resort, Bogmalo,&#8230;</h4>
-                            <p class="tx-14 tx-gray-600 tx-bold tx-capitalize lh-1 mg-b-5"><i class="fa fa-map-marker"></i>  Goa, Goa</p>
-
-                        </div>
-                        <div class="w-75 float-left  pd-t-10">
-                            <div class="">
-                                <p class="tx-14 tx-color-01 tx-bold lh-1 mg-b-5"><i class="fas fa-rupee"></i> 1250</p>
-                                <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10"><i class="fas fa-square tx-color-03"></i> Per Plate</p>
-                            </div>
-                        </div>
-                        <div class="w-25 float-right pd-t-10">
-                            <p class="tx-14 tx-white tx-bold lh--6 mg-b-5 rating-5 pd-t-10 pd-b-10 pd-r-5 pd-l-5  tx-center pd-t-10 rounded-5">4.8</p>
-                            <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10 tx-center">0  reviews</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card box-shadow mg-b-30">
-                <div class="img-area">
-                    <a href="grand-hyatt-goa--bambolim-bambolim/index.html" target="_blank">
-                        <img src="~/image/Services/Venue/11.jpg" style="height:192px" class="img-fit-cover ht-180" alt="Grand Hyatt Goa, Bambolim" title="Grand Hyatt Goa, Bambolim" />
-                    </a>
-                </div>
-                <div class="pd-10">
-                    <a href="grand-hyatt-goa--bambolim-bambolim/index.html" target="_blank">
-                        <div class="w-100 float-left b-bottom-dashed">
-                            <h4 class="tx-16 tx-gray-400 tx-bold tx-capitalize lh-1 mg-b-5">Grand Hyatt Goa, Bambolim</h4>
-                            <p class="tx-14 tx-gray-600 tx-bold tx-capitalize lh-1 mg-b-5"><i class="fa fa-map-marker"></i>  Bambolim, Goa</p>
-
-                        </div>
-                        <div class="w-75 float-left  pd-t-10">
-                            <div class="">
-                                <p class="tx-14 tx-color-01 tx-bold lh-1 mg-b-5">Price on Request</p>
-                                <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10"><i class="fas fa-square tx-color-03"></i> Per Plate</p>
-                            </div>
-                        </div>
-                        <div class="w-25 float-right pd-t-10">
-                            <p class="tx-14 tx-white tx-bold lh--6 mg-b-5 rating-5 pd-t-10 pd-b-10 pd-r-5 pd-l-5  tx-center pd-t-10 rounded-5">4.8</p>
-                            <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10 tx-center">0  reviews</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card box-shadow mg-b-30">
-                <div class="img-area">
-                    <a href="safira-river-front-resort-goa/index.html" target="_blank">
-                        <img src="~/image/Services/Venue/12.jpg" style="height:192px" class="img-fit-cover ht-180" alt="Safira River Front Resort" title="Safira River Front Resort" />
-                    </a>
-                </div>
-                <div class="pd-10">
-                    <a href="safira-river-front-resort-goa/index.html" target="_blank">
-                        <div class="w-100 float-left b-bottom-dashed">
-                            <h4 class="tx-16 tx-gray-400 tx-bold tx-capitalize lh-1 mg-b-5">Safira River Front Resort</h4>
-                            <p class="tx-14 tx-gray-600 tx-bold tx-capitalize lh-1 mg-b-5"><i class="fa fa-map-marker"></i>  Goa, Goa</p>
-
-                        </div>
-                        <div class="w-75 float-left  pd-t-10">
-                            <div class="">
-                                <p class="tx-14 tx-color-01 tx-bold lh-1 mg-b-5"><i class="fas fa-rupee"></i> 750</p>
-                                <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10"><i class="fas fa-square tx-color-03"></i> Per Plate</p>
-                            </div>
-                        </div>
-                        <div class="w-25 float-right pd-t-10">
-                            <p class="tx-14 tx-white tx-bold lh--6 mg-b-5 rating-5 pd-t-10 pd-b-10 pd-r-5 pd-l-5  tx-center pd-t-10 rounded-5">4.8</p>
-                            <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10 tx-center">0  reviews</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card box-shadow mg-b-30">
-                <div class="img-area">
-                    <a href="rio-royale--arpora-bardez/index.html" target="_blank">
-                        <img src="~/image/Services/Venue/13.jpg" style="height:192px" class="img-fit-cover ht-180" alt="Rio Royale, Arpora" title="Rio Royale, Arpora" />
-                    </a>
-                </div>
-                <div class="pd-10">
-                    <a href="rio-royale--arpora-bardez/index.html" target="_blank">
-                        <div class="w-100 float-left b-bottom-dashed">
-                            <h4 class="tx-16 tx-gray-400 tx-bold tx-capitalize lh-1 mg-b-5">Rio Royale, Arpora</h4>
-                            <p class="tx-14 tx-gray-600 tx-bold tx-capitalize lh-1 mg-b-5"><i class="fa fa-map-marker"></i>  Bardez, Goa</p>
-
-                        </div>
-                        <div class="w-75 float-left  pd-t-10">
-                            <div class="">
-                                <p class="tx-14 tx-color-01 tx-bold lh-1 mg-b-5"><i class="fas fa-rupee"></i> 1600</p>
-                                <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10"><i class="fas fa-square tx-color-03"></i> Per Plate</p>
-                            </div>
-                        </div>
-                        <div class="w-25 float-right pd-t-10">
-                            <p class="tx-14 tx-white tx-bold lh--6 mg-b-5 rating-5 pd-t-10 pd-b-10 pd-r-5 pd-l-5  tx-center pd-t-10 rounded-5">4.8</p>
-                            <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10 tx-center">0  reviews</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card box-shadow mg-b-30">
-                <div class="img-area">
-                    <a href="joecons-beach-resort-goa/index.html" target="_blank">
-                        <img src="~/image/Services/Venue/14.jpg" style="height:192px" class="img-fit-cover ht-180" alt="Joecons Beach Resort" title="Joecons Beach Resort" />
-                    </a>
-                </div>
-                <div class="pd-10">
-                    <a href="joecons-beach-resort-goa/index.html" target="_blank">
-                        <div class="w-100 float-left b-bottom-dashed">
-                            <h4 class="tx-16 tx-gray-400 tx-bold tx-capitalize lh-1 mg-b-5">Joecons Beach Resort</h4>
-                            <p class="tx-14 tx-gray-600 tx-bold tx-capitalize lh-1 mg-b-5"><i class="fa fa-map-marker"></i>  Goa, Goa</p>
-
-                        </div>
-                        <div class="w-75 float-left  pd-t-10">
-                            <div class="">
-                                <p class="tx-14 tx-color-01 tx-bold lh-1 mg-b-5"><i class="fas fa-rupee"></i> 1050</p>
-                                <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10"><i class="fas fa-square tx-color-03"></i> Per Plate</p>
-                            </div>
-                        </div>
-                        <div class="w-25 float-right pd-t-10">
-                            <p class="tx-14 tx-white tx-bold lh--6 mg-b-5 rating-5 pd-t-10 pd-b-10 pd-r-5 pd-l-5  tx-center pd-t-10 rounded-5">4.8</p>
-                            <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10 tx-center">0  reviews</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card box-shadow mg-b-30">
-                <div class="img-area">
-                    <a href="longuinhos-beach-resort--colva--colva-mormugao/index.html" target="_blank">
-                        <img src="~/image/Services/Venue/15.jpg" style="height:192px" class="img-fit-cover ht-180" alt="Longuinhos Beach Resort, Colva" title="Longuinhos Beach Resort, Colva" />
-                    </a>
-                </div>
-                <div class="pd-10">
-                    <a href="longuinhos-beach-resort--colva--colva-mormugao/index.html" target="_blank">
-                        <div class="w-100 float-left b-bottom-dashed">
-                            <h4 class="tx-16 tx-gray-400 tx-bold tx-capitalize lh-1 mg-b-5">Longuinhos Beach Resort, Colva</h4>
-                            <p class="tx-14 tx-gray-600 tx-bold tx-capitalize lh-1 mg-b-5"><i class="fa fa-map-marker"></i>   Colva Mormugao, Goa</p>
-
-                        </div>
-                        <div class="w-75 float-left  pd-t-10">
-                            <div class="">
-                                <p class="tx-14 tx-color-01 tx-bold lh-1 mg-b-5">Price on Request</p>
-                                <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10"><i class="fas fa-square tx-color-03"></i> Per Plate</p>
-                            </div>
-                        </div>
-                        <div class="w-25 float-right pd-t-10">
-                            <p class="tx-14 tx-white tx-bold lh--6 mg-b-5 rating-5 pd-t-10 pd-b-10 pd-r-5 pd-l-5  tx-center pd-t-10 rounded-5">4.8</p>
-                            <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10 tx-center">0  reviews</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card box-shadow mg-b-30">
-                <div class="img-area">
-                    <a href="marbela-beach-resort--mandrem/index.html" target="_blank">
-                        <img src="~/image/Services/Venue/16.jpg" style="height:192px" class="img-fit-cover ht-180" alt="Marbela Beach Resort " title="Marbela Beach Resort " />
-                    </a>
-                </div>
-                <div class="pd-10">
-                    <a href="marbela-beach-resort--mandrem/index.html" target="_blank">
-                        <div class="w-100 float-left b-bottom-dashed">
-                            <h4 class="tx-16 tx-gray-400 tx-bold tx-capitalize lh-1 mg-b-5">Marbela Beach Resort </h4>
-                            <p class="tx-14 tx-gray-600 tx-bold tx-capitalize lh-1 mg-b-5"><i class="fa fa-map-marker"></i>  Mandrem, Goa</p>
-
-                        </div>
-                        <div class="w-75 float-left  pd-t-10">
-                            <div class="">
-                                <p class="tx-14 tx-color-01 tx-bold lh-1 mg-b-5">Price on Request</p>
-                                <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10"><i class="fas fa-square tx-color-03"></i> Per Plate</p>
-                            </div>
-                        </div>
-                        <div class="w-25 float-right pd-t-10">
-                            <p class="tx-14 tx-white tx-bold lh--6 mg-b-5 rating-5 pd-t-10 pd-b-10 pd-r-5 pd-l-5  tx-center pd-t-10 rounded-5">4.8</p>
-                            <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10 tx-center">0  reviews</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card box-shadow mg-b-30">
-                <div class="img-area">
-                    <a href="bay-15--dona-paula-goa/index.html" target="_blank">
-                        <img src="~/image/Services/Venue/17.jpg" style="height:192px" class="img-fit-cover ht-180" alt="Bay 15, Dona Paula" title="Bay 15, Dona Paula" />
-                    </a>
-                </div>
-                <div class="pd-10">
-                    <a href="bay-15--dona-paula-goa/index.html" target="_blank">
-                        <div class="w-100 float-left b-bottom-dashed">
-                            <h4 class="tx-16 tx-gray-400 tx-bold tx-capitalize lh-1 mg-b-5">Bay 15, Dona Paula</h4>
-                            <p class="tx-14 tx-gray-600 tx-bold tx-capitalize lh-1 mg-b-5"><i class="fa fa-map-marker"></i>  Goa, Goa</p>
-
-                        </div>
-                        <div class="w-75 float-left  pd-t-10">
-                            <div class="">
-                                <p class="tx-14 tx-color-01 tx-bold lh-1 mg-b-5">Price on Request</p>
-                                <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10"><i class="fas fa-square tx-color-03"></i> Per Plate</p>
-                            </div>
-                        </div>
-                        <div class="w-25 float-right pd-t-10">
-                            <p class="tx-14 tx-white tx-bold lh--6 mg-b-5 rating-5 pd-t-10 pd-b-10 pd-r-5 pd-l-5  tx-center pd-t-10 rounded-5">4.8</p>
-                            <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10 tx-center">0  reviews</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card box-shadow mg-b-30">
-                <div class="img-area">
-                    <a href="planet-hollywood-beach-resort--utorda--goa-salcette/index.html" target="_blank">
-                        <img src="~/image/Services/Venue/18.jpg" style="height:192px" class="img-fit-cover ht-180" alt="Planet Hollywood Beach Resort, Utorda, Goa" title="Planet Hollywood Beach Resort, Utorda, Goa" />
-                    </a>
-                </div>
-                <div class="pd-10">
-                    <a href="planet-hollywood-beach-resort--utorda--goa-salcette/index.html" target="_blank">
-                        <div class="w-100 float-left b-bottom-dashed">
-                            <h4 class="tx-16 tx-gray-400 tx-bold tx-capitalize lh-1 mg-b-5">Planet Hollywood Beach Resort,&#8230;</h4>
-                            <p class="tx-14 tx-gray-600 tx-bold tx-capitalize lh-1 mg-b-5"><i class="fa fa-map-marker"></i>  Salcette, Goa</p>
-
-                        </div>
-                        <div class="w-75 float-left  pd-t-10">
-                            <div class="">
-                                <p class="tx-14 tx-color-01 tx-bold lh-1 mg-b-5">Price on Request</p>
-                                <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10"><i class="fas fa-square tx-color-03"></i> Per Plate</p>
-                            </div>
-                        </div>
-                        <div class="w-25 float-right pd-t-10">
-                            <p class="tx-14 tx-white tx-bold lh--6 mg-b-5 rating-5 pd-t-10 pd-b-10 pd-r-5 pd-l-5  tx-center pd-t-10 rounded-5">4.8</p>
-                            <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10 tx-center">0  reviews</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card box-shadow mg-b-30">
-                <div class="img-area">
-                    <a href="radisson-blu--cavelossim-goa/index.html" target="_blank">
-                        <img src="~/image/Services/Venue/19.jpg" style="height:192px" class="img-fit-cover ht-180" alt="Radisson Blu, Cavelossim" title="Radisson Blu, Cavelossim" />
-                    </a>
-                </div>
-                <div class="pd-10">
-                    <a href="radisson-blu--cavelossim-goa/index.html" target="_blank">
-                        <div class="w-100 float-left b-bottom-dashed">
-                            <h4 class="tx-16 tx-gray-400 tx-bold tx-capitalize lh-1 mg-b-5">Radisson Blu, Cavelossim</h4>
-                            <p class="tx-14 tx-gray-600 tx-bold tx-capitalize lh-1 mg-b-5"><i class="fa fa-map-marker"></i>  Goa, Goa</p>
-
-                        </div>
-                        <div class="w-75 float-left  pd-t-10">
-                            <div class="">
-                                <p class="tx-14 tx-color-01 tx-bold lh-1 mg-b-5">Price on Request</p>
-                                <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10"><i class="fas fa-square tx-color-03"></i> Per Plate</p>
-                            </div>
-                        </div>
-                        <div class="w-25 float-right pd-t-10">
-                            <p class="tx-14 tx-white tx-bold lh--6 mg-b-5 rating-5 pd-t-10 pd-b-10 pd-r-5 pd-l-5  tx-center pd-t-10 rounded-5">4.8</p>
-                            <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10 tx-center">0  reviews</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card box-shadow mg-b-30">
-                <div class="img-area">
-                    <a href="la-cabana-beach---spa--mandrem-mandrem/index.html" target="_blank">
-                        <img src="~/image/Services/Venue/20.jpg" style="height:176px" class="img-fit-cover ht-180" alt="La Cabana Beach & Spa, Mandrem" title="La Cabana Beach & Spa, Mandrem" />
-                    </a>
-                </div>
-                <div class="pd-10">
-                    <a href="la-cabana-beach---spa--mandrem-mandrem/index.html" target="_blank">
-                        <div class="w-100 float-left b-bottom-dashed">
-                            <h4 class="tx-16 tx-gray-400 tx-bold tx-capitalize lh-1 mg-b-5">La Cabana Beach & Spa, Mandrem</h4>
-                            <p class="tx-14 tx-gray-600 tx-bold tx-capitalize lh-1 mg-b-5"><i class="fa fa-map-marker"></i>  Mandrem, Goa</p>
-
-                        </div>
-                        <div class="w-75 float-left  pd-t-10">
-                            <div class="">
-                                <p class="tx-14 tx-color-01 tx-bold lh-1 mg-b-5">Price on Request</p>
-                                <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10"><i class="fas fa-square tx-color-03"></i> Per Plate</p>
-                            </div>
-                        </div>
-                        <div class="w-25 float-right pd-t-10">
-                            <p class="tx-14 tx-white tx-bold lh--6 mg-b-5 rating-5 pd-t-10 pd-b-10 pd-r-5 pd-l-5  tx-center pd-t-10 rounded-5">4.8</p>
-                            <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10 tx-center">0  reviews</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card box-shadow mg-b-30">
-                <div class="img-area">
-                    <a href="riva-beach-resort-mandrem/index.html" target="_blank">
-                        <img src="~/image/Services/Venue/21.jpg" style="height:192px" class="img-fit-cover ht-180" alt="Riva Beach Resort" title="Riva Beach Resort" />
-                    </a>
-                </div>
-                <div class="pd-10">
-                    <a href="riva-beach-resort-mandrem/index.html" target="_blank">
-                        <div class="w-100 float-left b-bottom-dashed">
-                            <h4 class="tx-16 tx-gray-400 tx-bold tx-capitalize lh-1 mg-b-5">Riva Beach Resort</h4>
-                            <p class="tx-14 tx-gray-600 tx-bold tx-capitalize lh-1 mg-b-5"><i class="fa fa-map-marker"></i>  Mandrem, Goa</p>
-
-                        </div>
-                        <div class="w-75 float-left  pd-t-10">
-                            <div class="">
-                                <p class="tx-14 tx-color-01 tx-bold lh-1 mg-b-5"><i class="fas fa-rupee"></i> 900</p>
-                                <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10"><i class="fas fa-square tx-color-03"></i> Per Plate</p>
-                            </div>
-                        </div>
-                        <div class="w-25 float-right pd-t-10">
-                            <p class="tx-14 tx-white tx-bold lh--6 mg-b-5 rating-5 pd-t-10 pd-b-10 pd-r-5 pd-l-5  tx-center pd-t-10 rounded-5">4.8</p>
-                            <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10 tx-center">0  reviews</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card box-shadow mg-b-30">
-                <div class="img-area">
-                    <a href="the-leela--goa-goa/index.html" target="_blank">
-                        <img src="~/image/Services/Venue/22.jpg" style="height:192px" class="img-fit-cover ht-180" alt="The Leela, Goa" title="The Leela, Goa" />
-                    </a>
-                </div>
-                <div class="pd-10">
-                    <a href="the-leela--goa-goa/index.html" target="_blank">
-                        <div class="w-100 float-left b-bottom-dashed">
-                            <h4 class="tx-16 tx-gray-400 tx-bold tx-capitalize lh-1 mg-b-5">The Leela, Goa</h4>
-                            <p class="tx-14 tx-gray-600 tx-bold tx-capitalize lh-1 mg-b-5"><i class="fa fa-map-marker"></i>  Goa, Goa</p>
-
-                        </div>
-                        <div class="w-75 float-left  pd-t-10">
-                            <div class="">
-                                <p class="tx-14 tx-color-01 tx-bold lh-1 mg-b-5">Price on Request</p>
-                                <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10"><i class="fas fa-square tx-color-03"></i> Per Plate</p>
-                            </div>
-                        </div>
-                        <div class="w-25 float-right pd-t-10">
-                            <p class="tx-14 tx-white tx-bold lh--6 mg-b-5 rating-5 pd-t-10 pd-b-10 pd-r-5 pd-l-5  tx-center pd-t-10 rounded-5">4.8</p>
-                            <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10 tx-center">0  reviews</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card box-shadow mg-b-30">
-                <div class="img-area">
-                    <a href="por-do-sol-goa/index.html" target="_blank">
-                        <img src="~/image/Services/Venue/23.jpg" style="height:192px" class="img-fit-cover ht-180" alt="POR DO SOL" title="POR DO SOL" />
-                    </a>
-                </div>
-                <div class="pd-10">
-                    <a href="por-do-sol-goa/index.html" target="_blank">
-                        <div class="w-100 float-left b-bottom-dashed">
-                            <h4 class="tx-16 tx-gray-400 tx-bold tx-capitalize lh-1 mg-b-5">POR DO SOL</h4>
-                            <p class="tx-14 tx-gray-600 tx-bold tx-capitalize lh-1 mg-b-5"><i class="fa fa-map-marker"></i>  Goa, Goa</p>
-
-                        </div>
-                        <div class="w-75 float-left  pd-t-10">
-                            <div class="">
-                                <p class="tx-14 tx-color-01 tx-bold lh-1 mg-b-5"><i class="fas fa-rupee"></i> 1200</p>
-                                <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10"><i class="fas fa-square tx-color-03"></i> Per Plate</p>
-                            </div>
-                        </div>
-                        <div class="w-25 float-right pd-t-10">
-                            <p class="tx-14 tx-white tx-bold lh--6 mg-b-5 rating-5 pd-t-10 pd-b-10 pd-r-5 pd-l-5  tx-center pd-t-10 rounded-5">4.8</p>
-                            <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10 tx-center">0  reviews</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card box-shadow mg-b-30">
-                <div class="img-area">
-                    <a href="fahrenheit-hotels-and-resorts-bardez/index.html" target="_blank">
-                        <img src="~/image/Services/Venue/24.jpg" style="height:192px" class="img-fit-cover ht-180" alt="Fahrenheit Hotels And Resorts" title="Fahrenheit Hotels And Resorts" />
-                    </a>
-                </div>
-                <div class="pd-10">
-                    <a href="fahrenheit-hotels-and-resorts-bardez/index.html" target="_blank">
-                        <div class="w-100 float-left b-bottom-dashed">
-                            <h4 class="tx-16 tx-gray-400 tx-bold tx-capitalize lh-1 mg-b-5">Fahrenheit Hotels And Resorts</h4>
-                            <p class="tx-14 tx-gray-600 tx-bold tx-capitalize lh-1 mg-b-5"><i class="fa fa-map-marker"></i>  Bardez, Goa</p>
-
-                        </div>
-                        <div class="w-75 float-left  pd-t-10">
-                            <div class="">
-                                <p class="tx-14 tx-color-01 tx-bold lh-1 mg-b-5">Price on Request</p>
-                                <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10"><i class="fas fa-square tx-color-03"></i> Per Plate</p>
-                            </div>
-                        </div>
-                        <div class="w-25 float-right pd-t-10">
-                            <p class="tx-14 tx-white tx-bold lh--6 mg-b-5 rating-5 pd-t-10 pd-b-10 pd-r-5 pd-l-5  tx-center pd-t-10 rounded-5">4.8</p>
-                            <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10 tx-center">0  reviews</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card box-shadow mg-b-30">
-                <div class="img-area">
-                    <a href="zeebop-salcette/index.html" target="_blank">
-                        <img src="~/image/Services/Venue/25.jpg" style="height:192px" class="img-fit-cover ht-180" alt="Zeebop" title="Zeebop" />
-                    </a>
-                </div>
-                <div class="pd-10">
-                    <a href="zeebop-salcette/index.html" target="_blank">
-                        <div class="w-100 float-left b-bottom-dashed">
-                            <h4 class="tx-16 tx-gray-400 tx-bold tx-capitalize lh-1 mg-b-5">Zeebop</h4>
-                            <p class="tx-14 tx-gray-600 tx-bold tx-capitalize lh-1 mg-b-5"><i class="fa fa-map-marker"></i>  Salcette, Goa</p>
-
-                        </div>
-                        <div class="w-75 float-left  pd-t-10">
-                            <div class="">
-                                <p class="tx-14 tx-color-01 tx-bold lh-1 mg-b-5">Price on Request</p>
-                                <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10"><i class="fas fa-square tx-color-03"></i> Per Plate</p>
-                            </div>
-                        </div>
-                        <div class="w-25 float-right pd-t-10">
-                            <p class="tx-14 tx-white tx-bold lh--6 mg-b-5 rating-5 pd-t-10 pd-b-10 pd-r-5 pd-l-5  tx-center pd-t-10 rounded-5">4.8</p>
-                            <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10 tx-center">0  reviews</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card box-shadow mg-b-30">
-                <div class="img-area">
-                    <a href="resorte-marinha-dourada-bardez/index.html" target="_blank">
-                        <img src="~/image/Services/Venue/26.jpg" style="height:192px" class="img-fit-cover ht-180" alt="Resorte Marinha Dourada" title="Resorte Marinha Dourada" />
-                    </a>
-                </div>
-                <div class="pd-10">
-                    <a href="resorte-marinha-dourada-bardez/index.html" target="_blank">
-                        <div class="w-100 float-left b-bottom-dashed">
-                            <h4 class="tx-16 tx-gray-400 tx-bold tx-capitalize lh-1 mg-b-5">Resorte Marinha Dourada</h4>
-                            <p class="tx-14 tx-gray-600 tx-bold tx-capitalize lh-1 mg-b-5"><i class="fa fa-map-marker"></i>  Bardez, Goa</p>
-
-                        </div>
-                        <div class="w-75 float-left  pd-t-10">
-                            <div class="">
-                                <p class="tx-14 tx-color-01 tx-bold lh-1 mg-b-5">Price on Request</p>
-                                <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10"><i class="fas fa-square tx-color-03"></i> Per Plate</p>
-                            </div>
-                        </div>
-                        <div class="w-25 float-right pd-t-10">
-                            <p class="tx-14 tx-white tx-bold lh--6 mg-b-5 rating-5 pd-t-10 pd-b-10 pd-r-5 pd-l-5  tx-center pd-t-10 rounded-5">4.8</p>
-                            <p class="tx-13 tx-color-02 tx-medium lh--6 mg-b-10 tx-center">0  reviews</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
         </div>
     </div>
-</div>
-</div>
+
