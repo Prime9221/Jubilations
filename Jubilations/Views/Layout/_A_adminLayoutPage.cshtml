@@ -92,7 +92,7 @@
             </li>
 
             <li class="nav-item">
-            <a href="@Url.Action("SignOut","Login")">Logout</a>
+                <a href="@Url.Action("SignOut","Login")">Logout</a>
             </li>
         </ul>
     </nav>
@@ -122,7 +122,7 @@
                         <a href="#" class="d-block">@(User.Identity.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Guest")</a>
                     </div>
                 }
-                </div>
+            </div>
             <!-- SidebarSearch Form -->
             <div class="form-inline">
                 <div class="input-group" data-widget="sidebar-search">
@@ -140,212 +140,199 @@
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <!-- Add icons to the links using the .nav-icon class
                     with font-awesome or any other icon font library -->
-                    <li class="nav-item">
-                        <a href="~/A_admin/Dashboard" class="nav-link">
-                            <i class="nav-icon fas fa-tachometer-alt"></i>
-                            <p>Dashboard</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="~/A_admin/Widgets" class="nav-link">
-                            <i class="nav-icon fas fa-th"></i>
-                            <p>
-                                Widgets
+                    @*<li class="nav-item">
+                            <a href="~/A_admin/Dashboard" class="nav-link">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>Dashboard</p>
+                            </a>
+                        </li>*@
+                    @*<li class="nav-item">
+                            <a href="~/A_admin/Widgets" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                    Widgets
 
-                            </p>
-                        </a>
-                    </li>
+                                </p>
+                            </a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a href="~/A_admin/ChartsJS" class="nav-link">
-                            <i class="nav-icon fas fa-chart-pie"></i>
-                            <p>
-                                ChartsJS
-                            </p>
-                        </a>
+                        <li class="nav-item">
+                            <a href="~/A_admin/ChartsJS" class="nav-link">
+                                <i class="nav-icon fas fa-chart-pie"></i>
+                                <p>
+                                    ChartsJS
+                                </p>
+                            </a>
 
-                    </li>
+                        </li>*@
 
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-tree"></i>
-                            <p>
-                                UI Elements
-                                <i class="fas fa-angle-left right"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
+                    @*<li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-tree"></i>
+                                <p>
+                                    UI Elements
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
 
-                            <li class="nav-item">
-                                <a href="~/A_admin/Icons" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Icons</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="~/A_admin/Buttons" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Buttons</p>
-                                </a>
-                            </li>
+                                <li class="nav-item">
+                                    <a href="~/A_admin/Icons" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Icons</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="~/A_admin/Buttons" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Buttons</p>
+                                    </a>
+                                </li>
 
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="~/A_admin/Validation" class="nav-link">
-                            <i class="nav-icon fas fa-edit"></i>
-                            <p>
-                                Forms Validation
+                            </ul>
+                        </li>*@
+                    @*<li class="nav-item">
+                            <a href="~/A_admin/Validation" class="nav-link">
+                                <i class="nav-icon fas fa-edit"></i>
+                                <p>
+                                    Forms Validation
 
-                            </p>
-                        </a>
+                                </p>
+                            </a>
 
-                    </li>
-                    <li class="nav-item ">
-                        <a href="~/A_admin/DataTables" class="nav-link ">
-                            <i class="nav-icon fas fa-table"></i>
-                            <p>
-                                DataTables
+                        </li>
+                        <li class="nav-item ">
+                            <a href="~/A_admin/DataTables" class="nav-link ">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>
+                                    DataTables
 
-                            </p>
-                        </a>
+                                </p>
+                            </a>
 
 
-                    </li>
+                        </li>*@
                     <li class="nav-header">EXAMPLES</li>
-                    <li class="nav-item">
-                        <a href="~/A_admin/Calendar" class="nav-link">
-                            <i class="nav-icon far fa-calendar-alt"></i>
-                            <p>
-                                Calendar
+                    @*<li class="nav-item">
+                            <a href="~/A_admin/Calendar" class="nav-link">
+                                <i class="nav-icon far fa-calendar-alt"></i>
+                                <p>
+                                    Calendar
 
-                            </p>
-                        </a>
-                    </li>
+                                </p>
+                            </a>
+                        </li>*@
                     <li class="nav-item">
                         <a href="~/A_admin/Gallery" class="nav-link">
-                            <i class="nav-icon far fa-image"></i>
+                            <i class="nav-icon far fa fa-camera-retro"></i>
                             <p>
                                 Gallery
                             </p>
                         </a>
                     </li>
 
-
-                    <li class="nav-item ">
-                        <a href="#" class="nav-link ">
-                            <i class="nav-icon fas fa-book"></i>
-                            <p>
-                                Pages
-                                <i class="fas fa-angle-left right"></i>
-                            </p>
+                    <li class="nav-item">
+                        <a href="~/A_admin/A_Aboutus" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Aboutus</p>
                         </a>
-                        <ul class="nav nav-treeview">
-
-                            <li class="nav-item">
-                                <a href="~/A_admin/A_Aboutus" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Aboutus</p>
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="~/A_admin/A_Feedback" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Feedback</p>
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="~/A_admin/A_Category" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Category</p>
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="~/A_admin/A_Services" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Services</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="~/A_admin/A_Catelog" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Catelog</p>
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="~/A_admin/A_Profiles" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Profiles</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="~/A_admin/A_User" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>All User</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="~/A_admin/A_Role" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>User Role</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="~/A_admin/A_User_Role" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>User Role Define</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="~/A_admin/A_Blog" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Blog</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="~/A_admin/Contacts" class="nav-link ">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Contacts</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="~/A_admin/FAQ" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>FAQ</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="~/A_admin/Contact_us" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Contact us</p>
-                                </a>
-                            </li>
-                        </ul>
                     </li>
 
-                    <li class="nav-header">LABELS</li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon far fa-circle text-danger"></i>
-                            <p class="text">Important</p>
+                        <a href="~/A_admin/A_Feedback" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Feedback</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="~/A_admin/A_Category" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Category</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="~/A_admin/A_Services" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Services</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon far fa-circle text-warning"></i>
-                            <p>Warning</p>
+                        <a href="~/A_admin/A_Catelog" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Catelog</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="~/A_admin/A_Profiles" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Profiles</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon far fa-circle text-info"></i>
-                            <p>Informational</p>
+                        <a href="~/A_admin/A_User" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>All User</p>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="~/A_admin/A_Role" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>User Role</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="~/A_admin/A_User_Role" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>User Role Define</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="~/A_admin/A_Blog" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Blog</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="~/A_admin/Contacts" class="nav-link ">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Contacts</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="~/A_admin/FAQ" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>FAQ</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="~/A_admin/Contact_us" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Contact us</p>
+                        </a>
+                    </li>
+
+                    @*<li class="nav-header">LABELS</li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-circle text-danger"></i>
+                                <p class="text">Important</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-circle text-warning"></i>
+                                <p>Warning</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-circle text-info"></i>
+                                <p>Informational</p>
+                            </a>
+                        </li>*@
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->
@@ -354,20 +341,15 @@
     </aside>
 
     <div class="wrapper" id="body">
-
         <div>
             @RenderBody()
         </div>
-
     </div>
     <footer class="main-footer">
         <div class="float-right d-none d-sm-block">
-            @*<b>Version</b> 3.2.0*@
         </div>
         <strong>Copyright &copy; 2023 <a href="https://adminlte.io">Jubilation. ❤️</a>.</strong> All rights reserved.
     </footer>
-
-
 
     <!-- jQuery -->
     <script src="~/Design/A_admin/plugins/jquery/jquery.min.js"></script>
@@ -419,6 +401,7 @@
     <script src="~/Design/A_admin/plugins/moment/moment.min.js"></script>
     <script src="~/Design/A_admin/plugins/fullcalendar/main.js"></script>
     <script src="~/Design/A_admin/dist/js/pages/Calender.js"></script>
+
     @*enhancesearch*@
     <script src="~/Design/A_admin/dist/js/pages/enhansedsearch.js"></script>
 </body>
