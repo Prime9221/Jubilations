@@ -315,15 +315,6 @@ namespace Jubilations.Controllers
             return View("A_Catelog");
         }
 
-
-
-
-
-
-
-
-
-
         //Catelog end--------------------------------------------------------------------------------------------------
 
 

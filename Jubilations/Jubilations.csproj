@@ -4170,6 +4170,23 @@
     <Content Include="Design\V_admin\vendor\libs\quill\fonts\KaTeX_Typewriter-Regular.ttf" />
     <Content Include="Design\V_admin\vendor\libs\quill\fonts\KaTeX_Typewriter-Regular.woff" />
     <Content Include="Design\V_admin\vendor\libs\quill\fonts\KaTeX_Typewriter-Regular.woff2" />
+    <Content Include="webdata\Profileimg\dinal.jpeg" />
+    <Content Include="webdata\UploadedFiles\1.png" />
+    <Content Include="webdata\UploadedFiles\2052288.jpg" />
+    <Content Include="webdata\UploadedFiles\2341526.jpg" />
+    <Content Include="webdata\UploadedFiles\8.png" />
+    <Content Include="webdata\UploadedFiles\dinal.jpeg" />
+    <Content Include="webdata\UploadedFiles\dinal.jpg" />
+    <Content Include="webdata\UploadedFiles\Dulhan.jpg" />
+    <Content Include="webdata\UploadedFiles\heart-1776746_960_720 %283%29.jpg" />
+    <Content Include="webdata\UploadedFiles\heart-1776746_960_720 %284%29.jpg" />
+    <Content Include="webdata\UploadedFiles\heart-1776746_960_720.jpg" />
+    <Content Include="webdata\UploadedFiles\hotel.jpg" />
+    <Content Include="webdata\UploadedFiles\india.png" />
+    <Content Include="webdata\UploadedFiles\like.png" />
+    <Content Include="webdata\UploadedFiles\like2.png" />
+    <Content Include="webdata\UploadedFiles\login.png" />
+    <Content Include="webdata\UploadedFiles\login2.png" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -4563,8 +4580,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="webdata\Profileimg\" />
-    <Folder Include="webdata\UploadedFiles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
