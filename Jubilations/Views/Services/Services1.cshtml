@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<Jubilations.Models.Category>
 @{
     ViewBag.Title = "Services1";
     Layout = "~/Views/Layout/_LayoutPage1.cshtml";
@@ -39,153 +39,166 @@
     </div>
     <div class="section col-md-12 container">
         <div class="row">
-            <div class="col-md-3">
-                <a class="dataToggle" label="weddingVenue">
-                </a><div class="mn-ht-250 card">
-                    <a class="dataToggle" label="weddingVenue">
-                    </a><div class="card-body">
+            @if (Model != null)
+            {
+                foreach (var item in Model)
+                {
+                    <div class="col-md-3">
                         <a class="dataToggle" label="weddingVenue">
-                            <div class="cat-img">
-                                <img src="~/image/Services/icon/venueblack.png" class="cat-icon" alt="wedding venues">
+                        </a><div class="mn-ht-250 card">
+                            <a class="dataToggle" label="weddingVenue">
+                            </a>
+                            <div class="card-body">
+                                <a class="dataToggle" label="weddingVenue">
+                                    <div class="cat-img">
+                                        <img src="~/image/Services/icon/venueblack.png" class="cat-icon" alt="wedding venues">
+                                    </div>
+                                </a>
+                                @*@Html.ActionLink(item.Category_Name, "venue", new { categoryId = item.Category_Id },null)*@
+                                <a href="Services\venue">
+                                    <h2 class="card-title tx-color-icon">
+                                        @*@Html.ActionLink("Wedding Venue", "venue", "Services",new {@style="color:black"})*@
+                                        @Html.ActionLink(item.Category_Name, "venue", new { categoryId = item.Category_Id}, null)
+                                    </h2>
+                                </a>
+                                <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="wedding-venue16cf.html?s=hotels" class="tx-color-777">Hotels</a>, <a href="wedding-venue300d.html?s=farmhouse" class="tx-color-777">Farmhouse</a>, <a href="wedding-venue67a0.html?s=community-halls" class="tx-color-777">Community Halls</a>, <a href="wedding-venue3a31.html?s=resorts" class="tx-color-777">Resorts</a>, <a href="wedding-venuee377.html?s=terrace-banquet-halls" class="tx-color-777">Banquet Halls</a>, <a href="wedding-venue8833.html?s=wedding-tents" class="tx-color-777">Wedding Tents</a></p>
                             </div>
-                        </a><a href="Services\venue"><h2 class="card-title tx-color-icon">@Html.ActionLink("Wedding Venue", "venue", "Services")</h2></a>
-                        <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="wedding-venue16cf.html?s=hotels" class="tx-color-777">Hotels</a>, <a href="wedding-venue300d.html?s=farmhouse" class="tx-color-777">Farmhouse</a>, <a href="wedding-venue67a0.html?s=community-halls" class="tx-color-777">Community Halls</a>, <a href="wedding-venue3a31.html?s=resorts" class="tx-color-777">Resorts</a>, <a href="wedding-venuee377.html?s=terrace-banquet-halls" class="tx-color-777">Banquet Halls</a>, <a href="wedding-venue8833.html?s=wedding-tents" class="tx-color-777">Wedding Tents</a></p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <a class="dataToggle" label="makeupartist">
-                </a><div class="mn-ht-250 card">
-                    <a class="dataToggle" label="makeupartist">
-                    </a><div class="card-body">
-                        <a class="dataToggle" label="makeupartist">
-                            <div class="cat-img">
-                                <img src="~/image/Services/icon/makeupblack.png" class="cat-icon" alt="Bridal Makeup Artists">
-                            </div>
-                        </a><a href="makeup-and-hair/index.html"><h2 class="card-title tx-color-icon"> Makeup Artist</h2></a>
-                        <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="makeup-and-hair25d5.html?s=salons" class="tx-color-777">Makeup Salons</a>, <a href="makeup-and-hair5f14.html?s=traditional-makeup" class="tx-color-777">Traditional Makeup Artist</a>, <a href="makeup-and-hair2e79.html?s=celebrity-mua" class="tx-color-777">Celebrity Makeup Artist</a>, <a href="makeup-and-hair5a28.html?s=hair-stylist" class="tx-color-777">Hair Stylist</a></p>
-                     </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <a class="dataToggle" label="photographer">
-                </a><div class="mn-ht-250 card">
-                    <a class="dataToggle" label="photographer">
-                    </a><div class="card-body">
-                        <a class="dataToggle" label="photographer">
-                            <div class="cat-img">
-                                <img src="~/image/Services/icon/photographyblack.png" class="cat-icon" alt="Wedding Photographers">
-                            </div>
-                        </a><a href="wedding-photography/index.html"><h2 class="card-title tx-color-icon">Wedding Photographers</h2></a>
-                        <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="wedding-photography0e97.html?s=freelancers" class="tx-color-777">Freelancers</a>, <a href="wedding-photographya908.html?s=studio" class="tx-color-777">Studio</a>, <a href="wedding-photography51ed.html?s=celebrity-photographer" class="tx-color-777">Celebrity Photographer</a> </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <a class="dataToggle" label="photographer">
-                </a><div class="mn-ht-250 card">
-                    <a class="dataToggle" label="photographer">
-                    </a><div class="card-body">
-                        <a class="dataToggle" label="photographer">
-                            <div class="cat-img">
-                                <img src="~/image/Services/icon/decorblack.png" class="cat-icon" alt="Wedding Photographers">
-                            </div>
-                        </a><a href="wedding-planner/index.html"><h2 class="card-title tx-color-icon">Wedding Decorator</h2></a>
-                        <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="wedding-planner54fb.html?s=event-management-companies" class="tx-color-777">Event Management Companies</a>, <a href="wedding-planner5c59.html?s=wedding-planners" class="tx-color-777">Wedding Planners</a>, </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <a class="dataToggle" label="weddingVenue">
-                </a><div class="mn-ht-250 card">
-                    <a class="dataToggle" label="weddingVenue">
-                    </a><div class="card-body">
-                        <a class="dataToggle" label="weddingVenue">
-                            <div class="cat-img">
-                                <img src="~/image/Services/icon/cateringblack.png" class="cat-icon" alt="wedding venues">
-                            </div>
-                        </a><a href="wedding-attire/index.html"><h2 class="card-title tx-color-icon">Caterers</h2></a>
-                        <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="wedding-attire0971.html?s=gowns" class="tx-color-777">Gowns</a>, <a href="wedding-attiref085.html?s=indo-western" class="tx-color-777">Indo Western</a>, <a href="wedding-attirea8c8.html?s=lehnga" class="tx-color-777">Lehnga</a>, <a href="wedding-attire3bd2.html?s=suits" class="tx-color-777">Suits</a>, <a href="wedding-attire56f4.html?s=sarees" class="tx-color-777">Sarees</a>, <a href="wedding-attire67b6.html?s=designers" class="tx-color-777">Designers</a></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <a class="dataToggle" label="makeupartist">
-                </a><div class="mn-ht-250 card">
-                    <a class="dataToggle" label="makeupartist">
-                    </a><div class="card-body">
-                        <a class="dataToggle" label="makeupartist">
-                            <div class="cat-img">
-                                <img src="~/image/Services/icon/mehendiblack.png" class="cat-icon" alt="Bridal Makeup Artists">
-                            </div>
-                        </a><a href="bridal-jewellery/index.html"><h2 class="card-title tx-color-icon">Mahendi Artist</h2></a>
-                        <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="bridal-jewellery527a.html?s=fashion-jewellery" class="tx-color-777">Fashion Jewellery</a>, <a href="bridal-jewellery5275.html?s=artificial-jewellery" class="tx-color-777">Artificial Jewellery</a>, <a href="bridal-jewellery553b.html?s=diamond-jewellery" class="tx-color-777">Diamond Jewellery</a>, <a href="bridal-jewellery2bc3.html?s=jewellery-on-rent" class="tx-color-777">Jewellery on Rent</a></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="mn-ht-250 card">
-                    <div class="card-body">
-                        <div class="cat-img">
-                            <img src="~/image/Services/icon/lehengablack.png" class="cat-icon" alt="Wedding Photographers">
                         </div>
-                        <a href="decorators/index.html"><h2 class="card-title tx-color-icon">Cloth Studio</h2></a>
-                        <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="decoratorsf804.html?s=theme-decor" class="tx-color-777">Theme Decor</a>, <a href="decoratorsa885.html?s=flower" class="tx-color-777">Flower</a> </p>
                     </div>
-                </div>
-            </div>
+                }
+            }
 
-            <div class="col-md-3">
-                <a class="dataToggle" label="photographer">
-                </a><div class="mn-ht-250 card">
-                    <a class="dataToggle" label="photographer">
-                    </a><div class="card-body">
-                        <a class="dataToggle" label="photographer">
-                            <div class="cat-img">
-                                <img src="~/image/Services/icon/djblack.png" class="cat-icon" alt="Wedding Photographers">
-                            </div>
-                        </a><a href="mehendi-artists/index.html"><h2 class="card-title tx-color-icon">DJ Rocks</h2></a>
-                        <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="mehendi-artistse473.html?s=bridal-mehendi" class="tx-color-777">Bridal Mehendi</a>, <a href="mehendi-artists04b8.html?s=tattoo-artist" class="tx-color-777">Tattoo Artist</a> </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <a class="dataToggle" label="weddingVenue">
-                </a><div class="mn-ht-250 card">
-                    <a class="dataToggle" label="weddingVenue">
-                    </a><div class="card-body">
-                        <a class="dataToggle" label="weddingVenue">
-                            <div class="cat-img">
-                                <img src="~/image/Services/icon/cardsblack.png" class="cat-icon" alt="wedding venues">
-                            </div>
-                        </a><a href="caterers/index.html"><h2 class="card-title tx-color-icon">Invitation Cards</h2></a>
-                        <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="caterers51c5.html?s=budget-caterers" class="tx-color-777">Budget Caterers</a>, <a href="caterersf9aa.html?s=concept-catering" class="tx-color-777">Concept Catering</a>, <a href="caterers5881.html?s=halwai-or-maharaaj" class="tx-color-777">Halwai or Maharaaj</a> </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <a class="dataToggle" label="makeupartist">
-                </a><div class="mn-ht-250 card">
+            @*<div class="col-md-3">
                     <a class="dataToggle" label="makeupartist">
-                    </a><div class="card-body">
+                    </a><div class="mn-ht-250 card">
                         <a class="dataToggle" label="makeupartist">
-                            <div class="cat-img">
-                                <img src="~/image/Services/icon/carsblack.png" class="cat-icon" alt="Bridal Makeup Artists">
-                            </div>
-                        </a><a href="invitation-cards/index.html"><h2 class="card-title tx-color-icon">Transport </h2></a>
-                        <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="invitation-cards1d0a.html?s=designer-cards" class="tx-color-777">Designer Cards</a>, <a href="invitation-cards725c.html?s=traditional-cards" class="tx-color-777">Traditional Cards</a>, <a href="invitation-cardsad33.html?s=e-invites" class="tx-color-777">E-Invites</a></p>
+                        </a><div class="card-body">
+                            <a class="dataToggle" label="makeupartist">
+                                <div class="cat-img">
+                                    <img src="~/image/Services/icon/makeupblack.png" class="cat-icon" alt="Bridal Makeup Artists">
+                                </div>
+                            </a><a href="makeup-and-hair/index.html"><h2 class="card-title tx-color-icon" style="color:black"> Makeup Artist</h2></a>
+                            <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="makeup-and-hair25d5.html?s=salons" class="tx-color-777">Makeup Salons</a>, <a href="makeup-and-hair5f14.html?s=traditional-makeup" class="tx-color-777">Traditional Makeup Artist</a>, <a href="makeup-and-hair2e79.html?s=celebrity-mua" class="tx-color-777">Celebrity Makeup Artist</a>, <a href="makeup-and-hair5a28.html?s=hair-stylist" class="tx-color-777">Hair Stylist</a></p>
+                         </div>
                     </div>
                 </div>
-            </div>
+
+                <div class="col-md-3">
+                    <a class="dataToggle" label="photographer">
+                    </a><div class="mn-ht-250 card">
+                        <a class="dataToggle" label="photographer">
+                        </a><div class="card-body">
+                            <a class="dataToggle" label="photographer">
+                                <div class="cat-img">
+                                    <img src="~/image/Services/icon/photographyblack.png" class="cat-icon" alt="Wedding Photographers">
+                                </div>
+                            </a><a href="wedding-photography/index.html"><h2 class="card-title tx-color-icon"style="color:black">Wedding Photographers</h2></a>
+                            <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="wedding-photography0e97.html?s=freelancers" class="tx-color-777">Freelancers</a>, <a href="wedding-photographya908.html?s=studio" class="tx-color-777">Studio</a>, <a href="wedding-photography51ed.html?s=celebrity-photographer" class="tx-color-777">Celebrity Photographer</a> </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <a class="dataToggle" label="photographer">
+                    </a><div class="mn-ht-250 card">
+                        <a class="dataToggle" label="photographer">
+                        </a><div class="card-body">
+                            <a class="dataToggle" label="photographer">
+                                <div class="cat-img">
+                                    <img src="~/image/Services/icon/decorblack.png" class="cat-icon" alt="Wedding Photographers">
+                                </div>
+                            </a><a href="wedding-planner/index.html"><h2 class="card-title tx-color-icon"style="color:black">Wedding Decorator</h2></a>
+                            <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="wedding-planner54fb.html?s=event-management-companies" class="tx-color-777">Event Management Companies</a>, <a href="wedding-planner5c59.html?s=wedding-planners" class="tx-color-777">Wedding Planners</a>, </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <a class="dataToggle" label="weddingVenue">
+                    </a><div class="mn-ht-250 card">
+                        <a class="dataToggle" label="weddingVenue">
+                        </a><div class="card-body">
+                            <a class="dataToggle" label="weddingVenue">
+                                <div class="cat-img">
+                                    <img src="~/image/Services/icon/cateringblack.png" class="cat-icon" alt="wedding venues">
+                                </div>
+                            </a><a href="wedding-attire/index.html"><h2 class="card-title tx-color-icon"style="color:black">Caterers</h2></a>
+                            <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="wedding-attire0971.html?s=gowns" class="tx-color-777">Gowns</a>, <a href="wedding-attiref085.html?s=indo-western" class="tx-color-777">Indo Western</a>, <a href="wedding-attirea8c8.html?s=lehnga" class="tx-color-777">Lehnga</a>, <a href="wedding-attire3bd2.html?s=suits" class="tx-color-777">Suits</a>, <a href="wedding-attire56f4.html?s=sarees" class="tx-color-777">Sarees</a>, <a href="wedding-attire67b6.html?s=designers" class="tx-color-777">Designers</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <a class="dataToggle" label="makeupartist">
+                    </a><div class="mn-ht-250 card">
+                        <a class="dataToggle" label="makeupartist">
+                        </a><div class="card-body">
+                            <a class="dataToggle" label="makeupartist">
+                                <div class="cat-img">
+                                    <img src="~/image/Services/icon/mehendiblack.png" class="cat-icon" alt="Bridal Makeup Artists">
+                                </div>
+                            </a><a href="bridal-jewellery/index.html"><h2 class="card-title tx-color-icon"style="color:black">Mahendi Artist</h2></a>
+                            <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="bridal-jewellery527a.html?s=fashion-jewellery" class="tx-color-777">Fashion Jewellery</a>, <a href="bridal-jewellery5275.html?s=artificial-jewellery" class="tx-color-777">Artificial Jewellery</a>, <a href="bridal-jewellery553b.html?s=diamond-jewellery" class="tx-color-777">Diamond Jewellery</a>, <a href="bridal-jewellery2bc3.html?s=jewellery-on-rent" class="tx-color-777">Jewellery on Rent</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="mn-ht-250 card">
+                        <div class="card-body">
+                            <div class="cat-img">
+                                <img src="~/image/Services/icon/lehengablack.png" class="cat-icon" alt="Wedding Photographers">
+                            </div>
+                            <a href="decorators/index.html"><h2 class="card-title tx-color-icon"style="color:black">Cloth Studio</h2></a>
+                            <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="decoratorsf804.html?s=theme-decor" class="tx-color-777">Theme Decor</a>, <a href="decoratorsa885.html?s=flower" class="tx-color-777">Flower</a> </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <a class="dataToggle" label="photographer">
+                    </a><div class="mn-ht-250 card">
+                        <a class="dataToggle" label="photographer">
+                        </a><div class="card-body">
+                            <a class="dataToggle" label="photographer">
+                                <div class="cat-img">
+                                    <img src="~/image/Services/icon/djblack.png" class="cat-icon" alt="Wedding Photographers">
+                                </div>
+                            </a><a href="mehendi-artists/index.html"><h2 class="card-title tx-color-icon"style="color:black">DJ Rocks</h2></a>
+                            <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="mehendi-artistse473.html?s=bridal-mehendi" class="tx-color-777">Bridal Mehendi</a>, <a href="mehendi-artists04b8.html?s=tattoo-artist" class="tx-color-777">Tattoo Artist</a> </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <a class="dataToggle" label="weddingVenue">
+                    </a><div class="mn-ht-250 card">
+                        <a class="dataToggle" label="weddingVenue">
+                        </a><div class="card-body">
+                            <a class="dataToggle" label="weddingVenue">
+                                <div class="cat-img">
+                                    <img src="~/image/Services/icon/cardsblack.png" class="cat-icon" alt="wedding venues">
+                                </div>
+                            </a><a href="caterers/index.html"><h2 class="card-title tx-color-icon"style="color:black">Invitation Cards</h2></a>
+                            <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="caterers51c5.html?s=budget-caterers" class="tx-color-777">Budget Caterers</a>, <a href="caterersf9aa.html?s=concept-catering" class="tx-color-777">Concept Catering</a>, <a href="caterers5881.html?s=halwai-or-maharaaj" class="tx-color-777">Halwai or Maharaaj</a> </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <a class="dataToggle" label="makeupartist">
+                    </a><div class="mn-ht-250 card">
+                        <a class="dataToggle" label="makeupartist">
+                        </a><div class="card-body">
+                            <a class="dataToggle" label="makeupartist">
+                                <div class="cat-img">
+                                    <img src="~/image/Services/icon/carsblack.png" class="cat-icon" alt="Bridal Makeup Artists">
+                                </div>
+                            </a><a href="invitation-cards/index.html"><h2 class="card-title tx-color-icon" style="color:black">Transport </h2></a>
+                            <p class="tx-13 tx-semibold tx-gray-aaa tx-center"><a href="invitation-cards1d0a.html?s=designer-cards" class="tx-color-777">Designer Cards</a>, <a href="invitation-cards725c.html?s=traditional-cards" class="tx-color-777">Traditional Cards</a>, <a href="invitation-cardsad33.html?s=e-invites" class="tx-color-777">E-Invites</a></p>
+                        </div>
+                    </div>
+                </div>*@
         </div>
     </div>
 </section>

@@ -22,11 +22,7 @@ namespace Jubilations.Controllers
             var data = db.aboutuss;
             return View(data);
         }
-
-        public ActionResult Blog()
-        {
-            return View();
-        }
+       
 
         public ActionResult Blog1()
         {

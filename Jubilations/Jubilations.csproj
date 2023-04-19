@@ -155,6 +155,7 @@
     <Compile Include="Controllers\A_adminController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LayoutController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\QuickLinkController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
@@ -178,10 +179,47 @@
     <Compile Include="Migrations\202303210643117_rlogin.designer.cs">
       <DependentUpon>202303210643117_rlogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202303241017237_initial1.cs" />
+    <Compile Include="Migrations\202303241017237_initial1.designer.cs">
+      <DependentUpon>202303241017237_initial1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303250612188_dp.cs" />
+    <Compile Include="Migrations\202303250612188_dp.designer.cs">
+      <DependentUpon>202303250612188_dp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303250719274_dp1.cs" />
+    <Compile Include="Migrations\202303250719274_dp1.designer.cs">
+      <DependentUpon>202303250719274_dp1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303251103089_catelog.cs" />
+    <Compile Include="Migrations\202303251103089_catelog.designer.cs">
+      <DependentUpon>202303251103089_catelog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303251136333_dd.cs" />
+    <Compile Include="Migrations\202303251136333_dd.designer.cs">
+      <DependentUpon>202303251136333_dd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303251139420_onee.cs" />
+    <Compile Include="Migrations\202303251139420_onee.designer.cs">
+      <DependentUpon>202303251139420_onee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303270440023_as.cs" />
+    <Compile Include="Migrations\202303270440023_as.designer.cs">
+      <DependentUpon>202303270440023_as.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303280437542_two.cs" />
+    <Compile Include="Migrations\202303280437542_two.designer.cs">
+      <DependentUpon>202303280437542_two.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303290452093_titlecatelog.cs" />
+    <Compile Include="Migrations\202303290452093_titlecatelog.designer.cs">
+      <DependentUpon>202303290452093_titlecatelog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Aboutus.cs" />
     <Compile Include="Models\AboutUsModel.cs" />
     <Compile Include="Models\Blog.cs" />
+    <Compile Include="Models\BlogModel.cs" />
     <Compile Include="Models\Blog_Comment.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\CategoryModel.cs" />
@@ -204,6 +242,7 @@
     <Compile Include="Models\User_Role_Map.cs" />
     <Compile Include="Models\User_Role_MapModel.cs" />
     <Compile Include="Models\Vender_Catalog.cs" />
+    <Compile Include="Models\Vender_CatalogModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -3501,6 +3540,10 @@
     <Content Include="image\Home\whychooseus.jpg" />
     <Content Include="image\login.png" />
     <Content Include="image\login\1.png" />
+    <Content Include="image\login\L0-removebg-preview.png" />
+    <Content Include="image\login\L0.jpg" />
+    <Content Include="image\login\L5.png" />
+    <Content Include="image\login\LG.png" />
     <Content Include="image\login\login-cover.png" />
     <Content Include="image\login\login.png" />
     <Content Include="image\login\login2.png" />
@@ -3704,6 +3747,46 @@
     <Content Include="image\Success_story\Yomesh\icon\photo.png" />
     <Content Include="image\Success_story\Yomesh\icon\wedding.png" />
     <Content Include="image\white.png" />
+    <Content Include="PROJECT RELATED\ppt\1\PPT-1 - Copy\screen-capture %282%29.mp4" />
+    <Content Include="PROJECT RELATED\ppt\1\PPT-1 - Copy\screen-capture %283%29.mp4" />
+    <Content Include="PROJECT RELATED\ppt\1\PPT-1 - Copy\screen-capture.mp4" />
+    <Content Include="PROJECT RELATED\ppt\1\PPT-1\screen-capture %282%29.mp4" />
+    <Content Include="PROJECT RELATED\ppt\1\PPT-1\screen-capture %283%29.mp4" />
+    <Content Include="PROJECT RELATED\ppt\1\PPT-1\screen-capture.mp4" />
+    <Content Include="PROJECT RELATED\Site SS\Aadmin\About .png" />
+    <Content Include="PROJECT RELATED\Site SS\Aadmin\Category.png" />
+    <Content Include="PROJECT RELATED\Site SS\Aadmin\Catelog.png" />
+    <Content Include="PROJECT RELATED\Site SS\Aadmin\FeedBack.png" />
+    <Content Include="PROJECT RELATED\Site SS\Aadmin\Home.png" />
+    <Content Include="PROJECT RELATED\Site SS\Aadmin\Role Define.png" />
+    <Content Include="PROJECT RELATED\Site SS\Aadmin\Roles.png" />
+    <Content Include="PROJECT RELATED\Site SS\Aadmin\Services.png" />
+    <Content Include="PROJECT RELATED\Site SS\Aadmin\Users.png" />
+    <Content Include="PROJECT RELATED\Site SS\Login\Bussiness Register.png" />
+    <Content Include="PROJECT RELATED\Site SS\Login\Forgot PAss.png" />
+    <Content Include="PROJECT RELATED\Site SS\Login\Login.png" />
+    <Content Include="PROJECT RELATED\Site SS\Login\User Registration .png" />
+    <Content Include="PROJECT RELATED\Site SS\Vadmin\add Catelog.png" />
+    <Content Include="PROJECT RELATED\Site SS\Vadmin\Add Services.png" />
+    <Content Include="PROJECT RELATED\Site SS\Vadmin\Home.png" />
+    <Content Include="PROJECT RELATED\Site SS\Web\About.png" />
+    <Content Include="PROJECT RELATED\Site SS\Web\Blog 1.png" />
+    <Content Include="PROJECT RELATED\Site SS\Web\Blog.png" />
+    <Content Include="PROJECT RELATED\Site SS\Web\Contact.png" />
+    <Content Include="PROJECT RELATED\Site SS\Web\FeedBack.png" />
+    <Content Include="PROJECT RELATED\Site SS\Web\Home.png" />
+    <Content Include="PROJECT RELATED\Site SS\Web\Privacy Policy.png" />
+    <Content Include="PROJECT RELATED\Site SS\Web\Service in Venue in venue1.png" />
+    <Content Include="PROJECT RELATED\Site SS\Web\Service in Venue.png" />
+    <Content Include="PROJECT RELATED\Site SS\Web\Services.png" />
+    <Content Include="PROJECT RELATED\Site SS\Web\Submit Wedding.png" />
+    <Content Include="PROJECT RELATED\Site SS\Web\SuccessStory .png" />
+    <Content Include="PROJECT RELATED\Site SS\Web\SuccessStory 1.png" />
+    <Content Include="PROJECT RELATED\Site SS\Web\SuccessStory 2.png" />
+    <Content Include="PROJECT RELATED\Site SS\Web\T&amp;C.png" />
+    <Content Include="PROJECT RELATED\Site SS\Web\Team.png" />
+    <Content Include="PROJECT RELATED\Site SS\Web\Testimonials .png" />
+    <Content Include="PROJECT RELATED\Site SS\Web\Why Choose Us.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -4127,6 +4210,27 @@
     <Content Include="Design\V_admin\vendor\libs\quill\fonts\KaTeX_Typewriter-Regular.ttf" />
     <Content Include="Design\V_admin\vendor\libs\quill\fonts\KaTeX_Typewriter-Regular.woff" />
     <Content Include="Design\V_admin\vendor\libs\quill\fonts\KaTeX_Typewriter-Regular.woff2" />
+    <Content Include="webdata\Profileimg\dinal.jpeg" />
+    <Content Include="webdata\UploadedFiles\1.png" />
+    <Content Include="webdata\UploadedFiles\2052288.jpg" />
+    <Content Include="webdata\UploadedFiles\2341526.jpg" />
+    <Content Include="webdata\UploadedFiles\8.png" />
+    <Content Include="webdata\UploadedFiles\dinal.jpeg" />
+    <Content Include="webdata\UploadedFiles\dinal.jpg" />
+    <Content Include="webdata\UploadedFiles\Dulhan.jpg" />
+    <Content Include="webdata\UploadedFiles\heart-1776746_960_720 %283%29.jpg" />
+    <Content Include="webdata\UploadedFiles\heart-1776746_960_720 %284%29.jpg" />
+    <Content Include="webdata\UploadedFiles\heart-1776746_960_720.jpg" />
+    <Content Include="webdata\UploadedFiles\hotel.jpg" />
+    <Content Include="webdata\UploadedFiles\india.png" />
+    <Content Include="webdata\UploadedFiles\like.png" />
+    <Content Include="webdata\UploadedFiles\like2.png" />
+    <Content Include="webdata\UploadedFiles\login.png" />
+    <Content Include="webdata\UploadedFiles\login2.png" />
+    <Content Include="PROJECT RELATED\ppt\1\PPT-1 - Copy\clg ppt.ppt" />
+    <Content Include="PROJECT RELATED\ppt\1\PPT-1\1stpresentationia18sem.zip" />
+    <Content Include="PROJECT RELATED\ppt\1\PPT-1\clg ppt.ppt" />
+    <Content Include="PROJECT RELATED\ppt\1\PPT-1\ppt.zip" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -4507,10 +4611,19 @@
     <Content Include="Views\A_admin\A_DRole_Edit.cshtml" />
     <Content Include="Views\A_admin\A_Role_Define.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\V_admin\V_Catelog.cshtml" />
+    <Content Include="Views\V_admin\V_Catelog_Create.cshtml" />
+    <Content Include="Views\V_admin\V_Catelog_Edit.cshtml" />
+    <Content Include="Views\V_admin\V_Catelog_delete.cshtml" />
+    <Content Include="Views\A_admin\A_Catelog.cshtml" />
+    <Content Include="Views\A_admin\A_Catelog_delete.cshtml" />
+    <Content Include="Views\A_admin\A_Blog.cshtml" />
+    <Content Include="Views\A_admin\A_Blog_Create.cshtml" />
+    <Content Include="Views\A_admin\A_Blog_Edit.cshtml" />
+    <Content Include="Views\A_admin\A_Blog_delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="webdata\UploadedFiles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -4551,6 +4664,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202303210643117_rlogin.resx">
       <DependentUpon>202303210643117_rlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303241017237_initial1.resx">
+      <DependentUpon>202303241017237_initial1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303250612188_dp.resx">
+      <DependentUpon>202303250612188_dp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303250719274_dp1.resx">
+      <DependentUpon>202303250719274_dp1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303270440023_as.resx">
+      <DependentUpon>202303270440023_as.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303280437542_two.resx">
+      <DependentUpon>202303280437542_two.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303290452093_titlecatelog.resx">
+      <DependentUpon>202303290452093_titlecatelog.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

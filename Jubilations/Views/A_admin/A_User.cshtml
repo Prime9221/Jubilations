@@ -90,9 +90,9 @@
 
                                                 <td>
 
-                                                    @if (item.User_Profile_Image != null)
+                                                    @if (item.ImagePath != null)
                                                     {
-                                                        @Html.DisplayFor(modelItem => item.User_Profile_Image)
+                                                        <img src="@item.ImagePath" style=" width:100px; height:auto; " />
                                                     }
                                                 </td>
 

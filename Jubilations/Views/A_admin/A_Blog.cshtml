@@ -1,0 +1,116 @@
+﻿@model Jubilations.Models.BlogModel
+
+@{
+    ViewBag.Title = "Blog";
+    Layout = "~/Views/Layout/_A_adminLayoutPage.cshtml";
+}
+<br />
+<br />
+<br />
+<br />
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Blog DataTable</h3>
+
+                        </div>
+                        <button>@Html.ActionLink("Create New", "A_Blog_Create")</button>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+
+                            <table id="example1" class="table table-bordered table-striped">
+
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Name</th>
+                                        <th>Title</th>
+                                        <th>Description</th>
+                                        <th>Image</th>
+                                        <th>Create Date</th>
+                                        <th>Update Date</th>
+                                        <th>Action</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model.BlogList.Count > 0)
+                                    {
+                                        foreach (var item in Model.BlogList)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Blog_Id)
+                                                </td>
+                                                <td>
+                                                    @if (item.Blog_Name != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.Blog_Name)
+                                                    }
+                                                </td>
+                                                <td>
+
+                                                    @if (item.Blog_Title != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.Blog_Title)
+                                                    }
+                                                </td>
+                                                <td>
+
+                                                    @if (item.Blog_Description != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.Blog_Description)
+                                                    }
+                                                </td>
+                                                <td>
+
+                                                    @if (item.Blog_Image != null)
+                                                    {
+                                                        <img src="@item.Blog_Image" style=" width:80px; height:auto; " />
+                                                    }
+                                                </td>
+                                                <td>
+
+                                                    @if (item.Blog_Create_Date != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.Blog_Create_Date)
+                                                    }
+                                                </td>
+                                                <td>
+
+                                                    @if (item.Blog_Update_Date != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.Blog_Update_Date)
+                                                    }
+                                                </td>
+                                                <td>
+                                                    @Html.ActionLink("Edit", "A_Blog_Edit", new { Blog_Id = item.Blog_Id }) |
+                                                    @Html.ActionLink("Delete", "A_Blog_delete", new { Blog_Id = item.Blog_Id })
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

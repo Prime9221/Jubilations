@@ -1,0 +1,145 @@
+﻿@model Jubilations.Models.Vender_CatalogModel
+@{
+    ViewBag.Title = "Catelog";
+    Layout = "~/Views/Layout/_A_adminLayoutPage.cshtml";
+}
+
+<div class="content-wrapper">
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Catelog DataTable</h3>
+
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+
+                            <table id="example1" class="table table-bordered table-striped">
+
+                                <thead>
+                                    <tr>
+                                        <th>Catelog Id</th>
+                                        <th>User Id</th>
+                                        <th>Category Id</th>
+                                        <th>Services Id</th>
+                                        <th>Product Image</th>
+                                        <th>Description</th>
+                                        <th>Price</th>
+                                        <th>Status</th>
+                                        <th>Create Date</th>
+                                        <th>Update Date</th>
+                                        <th>Action</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model.CatalogList.Count > 0)
+                                    {
+                                        foreach (var item in Model.CatalogList)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Catalog_Id)
+                                                </td>
+                                                <td>
+                                                    @foreach (var user in Model.UserNameList)
+                                                    {
+                                                        if (user.User_Id == item.User_Id)
+                                                        {
+                                                            @Html.DisplayFor(modelItem => user.User_Name)
+
+                                                        }
+                                                    }
+                                                </td>
+                                                <td>
+                                                    @foreach (var category in Model.CategoryList)
+                                                    {
+                                                        if (category.Category_Id == item.Category_Id)
+                                                        {
+                                                            @Html.DisplayFor(modelItem => category.Category_Name)
+
+                                                        }
+                                                    }
+                                                </td>
+                                                <td>
+                                                    @foreach (var services in Model.ServicesList)
+                                                    {
+                                                        if (services.Services_Id == item.Services_Id)
+                                                        {
+                                                            @Html.DisplayFor(modelItem => services.Services_Title)
+
+                                                        }
+                                                    }
+                                                </td>
+
+                                                <td>
+
+                                                    @if (item.ImagePath != null)
+                                                    {
+                                                        <img src="@item.ImagePath" style=" width:80px; height:auto; " />
+                                                    }
+                                                </td>
+                                                <td>
+
+                                                    @if (item.Description != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.Description)
+                                                    }
+                                                </td>
+                                                <td>
+
+                                                    @if (item.Price != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.Price)
+                                                    }
+                                                </td>
+                                                <td>
+
+                                                    @if (item.Status != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.Status)
+                                                    }
+                                                </td>
+                                                <td>
+
+                                                    @if (item.Create_Date != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.Create_Date)
+                                                    }
+
+
+                                                </td>
+                                                <td>
+
+                                                    @if (item.Update_Date != null)
+                                                    {
+                                                        @Html.DisplayFor(modelItem => item.Update_Date)
+                                                    }
+                                                </td>
+                                                <td>
+                                                    @Html.ActionLink("Delete", "A_Catelog_delete", new { Catalog_id = item.Catalog_Id })
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
