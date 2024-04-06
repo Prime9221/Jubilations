@@ -174,7 +174,7 @@
                             <li class="dropdown">
                                 <a href="#"><span>Vehicle</span></a>
                                 <ul>
-                                    <li><a href="#">Car</a></li> 
+                                    <li><a href="#">Car</a></li>
                                     <li><a href="#"> Bus</a></li>
                                     <li><a href="#"> Bike</a></li>
                                 </ul>
@@ -184,108 +184,112 @@
                     <li><a>@Html.ActionLink("Blog", "Blog1", "Contact")</a></li>
                     <li><a>@Html.ActionLink("About", "About_us", "Contact")</a></li>
                     <li><a>@Html.ActionLink("Contact", "Contact_us", "Contact")</a></li>
-                    <li><a>
-                        
-                    @if (User.Identity.IsAuthenticated)
-                    {
-                        <li><a style="color: #7f7f90;" href="#">Welcome 😍 @(User.Identity.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Guest")</a></li>
+                    <li>
+                        <a>
+
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                var username = HttpContext.Current.User.Identity.Name;
+                                Jubilations.Models.DBEntity jubilations = new Jubilations.Models.DBEntity();
+                                var currentUserId = jubilations.user.Where(x => x.User_Email == username).Select(x => x.User_Id).FirstOrDefault();
+                        <li>@Html.ActionLink(username, "Profile", "Login", new { currentUserId = @currentUserId },null)</li>
                     }
-                        </a></li>
-                    </ul><br /><br /><br />
+                            </a></li>
+                        </ul><br /><br /><br />
 
 
 
 
-                <form class="example" action="/action_page.php" style="margin:15px;max-width:300px">
-                    <input type="text" placeholder="Search.." value="@ViewData["getemployeedetails"]" name="empsearch">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
+                        <form class="example" action="/action_page.php" style="margin:15px;max-width:300px">
+                            <input type="text" placeholder="Search.." value="@ViewData["getemployeedetails"]" name="empsearch">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
 
-            </nav>
-            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+                    </nav>
+                    <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+                    <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 
-        </div>
-    </header><!-- End Header -->
+                </div>
+            </header><!-- End Header -->
 
-    <div>
-        @RenderBody()
-    </div>
-    <br />
-    <footer id="footer" class="footer">
-        <div class="container">
-            <div class="row gy-3">
-                <div class="col-lg-3 col-md-6 d-flex">
-                    <i class="bi bi-tablet icon"></i>
-                    <div>
-                        <h4>Follow Us</h4>
-                        <div class="social-links d-flex">
-                            <a href="#" class="twitter"><i class="bi bi-whatsapp"></i></a>
-                            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                            <a href="https://instagram.com/_jubilation_389?igshid=ZDdkNTZiNTM=" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
-                            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            <div>
+                @RenderBody()
+            </div>
+            <br />
+            <footer id="footer" class="footer">
+                <div class="container">
+                    <div class="row gy-3">
+                        <div class="col-lg-3 col-md-6 d-flex">
+                            <i class="bi bi-tablet icon"></i>
+                            <div>
+                                <h4>Follow Us</h4>
+                                <div class="social-links d-flex">
+                                    <a href="#" class="twitter"><i class="bi bi-whatsapp"></i></a>
+                                    <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                                    <a href="https://instagram.com/_jubilation_389?igshid=ZDdkNTZiNTM=" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+                                    <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="col-lg-3 col-md-6 footer-links d-flex">
-                    <i class="bi bi-telephone icon"></i>
-                    <div>
-                        <h4>customer care number</h4>
-                        <p>
-                            <strong>Phone:</strong> +91 9909035097<br>
-                            <strong>Email:</strong> info@Jubilations.com<br>
-                        </p>
-                    </div>
-                </div>
+                        <div class="col-lg-3 col-md-6 footer-links d-flex">
+                            <i class="bi bi-telephone icon"></i>
+                            <div>
+                                <h4>customer care number</h4>
+                                <p>
+                                    <strong>Phone:</strong> +91 9909035097<br>
+                                    <strong>Email:</strong> info@Jubilations.com<br>
+                                </p>
+                            </div>
+                        </div>
 
-                <div class="col-lg-3 col-md-6 footer-links d-flex">
-                    <i class="bi bi-link icon"></i>
-                    <div>
-                        <h4>Quick Link 1</h4>
-                        <div class="row" id="col">
-                            <div class="col-lg-12">
-                                <div class="col"> <a href="~/Home/Index" style="color:#ffffffb3;">Home</a> </div>
-                                <div class="col"> <a href="~/Contact/About_us" style="color:#ffffffb3;">About</a> </div>
-                                <div class="col"> <a href="~/Services/Services1" style="color:#ffffffb3;">Service</a> </div>
-                                <div class="col"> <a href="~/QuickLink/Terms" style="color:#ffffffb3;">T&C</a> </div>
-                                <div class="col"> <a href="~/Contact/Blog1" style="color:#ffffffb3;">Blog</a> </div>
-                                <div class="col"> <a href="~/Contact/Contact_us" style="color:#ffffffb3;">Contact</a> </div>
+                        <div class="col-lg-3 col-md-6 footer-links d-flex">
+                            <i class="bi bi-link icon"></i>
+                            <div>
+                                <h4>Quick Link 1</h4>
+                                <div class="row" id="col">
+                                    <div class="col-lg-12">
+                                        <div class="col"> <a href="~/Home/Index" style="color:#ffffffb3;">Home</a> </div>
+                                        <div class="col"> <a href="~/Contact/About_us" style="color:#ffffffb3;">About</a> </div>
+                                        <div class="col"> <a href="~/Services/Services1" style="color:#ffffffb3;">Service</a> </div>
+                                        <div class="col"> <a href="~/QuickLink/Terms" style="color:#ffffffb3;">T&C</a> </div>
+                                        <div class="col"> <a href="~/Contact/Blog1" style="color:#ffffffb3;">Blog</a> </div>
+                                        <div class="col"> <a href="~/Contact/Contact_us" style="color:#ffffffb3;">Contact</a> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 footer-links d-flex">
+                            <i class="bi bi-link icon"></i>
+                            <div>
+                                <h4>Quick Link 2</h4>
+                                <div class="row" id="col">
+                                    <div class="col-lg-12" id="a">
+                                        <div class="col"> <a href="~/QuickLink/Privacy_Policy" style="color:#ffffffb3;">Privacy Policy</a> </div>
+                                        <div class="col"> <a href="~/QuickLink/Success_Story" style="color:#ffffffb3;">Success Story</a> </div>
+                                        <div class="col"> <a href="~/QuickLink/Submit_Wedding" style="color:#ffffffb3;">Submit Your vibes</a> </div>
+                                        <div class="col"> <a href="~/QuickLink/why_choose_us" style="color:#ffffffb3;">Why Choose Us!?</a> </div>
+                                        <div class="col"> <a href="~/QuickLink/Feedback" style="color:#ffffffb3;">Feedback</a> </div>
+                                        <div class="col"> <a href="~/QuickLink/Testimonial" style="color:#ffffffb3;">Testimonial</a> </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6 footer-links d-flex">
-                    <i class="bi bi-link icon"></i>
-                    <div>
-                        <h4>Quick Link 2</h4>
-                        <div class="row" id="col">
-                            <div class="col-lg-12" id="a">
-                                <div class="col"> <a href="~/QuickLink/Privacy_Policy" style="color:#ffffffb3;">Privacy Policy</a> </div>
-                                <div class="col"> <a href="~/QuickLink/Success_Story" style="color:#ffffffb3;">Success Story</a> </div>
-                                <div class="col"> <a href="~/QuickLink/Submit_Wedding" style="color:#ffffffb3;">Submit Your vibes</a> </div>
-                                <div class="col"> <a href="~/QuickLink/why_choose_us" style="color:#ffffffb3;">Why Choose Us!?</a> </div>
-                                <div class="col"> <a href="~/QuickLink/Feedback" style="color:#ffffffb3;">Feedback</a> </div>
-                                <div class="col"> <a href="~/QuickLink/Testimonial" style="color:#ffffffb3;">Testimonial</a> </div>
-                            </div>
-                        </div>
+
+
+                <div class="container">
+                    <div class="copyright">
+                        &copy; Copyright 2022 <strong><span>Jubilations</span></strong>. All Rights Reserved
+                    </div>
+                    <div class="credits">
+                        Designed by <a class="aa" href="#">Jubilations</a>
                     </div>
                 </div>
-            </div>
-        </div>
 
-
-
-        <div class="container">
-            <div class="copyright">
-                &copy; Copyright 2022 <strong><span>Jubilations</span></strong>. All Rights Reserved
-            </div>
-            <div class="credits">
-                Designed by <a class="aa" href="#">Jubilations</a>
-            </div>
-        </div>
-
-    </footer>
-</body>
-</html>
+            </footer>
+        </body>
+    </html>

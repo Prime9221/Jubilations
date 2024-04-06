@@ -165,9 +165,12 @@ namespace Jubilations.Controllers
             return View();
         }
 
-        public ActionResult Profile()
+        public ActionResult Profile(int currentUserId)
         {
-            return View();
+            //return View();
+
+            var Ui = db.user.Where(x => x.User_Id == currentUserId).First();
+            return View(Ui);
         }
     }
 }
