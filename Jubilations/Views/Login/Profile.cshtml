@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Jubilations.Models.User>
+﻿@model Jubilations.Models.User
 
 @{ 
     ViewBag.Title = "Profile";
@@ -24,8 +24,6 @@
 
 @if (Model != null)
 {
-    foreach (var item in Model)
-    {
         <div>
             <div id="navbar-top" style="margin-top:68px;">
                 <div id="title">
@@ -36,17 +34,20 @@
             <!-- Sidenav -->
             <div id="sidenav" style="margin-top:23px;">
                 <div id="profile">
-                    <img src="@item.ImagePath" alt="" width="100" height="100">
+                    @if (!string.IsNullOrEmpty(Model.ImagePath))
+                    {
+                        <!-- Use model.ImagePath for the image source -->
+                        <img src="@Model.ImagePath" alt="Profile Image" width="100" height="100">
+                    }
 
                     <div id="name">
-                        @Html.DisplayNameFor(model => model.User_Name)
-
+                        @Html.DisplayFor(model => model.User_Name)
                     </div>
                     <div id="job">
-                        @Html.DisplayNameFor(model => model.User_PhoneNo)
+                        @Html.DisplayFor(model => model.User_PhoneNo)
                     </div>
                     <div id="job">
-                        @Html.DisplayNameFor(model => model.User_Email)
+                        @Html.DisplayFor(model => model.User_Email)
                     </div>
                 </div>
 
@@ -74,17 +75,17 @@
                                 <tr>
                                     <td>Name</td>
                                     <td>: </td>
-                                    <td> @Html.DisplayNameFor(model => model.User_Name)</td>
+                                    <td> @Html.DisplayFor(model => model.User_Name)</td>
                                 </tr>
                                 <tr>
                                     <td>Email</td>
                                     <td>:</td>
-                                    <td> @Html.DisplayNameFor(model => model.User_Email)</td>
+                                    <td> @Html.DisplayFor(model => model.User_Email)</td>
                                 </tr>
                                 <tr>
                                     <td>Phone No</td>
                                     <td>:</td>
-                                    <td> @Html.DisplayNameFor(model => model.User_PhoneNo)</td>
+                                    <td> @Html.DisplayFor(model => model.User_PhoneNo)</td>
                                 </tr>
                                 @*<tr>
                                     <td>Address</td>
@@ -99,5 +100,4 @@
 
         </div>
         <!-- End -->
-    }
 }

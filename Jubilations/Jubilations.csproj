@@ -3747,6 +3747,8 @@
     <Content Include="image\Success_story\Yomesh\icon\photo.png" />
     <Content Include="image\Success_story\Yomesh\icon\wedding.png" />
     <Content Include="image\white.png" />
+    <Content Include="IMPS\database.sql" />
+    <Content Include="IMPS\readme.txt" />
     <Content Include="PROJECT RELATED\ppt\1\PPT-1 - Copy\screen-capture %282%29.mp4" />
     <Content Include="PROJECT RELATED\ppt\1\PPT-1 - Copy\screen-capture %283%29.mp4" />
     <Content Include="PROJECT RELATED\ppt\1\PPT-1 - Copy\screen-capture.mp4" />
